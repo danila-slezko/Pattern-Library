@@ -1,6 +1,6 @@
 
 block vars
-  - var assets = 'http://mktg-static-sites.prod.cnetcontent.com/assets/'
+  - var assets = '../../assets/'
 
 doctype html
 html(lang="en")
@@ -13,20 +13,19 @@ html(lang="en")
     script document.getElementsByTagName("html")[0].className += " js";
     link#codyframe(rel='stylesheet', href=assets + 'css/style.css')
     script if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
-    
+
     block styles
-      
+
   body(data-theme="default")
     a#top.anchor
-    main(class=header.logo.alt + '-Page', layout)
+    div#page(class=header.logo.alt, layout)
       block body
-      
-   
+
+
     //- svg(xmlns='http://www.w3.org/2000/svg', style='display: none;')
       block icons
-    
-   
+
+
     block scripts
-    
+
     script(src=assets + 'js/scripts.min.js')
-        

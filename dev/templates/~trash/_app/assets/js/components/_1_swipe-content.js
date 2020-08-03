@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_swipe-content
 (function () {

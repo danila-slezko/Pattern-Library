@@ -1,8 +1,5 @@
 style
   :scss(compress=true)
-    .anchor {
-      margin-bottom: var(--header-height);
-    }
     #header {
       --header-height: 80px;
       --header-height-md: 72px;
@@ -30,7 +27,6 @@ style
       .header__trigger {
         box-shadow: inset 0 0 0 2px transparent !important;
         padding: var(--space-md) 1em;
-        margin: calc(var(--header-height) * -.4) 0 auto auto;
         &-icon {
           margin-right: 0;
           width: 1.5em;
@@ -44,13 +40,17 @@ style
           display: none;
         }
       }
-      .header__container {
-        margin-top: calc(var(--header-height) * -.5);
-      }
       .header__nav::before {
         border: none;
       }
+      .header__item {
+        text-align: center;
+        img {
+          margin: auto;
+        }
+      }
     }
+
 
 append vars
   - var showLogo = header.logo.display

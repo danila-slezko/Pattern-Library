@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_alert-card
 // Usage: codyhouse.co/license

@@ -1,94 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="http://mktg-static-sites.prod.cnetcontent.com/assets/redball.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="../../assets/redball.ico">
     <title>Transform your existing marketing assets into powerful digital merchandising tools on Costco.com</title>
-    <meta name="description" content="Costco has chosen CNET Content Solutions as their partner for Syndicated Rich Content for Costco.com, CostcoBusinessDelivery.com, and Costco.ca." />
-    <script>
-      document.getElementsByTagName("html")[0].className += " js";
-    </script>
-    <link id="codyframe" rel="stylesheet" href="http://mktg-static-sites.prod.cnetcontent.com/assets/css/style.css" />
-    <script>
-      if (!("CSS" in window) || !CSS.supports("color", "var(--color-var)")) {
-        var cfStyle = document.getElementById("codyframe");
-        if (cfStyle) {
-          var href = cfStyle.getAttribute("href");
-          href = href.replace("style.css", "style-fallback.css");
-          cfStyle.setAttribute("href", href);
-        }
-      }
-    </script>
+    <meta name="description" content="Costco has chosen CNET Content Solutions as their partner for Syndicated Rich Content for Costco.com, CostcoBusinessDelivery.com, and Costco.ca.">
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link id="codyframe" rel="stylesheet" href="../../assets/css/style.css">
+    <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
   </head>
-  <body data-theme="default">
-    <a class="anchor" id="top"></a>
-    <main class="Costco-Page" layout>
-      <style>
-        .anchor {
-          margin-bottom: var(--header-height);
-        }
+  <body data-theme="default"><a class="anchor" id="top"></a>
+    <div class="Costco" id="page" layout>
+      <style>#header {
+  --header-height: 80px;
+  --header-height-md: 72px;
+  --color-bg: var(--color-primary-darker);
+  --color-contrast-higher: white;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  #header .header__item--divider {
+    width: 2px;
+    height: 3rem;
+    opacity: .5;
+    background-color: white; }
+  #header .btn {
+    background-color: transparent;
+    color: var(--color-white);
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5) !important; }
+    #header .btn:hover {
+      background-color: var(--color-white);
+      color: var(--color-primary);
+      box-shadow: inset 0 0 0 2px transparent; }
+  #header .header__trigger {
+    box-shadow: inset 0 0 0 2px transparent !important;
+    padding: var(--space-md) 1em; }
+    #header .header__trigger-icon {
+      margin-right: 0;
+      width: 1.5em; }
+    #header .header__trigger:hover {
+      background: transparent; }
+  #header .header__nav--is-visible .header__item--divider {
+    display: none; }
+  #header .header__nav::before {
+    border: none; }
+  #header .header__item {
+    text-align: center; }
+    #header .header__item img {
+      margin: auto; }
 
-        #header {
-          --header-height: 80px;
-          --header-height-md: 72px;
-          --color-bg: var(--color-primary-darker);
-          --color-contrast-higher: white;
-          position: fixed;
-          top: 0;
-          width: 100%;
-        }
-        #header .header__item--divider {
-          width: 2px;
-          height: 3rem;
-          opacity: 0.5;
-          background-color: white;
-        }
-        #header .btn {
-          background-color: transparent;
-          color: var(--color-white);
-          box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
-        }
-        #header .btn:hover {
-          background-color: var(--color-white);
-          color: var(--color-primary);
-          box-shadow: inset 0 0 0 2px transparent;
-        }
-        #header .header__trigger {
-          box-shadow: inset 0 0 0 2px transparent !important;
-          padding: var(--space-md) 1em;
-          margin: calc(var(--header-height) * -0.4) 0 auto auto;
-        }
-        #header .header__trigger-icon {
-          margin-right: 0;
-          width: 1.5em;
-        }
-        #header .header__trigger:hover {
-          background: transparent;
-        }
-        #header .header__nav--is-visible .header__item--divider {
-          display: none;
-        }
-        #header .header__container {
-          margin-top: calc(var(--header-height) * -0.5);
-        }
-        #header .header__nav::before {
-          border: none;
-        }
       </style>
       <header class="header js-header anchor" id="header">
         <div class="header__container container max-width-adaptive-md">
-          <div class="header__logo">
-            <a href="#top"><img src="http://mktg-static-sites.prod.cnetcontent.com/assets/images/content-solutions.svg" alt="CNET Content Solutions" /></a>
-          </div>
-          <button class="btn btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
-            <i class="header__trigger-icon" aria-hidden="true"><span class="is-hidden">Menu</span></i>
-          </button>
+          <div class="header__logo"><a href="#top"><img src="http://mktg-static-sites.prod.cnetcontent.com/assets/images/content-solutions.svg" alt="CNET Content Solutions"></a></div>
+          <button class="btn btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav"><i class="header__trigger-icon" aria-hidden="true"><span class="is-hidden">Menu</span></i></button>
           <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main">
             <div class="header__nav-inner margin-auto max-width-adaptive-md">
               <div class="header__label is-hidden">Main menu</div>
               <ul class="header__list">
-                <li class="header__item"><img class="block" src="http://mktg-static-sites.prod.cnetcontent.com/assets/logos/costco-color.svg" width="128" height="auto" alt="Costco" /></li>
+                <li class="header__item"><img class="block" src="http://mktg-static-sites.prod.cnetcontent.com/assets/logos/costco-color.svg" width="128" height="auto" alt="Costco"></li>
                 <li class="header__item header__item--divider" aria-hidden="true"></li>
                 <li class="header__item"><a class="btn btn--subtle js-smooth-scroll" href="#contact" data-duration="300">Contact Us</a></li>
               </ul>
@@ -97,16 +68,17 @@
         </div>
       </header>
       <section class="position-relative padding-y-md" id="intro">
-        <div class="container padding-top-md max-width-adaptive-md padding-top-xxl">
+        <div class="container padding-top-md max-width-adaptive-md">
           <div class="grid gap-lg@md">
             <div class="flex items-center col-6@md">
               <div class="text-component line-height-lg v-space-lg">
                 <h1 class="text-xl padding-bottom-xxs color-black">Transform your existing marketing assets into powerful digital merchandising tools on Costco.com</h1>
-                <p>Costco has chosen CNET Content Solutions as their partner for Syndicated Rich Content for Costco.com, CostcoBusinessDelivery.com, and Costco.ca.</p>
-                <a class="btn btn--primary margin-bottom-md" href="#contact">Get Started</a>
+                <p>Costco has chosen CNET Content Solutions as their partner for Syndicated Rich Content for Costco.com, CostcoBusinessDelivery.com, and Costco.ca.</p><a class="btn btn--primary margin-bottom-md" href="#contact">Get Started</a>
               </div>
             </div>
-            <img class="block radius-md width-100% object-cover col-6@md" src="http://mktg-static-sites.prod.cnetcontent.com/assets/images/store-mobile-washing-1x.jpg" srcset="http://mktg-static-sites.prod.cnetcontent.com/assets/images/store-mobile-washing-2x.jpg 2x" alt="Image description" />
+            <div class="col-6@md padding-top-lg padding-top-0@md">
+              <figure class="media-wrapper media-wrapper--4:3 radius-md"><img src="http://mktg-static-sites.prod.cnetcontent.com/assets/images/store-mobile-washing-1x.jpg" srcset="http://mktg-static-sites.prod.cnetcontent.com/assets/images/store-mobile-washing-2x.jpg 2x" alt="Image description"></figure>
+            </div>
           </div>
         </div>
       </section>
@@ -114,57 +86,40 @@
         <div class="container padding-top-md max-width-adaptive-md padding-bottom-lg">
           <script>
             function ImagePreload() {
-              if (window.devicePixelRatio > 1) {
-                imgA1 = new Image();
-                imgA1.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hotspots-2x.jpg";
-                imgA4 = new Image();
-                imgA4.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-spin-2x.jpg";
-                imgA5 = new Image();
-                imgA5.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-videos-2x.jpg";
-                imgA6 = new Image();
-                imgA6.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-zoom-2x.jpg";
-                imgA7 = new Image();
-                imgA7.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-reporting-2x.jpg";
-                imgA8 = new Image();
-                imgA8.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-compare-2x.jpg";
+              if(window.devicePixelRatio > 1) {
+                imgA1 = new Image(); imgA1.src = '../../assets/images/features-hotspots-2x.jpg';
+                imgA4 = new Image(); imgA4.src = '../../assets/images/features-spin-2x.jpg';
+                imgA5 = new Image(); imgA5.src = '../../assets/images/features-videos-2x.jpg';
+                imgA6 = new Image(); imgA6.src = '../../assets/images/features-zoom-2x.jpg';
+                imgA7 = new Image(); imgA7.src = '../../assets/images/features-reporting-2x.jpg';
+                imgA8 = new Image(); imgA8.src = '../../assets/images/features-compare-2x.jpg';
               } else {
-                imgB1 = new Image();
-                imgB1.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hotspots-1x.jpg";
-                imgB4 = new Image();
-                imgB4.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-spin-1x.jpg";
-                imgB5 = new Image();
-                imgB5.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-videos-1x.jpg";
-                imgB6 = new Image();
-                imgB6.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-zoom-1x.jpg";
-                imgB7 = new Image();
-                imgB7.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-reporting-1x.jpg";
-                imgB8 = new Image();
-                imgB8.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-compare-1x.jpg";
+                imgB1 = new Image(); imgB1.src = '../../assets/images/features-hotspots-1x.jpg';
+                imgB4 = new Image(); imgB4.src = '../../assets/images/features-spin-1x.jpg';
+                imgB5 = new Image(); imgB5.src = '../../assets/images/features-videos-1x.jpg';
+                imgB6 = new Image(); imgB6.src = '../../assets/images/features-zoom-1x.jpg';
+                imgB7 = new Image(); imgB7.src = '../../assets/images/features-reporting-1x.jpg';
+                imgB8 = new Image(); imgB8.src = '../../assets/images/features-compare-1x.jpg';
               }
-            }
-            window.onload = ImagePreload;
-            function ImageSwap(ImageID, FileName1, FileName2) {
+            };
+              window.onload = ImagePreload;
+              function ImageSwap(ImageID,FileName1,FileName2) {
               document.getElementById(ImageID).src = FileName1;
               document.getElementById(ImageID).srcset = FileName2;
-            }
+            };
           </script>
           <div class="grid gap-lg@md">
-            <img class="block radius-md height-100% object-cover col-6@md" id="jsImageSwap" style="max-height: 325px;" src="http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hover-1x.jpg" srcset="http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hover-2x.jpg 2x" alt="Image description" />
+            <div class="col-6@md order-2 order-1@md padding-top-lg padding-top-0@md">
+              <figure class="media-wrapper media-wrapper--4:3 radius-md"><img id="jsImageSwap" src="../../assets/images/features-hover-1x.jpg" srcset="../../assets/images/features-hover-2x.jpg 2x" alt="Image description"></figure>
+            </div>
             <div class="flex items-center col-6@md">
-              <div class="text-component line-height-lg v-space-lg">
-                <br class="hide@md" />
+              <div class="text-component line-height-lg v-space-lg"><br class="hide@md">
                 <h1 class="text-xl color-black">The Costco Exclusive Offering</h1>
                 <ul class="list list--ul text-md margin-top-md@md margin-left-md@md margin-left-sm@sm">
-                  <li>
-                    <a class="link" href="javascript:void(0)" onmouseout='ImageSwap("jsImageSwap","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hover-1x.jpg","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hover-2x.jpg")' onmouseover='ImageSwap("jsImageSwap","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hotspots-1x.jpg","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hotspots-2x.jpg")'
-                      >Interactive Hotspots</a
-                    >
-                  </li>
+                  <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap(&quot;jsImageSwap&quot;,&quot;../../assets/images/features-hover-1x.jpg&quot;,&quot;../../assets/images/features-hover-2x.jpg&quot;)" onmouseover="ImageSwap(&quot;jsImageSwap&quot;,&quot;../../assets/images/features-hotspots-1x.jpg&quot;,&quot;../../assets/images/features-hotspots-2x.jpg&quot;)">Interactive Hotspots</a></li>
                   <li>Videos</li>
-                  <li><a class="link" href="javascript:void(0)" onmouseout='ImageSwap("jsImageSwap","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hover-1x.jpg","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hover-2x.jpg")' onmouseover='ImageSwap("jsImageSwap","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-zoom-1x.jpg","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-zoom-2x.jpg")'>Image Zoom</a></li>
-                  <li>
-                    <a class="link" href="javascript:void(d0)" onmouseout='ImageSwap("jsImageSwap","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hover-1x.jpg","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hover-2x.jpg")' onmouseover='ImageSwap("jsImageSwap","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-spin-1x.jpg","http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-spin-2x.jpg")'>360° Product Views</a>
-                  </li>
+                  <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap(&quot;jsImageSwap&quot;,&quot;../../assets/images/features-hover-1x.jpg&quot;,&quot;../../assets/images/features-hover-2x.jpg&quot;)" onmouseover="ImageSwap(&quot;jsImageSwap&quot;,&quot;../../assets/images/features-zoom-1x.jpg&quot;,&quot;../../assets/images/features-zoom-2x.jpg&quot;)">Image Zoom</a></li>
+                  <li><a class="link" href="javascript:void(d0)" onmouseout="ImageSwap(&quot;jsImageSwap&quot;,&quot;../../assets/images/features-hover-1x.jpg&quot;,&quot;../../assets/images/features-hover-2x.jpg&quot;)" onmouseover="ImageSwap(&quot;jsImageSwap&quot;,&quot;../../assets/images/features-spin-1x.jpg&quot;,&quot;../../assets/images/features-spin-2x.jpg&quot;)">360° Product Views</a></li>
                 </ul>
               </div>
             </div>
@@ -178,10 +133,9 @@
           </div>
           <div class="max-width-adaptive-xs margin-auto padding-y-sm">
             <figure class="media-wrapper radius-md">
-              <video poster="http://mktg-static-sites.prod.cnetcontent.com/assets/media/brand-assets.jpg" preload autoplay loop muted playsinline nofullscreen>
-                <source src="http://mktg-static-sites.prod.cnetcontent.com/assets/media/brand-assets.webm" />
-                <source src="http://mktg-static-sites.prod.cnetcontent.com/assets/media/brand-assets.mp4" />
-                <img src="http://mktg-static-sites.prod.cnetcontent.com/assets/media/brand-assets.jpg" alt="thumbnail" aria-label="media" />
+              <video poster="../../assets/media/brand-assets.jpg" preload autoplay loop muted playsinline nofullscreen>
+                <source src="../../assets/media/brand-assets.webm">
+                <source src="../../assets/media/brand-assets.mp4"><img src="../../assets/media/brand-assets.jpg" alt="thumbnail" aria-label="media">
               </video>
             </figure>
           </div>
@@ -191,29 +145,23 @@
         <div class="container padding-top-md max-width-adaptive-md padding-y-xl padding-x-xxxl@md">
           <h3 class="text-xl color-black text-center padding-bottom-lg">Choose Self-Service or use CNET’s Concierge Content Service</h3>
           <div class="grid gap-lg@md items-center">
-            <div class="col-6@md order-1@md">
-              <span class="text-component line-height-lg"
-                ><p>Our standard offering includes access to our Brand Content Portal for you to easily self-serve and build out the syndicated rich content experience you prefer.</p>
-                <p>If you are short on time and resources, we can create rich content for you via our Concierge Content Service. We’ll take your creative assets and turn them into captivating interactive experiences to drive sales on Costco.com. Your choice. We’re happy to help.</p></span
-              >
-            </div>
-            <img class="col-6@md block radius-md width-100% object-cover order-1@md" src="http://mktg-static-sites.prod.cnetcontent.com/assets/images/app-screen-1x.jpg" srcset="http://mktg-static-sites.prod.cnetcontent.com/assets/images/app-screen-2x.jpg 2x" alt="Image description" />
+            <div class="col-6@md order-1@md"><span class="text-component line-height-lg"><p>Our standard offering includes access to our Brand Content Portal for you to easily self-serve and build out the syndicated rich content experience you prefer.</p><p>If you are short on time and resources, we can create rich content for you via our Concierge Content Service. We’ll take your creative assets and turn them into captivating interactive experiences to drive sales on Costco.com. Your choice. We’re happy to help.</p></span></div><img class="col-6@md block radius-md width-100% object-cover order-1@md" src="http://mktg-static-sites.prod.cnetcontent.com/assets/images/app-screen-1x.jpg" srcset="http://mktg-static-sites.prod.cnetcontent.com/assets/images/app-screen-2x.jpg 2x" alt="Image description">
           </div>
         </div>
       </section>
       <section class="bg bg-contrast-lower padding-y-lg" id="contact">
         <div class="container max-width-adaptive-sm">
           <form class="form-template-v3">
-            <input id="captcha" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":"1588524591826"}' />
-            <input id="oid" type="hidden" name="oid" value="00D2000000002px" />
-            <input id="retURL" type="hidden" name="retURL" value="https://staples.cnetcontent.com?inquiry=true" />
-            <input id="lead_source" type="hidden" name="lead_source" title="Lead Source" value="Landing Page" />
-            <input id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" title="Lead Sub-Source" value="Staples" />
-            <input id="Campaign_ID" type="hidden" name="Campaign_ID" title="Campaign ID" value="7012p000001XpCm" />
-            <input id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" title="CC Product Interest" />
-            <input id="00N570000063NYi" type="hidden" name="00N570000063NYi" title="Referrer URL" value="https://staples.cnetcontent.com/merchandising" />
-            <input type="hidden" name="debug" value="1" />
-            <input type="hidden" name="debugEmail" value="valerie.mardorf@cbs.com" />
+            <input id="captcha" type="hidden" name="captcha_settings" value="{&quot;keyname&quot;:&quot;CCS_Websites&quot;,&quot;fallback&quot;:&quot;true&quot;,&quot;orgId&quot;:&quot;00D2000000002px&quot;,&quot;ts&quot;:&quot;1588524591826&quot;}">
+            <input id="oid" type="hidden" name="oid" value="00D2000000002px">
+            <input id="retURL" type="hidden" name="retURL" value="https://staples.cnetcontent.com?inquiry=true">
+            <input id="lead_source" type="hidden" name="lead_source" title="Lead Source" value="Landing Page">
+            <input id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" title="Lead Sub-Source" value="Staples">
+            <input id="Campaign_ID" type="hidden" name="Campaign_ID" title="Campaign ID" value="7012p000001XpCm">
+            <input id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" title="CC Product Interest">
+            <input id="00N570000063NYi" type="hidden" name="00N570000063NYi" title="Referrer URL" value="https://staples.cnetcontent.com/merchandising">
+            <input type="hidden" name="debug" value="1">
+            <input type="hidden" name="debugEmail" value="valerie.mardorf@cbs.com">
             <fieldset class="margin-bottom-md padding-bottom-sm border-bottom">
               <div class="text-component margin-bottom-md text-center line-height-lg v-space-lg">
                 <h5 class="text-xxl padding-bottom-xs color-black">Contact us to get started.</h5>
@@ -225,7 +173,7 @@
                     <label class="form-label" for="first_name">First Name</label>
                   </div>
                   <div class="col-4@md">
-                    <input class="form-control width-100%" id="first_name" type="text" name="first_name" />
+                    <input class="form-control width-100%" id="first_name" type="text" name="first_name">
                   </div>
                 </div>
               </div>
@@ -235,7 +183,7 @@
                     <label class="form-label" for="last_name">Last Name</label>
                   </div>
                   <div class="col-4@md">
-                    <input class="form-control width-100%" id="last_name" type="text" name="last_name" />
+                    <input class="form-control width-100%" id="last_name" type="text" name="last_name">
                   </div>
                 </div>
               </div>
@@ -245,7 +193,7 @@
                     <label class="form-label" for="company">Company</label>
                   </div>
                   <div class="col-4@md">
-                    <input class="form-control width-100%" id="company" type="text" name="company" />
+                    <input class="form-control width-100%" id="company" type="text" name="company">
                   </div>
                 </div>
               </div>
@@ -255,7 +203,7 @@
                     <label class="form-label" for="phone">Company Phone</label>
                   </div>
                   <div class="col-4@md">
-                    <input class="form-control width-100%" id="phone" type="text" name="phone" />
+                    <input class="form-control width-100%" id="phone" type="text" name="phone">
                   </div>
                 </div>
               </div>
@@ -265,22 +213,283 @@
                     <label class="form-label" for="email">Work Email</label>
                   </div>
                   <div class="col-4@md">
-                    <input class="form-control width-100%" id="email" type="email" name="email" />
+                    <input class="form-control width-100%" id="email" type="email" name="email">
                   </div>
                 </div>
               </div>
               <div class="margin-bottom-xs">
                 <div class="grid gap-xxs items-center@md">
                   <div class="col-4@md text-right@md">
-                    <label class="form-label" for="email">{Address Feilds}</label>
+                    <label class="form-label" for="country">Country</label>
                   </div>
                   <div class="col-4@md">
-                    <input class="form-control width-100%" id="email" type="email" name="email" />
+                    <div class="select" style="position:relative">
+                      <select class="select__input form-control width-100%" id="country" name="country">
+                        <option disabled selected value>Please Select</option>
+                        <option value="United States">United States</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Germany">Germany</option>
+                        <option value="France">France</option>
+                        <option disabled>———</option>
+                        <option value="00">None</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Aland Islands">Aland Islands</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Belize">Belize</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bermuda">Bermuda</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Bouvet Island">Bouvet Island</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                        <option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Cape Verde">Cape Verde</option>
+                        <option value="Cayman Islands">Cayman Islands</option>
+                        <option value="Central African Republic">Central African Republic</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Christmas Island">Christmas Island</option>
+                        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Comoros">Comoros</option>
+                        <option value="Congo">Congo</option>
+                        <option value="Congo, The Democratic Republic Of The">Congo, The Democratic Republic Of The</option>
+                        <option value="Cook Islands">Cook Islands</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Côte D'ivoire">Côte D'ivoire</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominica">Dominica</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Equatorial Guinea">Equatorial Guinea</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                        <option value="Faroe Islands">Faroe Islands</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="French Guiana">French Guiana</option>
+                        <option value="French Polynesia">French Polynesia</option>
+                        <option value="French Southern Territories">French Southern Territories</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Gibraltar">Gibraltar</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Greenland">Greenland</option>
+                        <option value="Grenada">Grenada</option>
+                        <option value="Guadeloupe">Guadeloupe</option>
+                        <option value="Guam">Guam</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guernsey">Guernsey</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Guinea-bissau">Guinea-bissau</option>
+                        <option value="Guyana">Guyana</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                        <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran, Islamic Republic Of">Iran, Islamic Republic Of</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jersey">Jersey</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kiribati">Kiribati</option>
+                        <option value="Korea, Democratic People's Republic Of">Korea, Democratic People's Republic Of</option>
+                        <option value="Korea, Republic Of">Korea, Republic Of</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Liberia">Liberia</option>
+                        <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Macao">Macao</option>
+                        <option value="Macedonia, The Former Yugoslav Republic Of">Macedonia, The Former Yugoslav Republic Of</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Marshall Islands">Marshall Islands</option>
+                        <option value="Martinique">Martinique</option>
+                        <option value="Mauritania">Mauritania</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mayotte">Mayotte</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Micronesia, Federated States Of">Micronesia, Federated States Of</option>
+                        <option value="Moldova, Republic Of">Moldova, Republic Of</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nauru">Nauru</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Netherlands Antilles">Netherlands Antilles</option>
+                        <option value="New Caledonia">New Caledonia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niue">Niue</option>
+                        <option value="Norfolk Island">Norfolk Island</option>
+                        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palau">Palau</option>
+                        <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Papua New Guinea">Papua New Guinea</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Pitcairn">Pitcairn</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Reunion">Reunion</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russian Federation">Russian Federation</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Barthélemy">Saint Barthélemy</option>
+                        <option value="Saint Helena">Saint Helena</option>
+                        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                        <option value="Saint Lucia">Saint Lucia</option>
+                        <option value="Saint Martin">Saint Martin</option>
+                        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                        <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                        <option value="Samoa">Samoa</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Solomon Islands">Solomon Islands</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                        <option value="Taiwan">Taiwan</option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Tanzania, United Republic Of">Tanzania, United Republic Of</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Timor-leste">Timor-leste</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tokelau">Tokelau</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                        <option value="Tuvalu">Tuvalu</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Vanuatu">Vanuatu</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Virgin Islands, British">Virgin Islands, British</option>
+                        <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                        <option value="Wallis and Futuna">Wallis and Futuna</option>
+                        <option value="Western Sahara">Western Sahara</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                      </select>
+                      <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16" style="position: absolute; top: 1.5rem; right: 1rem;">
+                        <g stroke-width="2" stroke="currentColor">
+                          <polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                        </g>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
             </fieldset>
             <div class="text-center">
+              <p class="color-contrast-medium padding-bottom-sm">CNET Content Solutions will use your personal information to manage the partner program.</p>
               <button class="btn btn--primary">Submit</button>
             </div>
           </form>
@@ -299,25 +508,21 @@
                   <li>Real-time editor</li>
                 </ul>
               </div>
-            </div>
-            <img class="block width-100% object-cover col-6@md radius-lg" src="https://cdn.cnetcontent.com/sites/pages/breadth-depth-1x.jpg" srcset="https://cdn.cnetcontent.com/sites/pages/breadth-depth-2x.jpg 2x" alt="Image description" />
+            </div><img class="block width-100% object-cover col-6@md radius-lg" src="https://cdn.cnetcontent.com/sites/pages/breadth-depth-1x.jpg" srcset="https://cdn.cnetcontent.com/sites/pages/breadth-depth-2x.jpg 2x" alt="Image description">
           </div>
         </div>
       </section>
-      <style>
-        #bottom {
-          background-color: var(--color-contrast-higher);
-          color: var(--color-contrast-low);
-        }
-        #bottom .link {
-          color: var(--color-contrast-low);
-          text-decoration: none;
-        }
-        #bottom .link:hover {
-          text-decoration: underline;
-        }
+      <style>#bottom {
+  background-color: var(--color-contrast-higher);
+  color: var(--color-contrast-low); }
+  #bottom .link {
+    color: var(--color-contrast-low);
+    text-decoration: none; }
+    #bottom .link:hover {
+      text-decoration: underline; }
+
       </style>
-      <footer class="items-center bg-center bg-no-repeat" id="bottom" style="background-image: url('http://mktg-static-sites.prod.cnetcontent.com/assets/images/map.svg');">
+      <footer class="items-center bg-center bg-no-repeat" id="bottom" style="background-image: url('http://mktg-static-sites.prod.cnetcontent.com/assets/images/map.svg')">
         <div class="container max-width-adaptive-md padding-y-lg">
           <ul class="flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center">
             <li><a class="link padding-x-xs padding-y-xxs inline-block" href="http://cnetcontent.com" target="_blank">CNET Content Solutions</a></li>
@@ -326,52 +531,11 @@
             <li><a class="link padding-x-xs padding-y-xxs inline-block" href="https://www.cbsinteractive.com/legal/cbsi/privacy-policy/highlights" target="_blank">Privacy Policy</a></li>
             <li><a class="link padding-x-xs padding-y-xxs inline-block" href="https://ca.privacy.cbs" target="_blank">California Privacy/Info We Collect</a></li>
             <li><a class="link padding-x-xs padding-y-xxs inline-block" href="https://ca.privacy.cbs/donotsell" target="_blank">California Do Not Sell My Info</a></li>
-            <li class="opacity-70%">
-              ©
-              <!--#config timefmt="%Y" -->
-              <!--#echo var="DATE_LOCAL" -->
-              Copyright. All rights reserved.
-            </li>
+            <li class="opacity-70%">© <!--#config timefmt="%Y" --> <!--#echo var="DATE_LOCAL" --> Copyright. All rights reserved.</li>
           </ul>
         </div>
       </footer>
-    </main>
-    <script>
-      function ImagePreload() {
-        if (window.devicePixelRatio > 1) {
-          imgA1 = new Image();
-          imgA1.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hotspots-2x.jpg";
-          imgA4 = new Image();
-          imgA4.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-spin-2x.jpg";
-          imgA5 = new Image();
-          imgA5.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-videos-2x.jpg";
-          imgA6 = new Image();
-          imgA6.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-zoom-2x.jpg";
-          imgA7 = new Image();
-          imgA7.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-reporting-2x.jpg";
-          imgA8 = new Image();
-          imgA8.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-compare-2x.jpg";
-        } else {
-          imgB1 = new Image();
-          imgB1.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-hotspots-1x.jpg";
-          imgB4 = new Image();
-          imgB4.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-spin-1x.jpg";
-          imgB5 = new Image();
-          imgB5.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-videos-1x.jpg";
-          imgB6 = new Image();
-          imgB6.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-zoom-1x.jpg";
-          imgB7 = new Image();
-          imgB7.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-reporting-1x.jpg";
-          imgB8 = new Image();
-          imgB8.src = "http://mktg-static-sites.prod.cnetcontent.com/assets/images/features-compare-1x.jpg";
-        }
-      }
-      window.onload = ImagePreload;
-      function ImageSwap(ImageID, FileName1, FileName2) {
-        document.getElementById(ImageID).src = FileName1;
-        document.getElementById(ImageID).srcset = FileName2;
-      }
-    </script>
-    <script src="http://mktg-static-sites.prod.cnetcontent.com/assets/js/scripts.min.js"></script>
+    </div>
+    <script src="../../assets/js/scripts.min.js"></script>
   </body>
 </html>

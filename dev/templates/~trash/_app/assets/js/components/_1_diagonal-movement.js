@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_diagonal-movement
 // Usage: codyhouse.co/license

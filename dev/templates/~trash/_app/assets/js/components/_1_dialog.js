@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_dialog
 // Usage: codyhouse.co/license

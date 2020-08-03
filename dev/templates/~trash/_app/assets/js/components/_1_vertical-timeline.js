@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_vertical-timeline
 // Usage: codyhouse.co/license

@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_progress-bar
 // Usage: codyhouse.co/license

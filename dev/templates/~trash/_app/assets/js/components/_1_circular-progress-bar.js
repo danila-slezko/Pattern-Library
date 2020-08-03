@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_circular-progress-bar
 // Usage: codyhouse.co/license

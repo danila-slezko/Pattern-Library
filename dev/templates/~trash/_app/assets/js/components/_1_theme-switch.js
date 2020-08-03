@@ -1,4 +1,4 @@
-/** @format */
+
 
 (function () {
   var themeSwitch = document.getElementById("switch-light-dark");

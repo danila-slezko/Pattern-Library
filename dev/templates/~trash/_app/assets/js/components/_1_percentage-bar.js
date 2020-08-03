@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_percentage-bar
 // Usage: codyhouse.co/license

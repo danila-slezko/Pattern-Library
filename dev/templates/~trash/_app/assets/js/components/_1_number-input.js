@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_number-input
 // Usage: codyhouse.co/license

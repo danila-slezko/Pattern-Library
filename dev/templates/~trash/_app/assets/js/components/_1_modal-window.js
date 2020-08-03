@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_modal-window
 // Usage: codyhouse.co/license

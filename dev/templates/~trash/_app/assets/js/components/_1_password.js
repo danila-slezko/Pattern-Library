@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_password
 // Usage: codyhouse.co/license

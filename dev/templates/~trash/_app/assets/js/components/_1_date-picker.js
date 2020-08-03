@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_date-picker
 // Usage: codyhouse.co/license

@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _2_menu-bar
 // Usage: codyhouse.co/license

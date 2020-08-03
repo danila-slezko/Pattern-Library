@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_expandable-search
 // Usage: codyhouse.co/license

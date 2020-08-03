@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_choice-tags
 // Usage: codyhouse.co/license

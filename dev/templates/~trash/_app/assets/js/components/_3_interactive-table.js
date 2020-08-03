@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _3_interactive-table
 // Usage: codyhouse.co/license

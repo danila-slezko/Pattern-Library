@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _2_date-range
 // Usage: codyhouse.co/license

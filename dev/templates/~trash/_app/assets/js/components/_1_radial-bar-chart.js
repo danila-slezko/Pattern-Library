@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _1_radial-bar-chart
 // Usage: codyhouse.co/license

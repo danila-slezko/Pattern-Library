@@ -1,4 +1,4 @@
-/** @format */
+
 
 // File#: _2_chart
 // Usage: codyhouse.co/license
