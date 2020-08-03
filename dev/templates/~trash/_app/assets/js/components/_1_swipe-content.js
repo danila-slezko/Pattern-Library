@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _1_swipe-content
 (function () {
   var SwipeContent = function (element) {
@@ -25,18 +27,13 @@
   function cancelDragging(content) {
     //remove event listeners
     if (content.intervalId) {
-      !window.requestAnimationFrame
-        ? clearInterval(content.intervalId)
-        : window.cancelAnimationFrame(content.intervalId);
+      !window.requestAnimationFrame ? clearInterval(content.intervalId) : window.cancelAnimationFrame(content.intervalId);
       content.intervalId = false;
     }
     content.element.removeEventListener("mousemove", handleEvent.bind(content));
     content.element.removeEventListener("touchmove", handleEvent.bind(content));
     content.element.removeEventListener("mouseup", handleEvent.bind(content));
-    content.element.removeEventListener(
-      "mouseleave",
-      handleEvent.bind(content)
-    );
+    content.element.removeEventListener("mouseleave", handleEvent.bind(content));
     content.element.removeEventListener("touchend", handleEvent.bind(content));
   }
 
@@ -62,10 +59,7 @@
     content.dragging = true;
     // listen to drag movements
     initDragging(content);
-    content.delta = [
-      parseInt(unify(event).clientX),
-      parseInt(unify(event).clientY),
-    ];
+    content.delta = [parseInt(unify(event).clientX), parseInt(unify(event).clientY)];
     // emit drag start event
     emitSwipeEvents(content, "dragStart", content.delta, event.target);
   }
@@ -81,9 +75,7 @@
       var s = getSign(dx - content.delta[0]);
 
       if (Math.abs(dx - content.delta[0]) > 30) {
-        s < 0
-          ? emitSwipeEvents(content, "swipeLeft", [dx, dy])
-          : emitSwipeEvents(content, "swipeRight", [dx, dy]);
+        s < 0 ? emitSwipeEvents(content, "swipeLeft", [dx, dy]) : emitSwipeEvents(content, "swipeRight", [dx, dy]);
       }
 
       content.delta[0] = false;
@@ -93,9 +85,7 @@
       var y = getSign(dy - content.delta[1]);
 
       if (Math.abs(dy - content.delta[1]) > 30) {
-        y < 0
-          ? emitSwipeEvents(content, "swipeUp", [dx, dy])
-          : emitSwipeEvents(content, "swipeDown", [dx, dy]);
+        y < 0 ? emitSwipeEvents(content, "swipeUp", [dx, dy]) : emitSwipeEvents(content, "swipeDown", [dx, dy]);
       }
 
       content.delta[1] = false;
@@ -112,16 +102,11 @@
       ? (content.intervalId = setTimeout(function () {
           emitDrag.bind(content, event);
         }, 250))
-      : (content.intervalId = window.requestAnimationFrame(
-          emitDrag.bind(content, event)
-        ));
+      : (content.intervalId = window.requestAnimationFrame(emitDrag.bind(content, event)));
   }
 
   function emitDrag(event) {
-    emitSwipeEvents(this, "dragging", [
-      parseInt(unify(event).clientX),
-      parseInt(unify(event).clientY),
-    ]);
+    emitSwipeEvents(this, "dragging", [parseInt(unify(event).clientX), parseInt(unify(event).clientY)]);
   }
 
   function unify(event) {

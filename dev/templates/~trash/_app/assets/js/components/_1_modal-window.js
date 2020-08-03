@@ -1,19 +1,15 @@
+/** @format */
+
 // File#: _1_modal-window
 // Usage: codyhouse.co/license
 (function () {
   var Modal = function (element) {
     this.element = element;
-    this.triggers = document.querySelectorAll(
-      '[aria-controls="' + this.element.getAttribute("id") + '"]'
-    );
+    this.triggers = document.querySelectorAll('[aria-controls="' + this.element.getAttribute("id") + '"]');
     this.firstFocusable = null;
     this.lastFocusable = null;
     this.moveFocusEl = null; // focus will be moved to this element when modal is open
-    this.modalFocus = this.element.getAttribute("data-modal-first-focus")
-      ? this.element.querySelector(
-          this.element.getAttribute("data-modal-first-focus")
-        )
-      : null;
+    this.modalFocus = this.element.getAttribute("data-modal-first-focus") ? this.element.querySelector(this.element.getAttribute("data-modal-first-focus")) : null;
     this.selectedTrigger = null;
     this.showClass = "modal--is-visible";
     this.initModal();
@@ -103,17 +99,10 @@
   };
 
   Modal.prototype.initKeyDown = function (event) {
-    if (
-      (event.keyCode && event.keyCode == 9) ||
-      (event.key && event.key == "Tab")
-    ) {
+    if ((event.keyCode && event.keyCode == 9) || (event.key && event.key == "Tab")) {
       //trap focus inside modal
       this.trapFocus(event);
-    } else if (
-      ((event.keyCode && event.keyCode == 13) ||
-        (event.key && event.key == "Enter")) &&
-      event.target.closest(".js-modal__close")
-    ) {
+    } else if (((event.keyCode && event.keyCode == 13) || (event.key && event.key == "Enter")) && event.target.closest(".js-modal__close")) {
       event.preventDefault();
       this.closeModal(); // close modal when pressing Enter on close button
     }
@@ -121,11 +110,7 @@
 
   Modal.prototype.initClick = function (event) {
     //close modal when clicking on close button or modal bg layer
-    if (
-      !event.target.closest(".js-modal__close") &&
-      !Util.hasClass(event.target, "js-modal")
-    )
-      return;
+    if (!event.target.closest(".js-modal__close") && !Util.hasClass(event.target, "js-modal")) return;
     event.preventDefault();
     this.closeModal();
   };
@@ -198,18 +183,13 @@
   };
 
   function isVisible(element) {
-    return (
-      element.offsetWidth ||
-      element.offsetHeight ||
-      element.getClientRects().length
-    );
+    return element.offsetWidth || element.offsetHeight || element.getClientRects().length;
   }
 
   //initialize the Modal objects
   var modals = document.getElementsByClassName("js-modal");
   // generic focusable elements string selector
-  var focusableElString =
-    '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary';
+  var focusableElString = '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary';
   if (modals.length > 0) {
     var modalArrays = [];
     for (var i = 0; i < modals.length; i++) {
@@ -220,10 +200,7 @@
 
     window.addEventListener("keydown", function (event) {
       //close modal window on esc
-      if (
-        (event.keyCode && event.keyCode == 27) ||
-        (event.key && event.key.toLowerCase() == "escape")
-      ) {
+      if ((event.keyCode && event.keyCode == 27) || (event.key && event.key.toLowerCase() == "escape")) {
         for (var i = 0; i < modalArrays.length; i++) {
           (function (i) {
             modalArrays[i].closeModal();

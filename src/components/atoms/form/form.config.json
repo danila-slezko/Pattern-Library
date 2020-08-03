@@ -1,7 +1,4 @@
 {
   "label": "Form Elements",
-  "hidden": false,
-  "order": 1,
-  "order": 1,
-  "preview": "@preview-rows"
+  "hidden": false
 }

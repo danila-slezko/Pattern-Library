@@ -1,14 +1,12 @@
+/** @format */
+
 // File#: _1_password
 // Usage: codyhouse.co/license
 (function () {
   var Password = function (element) {
     this.element = element;
-    this.password = this.element.getElementsByClassName(
-      "js-password__input"
-    )[0];
-    this.visibilityBtn = this.element.getElementsByClassName(
-      "js-password__btn"
-    )[0];
+    this.password = this.element.getElementsByClassName("js-password__input")[0];
+    this.visibilityBtn = this.element.getElementsByClassName("js-password__btn")[0];
     this.visibilityClass = "password--text-is-visible";
     this.initPassword();
   };
@@ -29,9 +27,7 @@
     //change element class
     Util.toggleClass(this.element, this.visibilityClass, makeVisible);
     //change input type
-    makeVisible
-      ? this.password.setAttribute("type", "text")
-      : this.password.setAttribute("type", "password");
+    makeVisible ? this.password.setAttribute("type", "text") : this.password.setAttribute("type", "password");
   };
 
   //initialize the Password objects

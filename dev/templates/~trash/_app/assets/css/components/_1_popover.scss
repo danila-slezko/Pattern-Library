@@ -1,11 +1,16 @@
-/* -------------------------------- 
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _1_popover
+ * Title: Popover
+ * Descr: A pop-up box controlled by a trigger element
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
-File#: _1_popover
-Title: Popover
-Descr: A pop-up box controlled by a trigger element
-Usage: codyhouse.co/license
-
--------------------------------- */
 :root {
   --popover-width: 250px;
   --popover-vertical-gap: 4px; // vertical gap between the popover element and its control

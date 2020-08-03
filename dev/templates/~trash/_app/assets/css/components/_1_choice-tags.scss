@@ -1,11 +1,15 @@
-/* -------------------------------- 
-
-File#: _1_choice-tags
-Title: Choice tags
-Descr: Custom, "tag-looking" radio/checkbox buttons
-Usage: codyhouse.co/license
-
--------------------------------- */
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _1_choice-tags
+ * Title: Choice tags
+ * Descr: Custom, "tag-looking" radio/checkbox buttons
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
 :root {
   --choice-tag-icon-size: 16px;
@@ -69,8 +73,7 @@ Usage: codyhouse.co/license
 
     :nth-child(1),
     :nth-child(2) {
-      transition: transform 0.3s var(--ease-out-back),
-        stroke-dashoffset 0.3s var(--ease-out-back);
+      transition: transform 0.3s var(--ease-out-back), stroke-dashoffset 0.3s var(--ease-out-back);
     }
 
     :nth-child(1) {
@@ -117,9 +120,7 @@ Usage: codyhouse.co/license
   .choice-tag__icon-group {
     :nth-child(1) {
       fill: none;
-      stroke-width: var(
-        --choice-tag-icon-stroke-width
-      ); // radio dot stroke width
+      stroke-width: var(--choice-tag-icon-stroke-width); // radio dot stroke width
     }
 
     :nth-child(2) {

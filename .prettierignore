@@ -1,3 +1,2 @@
-dist/
-www/
 node_modules/
+*.min.*

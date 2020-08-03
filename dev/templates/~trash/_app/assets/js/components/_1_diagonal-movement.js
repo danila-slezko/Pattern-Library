@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _1_diagonal-movement
 // Usage: codyhouse.co/license
 /*
@@ -175,12 +177,7 @@
         prevLoc = loc;
       }
 
-      if (
-        prevLoc.x < offset.left ||
-        prevLoc.x > lowerRight.x ||
-        prevLoc.y < offset.top ||
-        prevLoc.y > lowerRight.y
-      ) {
+      if (prevLoc.x < offset.left || prevLoc.x > lowerRight.x || prevLoc.y < offset.top || prevLoc.y > lowerRight.y) {
         // If the previous mouse location was outside of the entire
         // menu's bounds, immediately activate.
         return 0;
@@ -241,10 +238,7 @@
         prevDecreasingSlope = slope(prevLoc, decreasingCorner),
         prevIncreasingSlope = slope(prevLoc, increasingCorner);
 
-      if (
-        decreasingSlope < prevDecreasingSlope &&
-        increasingSlope > prevIncreasingSlope
-      ) {
+      if (decreasingSlope < prevDecreasingSlope && increasingSlope > prevIncreasingSlope) {
         // Mouse is moving from previous location towards the
         // currently activated submenu. Delay before activating a
         // new menu row, because user may be moving into submenu.

@@ -1,11 +1,15 @@
-/* -------------------------------- 
-
-File#: _3_interactive-table
-Title: Interactive Table
-Descr: Table with the option of sorting data and selecting rows to perform specific actions
-Usage: codyhouse.co/license
-
--------------------------------- */
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _3_interactive-table
+ * Title: Interactive Table
+ * Descr: Table with the option of sorting data and selecting rows to perform specific actions
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
 .int-table {
   overflow: hidden;
@@ -160,9 +164,7 @@ Usage: codyhouse.co/license
   .menu-bar {
     --menu-bar-button-size: 34px; // size of the menu buttons
     --menu-bar-icon-size: 16px; // size of the icons inside the buttons
-    --menu-bar-horizontal-gap: var(
-      --space-xxxxs
-    ); // horizontal gap between buttons
+    --menu-bar-horizontal-gap: var(--space-xxxxs); // horizontal gap between buttons
     --menu-bar-vertical-gap: 4px; // vertical gap between buttons and labels (tooltips)
     --menu-bar-label-size: var(--text-xs); // label font size
   }

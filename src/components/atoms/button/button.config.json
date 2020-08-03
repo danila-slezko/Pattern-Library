@@ -2,7 +2,6 @@
   "title": "Buttons",
   "status": "ready",
   "hidden": false,
-  "order": 1,
   "preview": "@preview-columns",
   "tags": ["cta", "call-to-action", "form"],
   "meta": { "created": "2020-03-08" },

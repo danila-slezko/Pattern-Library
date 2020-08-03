@@ -1,11 +1,11 @@
+/** @format */
+
 // File#: _1_dialog
 // Usage: codyhouse.co/license
 (function () {
   var Dialog = function (element) {
     this.element = element;
-    this.triggers = document.querySelectorAll(
-      '[aria-controls="' + this.element.getAttribute("id") + '"]'
-    );
+    this.triggers = document.querySelectorAll('[aria-controls="' + this.element.getAttribute("id") + '"]');
     this.firstFocusable = null;
     this.lastFocusable = null;
     this.selectedTrigger = null;
@@ -80,16 +80,10 @@
   }
 
   function initKeyDown(dialog, event) {
-    if (
-      (event.keyCode && event.keyCode == 27) ||
-      (event.key && event.key == "Escape")
-    ) {
+    if ((event.keyCode && event.keyCode == 27) || (event.key && event.key == "Escape")) {
       //close dialog on esc
       closeDialog(dialog);
-    } else if (
-      (event.keyCode && event.keyCode == 9) ||
-      (event.key && event.key == "Tab")
-    ) {
+    } else if ((event.keyCode && event.keyCode == 9) || (event.key && event.key == "Tab")) {
       //trap focus inside dialog
       trapFocus(dialog, event);
     }
@@ -117,9 +111,7 @@
 
   function getFocusableElements(dialog) {
     //get all focusable elements inside the dialog
-    var allFocusable = dialog.element.querySelectorAll(
-      '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary'
-    );
+    var allFocusable = dialog.element.querySelectorAll('[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary');
     getFirstVisible(dialog, allFocusable);
     getLastVisible(dialog, allFocusable);
   }
@@ -127,11 +119,7 @@
   function getFirstVisible(dialog, elements) {
     //get first visible focusable element inside the dialog
     for (var i = 0; i < elements.length; i++) {
-      if (
-        elements[i].offsetWidth ||
-        elements[i].offsetHeight ||
-        elements[i].getClientRects().length
-      ) {
+      if (elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length) {
         dialog.firstFocusable = elements[i];
         return true;
       }
@@ -141,11 +129,7 @@
   function getLastVisible(dialog, elements) {
     //get last visible focusable element inside the dialog
     for (var i = elements.length - 1; i >= 0; i--) {
-      if (
-        elements[i].offsetWidth ||
-        elements[i].offsetHeight ||
-        elements[i].getClientRects().length
-      ) {
+      if (elements[i].offsetWidth || elements[i].offsetHeight || elements[i].getClientRects().length) {
         dialog.lastFocusable = elements[i];
         return true;
       }

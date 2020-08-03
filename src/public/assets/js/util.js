@@ -1,3 +1,5 @@
+/** @format */
+
 // Utility function
 function Util() {}
 
@@ -6,8 +8,7 @@ function Util() {}
 */
 Util.hasClass = function (el, className) {
   if (el.classList) return el.classList.contains(className);
-  else
-    return !!el.className.match(new RegExp("(\\s|^)" + className + "(\\s|$)"));
+  else return !!el.className.match(new RegExp("(\\s|^)" + className + "(\\s|$)"));
 };
 
 Util.addClass = function (el, className) {
@@ -45,8 +46,7 @@ Util.getChildrenByClassName = function (el, className) {
   var children = el.children,
     childrenByClass = [];
   for (var i = 0; i < el.children.length; i++) {
-    if (Util.hasClass(el.children[i], className))
-      childrenByClass.push(el.children[i]);
+    if (Util.hasClass(el.children[i], className)) childrenByClass.push(el.children[i]);
   }
   return childrenByClass;
 };
@@ -56,10 +56,7 @@ Util.is = function (elem, selector) {
     return elem === selector;
   }
 
-  var qa =
-      typeof selector === "string"
-        ? document.querySelectorAll(selector)
-        : selector,
+  var qa = typeof selector === "string" ? document.querySelectorAll(selector) : selector,
     length = qa.length,
     returnArr = [];
 
@@ -176,10 +173,7 @@ Util.extend = function () {
     for (var prop in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, prop)) {
         // If deep merge and property is an object, merge properties
-        if (
-          deep &&
-          Object.prototype.toString.call(obj[prop]) === "[object Object]"
-        ) {
+        if (deep && Object.prototype.toString.call(obj[prop]) === "[object Object]") {
           extended[prop] = extend(true, extended[prop], obj[prop]);
         } else {
           extended[prop] = obj[prop];
@@ -210,9 +204,7 @@ Util.osHasReducedMotion = function () {
 */
 //Closest() method
 if (!Element.prototype.matches) {
-  Element.prototype.matches =
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.webkitMatchesSelector;
+  Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 }
 
 if (!Element.prototype.closest) {
@@ -232,12 +224,7 @@ if (typeof window.CustomEvent !== "function") {
   function CustomEvent(event, params) {
     params = params || { bubbles: false, cancelable: false, detail: undefined };
     var evt = document.createEvent("CustomEvent");
-    evt.initCustomEvent(
-      event,
-      params.bubbles,
-      params.cancelable,
-      params.detail
-    );
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
     return evt;
   }
 
@@ -285,11 +272,7 @@ Math.easeOutElastic = function (t, b, c, d) {
     a = c;
     var s = p / 4;
   } else var s = (p / (2 * Math.PI)) * Math.asin(c / a);
-  return (
-    a * Math.pow(2, -10 * t) * Math.sin(((t * d - s) * (2 * Math.PI)) / p) +
-    c +
-    b
-  );
+  return a * Math.pow(2, -10 * t) * Math.sin(((t * d - s) * (2 * Math.PI)) / p) + c + b;
 };
 
 /* JS Utility Classes */

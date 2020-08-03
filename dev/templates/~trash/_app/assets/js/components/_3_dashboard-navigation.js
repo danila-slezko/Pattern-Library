@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _3_dashboard-navigation
 // Usage: codyhouse.co/license
 (function () {
@@ -27,31 +29,17 @@
     // listen for key events
     window.addEventListener("keyup", function (event) {
       // listen for esc key
-      if (
-        (event.keyCode && event.keyCode == 27) ||
-        (event.key && event.key.toLowerCase() == "escape")
-      ) {
+      if ((event.keyCode && event.keyCode == 27) || (event.key && event.key.toLowerCase() == "escape")) {
         // close navigation on mobile if open
-        if (
-          appMenuBtn[0].getAttribute("aria-expanded") == "true" &&
-          isVisible(appMenuBtn[0])
-        ) {
+        if (appMenuBtn[0].getAttribute("aria-expanded") == "true" && isVisible(appMenuBtn[0])) {
           focusMenu = appMenuBtn[0]; // move focus to menu trigger when menu is close
           appMenuBtn[0].click();
         }
       }
       // listen for tab key
-      if (
-        (event.keyCode && event.keyCode == 9) ||
-        (event.key && event.key.toLowerCase() == "tab")
-      ) {
+      if ((event.keyCode && event.keyCode == 9) || (event.key && event.key.toLowerCase() == "tab")) {
         // close navigation on mobile if open when nav loses focus
-        if (
-          appMenuBtn[0].getAttribute("aria-expanded") == "true" &&
-          isVisible(appMenuBtn[0]) &&
-          !document.activeElement.closest(".js-app-ui__nav")
-        )
-          appMenuBtn[0].click();
+        if (appMenuBtn[0].getAttribute("aria-expanded") == "true" && isVisible(appMenuBtn[0]) && !document.activeElement.closest(".js-app-ui__nav")) appMenuBtn[0].click();
       }
     });
 
@@ -63,26 +51,16 @@
     });
 
     function doneResizing() {
-      if (
-        !isVisible(appMenuBtn[0]) &&
-        Util.hasClass(appUi[0], appExpandedClass)
-      )
-        appMenuBtn[0].click();
+      if (!isVisible(appMenuBtn[0]) && Util.hasClass(appUi[0], appExpandedClass)) appMenuBtn[0].click();
     }
 
     function getMenuFirstFocusable() {
       var mobileNav = appUi[0].getElementsByClassName("js-app-ui__nav");
       if (mobileNav.length < 1) return false;
-      var focusableEle = mobileNav[0].querySelectorAll(
-          '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"]), [controls], summary'
-        ),
+      var focusableEle = mobileNav[0].querySelectorAll('[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"]), [controls], summary'),
         firstFocusable = false;
       for (var i = 0; i < focusableEle.length; i++) {
-        if (
-          focusableEle[i].offsetWidth ||
-          focusableEle[i].offsetHeight ||
-          focusableEle[i].getClientRects().length
-        ) {
+        if (focusableEle[i].offsetWidth || focusableEle[i].offsetHeight || focusableEle[i].getClientRects().length) {
           firstFocusable = focusableEle[i];
           break;
         }
@@ -92,11 +70,7 @@
     }
 
     function isVisible(element) {
-      return (
-        element.offsetWidth ||
-        element.offsetHeight ||
-        element.getClientRects().length
-      );
+      return element.offsetWidth || element.offsetHeight || element.getClientRects().length;
     }
   }
 })();

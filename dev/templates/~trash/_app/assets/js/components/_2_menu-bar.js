@@ -1,15 +1,13 @@
+/** @format */
+
 // File#: _2_menu-bar
 // Usage: codyhouse.co/license
 (function () {
   var MenuBar = function (element) {
     this.element = element;
     this.items = Util.getChildrenByClassName(this.element, "menu-bar__item");
-    this.mobHideItems = this.element.getElementsByClassName(
-      "menu-bar__item--hide"
-    );
-    this.moreItemsTrigger = this.element.getElementsByClassName(
-      "js-menu-bar__trigger"
-    );
+    this.mobHideItems = this.element.getElementsByClassName("menu-bar__item--hide");
+    this.moreItemsTrigger = this.element.getElementsByClassName("js-menu-bar__trigger");
     initMenuBar(this);
   };
 
@@ -29,25 +27,16 @@
     // open dropdown when pressing Enter on trigger element
     if (menu.moreItemsTrigger.length > 0) {
       menu.moreItemsTrigger[0].addEventListener("keydown", function (event) {
-        if (
-          (event.keyCode && event.keyCode == 13) ||
-          (event.key && event.key.toLowerCase() == "enter")
-        ) {
+        if ((event.keyCode && event.keyCode == 13) || (event.key && event.key.toLowerCase() == "enter")) {
           if (!menu.menuInstance) return;
           menu.menuInstance.selectedTrigger = menu.moreItemsTrigger[0];
-          menu.menuInstance.toggleMenu(
-            !Util.hasClass(menu.subMenu, "menu--is-visible"),
-            true
-          );
+          menu.menuInstance.toggleMenu(!Util.hasClass(menu.subMenu, "menu--is-visible"), true);
         }
       });
 
       // close dropdown on esc
       menu.subMenu.addEventListener("keydown", function (event) {
-        if (
-          (event.keyCode && event.keyCode == 27) ||
-          (event.key && event.key.toLowerCase() == "escape")
-        ) {
+        if ((event.keyCode && event.keyCode == 27) || (event.key && event.key.toLowerCase() == "escape")) {
           // close submenu on esc
           if (menu.menuInstance) menu.menuInstance.toggleMenu(false, true);
         }
@@ -56,15 +45,9 @@
 
     // navigate menu items using left/right arrows
     menu.element.addEventListener("keydown", function (event) {
-      if (
-        (event.keyCode && event.keyCode == 39) ||
-        (event.key && event.key.toLowerCase() == "arrowright")
-      ) {
+      if ((event.keyCode && event.keyCode == 39) || (event.key && event.key.toLowerCase() == "arrowright")) {
         navigateItems(menu.items, event, "next");
-      } else if (
-        (event.keyCode && event.keyCode == 37) ||
-        (event.key && event.key.toLowerCase() == "arrowleft")
-      ) {
+      } else if ((event.keyCode && event.keyCode == 37) || (event.key && event.key.toLowerCase() == "arrowleft")) {
         navigateItems(menu.items, event, "prev");
       }
     });
@@ -84,8 +67,7 @@
   function initMenuBarMarkup(menu) {
     if (menu.mobHideItems.length == 0) {
       // no items to hide on mobile - remove trigger
-      if (menu.moreItemsTrigger.length > 0)
-        menu.element.removeChild(menu.moreItemsTrigger[0]);
+      if (menu.moreItemsTrigger.length > 0) menu.element.removeChild(menu.moreItemsTrigger[0]);
       return;
     }
 
@@ -100,13 +82,7 @@
         label = item.getElementsByClassName("menu-bar__label")[0];
 
       svg.setAttribute("class", "icon menu__icon");
-      content =
-        content +
-        '<li role="menuitem"><span class="menu__content js-menu__content">' +
-        svg.outerHTML +
-        "<span>" +
-        label.innerHTML +
-        "</span></span></li>";
+      content = content + '<li role="menuitem"><span class="menu__content js-menu__content">' + svg.outerHTML + "<span>" + label.innerHTML + "</span></span></li>";
     }
 
     Util.setAttributes(menu.moreItemsTrigger[0], {
@@ -133,40 +109,24 @@
 
   function checkMenuLayout(menu) {
     // switch from compressed to expanded layout and viceversa
-    var layout = getComputedStyle(menu.element, ":before")
-      .getPropertyValue("content")
-      .replace(/\'|"/g, "");
-    Util.toggleClass(
-      menu.element,
-      "menu-bar--collapsed",
-      layout == "collapsed"
-    );
+    var layout = getComputedStyle(menu.element, ":before").getPropertyValue("content").replace(/\'|"/g, "");
+    Util.toggleClass(menu.element, "menu-bar--collapsed", layout == "collapsed");
   }
 
   function navigateItems(list, event, direction, prevIndex) {
     // keyboard navigation among menu items
     event.preventDefault();
-    var index =
-        typeof prevIndex !== "undefined"
-          ? prevIndex
-          : Util.getIndexInArray(list, event.target),
+    var index = typeof prevIndex !== "undefined" ? prevIndex : Util.getIndexInArray(list, event.target),
       nextIndex = direction == "next" ? index + 1 : index - 1;
     if (nextIndex < 0) nextIndex = list.length - 1;
     if (nextIndex > list.length - 1) nextIndex = 0;
     // check if element is visible before moving focus
-    list[nextIndex].offsetParent === null
-      ? navigateItems(list, event, direction, nextIndex)
-      : Util.moveFocus(list[nextIndex]);
+    list[nextIndex].offsetParent === null ? navigateItems(list, event, direction, nextIndex) : Util.moveFocus(list[nextIndex]);
   }
 
   function checkMenuClick(menu, target) {
     // close dropdown when clicking outside the menu element
-    if (
-      menu.menuInstance &&
-      !menu.moreItemsTrigger[0].contains(target) &&
-      !menu.subMenu.contains(target)
-    )
-      menu.menuInstance.toggleMenu(false, false);
+    if (menu.menuInstance && !menu.moreItemsTrigger[0].contains(target) && !menu.subMenu.contains(target)) menu.menuInstance.toggleMenu(false, false);
   }
 
   // init MenuBars objects
@@ -175,10 +135,7 @@
     var j = 0,
       menuBarArray = [];
     for (var i = 0; i < menuBars.length; i++) {
-      var beforeContent = getComputedStyle(
-        menuBars[i],
-        ":before"
-      ).getPropertyValue("content");
+      var beforeContent = getComputedStyle(menuBars[i], ":before").getPropertyValue("content");
       if (beforeContent && beforeContent != "" && beforeContent != "none") {
         (function (i) {
           menuBarArray.push(new MenuBar(menuBars[i]));

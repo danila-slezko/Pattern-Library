@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _1_choice-tags
 // Usage: codyhouse.co/license
 (function () {
@@ -22,11 +24,7 @@
   function initChoiceTags(element) {
     // if tag is selected by default - add checkedClass to the label element
     for (var i = 0; i < element.inputs.length; i++) {
-      Util.toggleClass(
-        element.labels[i],
-        element.checkedClass,
-        element.inputs[i].checked
-      );
+      Util.toggleClass(element.labels[i], element.checkedClass, element.inputs[i].checked);
     }
   }
 
@@ -34,13 +32,8 @@
     element.element.addEventListener("change", function (event) {
       var inputIndex = Util.getIndexInArray(element.inputs, event.target);
       if (inputIndex < 0) return;
-      Util.toggleClass(
-        element.labels[inputIndex],
-        element.checkedClass,
-        event.target.checked
-      );
-      if (element.isRadio && event.target.checked)
-        resetRadioTags(element, inputIndex);
+      Util.toggleClass(element.labels[inputIndex], element.checkedClass, event.target.checked);
+      if (element.isRadio && event.target.checked) resetRadioTags(element, inputIndex);
     });
   }
 

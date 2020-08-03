@@ -1,11 +1,11 @@
+/** @format */
+
 // File#: _2_chart
 // Usage: codyhouse.co/license
 (function () {
   var Chart = function (opts) {
     this.options = Util.extend(Chart.defaults, opts);
-    this.element = this.options.element.getElementsByClassName(
-      "js-chart__area"
-    )[0];
+    this.element = this.options.element.getElementsByClassName("js-chart__area")[0];
     this.svgPadding = this.options.padding;
     this.topDelta = this.svgPadding;
     this.bottomDelta = 0;
@@ -27,14 +27,8 @@
     this.interLine = false;
     this.markers = false;
     this.tooltipOn = this.options.tooltip && this.options.tooltip.enabled;
-    this.tooltipClasses =
-      this.tooltipOn && this.options.tooltip.classes
-        ? this.options.tooltip.classes
-        : "";
-    this.tooltipPosition =
-      this.tooltipOn && this.options.tooltip.position
-        ? this.options.tooltip.position
-        : false;
+    this.tooltipClasses = this.tooltipOn && this.options.tooltip.classes ? this.options.tooltip.classes : "";
+    this.tooltipPosition = this.tooltipOn && this.options.tooltip.position ? this.options.tooltip.position : false;
     this.tooltipDelta = 10;
     this.selectedMarker = false;
     this.selectedMarkerClass = "chart__marker--selected";
@@ -44,9 +38,7 @@
     // events id
     this.eventIds = []; // will use to store event ids
     // accessibility
-    this.categories = this.options.element.getElementsByClassName(
-      "js-chart__category"
-    );
+    this.categories = this.options.element.getElementsByClassName("js-chart__category");
     this.loaded = false;
     // init chart
     initChartInfo(this);
@@ -85,12 +77,7 @@
   }
 
   function createChartSvg(chart) {
-    var svg =
-      '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="' +
-      chart.width +
-      '" height="' +
-      chart.height +
-      '" class="chart__svg js-chart__svg"></svg>';
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="' + chart.width + '" height="' + chart.height + '" class="chart__svg js-chart__svg"></svg>';
     chart.element.innerHTML = svg;
     chart.svg = chart.element.getElementsByClassName("js-chart__svg")[0];
 
@@ -136,20 +123,14 @@
   function setXAxis(chart) {
     // set legend of axis if available
     if (chart.options.xAxis && chart.options.xAxis.legend) {
-      var textLegend = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "text"
-      );
+      var textLegend = document.createElementNS("http://www.w3.org/2000/svg", "text");
       textLegend.textContent = chart.options.xAxis.legend;
       Util.setAttributes(textLegend, {
-        class:
-          "chart__axis-legend chart__axis-legend--x js-chart__axis-legend--x",
+        class: "chart__axis-legend chart__axis-legend--x js-chart__axis-legend--x",
       });
       chart.svg.appendChild(textLegend);
 
-      var xLegend = chart.element.getElementsByClassName(
-        "js-chart__axis-legend--x"
-      )[0];
+      var xLegend = chart.element.getElementsByClassName("js-chart__axis-legend--x")[0];
 
       if (isVisible(xLegend)) {
         var size = xLegend.getBBox(),
@@ -163,11 +144,7 @@
 
     // get interval and create scale
     var xLabels;
-    if (
-      chart.options.xAxis &&
-      chart.options.xAxis.labels &&
-      chart.options.xAxis.labels.length > 1
-    ) {
+    if (chart.options.xAxis && chart.options.xAxis.labels && chart.options.xAxis.labels.length > 1) {
       xLabels = chart.options.xAxis.labels;
       chart.xAxisInterval = [0, chart.options.xAxis.labels.length - 1];
     } else {
@@ -180,19 +157,12 @@
 
     var gEl = document.createElementNS("http://www.w3.org/2000/svg", "g");
     Util.setAttributes(gEl, {
-      class:
-        "chart__axis-labels chart__axis-labels--x js-chart__axis-labels--x",
+      class: "chart__axis-labels chart__axis-labels--x js-chart__axis-labels--x",
     });
 
     for (var i = 0; i < xLabels.length; i++) {
-      var textEl = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "text"
-      );
-      var labelClasses =
-        chart.options.xAxis && chart.options.xAxis.labels
-          ? "chart__axis-label chart__axis-label--x js-chart__axis-label"
-          : "is-hidden js-chart__axis-label";
+      var textEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      var labelClasses = chart.options.xAxis && chart.options.xAxis.labels ? "chart__axis-label chart__axis-label--x js-chart__axis-label" : "is-hidden js-chart__axis-label";
       Util.setAttributes(textEl, {
         class: labelClasses,
         "alignment-baseline": "middle",
@@ -202,10 +172,7 @@
     }
 
     if (chart.options.xAxis && chart.options.xAxis.line) {
-      var lineEl = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "line"
-      );
+      var lineEl = document.createElementNS("http://www.w3.org/2000/svg", "line");
       Util.setAttributes(lineEl, {
         class: "chart__axis chart__axis--x js-chart__axis--x",
         "stroke-linecap": "square",
@@ -217,14 +184,8 @@
     if (chart.options.type == "column") ticksLength = ticksLength + 1;
 
     for (var i = 0; i < ticksLength; i++) {
-      var tickEl = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "line"
-      );
-      var classTicks =
-        chart.options.xAxis && chart.options.xAxis.ticks
-          ? "chart__tick chart__tick-x js-chart__tick-x"
-          : "js-chart__tick-x";
+      var tickEl = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      var classTicks = chart.options.xAxis && chart.options.xAxis.ticks ? "chart__tick chart__tick-x js-chart__tick-x" : "js-chart__tick-x";
       Util.setAttributes(tickEl, {
         class: classTicks,
         "stroke-linecap": "square",
@@ -238,20 +199,12 @@
   function setYAxis(chart) {
     // set legend of axis if available
     if (chart.options.yAxis && chart.options.yAxis.legend) {
-      var textLegend = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "text"
-      );
+      var textLegend = document.createElementNS("http://www.w3.org/2000/svg", "text");
       textLegend.textContent = chart.options.yAxis.legend;
-      textLegend.setAttribute(
-        "class",
-        "chart__axis-legend chart__axis-legend--y js-chart__axis-legend--y"
-      );
+      textLegend.setAttribute("class", "chart__axis-legend chart__axis-legend--y js-chart__axis-legend--y");
       chart.svg.appendChild(textLegend);
 
-      var yLegend = chart.element.getElementsByClassName(
-        "js-chart__axis-legend--y"
-      )[0];
+      var yLegend = chart.element.getElementsByClassName("js-chart__axis-legend--y")[0];
       if (isVisible(yLegend)) {
         var height = yLegend.getBBox().height,
           xPosition = chart.leftDelta + height / 2,
@@ -263,11 +216,7 @@
     }
     // get interval and create scale
     var yLabels;
-    if (
-      chart.options.yAxis &&
-      chart.options.yAxis.labels &&
-      chart.options.yAxis.labels.length > 1
-    ) {
+    if (chart.options.yAxis && chart.options.yAxis.labels && chart.options.yAxis.labels.length > 1) {
       yLabels = chart.options.yAxis.labels;
       chart.yAxisInterval = [0, chart.options.yAxis.labels.length - 1];
     } else {
@@ -281,19 +230,12 @@
 
     var gEl = document.createElementNS("http://www.w3.org/2000/svg", "g");
     Util.setAttributes(gEl, {
-      class:
-        "chart__axis-labels chart__axis-labels--y js-chart__axis-labels--y",
+      class: "chart__axis-labels chart__axis-labels--y js-chart__axis-labels--y",
     });
 
     for (var i = yLabels.length - 1; i >= 0; i--) {
-      var textEl = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "text"
-      );
-      var labelClasses =
-        chart.options.yAxis && chart.options.yAxis.labels
-          ? "chart__axis-label chart__axis-label--y js-chart__axis-label"
-          : "is-hidden js-chart__axis-label";
+      var textEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      var labelClasses = chart.options.yAxis && chart.options.yAxis.labels ? "chart__axis-label chart__axis-label--y js-chart__axis-label" : "is-hidden js-chart__axis-label";
       Util.setAttributes(textEl, {
         class: labelClasses,
         "alignment-baseline": "middle",
@@ -303,10 +245,7 @@
     }
 
     if (chart.options.yAxis && chart.options.yAxis.line) {
-      var lineEl = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "line"
-      );
+      var lineEl = document.createElementNS("http://www.w3.org/2000/svg", "line");
       Util.setAttributes(lineEl, {
         class: "chart__axis chart__axis--y js-chart__axis--y",
         "stroke-linecap": "square",
@@ -314,15 +253,9 @@
       gEl.appendChild(lineEl);
     }
 
-    var hideGuides =
-      chart.options.xAxis &&
-      chart.options.xAxis.hasOwnProperty("guides") &&
-      !chart.options.xAxis.guides;
+    var hideGuides = chart.options.xAxis && chart.options.xAxis.hasOwnProperty("guides") && !chart.options.xAxis.guides;
     for (var i = 1; i < yLabels.length; i++) {
-      var rectEl = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "rect"
-      );
+      var rectEl = document.createElementNS("http://www.w3.org/2000/svg", "rect");
       Util.setAttributes(rectEl, { class: "chart__guides js-chart__guides" });
       if (hideGuides) {
         Util.setAttributes(rectEl, {
@@ -335,33 +268,23 @@
   }
 
   function updateChartWidth(chart) {
-    var labels = chart.element
-      .getElementsByClassName("js-chart__axis-labels--y")[0]
-      .querySelectorAll(".js-chart__axis-label");
+    var labels = chart.element.getElementsByClassName("js-chart__axis-labels--y")[0].querySelectorAll(".js-chart__axis-label");
 
     if (isVisible(labels[0])) {
       chart.yChartMaxWidth = getLabelMaxSize(labels, "width");
-      chart.leftDelta =
-        chart.leftDelta +
-        chart.svgPadding +
-        chart.yChartMaxWidth +
-        chart.svgPadding;
+      chart.leftDelta = chart.leftDelta + chart.svgPadding + chart.yChartMaxWidth + chart.svgPadding;
     } else {
       chart.leftDelta = chart.leftDelta + chart.svgPadding;
     }
 
-    var xLabels = chart.element
-      .getElementsByClassName("js-chart__axis-labels--x")[0]
-      .querySelectorAll(".js-chart__axis-label");
+    var xLabels = chart.element.getElementsByClassName("js-chart__axis-labels--x")[0].querySelectorAll(".js-chart__axis-label");
     if (isVisible(xLabels[0]) && !isVisible(labels[0])) {
       chart.leftDelta = chart.leftDelta + xLabels[0].getBBox().width * 0.5;
     }
   }
 
   function placeyAxisLabels(chart) {
-    var labels = chart.element
-      .getElementsByClassName("js-chart__axis-labels--y")[0]
-      .querySelectorAll(".js-chart__axis-label");
+    var labels = chart.element.getElementsByClassName("js-chart__axis-labels--y")[0].querySelectorAll(".js-chart__axis-label");
 
     var labelsVisible = isVisible(labels[0]);
     var height = 0;
@@ -374,8 +297,7 @@
     var yDelta = chart.yAxisHeight / (labels.length - 1);
 
     var gridRect = chart.element.getElementsByClassName("js-chart__guides"),
-      dasharray =
-        "" + chart.xAxisWidth + " " + 2 * (chart.xAxisWidth + yDelta) + "";
+      dasharray = "" + chart.xAxisWidth + " " + 2 * (chart.xAxisWidth + yDelta) + "";
 
     for (var i = 0; i < labels.length; i++) {
       var labelWidth = 0;
@@ -407,9 +329,7 @@
       });
     }
     // center y axis label
-    var yLegend = chart.element.getElementsByClassName(
-      "js-chart__axis-legend--y"
-    );
+    var yLegend = chart.element.getElementsByClassName("js-chart__axis-legend--y");
     if (yLegend.length > 0 && isVisible(yLegend[0])) {
       var position = yLegend[0].getBBox(),
         height = position.height,
@@ -419,20 +339,13 @@
       Util.setAttributes(yLegend[0], {
         y: yPosition,
         x: xPosition,
-        transform:
-          "rotate(-90 " +
-          (position.x + height) +
-          " " +
-          (yPosition + height / 2) +
-          ")",
+        transform: "rotate(-90 " + (position.x + height) + " " + (yPosition + height / 2) + ")",
       });
     }
   }
 
   function placexAxisLabels(chart) {
-    var labels = chart.element
-      .getElementsByClassName("js-chart__axis-labels--x")[0]
-      .querySelectorAll(".js-chart__axis-label");
+    var labels = chart.element.getElementsByClassName("js-chart__axis-labels--x")[0].querySelectorAll(".js-chart__axis-label");
     var ticks = chart.element.getElementsByClassName("js-chart__tick-x");
 
     // increase rightDelta value
@@ -450,8 +363,7 @@
       maxWidth = getLabelMaxSize(labels, "width"),
       xDelta = chart.xAxisWidth / (labels.length - 1);
 
-    if (chart.options.type == "column")
-      xDelta = chart.xAxisWidth / labels.length;
+    if (chart.options.type == "column") xDelta = chart.xAxisWidth / labels.length;
 
     var totWidth = 0,
       height = 0;
@@ -506,14 +418,9 @@
     }
 
     // center x-axis label
-    var xLegend = chart.element.getElementsByClassName(
-      "js-chart__axis-legend--x"
-    );
+    var xLegend = chart.element.getElementsByClassName("js-chart__axis-legend--x");
     if (xLegend.length > 0 && isVisible(xLegend[0])) {
-      xLegend[0].setAttribute(
-        "x",
-        chart.leftDelta + 0.5 * (chart.xAxisWidth - xLegend[0].getBBox().width)
-      );
+      xLegend[0].setAttribute("x", chart.leftDelta + 0.5 * (chart.xAxisWidth - xLegend[0].getBBox().width));
     }
   }
 
@@ -521,8 +428,7 @@
     // there's not enough horiziontal space -> we need to rotate the x axis labels
     for (var i = 0; i < labels.length; i++) {
       var dimensions = labels[i].getBBox(),
-        xCenter =
-          parseFloat(labels[i].getAttribute("x")) + dimensions.width / 2,
+        xCenter = parseFloat(labels[i].getAttribute("x")) + dimensions.width / 2,
         yCenter = parseFloat(labels[i].getAttribute("y")) - delta;
 
       Util.setAttributes(labels[i], {
@@ -532,11 +438,7 @@
 
       ticks[i].setAttribute("transform", "translate(0 -" + delta + ")");
     }
-    if (ticks[labels.length])
-      ticks[labels.length].setAttribute(
-        "transform",
-        "translate(0 -" + delta + ")"
-      );
+    if (ticks[labels.length]) ticks[labels.length].setAttribute("transform", "translate(0 -" + delta + ")");
   }
 
   function setChartDatasets(chart) {
@@ -545,37 +447,18 @@
     chart.datasetScaled = [];
     for (var i = 0; i < chart.options.datasets.length; i++) {
       var gSet = document.createElementNS("http://www.w3.org/2000/svg", "g");
-      gSet.setAttribute(
-        "class",
-        "chart__set chart__set--" + (i + 1) + " js-chart__set"
-      );
-      chart.datasetScaled[i] = JSON.parse(
-        JSON.stringify(chart.options.datasets[i].data)
-      );
+      gSet.setAttribute("class", "chart__set chart__set--" + (i + 1) + " js-chart__set");
+      chart.datasetScaled[i] = JSON.parse(JSON.stringify(chart.options.datasets[i].data));
       chart.datasetScaled[i] = getChartData(chart, chart.datasetScaled[i]);
-      chart.datasetScaledFlat[i] = JSON.parse(
-        JSON.stringify(chart.datasetScaled[i])
-      );
+      chart.datasetScaledFlat[i] = JSON.parse(JSON.stringify(chart.datasetScaled[i]));
       if (chart.options.type == "area") {
-        chart.datasetAreaScaled[i] = getAreaPointsFromLine(
-          chart,
-          chart.datasetScaled[i]
-        );
-        chart.datasetAreaScaledFlat[i] = JSON.parse(
-          JSON.stringify(chart.datasetAreaScaled[i])
-        );
+        chart.datasetAreaScaled[i] = getAreaPointsFromLine(chart, chart.datasetScaled[i]);
+        chart.datasetAreaScaledFlat[i] = JSON.parse(JSON.stringify(chart.datasetAreaScaled[i]));
       }
       if (!chart.loaded && chart.options.animate) {
         flatDatasets(chart, i);
       }
-      gSet.appendChild(
-        getPath(
-          chart,
-          chart.datasetScaledFlat[i],
-          chart.datasetAreaScaledFlat[i],
-          i
-        )
-      );
+      gSet.appendChild(getPath(chart, chart.datasetScaledFlat[i], chart.datasetAreaScaledFlat[i], i));
       gSet.appendChild(getMarkers(chart, chart.datasetScaled[i], i));
       gEl.appendChild(gSet);
     }
@@ -588,19 +471,11 @@
     var points = multiSet ? data : addXData(data); // addXData is used for one-dimension dataset; e.g. [2, 4, 6] rather than [[2, 4], [4, 7]]
 
     // xOffsetChart used for column chart type onlymodified
-    var xOffsetChart =
-      chart.xAxisWidth / (points.length - 1) - chart.xAxisWidth / points.length;
+    var xOffsetChart = chart.xAxisWidth / (points.length - 1) - chart.xAxisWidth / points.length;
     // now modify the points to coordinate relative to the svg
     for (var i = 0; i < points.length; i++) {
-      var xNewCoordinate =
-          chart.leftDelta +
-          (chart.xAxisWidth * (points[i][0] - chart.xAxisInterval[0])) /
-            (chart.xAxisInterval[1] - chart.xAxisInterval[0]),
-        yNewCoordinate =
-          chart.height -
-          chart.bottomDelta -
-          (chart.yAxisHeight * (points[i][1] - chart.yAxisInterval[0])) /
-            (chart.yAxisInterval[1] - chart.yAxisInterval[0]);
+      var xNewCoordinate = chart.leftDelta + (chart.xAxisWidth * (points[i][0] - chart.xAxisInterval[0])) / (chart.xAxisInterval[1] - chart.xAxisInterval[0]),
+        yNewCoordinate = chart.height - chart.bottomDelta - (chart.yAxisHeight * (points[i][1] - chart.yAxisInterval[0])) / (chart.yAxisInterval[1] - chart.yAxisInterval[0]);
       if (chart.options.type == "column") {
         xNewCoordinate = xNewCoordinate - i * xOffsetChart;
       }
@@ -610,37 +485,22 @@
   }
 
   function getPath(chart, points, areaPoints, index) {
-    var pathCode = chart.options.smooth
-      ? getSmoothLine(points, false)
-      : getStraightLine(points);
+    var pathCode = chart.options.smooth ? getSmoothLine(points, false) : getStraightLine(points);
 
     var gEl = document.createElementNS("http://www.w3.org/2000/svg", "g"),
       pathL = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
     Util.setAttributes(pathL, {
       d: pathCode,
-      class:
-        "chart__data-line chart__data-line--" +
-        (index + 1) +
-        " js-chart__data-line--" +
-        (index + 1),
+      class: "chart__data-line chart__data-line--" + (index + 1) + " js-chart__data-line--" + (index + 1),
     });
 
     if (chart.options.type == "area") {
-      var areaCode = chart.options.smooth
-        ? getSmoothLine(areaPoints, true)
-        : getStraightLine(areaPoints);
-      var pathA = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
+      var areaCode = chart.options.smooth ? getSmoothLine(areaPoints, true) : getStraightLine(areaPoints);
+      var pathA = document.createElementNS("http://www.w3.org/2000/svg", "path");
       Util.setAttributes(pathA, {
         d: areaCode,
-        class:
-          "chart__data-fill chart__data-fill--" +
-          (index + 1) +
-          " js-chart__data-fill--" +
-          (index + 1),
+        class: "chart__data-fill chart__data-fill--" + (index + 1) + " js-chart__data-fill--" + (index + 1),
       });
       gEl.appendChild(pathA);
     }
@@ -652,10 +512,7 @@
   function getStraightLine(points) {
     var dCode = "";
     for (var i = 0; i < points.length; i++) {
-      dCode =
-        i == 0
-          ? "M " + points[0][0] + "," + points[0][1]
-          : dCode + " L " + points[i][0] + "," + points[i][1];
+      dCode = i == 0 ? "M " + points[0][0] + "," + points[0][1] : dCode + " L " + points[i][0] + "," + points[i][1];
     }
     return dCode;
   }
@@ -663,16 +520,10 @@
   function flatDatasets(chart, index) {
     var bottomY = getBottomFlatDatasets(chart);
     for (var i = 0; i < chart.datasetScaledFlat[index].length; i++) {
-      chart.datasetScaledFlat[index][i] = [
-        chart.datasetScaled[index][i][0],
-        bottomY,
-      ];
+      chart.datasetScaledFlat[index][i] = [chart.datasetScaled[index][i][0], bottomY];
     }
     if (chart.options.type == "area") {
-      chart.datasetAreaScaledFlat[index] = getAreaPointsFromLine(
-        chart,
-        chart.datasetScaledFlat[index]
-      );
+      chart.datasetAreaScaledFlat[index] = getAreaPointsFromLine(chart, chart.datasetScaledFlat[index]);
     }
   }
 
@@ -724,20 +575,7 @@
   function bezierCommand(point, i, a) {
     var cps = pathControlPoint(a[i - 1], a[i - 2], point);
     var cpe = pathControlPoint(point, a[i - 1], a[i + 1], true);
-    return (
-      "C " +
-      cps[0] +
-      "," +
-      cps[1] +
-      " " +
-      cpe[0] +
-      "," +
-      cpe[1] +
-      " " +
-      point[0] +
-      "," +
-      point[1]
-    );
+    return "C " + cps[0] + "," + cps[1] + " " + cpe[0] + "," + cpe[1] + " " + point[0] + "," + point[1];
   }
 
   function getAreaPointsFromLine(chart, array) {
@@ -755,11 +593,7 @@
   function getBottomFlatDatasets(chart) {
     var bottom = chart.height - chart.bottomDelta;
     if (chart.options.fillOrigin) {
-      bottom =
-        chart.height -
-        chart.bottomDelta -
-        (chart.yAxisHeight * (0 - chart.yAxisInterval[0])) /
-          (chart.yAxisInterval[1] - chart.yAxisInterval[0]);
+      bottom = chart.height - chart.bottomDelta - (chart.yAxisHeight * (0 - chart.yAxisInterval[0])) / (chart.yAxisInterval[1] - chart.yAxisInterval[0]);
     }
     if (chart.options.type && chart.options.type == "column") {
       bottom = chart.yZero;
@@ -775,10 +609,7 @@
       xOffset = (0.5 * chart.xAxisWidth) / points.length;
     }
     for (var i = 0; i < points.length; i++) {
-      var marker = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "circle"
-      );
+      var marker = document.createElementNS("http://www.w3.org/2000/svg", "circle");
       Util.setAttributes(marker, {
         class: "chart__marker js-chart__marker chart__marker--" + (index + 1),
         cx: points[i][0] + xOffset,
@@ -811,46 +642,22 @@
   }
 
   function createDataTable(chart, index) {
-    var tableTitle =
-      chart.categories.length > index
-        ? 'aria-label="' + chart.categories.length[index].textContent + '"'
-        : "";
+    var tableTitle = chart.categories.length > index ? 'aria-label="' + chart.categories.length[index].textContent + '"' : "";
     var table = "<table " + tableTitle + "><thead><tr>";
-    table =
-      chart.options.xAxis && chart.options.xAxis.legend
-        ? table + '<th scope="col">' + chart.options.xAxis.legend + "</th>"
-        : table + '<th scope="col"></th>';
+    table = chart.options.xAxis && chart.options.xAxis.legend ? table + '<th scope="col">' + chart.options.xAxis.legend + "</th>" : table + '<th scope="col"></th>';
 
-    table =
-      chart.options.yAxis && chart.options.yAxis.legend
-        ? table + '<th scope="col">' + chart.options.yAxis.legend + "</th>"
-        : table + '<th scope="col"></th>';
+    table = chart.options.yAxis && chart.options.yAxis.legend ? table + '<th scope="col">' + chart.options.yAxis.legend + "</th>" : table + '<th scope="col"></th>';
 
     table = table + "</thead><tbody>";
     var multiset = chart.options.datasets[index].data[0].length > 1,
-      xAxisLabels =
-        chart.options.xAxis &&
-        chart.options.xAxis.labels &&
-        chart.options.xAxis.labels.length > 1;
+      xAxisLabels = chart.options.xAxis && chart.options.xAxis.labels && chart.options.xAxis.labels.length > 1;
     for (var i = 0; i < chart.options.datasets[index].data.length; i++) {
       table = table + "<tr>";
       if (multiset) {
-        table =
-          table +
-          '<td role="cell">' +
-          chart.options.datasets[index].data[i][0] +
-          '</td><td role="cell">' +
-          chart.options.datasets[index].data[i][1] +
-          "</td>";
+        table = table + '<td role="cell">' + chart.options.datasets[index].data[i][0] + '</td><td role="cell">' + chart.options.datasets[index].data[i][1] + "</td>";
       } else {
         var xValue = xAxisLabels ? chart.options.xAxis.labels[i] : i + 1;
-        table =
-          table +
-          '<td role="cell">' +
-          xValue +
-          '</td><td role="cell">' +
-          chart.options.datasets[index].data[i] +
-          "</td>";
+        table = table + '<td role="cell">' + xValue + '</td><td role="cell">' + chart.options.datasets[index].data[i] + "</td>";
       }
       table = table + "</tr>";
     }
@@ -861,51 +668,24 @@
   function getChartYLabels(chart) {
     var labels = [],
       intervals = 0;
-    if (
-      chart.options.yAxis &&
-      chart.options.yAxis.range &&
-      chart.options.yAxis.step
-    ) {
-      intervals = Math.ceil(
-        (chart.options.yAxis.range[1] - chart.options.yAxis.range[0]) /
-          chart.options.yAxis.step
-      );
+    if (chart.options.yAxis && chart.options.yAxis.range && chart.options.yAxis.step) {
+      intervals = Math.ceil((chart.options.yAxis.range[1] - chart.options.yAxis.range[0]) / chart.options.yAxis.step);
       for (var i = 0; i <= intervals; i++) {
-        labels.push(
-          chart.options.yAxis.range[0] + chart.options.yAxis.step * i
-        );
+        labels.push(chart.options.yAxis.range[0] + chart.options.yAxis.step * i);
       }
-      chart.yAxisInterval = [
-        chart.options.yAxis.range[0],
-        chart.options.yAxis.range[1],
-      ];
+      chart.yAxisInterval = [chart.options.yAxis.range[0], chart.options.yAxis.range[1]];
     } else {
-      var columnChartStacked =
-        chart.options.type &&
-        chart.options.type == "column" &&
-        chart.options.stacked;
+      var columnChartStacked = chart.options.type && chart.options.type == "column" && chart.options.stacked;
       if (columnChartStacked) setDatasetsSum(chart);
-      var min = columnChartStacked
-        ? getColStackedMinDataValue(chart)
-        : getMinDataValue(chart, true);
-      var max = columnChartStacked
-        ? getColStackedMaxDataValue(chart)
-        : getMaxDataValue(chart, true);
+      var min = columnChartStacked ? getColStackedMinDataValue(chart) : getMinDataValue(chart, true);
+      var max = columnChartStacked ? getColStackedMaxDataValue(chart) : getMaxDataValue(chart, true);
       var niceScale = new NiceScale(min, max, 5);
-      var intervals = Math.ceil(
-        (niceScale.getNiceUpperBound() - niceScale.getNiceLowerBound()) /
-          niceScale.getTickSpacing()
-      );
+      var intervals = Math.ceil((niceScale.getNiceUpperBound() - niceScale.getNiceLowerBound()) / niceScale.getTickSpacing());
 
       for (var i = 0; i <= intervals; i++) {
-        labels.push(
-          niceScale.getNiceLowerBound() + niceScale.getTickSpacing() * i
-        );
+        labels.push(niceScale.getNiceLowerBound() + niceScale.getTickSpacing() * i);
       }
-      chart.yAxisInterval = [
-        niceScale.getNiceLowerBound(),
-        niceScale.getNiceUpperBound(),
-      ];
+      chart.yAxisInterval = [niceScale.getNiceLowerBound(), niceScale.getNiceUpperBound()];
     }
     return labels;
   }
@@ -913,28 +693,13 @@
   function getChartXLabels(chart) {
     var labels = [],
       intervals = 0;
-    if (
-      chart.options.xAxis &&
-      chart.options.xAxis.range &&
-      chart.options.xAxis.step
-    ) {
-      intervals = Math.ceil(
-        (chart.options.xAxis.range[1] - chart.options.xAxis.range[0]) /
-          chart.options.xAxis.step
-      );
+    if (chart.options.xAxis && chart.options.xAxis.range && chart.options.xAxis.step) {
+      intervals = Math.ceil((chart.options.xAxis.range[1] - chart.options.xAxis.range[0]) / chart.options.xAxis.step);
       for (var i = 0; i <= intervals; i++) {
-        labels.push(
-          chart.options.xAxis.range[0] + chart.options.xAxis.step * i
-        );
+        labels.push(chart.options.xAxis.range[0] + chart.options.xAxis.step * i);
       }
-      chart.xAxisInterval = [
-        chart.options.xAxis.range[0],
-        chart.options.xAxis.range[1],
-      ];
-    } else if (
-      !chart.options.datasets[0].data[0].length ||
-      chart.options.datasets[0].data[0].length < 2
-    ) {
+      chart.xAxisInterval = [chart.options.xAxis.range[0], chart.options.xAxis.range[1]];
+    } else if (!chart.options.datasets[0].data[0].length || chart.options.datasets[0].data[0].length < 2) {
       // data sets are passed with a single value (y axis only)
       chart.xAxisInterval = [0, chart.options.datasets[0].data.length - 1];
       for (var i = 0; i < chart.options.datasets[0].data.length; i++) {
@@ -944,20 +709,12 @@
       var min = getMinDataValue(chart, false);
       var max = getMaxDataValue(chart, false);
       var niceScale = new NiceScale(min, max, 5);
-      var intervals = Math.ceil(
-        (niceScale.getNiceUpperBound() - niceScale.getNiceLowerBound()) /
-          niceScale.getTickSpacing()
-      );
+      var intervals = Math.ceil((niceScale.getNiceUpperBound() - niceScale.getNiceLowerBound()) / niceScale.getTickSpacing());
 
       for (var i = 0; i <= intervals; i++) {
-        labels.push(
-          niceScale.getNiceLowerBound() + niceScale.getTickSpacing() * i
-        );
+        labels.push(niceScale.getNiceLowerBound() + niceScale.getTickSpacing() * i);
       }
-      chart.xAxisInterval = [
-        niceScale.getNiceLowerBound(),
-        niceScale.getNiceUpperBound(),
-      ];
+      chart.xAxisInterval = [niceScale.getNiceLowerBound(), niceScale.getNiceUpperBound()];
     }
     return labels;
   }
@@ -1003,10 +760,7 @@
     chart.datasetsSum = [];
     for (var i = 0; i < chart.options.datasets.length; i++) {
       for (var j = 0; j < chart.options.datasets[i].data.length; j++) {
-        chart.datasetsSum[j] =
-          i == 0
-            ? chart.options.datasets[i].data[j]
-            : chart.datasetsSum[j] + chart.options.datasets[i].data[j];
+        chart.datasetsSum[j] = i == 0 ? chart.options.datasets[i].data[j] : chart.datasetsSum[j] + chart.options.datasets[i].data[j];
       }
     }
   }
@@ -1138,10 +892,7 @@
 
     // create tooltip line
     if (chart.options.yIndicator) {
-      var tooltipLine = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "line"
-      );
+      var tooltipLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
       Util.setAttributes(tooltipLine, {
         x1: 0,
         y1: chart.topDelta,
@@ -1150,26 +901,16 @@
         transform: "translate(" + chart.leftDelta + " " + chart.topDelta + ")",
         class: "chart__y-indicator js-chart__y-indicator is-hidden",
       });
-      chart.svg.insertBefore(
-        tooltipLine,
-        chart.element.getElementsByClassName("js-chart__dataset")[0]
-      );
-      chart.interLine = chart.element.getElementsByClassName(
-        "js-chart__y-indicator"
-      )[0];
+      chart.svg.insertBefore(tooltipLine, chart.element.getElementsByClassName("js-chart__dataset")[0]);
+      chart.interLine = chart.element.getElementsByClassName("js-chart__y-indicator")[0];
     }
 
     // create tooltip
     if (chart.tooltipOn) {
       var tooltip = document.createElement("div");
-      tooltip.setAttribute(
-        "class",
-        "chart__tooltip js-chart__tooltip is-hidden " + chart.tooltipClasses
-      );
+      tooltip.setAttribute("class", "chart__tooltip js-chart__tooltip is-hidden " + chart.tooltipClasses);
       chart.element.appendChild(tooltip);
-      chart.tooltip = chart.element.getElementsByClassName(
-        "js-chart__tooltip"
-      )[0];
+      chart.tooltip = chart.element.getElementsByClassName("js-chart__tooltip")[0];
     }
     initChartHover(chart);
   }
@@ -1177,9 +918,7 @@
   function initChartHover(chart) {
     if (!chart.options.yIndicator && !chart.tooltipOn) return;
     // init hover effect
-    chart.chartArea = chart.element.getElementsByClassName(
-      "js-chart__axis-labels--y"
-    )[0];
+    chart.chartArea = chart.element.getElementsByClassName("js-chart__axis-labels--y")[0];
     chart.eventIds["hover"] = handleEvent.bind(chart);
     chart.chartArea.addEventListener("mouseenter", chart.eventIds["hover"]);
     chart.chartArea.addEventListener("mousemove", chart.eventIds["hover"]);
@@ -1208,10 +947,7 @@
 
       if (chart.options.yIndicator) {
         Util.removeClass(chart.interLine, "is-hidden");
-        chart.interLine.setAttribute(
-          "transform",
-          "translate(" + (markerSize.x + markerSize.width / 2) + " 0)"
-        );
+        chart.interLine.setAttribute("transform", "translate(" + (markerSize.x + markerSize.width / 2) + " 0)");
       }
 
       if (chart.tooltipOn) {
@@ -1242,9 +978,7 @@
 
   function resetTooltip(chart) {
     if (chart.hoverId) {
-      window.requestAnimationFrame
-        ? window.cancelAnimationFrame(chart.hoverId)
-        : clearTimeout(chart.hoverId);
+      window.requestAnimationFrame ? window.cancelAnimationFrame(chart.hoverId) : clearTimeout(chart.hoverId);
       chart.hoverId = false;
     }
     if (chart.tooltipOn) Util.addClass(chart.tooltip, "is-hidden");
@@ -1258,12 +992,7 @@
 
   function resetMarkers(chart, bool) {
     for (var i = 0; i < chart.markers.length; i++) {
-      if (chart.markers[i] && chart.markers[i][chart.selectedMarker])
-        Util.toggleClass(
-          chart.markers[i][chart.selectedMarker],
-          chart.selectedMarkerClass,
-          bool
-        );
+      if (chart.markers[i] && chart.markers[i][chart.selectedMarker]) Util.toggleClass(chart.markers[i][chart.selectedMarker], chart.selectedMarkerClass, bool);
     }
   }
 
@@ -1271,46 +1000,27 @@
     // for column/bar chart -> change opacity on hover
     if (!chart.options.type || chart.options.type != "column") return;
     for (var i = 0; i < chart.bars.length; i++) {
-      if (chart.bars[i] && chart.bars[i][chart.selectedMarker])
-        Util.toggleClass(
-          chart.bars[i][chart.selectedMarker],
-          chart.selectedBarClass,
-          bool
-        );
+      if (chart.bars[i] && chart.bars[i][chart.selectedMarker]) Util.toggleClass(chart.bars[i][chart.selectedMarker], chart.selectedBarClass, bool);
     }
   }
 
   function setTooltipHTML(chart) {
     var selectedMarker = chart.markers[0][chart.selectedMarker];
-    chart.tooltip.innerHTML = getTooltipHTML(
-      chart,
-      selectedMarker.getAttribute("data-index"),
-      selectedMarker.getAttribute("data-set")
-    );
+    chart.tooltip.innerHTML = getTooltipHTML(chart, selectedMarker.getAttribute("data-index"), selectedMarker.getAttribute("data-set"));
   }
 
   function getTooltipHTML(chart, index, setIndex) {
     var htmlContent = "";
     if (chart.options.tooltip.customHTML) {
-      htmlContent = chart.options.tooltip.customHTML(
-        index,
-        chart.options,
-        setIndex
-      );
+      htmlContent = chart.options.tooltip.customHTML(index, chart.options, setIndex);
     } else {
       var multiVal = chart.options.datasets[setIndex].data[index].length > 1;
-      if (
-        chart.options.xAxis &&
-        chart.options.xAxis.labels &&
-        chart.options.xAxis.labels.length > 1
-      ) {
+      if (chart.options.xAxis && chart.options.xAxis.labels && chart.options.xAxis.labels.length > 1) {
         htmlContent = chart.options.xAxis.labels[index] + " - ";
       } else if (multiVal) {
         htmlContent = chart.options.datasets[setIndex].data[index][0] + " - ";
       }
-      htmlContent = multiVal
-        ? htmlContent + chart.options.datasets[setIndex].data[index][1]
-        : htmlContent + chart.options.datasets[setIndex].data[index];
+      htmlContent = multiVal ? htmlContent + chart.options.datasets[setIndex].data[index][1] : htmlContent + chart.options.datasets[setIndex].data[index];
     }
     return htmlContent;
   }
@@ -1322,52 +1032,29 @@
     var svgPosition = chart.svg.getBoundingClientRect();
 
     if (chart.options.type == "column") {
-      tooltipPositionColumnChart(
-        chart,
-        selectedMarker,
-        markerPosition,
-        markerPositionSVG
-      );
+      tooltipPositionColumnChart(chart, selectedMarker, markerPosition, markerPositionSVG);
     } else {
-      tooltipPositionChart(
-        chart,
-        markerPosition,
-        markerPositionSVG,
-        svgPosition.left,
-        svgPosition.width
-      );
+      tooltipPositionChart(chart, markerPosition, markerPositionSVG, svgPosition.left, svgPosition.width);
     }
   }
 
-  function tooltipPositionChart(
-    chart,
-    markerPosition,
-    markerPositionSVG,
-    svgPositionLeft,
-    svgPositionWidth
-  ) {
+  function tooltipPositionChart(chart, markerPosition, markerPositionSVG, svgPositionLeft, svgPositionWidth) {
     // set top/left/transform of the tooltip for line/area charts
     // horizontal position
     if (markerPosition.left - svgPositionLeft <= svgPositionWidth / 2) {
-      chart.tooltip.style.left =
-        markerPositionSVG.x + markerPositionSVG.width + 2 + "px";
+      chart.tooltip.style.left = markerPositionSVG.x + markerPositionSVG.width + 2 + "px";
       chart.tooltip.style.right = "auto";
       chart.tooltip.style.transform = "translateY(-100%)";
     } else {
       chart.tooltip.style.left = "auto";
-      chart.tooltip.style.right =
-        svgPositionWidth - markerPositionSVG.x + 2 + "px";
+      chart.tooltip.style.right = svgPositionWidth - markerPositionSVG.x + 2 + "px";
       chart.tooltip.style.transform = "translateY(-100%)";
     }
     // vertical position
     if (!chart.tooltipPosition) {
       chart.tooltip.style.top = markerPositionSVG.y + "px";
     } else if (chart.tooltipPosition == "top") {
-      chart.tooltip.style.top =
-        chart.topDelta +
-        chart.tooltip.getBoundingClientRect().height +
-        5 +
-        "px";
+      chart.tooltip.style.top = chart.topDelta + chart.tooltip.getBoundingClientRect().height + 5 + "px";
       chart.tooltip.style.bottom = "auto";
     } else {
       chart.tooltip.style.top = "auto";
@@ -1376,32 +1063,21 @@
     }
   }
 
-  function tooltipPositionColumnChart(
-    chart,
-    marker,
-    markerPosition,
-    markerPositionSVG
-  ) {
+  function tooltipPositionColumnChart(chart, marker, markerPosition, markerPositionSVG) {
     // set top/left/transform of the tooltip for column charts
-    chart.tooltip.style.left =
-      markerPositionSVG.x + markerPosition.width / 2 + "px";
+    chart.tooltip.style.left = markerPositionSVG.x + markerPosition.width / 2 + "px";
     chart.tooltip.style.right = "auto";
     chart.tooltip.style.transform = "translateX(-50%) translateY(-100%)";
     if (!chart.tooltipPosition) {
       if (parseInt(marker.getAttribute("cy")) > chart.yZero) {
         // negative value -> move tooltip below the bar
-        chart.tooltip.style.top =
-          markerPositionSVG.y + markerPositionSVG.height + 6 + "px";
+        chart.tooltip.style.top = markerPositionSVG.y + markerPositionSVG.height + 6 + "px";
         chart.tooltip.style.transform = "translateX(-50%)";
       } else {
         chart.tooltip.style.top = markerPositionSVG.y - 6 + "px";
       }
     } else if (chart.tooltipPosition == "top") {
-      chart.tooltip.style.top =
-        chart.topDelta +
-        chart.tooltip.getBoundingClientRect().height +
-        5 +
-        "px";
+      chart.tooltip.style.top = chart.topDelta + chart.tooltip.getBoundingClientRect().height + 5 + "px";
       chart.tooltip.style.bottom = "auto";
     } else {
       chart.tooltip.style.bottom = chart.bottomDelta + 5 + "px";
@@ -1453,22 +1129,13 @@
       if (progress > duration) progress = duration;
       for (var i = 0; i < finalArray.length; i++) {
         var points = [];
-        var path = chart.element.getElementsByClassName(
-          "js-chart__data-" + type + "--" + (i + 1)
-        )[0];
+        var path = chart.element.getElementsByClassName("js-chart__data-" + type + "--" + (i + 1))[0];
         for (var j = 0; j < finalArray[i].length; j++) {
-          var val = Math.easeOutQuart(
-            progress,
-            startArray[i][j][1],
-            finalArray[i][j][1] - startArray[i][j][1],
-            duration
-          );
+          var val = Math.easeOutQuart(progress, startArray[i][j][1], finalArray[i][j][1] - startArray[i][j][1], duration);
           points[j] = [finalArray[i][j][0], val];
         }
         // get path and animate
-        var pathCode = chart.options.smooth
-          ? getSmoothLine(points, type == "fill")
-          : getStraightLine(points);
+        var pathCode = chart.options.smooth ? getSmoothLine(points, type == "fill") : getStraightLine(points);
         path.setAttribute("d", pathCode);
       }
       if (progress < duration) {
@@ -1499,15 +1166,9 @@
     chart.dragging = false;
     // reset event listeners
     if (chart.eventIds && chart.eventIds["hover"]) {
-      chart.chartArea.removeEventListener(
-        "mouseenter",
-        chart.eventIds["hover"]
-      );
+      chart.chartArea.removeEventListener("mouseenter", chart.eventIds["hover"]);
       chart.chartArea.removeEventListener("mousemove", chart.eventIds["hover"]);
-      chart.chartArea.removeEventListener(
-        "mouseleave",
-        chart.eventIds["hover"]
-      );
+      chart.chartArea.removeEventListener("mouseleave", chart.eventIds["hover"]);
       chart.element.removeEventListener("dragStart", chart.eventIds["hover"]);
       chart.element.removeEventListener("dragging", chart.eventIds["hover"]);
       chart.element.removeEventListener("dragEnd", chart.eventIds["hover"]);
@@ -1551,20 +1212,12 @@
     chart.extDataYInit = [];
     if (chart.options.datasets.length > 1) {
       for (var i = 0; i < chart.options.datasets.length; i++) {
-        chart.extDataX[i] = document.querySelectorAll(
-          ".js-ext-chart-data-x--" + (i + 1) + '[data-chart="' + chartId + '"]'
-        );
-        chart.extDataY[i] = document.querySelectorAll(
-          ".js-ext-chart-data-y--" + (i + 1) + '[data-chart="' + chartId + '"]'
-        );
+        chart.extDataX[i] = document.querySelectorAll(".js-ext-chart-data-x--" + (i + 1) + '[data-chart="' + chartId + '"]');
+        chart.extDataY[i] = document.querySelectorAll(".js-ext-chart-data-y--" + (i + 1) + '[data-chart="' + chartId + '"]');
       }
     } else {
-      chart.extDataX[0] = document.querySelectorAll(
-        '.js-ext-chart-data-x[data-chart="' + chartId + '"]'
-      );
-      chart.extDataY[0] = document.querySelectorAll(
-        '.js-ext-chart-data-y[data-chart="' + chartId + '"]'
-      );
+      chart.extDataX[0] = document.querySelectorAll('.js-ext-chart-data-x[data-chart="' + chartId + '"]');
+      chart.extDataY[0] = document.querySelectorAll('.js-ext-chart-data-y[data-chart="' + chartId + '"]');
     }
     // store initial HTML contentent
     storeExternalDataContent(chart, chart.extDataX, chart.extDataXInit);
@@ -1594,17 +1247,9 @@
     if (!chart.extDataX[setIndex] || !chart.extDataX[setIndex][0]) return;
     var value = "";
     if (chart.options.externalData.customXHTML) {
-      value = chart.options.externalData.customXHTML(
-        dataIndex,
-        chart.options,
-        setIndex
-      );
+      value = chart.options.externalData.customXHTML(dataIndex, chart.options, setIndex);
     } else {
-      if (
-        chart.options.xAxis &&
-        chart.options.xAxis.labels &&
-        chart.options.xAxis.labels.length > 1
-      ) {
+      if (chart.options.xAxis && chart.options.xAxis.labels && chart.options.xAxis.labels.length > 1) {
         value = chart.options.xAxis.labels[dataIndex];
       } else if (multiVal) {
         htmlContent = chart.options.datasets[setIndex].data[dataIndex][0];
@@ -1617,11 +1262,7 @@
     if (!chart.extDataY[setIndex] || !chart.extDataY[setIndex][0]) return;
     var value = "";
     if (chart.options.externalData.customYHTML) {
-      value = chart.options.externalData.customYHTML(
-        dataIndex,
-        chart.options,
-        setIndex
-      );
+      value = chart.options.externalData.customYHTML(dataIndex, chart.options, setIndex);
     } else {
       if (multiVal) {
         value = chart.options.datasets[setIndex].data[dataIndex][1];
@@ -1635,10 +1276,8 @@
   function resetExternalData(chart) {
     if (!chart.options.externalData) return;
     for (var i = 0; i < chart.options.datasets.length; i++) {
-      if (chart.extDataX[i][0])
-        chart.extDataX[i][0].innerHTML = chart.extDataXInit[i][0];
-      if (chart.extDataY[i][0])
-        chart.extDataY[i][0].innerHTML = chart.extDataYInit[i][0];
+      if (chart.extDataX[i][0]) chart.extDataX[i][0].innerHTML = chart.extDataXInit[i][0];
+      if (chart.extDataY[i][0]) chart.extDataY[i][0].innerHTML = chart.extDataYInit[i][0];
     }
   }
 
@@ -1654,9 +1293,7 @@
   }
 
   function resetColumnChart(chart) {
-    var labels = chart.element
-        .getElementsByClassName("js-chart__axis-labels--x")[0]
-        .querySelectorAll(".js-chart__axis-label"),
+    var labels = chart.element.getElementsByClassName("js-chart__axis-labels--x")[0].querySelectorAll(".js-chart__axis-label"),
       labelsVisible = isVisible(labels[labels.length - 1]),
       xDelta = chart.xAxisWidth / labels.length;
 
@@ -1669,9 +1306,7 @@
     if (chart.options.stacked) {
       chart.columnWidth = columnsSpace;
     } else {
-      chart.columnWidth =
-        (columnsSpace - chart.columnGap * (chart.options.datasets.length - 1)) /
-        chart.options.datasets.length;
+      chart.columnWidth = (columnsSpace - chart.columnGap * (chart.options.datasets.length - 1)) / chart.options.datasets.length;
     }
 
     chart.columnDelta = (xDelta - columnsSpace) / 2;
@@ -1695,17 +1330,10 @@
 
     for (var i = 0; i < chart.options.datasets.length; i++) {
       var gSet = document.createElementNS("http://www.w3.org/2000/svg", "g");
-      gSet.setAttribute(
-        "class",
-        "chart__set chart__set--" + (i + 1) + " js-chart__set"
-      );
-      chart.datasetScaled[i] = JSON.parse(
-        JSON.stringify(chart.options.datasets[i].data)
-      );
+      gSet.setAttribute("class", "chart__set chart__set--" + (i + 1) + " js-chart__set");
+      chart.datasetScaled[i] = JSON.parse(JSON.stringify(chart.options.datasets[i].data));
       chart.datasetScaled[i] = getChartData(chart, chart.datasetScaled[i]);
-      chart.datasetScaledFlat[i] = JSON.parse(
-        JSON.stringify(chart.datasetScaled[i])
-      );
+      chart.datasetScaledFlat[i] = JSON.parse(JSON.stringify(chart.datasetScaled[i]));
       if (!chart.loaded && chart.options.animate) {
         flatDatasets(chart, i);
       }
@@ -1721,11 +1349,7 @@
     // if there are negative values -> make sre columns start from zero
     chart.yZero = chart.height - chart.bottomDelta;
     if (chart.yAxisInterval[0] < 0) {
-      chart.yZero =
-        chart.height -
-        chart.bottomDelta +
-        (chart.yAxisHeight * chart.yAxisInterval[0]) /
-          (chart.yAxisInterval[1] - chart.yAxisInterval[0]);
+      chart.yZero = chart.height - chart.bottomDelta + (chart.yAxisHeight * chart.yAxisInterval[0]) / (chart.yAxisInterval[1] - chart.yAxisInterval[0]);
     }
   }
 
@@ -1733,38 +1357,14 @@
     var gEl = document.createElementNS("http://www.w3.org/2000/svg", "g");
 
     for (var i = 0; i < dataset.length; i++) {
-      var pathL = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
-      var points = getColumnPoints(
-        chart,
-        dataset[i],
-        index,
-        i,
-        chart.datasetScaledFlat
-      );
-      var lineType =
-        chart.options.column && chart.options.column.radius
-          ? "round"
-          : "square";
-      if (
-        lineType == "round" &&
-        chart.options.stacked &&
-        index < chart.options.datasets.length - 1
-      )
-        lineType = "square";
-      var dPath =
-        lineType == "round"
-          ? getRoundedColumnRect(chart, points)
-          : getStraightLine(points);
+      var pathL = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      var points = getColumnPoints(chart, dataset[i], index, i, chart.datasetScaledFlat);
+      var lineType = chart.options.column && chart.options.column.radius ? "round" : "square";
+      if (lineType == "round" && chart.options.stacked && index < chart.options.datasets.length - 1) lineType = "square";
+      var dPath = lineType == "round" ? getRoundedColumnRect(chart, points) : getStraightLine(points);
       Util.setAttributes(pathL, {
         d: dPath,
-        class:
-          "chart__data-bar chart__data-bar--" +
-          (index + 1) +
-          " js-chart__data-bar js-chart__data-bar--" +
-          (index + 1),
+        class: "chart__data-bar chart__data-bar--" + (index + 1) + " js-chart__data-bar js-chart__data-bar--" + (index + 1),
       });
       gEl.appendChild(pathL);
     }
@@ -1772,8 +1372,7 @@
   }
 
   function getColumnPoints(chart, point, index, pointIndex, dataSetsAll) {
-    var xOffset =
-        chart.columnDelta + index * (chart.columnWidth + chart.columnGap),
+    var xOffset = chart.columnDelta + index * (chart.columnWidth + chart.columnGap),
       yOffset = 0;
 
     if (chart.options.stacked) {
@@ -1792,10 +1391,7 @@
   function getyOffsetColChart(chart, dataSetsAll, index, pointIndex) {
     var offset = 0;
     for (var i = 0; i < index; i++) {
-      if (dataSetsAll[i] && dataSetsAll[i][pointIndex])
-        offset =
-          offset +
-          (chart.height - chart.bottomDelta - dataSetsAll[i][pointIndex][1]);
+      if (dataSetsAll[i] && dataSetsAll[i][pointIndex]) offset = offset + (chart.height - chart.bottomDelta - dataSetsAll[i][pointIndex][1]);
     }
     return offset;
   }
@@ -1814,31 +1410,9 @@
     }
     var dpath = "M " + points[0][0] + " " + points[0][1];
     dpath = dpath + " V " + rectHeight;
-    dpath =
-      dpath +
-      " a " +
-      radius +
-      "," +
-      radius +
-      "," +
-      arcType +
-      "," +
-      radius +
-      deltaArc1 +
-      radius;
+    dpath = dpath + " a " + radius + "," + radius + "," + arcType + "," + radius + deltaArc1 + radius;
     dpath = dpath + " H " + (points[2][0] - radius);
-    dpath =
-      dpath +
-      " a " +
-      radius +
-      "," +
-      radius +
-      "," +
-      arcType +
-      "," +
-      radius +
-      deltaArc2 +
-      radius;
+    dpath = dpath + " a " + radius + "," + radius + "," + arcType + "," + radius + deltaArc2 + radius;
     dpath = dpath + " V " + points[3][1];
     return dpath;
   }
@@ -1858,39 +1432,15 @@
       for (var i = 0; i < finalArray.length; i++) {
         // multi sets
         var points = [];
-        var paths = chart.element.getElementsByClassName(
-          "js-chart__data-bar--" + (i + 1)
-        );
-        var rectLine =
-          chart.options.column && chart.options.column.radius
-            ? "round"
-            : "square";
-        if (
-          chart.options.stacked &&
-          rectLine == "round" &&
-          i < finalArray.length - 1
-        )
-          rectLine = "square";
+        var paths = chart.element.getElementsByClassName("js-chart__data-bar--" + (i + 1));
+        var rectLine = chart.options.column && chart.options.column.radius ? "round" : "square";
+        if (chart.options.stacked && rectLine == "round" && i < finalArray.length - 1) rectLine = "square";
         for (var j = 0; j < finalArray[i].length; j++) {
-          var val = Math.easeOutQuart(
-            progress,
-            startArray[i][j][1],
-            finalArray[i][j][1] - startArray[i][j][1],
-            duration
-          );
+          var val = Math.easeOutQuart(progress, startArray[i][j][1], finalArray[i][j][1] - startArray[i][j][1], duration);
           points[j] = [finalArray[i][j][0], val];
           // get path and animate
-          var rectPoints = getColumnPoints(
-            chart,
-            points[j],
-            i,
-            j,
-            multiSetPoint
-          );
-          var dPath =
-            rectLine == "round"
-              ? getRoundedColumnRect(chart, rectPoints)
-              : getStraightLine(rectPoints);
+          var rectPoints = getColumnPoints(chart, points[j], i, j, multiSetPoint);
+          var dPath = rectLine == "round" ? getRoundedColumnRect(chart, rectPoints) : getStraightLine(rectPoints);
           paths[j].setAttribute("d", dPath);
         }
 
@@ -1925,8 +1475,5 @@
 
   window.Chart = Chart;
 
-  var intObservSupported =
-    "IntersectionObserver" in window &&
-    "IntersectionObserverEntry" in window &&
-    "intersectionRatio" in window.IntersectionObserverEntry.prototype;
+  var intObservSupported = "IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype;
 })();

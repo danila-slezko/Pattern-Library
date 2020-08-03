@@ -10,71 +10,82 @@
   "default": "h1",
   "variants": [
     {
-      "label": "H1", "name": "h1",
+      "label": "H1",
+      "name": "h1",
       "context": {
         "headingText": "h1, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "H2", "name": "h2",
+      "label": "H2",
+      "name": "h2",
       "context": {
         "headingText": "h2, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "H3", "name": "h3",
+      "label": "H3",
+      "name": "h3",
       "context": {
         "headingText": "h3, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "H4", "name": "h4",
+      "label": "H4",
+      "name": "h4",
       "context": {
         "headingText": "h4, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "H5", "name": "h5",
+      "label": "H5",
+      "name": "h5",
       "context": {
         "headingText": "h5, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "H6", "name": "h6",
+      "label": "H6",
+      "name": "h6",
       "context": {
         "headingText": "h6, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "4X", "name": "xxxxl",
+      "label": "4X",
+      "name": "xxxxl",
       "context": {
-       "typeModifier": "text-xxxxl text-truncate",
-       "headingText": "text-xxxxl, Lorem ipsum dolor sit amet"
-     }
+        "typeModifier": "text-xxxxl text-truncate",
+        "headingText": "text-xxxxl, Lorem ipsum dolor sit amet"
+      }
     },
     {
-      "label": "3X", "name": "xxxl",
+      "label": "3X",
+      "name": "xxxl",
       "context": {
         "typeModifier": "text-xxxl text-truncate",
         "headingText": "text-xxxl, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "2X", "name": "xxl",
+      "label": "2X",
+      "name": "xxl",
       "context": {
         "typeModifier": "text-xxl text-truncate",
         "headingText": "text-xxl, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "1X", "name": "xl",
+      "label": "1X",
+      "name": "xl",
       "context": {
         "typeModifier": "text-xl text-truncate",
         "headingText": "text-xl, Lorem ipsum dolor sit amet"
       }
     },
     {
-      "label": "LG", "name": "lg",
+      "label": "LG",
+      "name": "lg",
       "context": {
         "typeModifier": "text-lg text-truncate",
         "headingText": "text-lg, Lorem ipsum dolor sit amet"

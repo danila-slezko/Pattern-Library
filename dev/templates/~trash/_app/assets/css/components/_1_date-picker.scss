@@ -1,11 +1,15 @@
-/* -------------------------------- 
-
-File#: _1_date-picker
-Title: Date Picker
-Descr: Input element used to select a date
-Usage: codyhouse.co/license
-
--------------------------------- */
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _1_date-picker
+ * Title: Date Picker
+ * Descr: Input element used to select a date
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
 :root {
   --date-picker-trigger-width: 2.5em; // calendar button width
@@ -14,9 +18,7 @@ Usage: codyhouse.co/license
   --date-picker-calendar-gap: 4px; // distance between input and calendar
   --date-picker-calendar-padding: var(--space-xxs); // calendar padding
   --date-picker-calendar-item-size: 2em; // calendar date size
-  --date-picker-calendar-item-radius: var(
-    --radius-md
-  ); // calendar date border radius
+  --date-picker-calendar-item-radius: var(--radius-md); // calendar date border radius
 }
 
 @include breakpoint(sm) {
@@ -227,8 +229,7 @@ Usage: codyhouse.co/license
     z-index: 2;
 
     &:focus:not(:hover) {
-      box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2),
-        0 2px 4px alpha(var(--color-primary), 0.3);
+      box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2), 0 2px 4px alpha(var(--color-primary), 0.3);
     }
   }
 

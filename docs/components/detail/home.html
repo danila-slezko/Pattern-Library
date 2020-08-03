@@ -215,6 +215,59 @@
     <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header js-header anchor"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"header"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-id">#header</span> {
+            <span class="hljs-attribute">--header-height</span>: <span class="hljs-number">80px</span>;
+            <span class="hljs-attribute">--header-height-md</span>: <span class="hljs-number">72px</span>;
+            <span class="hljs-attribute">--color-bg</span>: <span class="hljs-built_in">var</span>(--color-primary-darker);
+            <span class="hljs-attribute">--color-contrast-higher</span>: <span class="hljs-number">#fff</span>;
+            <span class="hljs-attribute">position</span>: fixed;
+            <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>
+        }
+
+        <span class="hljs-selector-id">#header</span> <span class="hljs-selector-class">.header__item--divider</span> {
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">2px</span>;
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">3rem</span>;
+            <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">5</span>;
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#fff</span>
+        }
+
+        <span class="hljs-selector-id">#header</span> <span class="hljs-selector-class">.btn</span> {
+            <span class="hljs-attribute">background-color</span>: transparent;
+            <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--color-white);
+            <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.5</span>) <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">font-size</span>: <span class="hljs-built_in">var</span>(--text-base-size)
+        }
+
+        <span class="hljs-selector-id">#header</span> <span class="hljs-selector-class">.btn</span><span class="hljs-selector-pseudo">:hover</span> {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--color-white);
+            <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--color-primary);
+            <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2px</span> transparent
+        }
+
+        <span class="hljs-selector-id">#header</span> <span class="hljs-selector-class">.header__trigger</span> {
+            <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">2px</span> transparent <span class="hljs-meta">!important</span>;
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>
+        }
+
+        <span class="hljs-selector-id">#header</span> <span class="hljs-selector-class">.header__trigger-icon</span> {
+            <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">1.5em</span>
+        }
+
+        <span class="hljs-selector-id">#header</span> <span class="hljs-selector-class">.header__trigger</span><span class="hljs-selector-pseudo">:hover</span> {
+            <span class="hljs-attribute">background</span>: transparent
+        }
+
+        <span class="hljs-selector-id">#header</span> <span class="hljs-selector-class">.header__nav--is-visible</span> <span class="hljs-selector-class">.header__item--divider</span> {
+            <span class="hljs-attribute">display</span>: none
+        }
+
+        <span class="hljs-selector-id">#header</span> <span class="hljs-selector-class">.header__nav</span><span class="hljs-selector-pseudo">::before</span> {
+            <span class="hljs-attribute">border</span>: none
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__container container max-width-adaptive-lg"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__logo"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#top"</span>&gt;</span>
@@ -259,7 +312,9 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M120.74,21.375l-2.761-5.66-2.739,5.66h-2.82l4-7.359-3.68-6.46h2.94l2.34,4.779,2.44-4.779h2.82l-3.7,6.359,4.1,7.46Z"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__item header__item--divider"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__item header__item--divider"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header__item"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--subtle js-smooth-scroll"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#contact"</span> <span class="hljs-attr">data-duration</span>=<span class="hljs-string">"300"</span>&gt;</span>
                             Contact Us
@@ -272,15 +327,28 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-    <span class="hljs-keyword">@import</span> url(<span class="hljs-string">"/components/raw/header/overrides.css"</span>);
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"content"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"max-width-adaptive-md margin-auto"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>Home Page Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span>
+        Home Page Title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"items-center bg-center bg-no-repeat"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url('http://mktg-static-sites.prod.cnetcontent.com/assets/images/map.svg')"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-id">#bottom</span> {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--color-contrast-higher);
+            <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--color-contrast-low)
+        }
+
+        <span class="hljs-selector-id">#bottom</span> <span class="hljs-selector-class">.link</span> {
+            <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--color-contrast-low);
+            <span class="hljs-attribute">text-decoration</span>: none
+        }
+
+        <span class="hljs-selector-id">#bottom</span> <span class="hljs-selector-class">.link</span><span class="hljs-selector-pseudo">:hover</span> {
+            <span class="hljs-attribute">text-decoration</span>: underline
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-md padding-y-lg"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>

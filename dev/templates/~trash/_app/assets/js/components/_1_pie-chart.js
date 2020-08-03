@@ -1,15 +1,13 @@
+/** @format */
+
 // File#: _1_pie-chart
 // Usage: codyhouse.co/license
 (function () {
   var PieChart = function (opts) {
     this.options = Util.extend(PieChart.defaults, opts);
     this.element = this.options.element;
-    this.chartArea = this.element.getElementsByClassName(
-      "js-pie-chart__area"
-    )[0];
-    this.dataValues = this.element.getElementsByClassName(
-      "js-pie-chart__value"
-    );
+    this.chartArea = this.element.getElementsByClassName("js-pie-chart__area")[0];
+    this.dataValues = this.element.getElementsByClassName("js-pie-chart__value");
     this.chartPaths;
     // used to convert data values to percentages
     this.percentageTot = 0;
@@ -55,23 +53,13 @@
     chart.width = chart.chartArea.clientWidth;
     // donut charts only
     if (chart.options.type == "donut") {
-      chart.donutSize = parseInt(
-        getComputedStyle(chart.element).getPropertyValue(
-          "--pie-chart-donut-width"
-        )
-      );
-      if (chart.donutSize <= 0 || isNaN(chart.donutSize))
-        chart.donutSize = chart.width / 4;
+      chart.donutSize = parseInt(getComputedStyle(chart.element).getPropertyValue("--pie-chart-donut-width"));
+      if (chart.donutSize <= 0 || isNaN(chart.donutSize)) chart.donutSize = chart.width / 4;
     }
   }
 
   function createChartSvg(chart) {
-    var svg =
-      '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="' +
-      chart.width +
-      '" height="' +
-      chart.height +
-      '" class="pie-chart__svg js-pie-chart__svg"></svg>';
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="' + chart.width + '" height="' + chart.height + '" class="pie-chart__svg js-pie-chart__svg"></svg>';
     chart.chartArea.innerHTML = chart.chartArea.innerHTML + svg;
     chart.svg = chart.chartArea.getElementsByClassName("js-pie-chart__svg")[0];
     // create chart content
@@ -82,23 +70,14 @@
     var gEl = document.createElementNS("http://www.w3.org/2000/svg", "g");
     gEl.setAttribute("class", "pie-chart__dataset js-pie-chart__dataset");
     for (var i = 0; i < chart.dataValues.length; i++) {
-      var pathEl = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path"
-      );
+      var pathEl = document.createElementNS("http://www.w3.org/2000/svg", "path");
       Util.setAttributes(pathEl, {
         d: getPiePath(chart, i),
-        class:
-          "pie-chart__data-path pie-chart__data-path--" +
-          (i + 1) +
-          " js-pie-chart__data-path js-pie-chart__data-path--" +
-          (i + 1),
+        class: "pie-chart__data-path pie-chart__data-path--" + (i + 1) + " js-pie-chart__data-path js-pie-chart__data-path--" + (i + 1),
         "data-index": i,
         "stroke-linejoin": "round",
       });
-      var customStyle = chart.dataValues[i].getAttribute(
-        "data-pie-chart-style"
-      );
+      var customStyle = chart.dataValues[i].getAttribute("data-pie-chart-style");
       if (customStyle) pathEl.setAttribute("style", customStyle);
       gEl.appendChild(pathEl);
     }
@@ -120,32 +99,14 @@
 
   function getPathCode(chart, startAngle, endAngle) {
     // if we still need to animate the chart -> reset endAngle
-    if (
-      !chart.chartLoaded &&
-      chart.options.animate &&
-      intersectionObserver &&
-      !reducedMotion
-    ) {
+    if (!chart.chartLoaded && chart.options.animate && intersectionObserver && !reducedMotion) {
       endAngle = startAngle;
     }
     if (chart.options.type == "pie") {
-      return getPieArc(
-        chart.width / 2,
-        chart.width / 2,
-        chart.width / 2,
-        startAngle,
-        endAngle
-      );
+      return getPieArc(chart.width / 2, chart.width / 2, chart.width / 2, startAngle, endAngle);
     } else {
       //donut
-      return getDonutArc(
-        chart.width / 2,
-        chart.width / 2,
-        chart.width / 2,
-        chart.donutSize,
-        startAngle,
-        endAngle
-      );
+      return getDonutArc(chart.width / 2, chart.width / 2, chart.width / 2, chart.donutSize, startAngle, endAngle);
     }
   }
 
@@ -196,9 +157,7 @@
 
   function resetTooltip(chart) {
     if (chart.hoverId) {
-      window.requestAnimationFrame
-        ? window.cancelAnimationFrame(chart.hoverId)
-        : clearTimeout(chart.hoverId);
+      window.requestAnimationFrame ? window.cancelAnimationFrame(chart.hoverId) : clearTimeout(chart.hoverId);
       chart.hoverId = false;
     }
     Util.addClass(chart.tooltip[0], "is-hidden");
@@ -207,27 +166,14 @@
   }
 
   function placeTooltip(chart) {
-    var tooltipRadialPosition =
-      chart.options.type == "donut"
-        ? (chart.width - chart.donutSize) / 2
-        : chart.width / 4;
-    var pathCenter = polarToCartesian(
-      chart.width / 2,
-      chart.width / 2,
-      tooltipRadialPosition,
-      chart.percentageStart[chart.selectedIndex] +
-        chart.percentageDelta[chart.selectedIndex] / 2
-    );
+    var tooltipRadialPosition = chart.options.type == "donut" ? (chart.width - chart.donutSize) / 2 : chart.width / 4;
+    var pathCenter = polarToCartesian(chart.width / 2, chart.width / 2, tooltipRadialPosition, chart.percentageStart[chart.selectedIndex] + chart.percentageDelta[chart.selectedIndex] / 2);
 
-    chart.tooltip[0].setAttribute(
-      "style",
-      "left: " + pathCenter.x + "px; top: " + pathCenter.y + "px"
-    );
+    chart.tooltip[0].setAttribute("style", "left: " + pathCenter.x + "px; top: " + pathCenter.y + "px");
   }
 
   function setTooltipContent(chart) {
-    chart.tooltip[0].textContent =
-      chart.dataValues[chart.selectedIndex].textContent;
+    chart.tooltip[0].textContent = chart.dataValues[chart.selectedIndex].textContent;
   }
 
   function getSelectedIndex(event) {
@@ -255,16 +201,10 @@
     chart.hovering = false;
     // reset event listeners
     if (chart.eventIds && chart.eventIds["hover"]) {
-      chart.chartArea.removeEventListener(
-        "mouseenter",
-        chart.eventIds["hover"]
-      );
+      chart.chartArea.removeEventListener("mouseenter", chart.eventIds["hover"]);
       chart.chartArea.removeEventListener("mousedown", chart.eventIds["hover"]);
       chart.chartArea.removeEventListener("mousemove", chart.eventIds["hover"]);
-      chart.chartArea.removeEventListener(
-        "mouseleave",
-        chart.eventIds["hover"]
-      );
+      chart.chartArea.removeEventListener("mouseleave", chart.eventIds["hover"]);
     }
   }
 
@@ -274,13 +214,7 @@
   }
 
   function animateChart(chart) {
-    if (
-      !chart.options.animate ||
-      chart.chartLoaded ||
-      reducedMotion ||
-      !intersectionObserver
-    )
-      return;
+    if (!chart.options.animate || chart.chartLoaded || reducedMotion || !intersectionObserver) return;
     var observer = new IntersectionObserver(chartObserve.bind(chart), {
       rootMargin: "0px 0px -200px 0px",
     });
@@ -306,12 +240,9 @@
       if (progress > duration) progress = duration;
 
       var startAngle = chart.percentageStart[index];
-      var endAngle =
-        startAngle + chart.percentageDelta[index] * (progress / duration);
+      var endAngle = startAngle + chart.percentageDelta[index] * (progress / duration);
 
-      var path = chart.element.getElementsByClassName(
-        "js-pie-chart__data-path--" + (index + 1)
-      )[0];
+      var path = chart.element.getElementsByClassName("js-pie-chart__data-path--" + (index + 1))[0];
       var pathCode = getPathCode(chart, startAngle, endAngle);
       path.setAttribute("d", pathCode);
 
@@ -348,25 +279,7 @@
 
     var arcSweep = endAngle - startAngle <= 180 ? "0" : "1";
 
-    var d = [
-      "M",
-      start.x,
-      start.y,
-      "A",
-      radius,
-      radius,
-      0,
-      arcSweep,
-      0,
-      end.x,
-      end.y,
-      "L",
-      x,
-      y,
-      "L",
-      start.x,
-      start.y,
-    ].join(" ");
+    var d = ["M", start.x, start.y, "A", radius, radius, 0, arcSweep, 0, end.x, end.y, "L", x, y, "L", start.x, start.y].join(" ");
 
     return d;
   }
@@ -379,33 +292,7 @@
 
     var arcSweep = endAngle - startAngle <= 180 ? "0" : "1";
 
-    var d = [
-      "M",
-      s1.x,
-      s1.y,
-      "L",
-      s2.x,
-      s2.y,
-      "A",
-      radius,
-      radius,
-      0,
-      arcSweep,
-      0,
-      s3.x,
-      s3.y,
-      "L",
-      s4.x,
-      s4.y,
-      "A",
-      radius - radiusDelta,
-      radius - radiusDelta,
-      0,
-      arcSweep,
-      1,
-      s1.x,
-      s1.y,
-    ].join(" ");
+    var d = ["M", s1.x, s1.y, "L", s2.x, s2.y, "A", radius, radius, 0, arcSweep, 0, s3.x, s3.y, "L", s4.x, s4.y, "A", radius - radiusDelta, radius - radiusDelta, 0, arcSweep, 1, s1.x, s1.y].join(" ");
 
     return d;
   }
@@ -420,23 +307,14 @@
 
   //initialize the PieChart objects
   var pieCharts = document.getElementsByClassName("js-pie-chart");
-  var intersectionObserver =
-      "IntersectionObserver" in window &&
-      "IntersectionObserverEntry" in window &&
-      "intersectionRatio" in window.IntersectionObserverEntry.prototype,
+  var intersectionObserver = "IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype,
     reducedMotion = Util.osHasReducedMotion();
 
   if (pieCharts.length > 0) {
     for (var i = 0; i < pieCharts.length; i++) {
       (function (i) {
-        var chartType = pieCharts[i].getAttribute("data-pie-chart-type")
-          ? pieCharts[i].getAttribute("data-pie-chart-type")
-          : "pie";
-        var animate =
-          pieCharts[i].getAttribute("data-pie-chart-animation") &&
-          pieCharts[i].getAttribute("data-pie-chart-animation") == "on"
-            ? true
-            : false;
+        var chartType = pieCharts[i].getAttribute("data-pie-chart-type") ? pieCharts[i].getAttribute("data-pie-chart-type") : "pie";
+        var animate = pieCharts[i].getAttribute("data-pie-chart-animation") && pieCharts[i].getAttribute("data-pie-chart-animation") == "on" ? true : false;
         new PieChart({
           element: pieCharts[i],
           type: chartType,

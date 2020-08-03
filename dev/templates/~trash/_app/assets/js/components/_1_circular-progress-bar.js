@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _1_circular-progress-bar
 // Usage: codyhouse.co/license
 (function () {
@@ -5,31 +7,18 @@
     this.element = element;
     this.fill = this.element.getElementsByClassName("c-progress-bar__fill")[0];
     this.fillLength = getProgressBarFillLength(this);
-    this.label = this.element.getElementsByClassName(
-      "js-c-progress-bar__value"
-    );
+    this.label = this.element.getElementsByClassName("js-c-progress-bar__value");
     this.value = parseFloat(this.element.getAttribute("data-progress"));
     // before checking if data-animation is set -> check for reduced motion
     updatedProgressBarForReducedMotion(this);
-    this.animate =
-      this.element.hasAttribute("data-animation") &&
-      this.element.getAttribute("data-animation") == "on";
-    this.animationDuration = this.element.hasAttribute("data-duration")
-      ? this.element.getAttribute("data-duration")
-      : 1000;
+    this.animate = this.element.hasAttribute("data-animation") && this.element.getAttribute("data-animation") == "on";
+    this.animationDuration = this.element.hasAttribute("data-duration") ? this.element.getAttribute("data-duration") : 1000;
     // animation will run only on browsers supporting IntersectionObserver
-    this.canAnimate =
-      "IntersectionObserver" in window &&
-      "IntersectionObserverEntry" in window &&
-      "intersectionRatio" in window.IntersectionObserverEntry.prototype;
+    this.canAnimate = "IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype;
     // this element is used to announce the percentage value to SR
-    this.ariaLabel = this.element.getElementsByClassName(
-      "js-c-progress-bar__aria-value"
-    );
+    this.ariaLabel = this.element.getElementsByClassName("js-c-progress-bar__aria-value");
     // check if we need to update the bar color
-    this.changeColor =
-      Util.hasClass(this.element, "c-progress-bar--color-update") &&
-      Util.cssSupports("color", "var(--color-value)");
+    this.changeColor = Util.hasClass(this.element, "c-progress-bar--color-update") && Util.cssSupports("color", "var(--color-value)");
     if (this.changeColor) {
       this.colorThresholds = getProgressBarColorThresholds(this);
     }
@@ -44,30 +33,14 @@
   };
 
   function getProgressBarFillLength(progressBar) {
-    return parseFloat(2 * Math.PI * progressBar.fill.getAttribute("r")).toFixed(
-      2
-    );
+    return parseFloat(2 * Math.PI * progressBar.fill.getAttribute("r")).toFixed(2);
   }
 
   function getProgressBarColorThresholds(progressBar) {
     var thresholds = [];
     var i = 1;
-    while (
-      !isNaN(
-        parseInt(
-          getComputedStyle(progressBar.element).getPropertyValue(
-            "--c-progress-bar-color-" + i
-          )
-        )
-      )
-    ) {
-      thresholds.push(
-        parseInt(
-          getComputedStyle(progressBar.element).getPropertyValue(
-            "--c-progress-bar-color-" + i
-          )
-        )
-      );
+    while (!isNaN(parseInt(getComputedStyle(progressBar.element).getPropertyValue("--c-progress-bar-color-" + i)))) {
+      thresholds.push(parseInt(getComputedStyle(progressBar.element).getPropertyValue("--c-progress-bar-color-" + i)));
       i = i + 1;
     }
     return thresholds;
@@ -75,19 +48,16 @@
 
   function updatedProgressBarForReducedMotion(progressBar) {
     // if reduced motion is supported and set to reduced -> remove animations
-    if (osHasReducedMotion)
-      progressBar.element.removeAttribute("data-animation");
+    if (osHasReducedMotion) progressBar.element.removeAttribute("data-animation");
   }
 
   function initProgressBar(progressBar) {
     // set shape initial dashOffset
     setShapeOffset(progressBar);
     // set initial bar color
-    if (progressBar.changeColor)
-      updateProgressBarColor(progressBar, progressBar.value);
+    if (progressBar.changeColor) updateProgressBarColor(progressBar, progressBar.value);
     // if data-animation is on -> reset the progress bar and animate when entering the viewport
-    if (progressBar.animate && progressBar.canAnimate)
-      animateProgressBar(progressBar);
+    if (progressBar.animate && progressBar.canAnimate) animateProgressBar(progressBar);
     else setProgressBarValue(progressBar, progressBar.value);
     // reveal fill and label -> --animate and --color-update variations only
     setTimeout(function () {
@@ -97,34 +67,23 @@
     // dynamically update value of progress bar
     progressBar.element.addEventListener("updateProgress", function (event) {
       // cancel request animation frame if it was animating
-      if (progressBar.animationId)
-        window.cancelAnimationFrame(progressBar.animationId);
+      if (progressBar.animationId) window.cancelAnimationFrame(progressBar.animationId);
 
       var final = event.detail.value,
-        duration = event.detail.duration
-          ? event.detail.duration
-          : progressBar.animationDuration;
+        duration = event.detail.duration ? event.detail.duration : progressBar.animationDuration;
       var start = getProgressBarValue(progressBar);
       // trigger update animation
       updateProgressBar(progressBar, start, final, duration, function () {
-        emitProgressBarEvents(
-          progressBar,
-          "progressCompleted",
-          progressBar.value + "%"
-        );
+        emitProgressBarEvents(progressBar, "progressCompleted", progressBar.value + "%");
         // update value of label for SR
-        if (progressBar.ariaLabel.length > 0)
-          progressBar.ariaLabel[0].textContent = final + "%";
+        if (progressBar.ariaLabel.length > 0) progressBar.ariaLabel[0].textContent = final + "%";
       });
     });
   }
 
   function setShapeOffset(progressBar) {
     var center = progressBar.fill.getAttribute("cx");
-    progressBar.fill.setAttribute(
-      "transform",
-      "rotate(-90 " + center + " " + center + ")"
-    );
+    progressBar.fill.setAttribute("transform", "rotate(-90 " + center + " " + center + ")");
     progressBar.fill.setAttribute("stroke-dashoffset", progressBar.fillLength);
     progressBar.fill.setAttribute("stroke-dasharray", progressBar.fillLength);
   }
@@ -134,29 +93,17 @@
     setProgressBarValue(progressBar, 0);
 
     // listen for the element to enter the viewport -> start animation
-    var observer = new IntersectionObserver(
-      progressBarObserve.bind(progressBar),
-      { threshold: [0, 0.1] }
-    );
+    var observer = new IntersectionObserver(progressBarObserve.bind(progressBar), { threshold: [0, 0.1] });
     observer.observe(progressBar.element);
   }
 
   function progressBarObserve(entries, observer) {
     // observe progressBar position -> start animation when inside viewport
     var self = this;
-    if (
-      entries[0].intersectionRatio.toFixed(1) > 0 &&
-      !this.animationTriggered
-    ) {
-      updateProgressBar(
-        this,
-        0,
-        this.value,
-        this.animationDuration,
-        function () {
-          emitProgressBarEvents(self, "progressCompleted", self.value + "%");
-        }
-      );
+    if (entries[0].intersectionRatio.toFixed(1) > 0 && !this.animationTriggered) {
+      updateProgressBar(this, 0, this.value, this.animationDuration, function () {
+        emitProgressBarEvents(self, "progressCompleted", self.value + "%");
+      });
     }
   }
 
@@ -197,13 +144,9 @@
   }
 
   function updateProgressBarColor(progressBar, value) {
-    var className =
-      "c-progress-bar--fill-color-" + progressBar.colorThresholds.length;
+    var className = "c-progress-bar--fill-color-" + progressBar.colorThresholds.length;
     for (var i = progressBar.colorThresholds.length; i > 0; i--) {
-      if (
-        !isNaN(progressBar.colorThresholds[i - 1]) &&
-        value <= progressBar.colorThresholds[i - 1]
-      ) {
+      if (!isNaN(progressBar.colorThresholds[i - 1]) && value <= progressBar.colorThresholds[i - 1]) {
         className = "c-progress-bar--fill-color-" + i;
       }
     }
@@ -220,28 +163,17 @@
   }
 
   function getProgressBarValue(progressBar) {
-    return (
-      100 -
-      Math.round(
-        (parseFloat(progressBar.fill.getAttribute("stroke-dashoffset")) /
-          progressBar.fillLength) *
-          100
-      )
-    );
+    return 100 - Math.round((parseFloat(progressBar.fill.getAttribute("stroke-dashoffset")) / progressBar.fillLength) * 100);
   }
 
   function emitProgressBarEvents(progressBar, eventName, detail) {
-    progressBar.element.dispatchEvent(
-      new CustomEvent(eventName, { detail: detail })
-    );
+    progressBar.element.dispatchEvent(new CustomEvent(eventName, { detail: detail }));
   }
 
   window.CProgressBar = CProgressBar;
 
   //initialize the CProgressBar objects
-  var circularProgressBars = document.getElementsByClassName(
-    "js-c-progress-bar"
-  );
+  var circularProgressBars = document.getElementsByClassName("js-c-progress-bar");
   var osHasReducedMotion = Util.osHasReducedMotion();
   if (circularProgressBars.length > 0) {
     for (var i = 0; i < circularProgressBars.length; i++) {

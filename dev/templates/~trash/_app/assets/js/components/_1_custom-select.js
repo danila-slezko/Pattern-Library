@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _1_custom-select
 // Usage: codyhouse.co/license
 (function () {
@@ -24,21 +26,12 @@
 
   function initCustomSelect(select) {
     // create the HTML for the custom dropdown element
-    select.element.insertAdjacentHTML(
-      "beforeend",
-      initButtonSelect(select) + initListSelect(select)
-    );
+    select.element.insertAdjacentHTML("beforeend", initButtonSelect(select) + initListSelect(select));
 
     // save custom elements
-    select.dropdown = select.element.getElementsByClassName(
-      "js-select__dropdown"
-    )[0];
-    select.trigger = select.element.getElementsByClassName(
-      "js-select__button"
-    )[0];
-    select.customOptions = select.dropdown.getElementsByClassName(
-      "js-select__item"
-    );
+    select.dropdown = select.element.getElementsByClassName("js-select__dropdown")[0];
+    select.trigger = select.element.getElementsByClassName("js-select__button")[0];
+    select.customOptions = select.dropdown.getElementsByClassName("js-select__item");
 
     // hide default select
     Util.addClass(select.select, "is-hidden");
@@ -64,15 +57,9 @@
     }
     // keyboard navigation
     select.dropdown.addEventListener("keydown", function (event) {
-      if (
-        (event.keyCode && event.keyCode == 38) ||
-        (event.key && event.key.toLowerCase() == "arrowup")
-      ) {
+      if ((event.keyCode && event.keyCode == 38) || (event.key && event.key.toLowerCase() == "arrowup")) {
         keyboardCustomSelect(select, "prev", event);
-      } else if (
-        (event.keyCode && event.keyCode == 40) ||
-        (event.key && event.key.toLowerCase() == "arrowdown")
-      ) {
+      } else if ((event.keyCode && event.keyCode == 40) || (event.key && event.key.toLowerCase() == "arrowdown")) {
         keyboardCustomSelect(select, "next", event);
       }
     });
@@ -87,10 +74,7 @@
     if (bool) {
       ariaExpanded = bool;
     } else {
-      ariaExpanded =
-        select.trigger.getAttribute("aria-expanded") == "true"
-          ? "false"
-          : "true";
+      ariaExpanded = select.trigger.getAttribute("aria-expanded") == "true" ? "false" : "true";
     }
     select.trigger.setAttribute("aria-expanded", ariaExpanded);
     if (ariaExpanded == "true") {
@@ -106,44 +90,22 @@
 
   function placeDropdown(select) {
     // remove placement classes to reset position
-    Util.removeClass(
-      select.dropdown,
-      "select__dropdown--right select__dropdown--up"
-    );
+    Util.removeClass(select.dropdown, "select__dropdown--right select__dropdown--up");
     var triggerBoundingRect = select.trigger.getBoundingClientRect();
-    Util.toggleClass(
-      select.dropdown,
-      "select__dropdown--right",
-      document.documentElement.clientWidth - 5 <
-        triggerBoundingRect.left + select.dropdown.offsetWidth
-    );
+    Util.toggleClass(select.dropdown, "select__dropdown--right", document.documentElement.clientWidth - 5 < triggerBoundingRect.left + select.dropdown.offsetWidth);
     // check if there's enough space up or down
-    var moveUp =
-      window.innerHeight - triggerBoundingRect.bottom - 5 <
-      triggerBoundingRect.top;
+    var moveUp = window.innerHeight - triggerBoundingRect.bottom - 5 < triggerBoundingRect.top;
     Util.toggleClass(select.dropdown, "select__dropdown--up", moveUp);
     // check if we need to set a max width
-    var maxHeight = moveUp
-      ? triggerBoundingRect.top - 20
-      : window.innerHeight - triggerBoundingRect.bottom - 20;
+    var maxHeight = moveUp ? triggerBoundingRect.top - 20 : window.innerHeight - triggerBoundingRect.bottom - 20;
     // set max-height based on available space
-    select.dropdown.setAttribute(
-      "style",
-      "max-height: " +
-        maxHeight +
-        "px; width: " +
-        triggerBoundingRect.width +
-        "px;"
-    );
+    select.dropdown.setAttribute("style", "max-height: " + maxHeight + "px; width: " + triggerBoundingRect.width + "px;");
   }
 
   function keyboardCustomSelect(select, direction, event) {
     // navigate custom dropdown with keyboard
     event.preventDefault();
-    var index = Util.getIndexInArray(
-      select.customOptions,
-      document.activeElement
-    );
+    var index = Util.getIndexInArray(select.customOptions, document.activeElement);
     index = direction == "next" ? index + 1 : index - 1;
     if (index < 0) index = select.customOptions.length - 1;
     if (index >= select.customOptions.length) index = 0;
@@ -160,20 +122,14 @@
   }
 
   function selectOption(select, option) {
-    if (
-      option.hasAttribute("aria-selected") &&
-      option.getAttribute("aria-selected") == "true"
-    ) {
+    if (option.hasAttribute("aria-selected") && option.getAttribute("aria-selected") == "true") {
       // selecting the same option
       select.trigger.setAttribute("aria-expanded", "false"); // hide dropdown
     } else {
-      var selectedOption = select.dropdown.querySelector(
-        '[aria-selected="true"]'
-      );
+      var selectedOption = select.dropdown.querySelector('[aria-selected="true"]');
       if (selectedOption) selectedOption.setAttribute("aria-selected", "false");
       option.setAttribute("aria-selected", "true");
-      select.trigger.getElementsByClassName("js-select__label")[0].textContent =
-        option.textContent;
+      select.trigger.getElementsByClassName("js-select__label")[0].textContent = option.textContent;
       select.trigger.setAttribute("aria-expanded", "false");
       // new option has been selected -> update native <select> element _ arai-label of trigger <button>
       updateNativeSelect(select, option.getAttribute("data-index"));
@@ -189,12 +145,7 @@
   }
 
   function updateTriggerAria(select) {
-    select.trigger.setAttribute(
-      "aria-label",
-      select.options[select.select.selectedIndex].innerHTML +
-        ", " +
-        select.label.textContent
-    );
+    select.trigger.setAttribute("aria-label", select.options[select.select.selectedIndex].innerHTML + ", " + select.label.textContent);
   }
 
   function getSelectedOptionText(select) {
@@ -211,25 +162,11 @@
   function initButtonSelect(select) {
     // create the button element -> custom select trigger
     // check if we need to add custom classes to the button trigger
-    var customClasses = select.element.getAttribute("data-trigger-class")
-      ? " " + select.element.getAttribute("data-trigger-class")
-      : "";
+    var customClasses = select.element.getAttribute("data-trigger-class") ? " " + select.element.getAttribute("data-trigger-class") : "";
 
-    var label =
-      select.options[select.select.selectedIndex].innerHTML +
-      ", " +
-      select.label.textContent;
+    var label = select.options[select.select.selectedIndex].innerHTML + ", " + select.label.textContent;
 
-    var button =
-      '<button type="button" class="js-select__button select__button' +
-      customClasses +
-      '" aria-label="' +
-      label +
-      '" aria-expanded="false" aria-controls="' +
-      select.selectId +
-      '-dropdown"><span aria-hidden="true" class="js-select__label select__label">' +
-      select.selectedOption +
-      "</span>";
+    var button = '<button type="button" class="js-select__button select__button' + customClasses + '" aria-label="' + label + '" aria-expanded="false" aria-controls="' + select.selectId + '-dropdown"><span aria-hidden="true" class="js-select__label select__label">' + select.selectedOption + "</span>";
     if (select.arrowIcon.length > 0 && select.arrowIcon[0].outerHTML) {
       var clone = select.arrowIcon[0].cloneNode(true);
       Util.removeClass(clone, "select__icon");
@@ -241,46 +178,23 @@
 
   function initListSelect(select) {
     // create custom select dropdown
-    var list =
-      '<div class="js-select__dropdown select__dropdown" aria-describedby="' +
-      select.selectId +
-      '-description" id="' +
-      select.selectId +
-      '-dropdown">';
+    var list = '<div class="js-select__dropdown select__dropdown" aria-describedby="' + select.selectId + '-description" id="' + select.selectId + '-dropdown">';
     list = list + getSelectLabelSR(select);
     if (select.optGroups.length > 0) {
       for (var i = 0; i < select.optGroups.length; i++) {
         var optGroupList = select.optGroups[i].getElementsByTagName("option"),
-          optGroupLabel =
-            '<li><span class="select__item select__item--optgroup">' +
-            select.optGroups[i].getAttribute("label") +
-            "</span></li>";
-        list =
-          list +
-          '<ul class="select__list" role="listbox">' +
-          optGroupLabel +
-          getOptionsList(select, optGroupList) +
-          "</ul>";
+          optGroupLabel = '<li><span class="select__item select__item--optgroup">' + select.optGroups[i].getAttribute("label") + "</span></li>";
+        list = list + '<ul class="select__list" role="listbox">' + optGroupLabel + getOptionsList(select, optGroupList) + "</ul>";
       }
     } else {
-      list =
-        list +
-        '<ul class="select__list" role="listbox">' +
-        getOptionsList(select, select.options) +
-        "</ul>";
+      list = list + '<ul class="select__list" role="listbox">' + getOptionsList(select, select.options) + "</ul>";
     }
     return list;
   }
 
   function getSelectLabelSR(select) {
     if (select.label) {
-      return (
-        '<p class="sr-only" id="' +
-        select.selectId +
-        '-description">' +
-        select.label.textContent +
-        "</p>"
-      );
+      return '<p class="sr-only" id="' + select.selectId + '-description">' + select.label.textContent + "</p>";
     } else {
       return "";
     }
@@ -288,16 +202,11 @@
 
   function resetCustomSelect(select) {
     // <select> element has been updated (using an external control) - update custom select
-    var selectedOption = select.dropdown.querySelector(
-      '[aria-selected="true"]'
-    );
+    var selectedOption = select.dropdown.querySelector('[aria-selected="true"]');
     if (selectedOption) selectedOption.setAttribute("aria-selected", "false");
-    var option = select.dropdown.querySelector(
-      '.js-select__item[data-index="' + select.select.selectedIndex + '"]'
-    );
+    var option = select.dropdown.querySelector('.js-select__item[data-index="' + select.select.selectedIndex + '"]');
     option.setAttribute("aria-selected", "true");
-    select.trigger.getElementsByClassName("js-select__label")[0].textContent =
-      option.textContent;
+    select.trigger.getElementsByClassName("js-select__label")[0].textContent = option.textContent;
     select.trigger.setAttribute("aria-expanded", "false");
     updateTriggerAria(select);
   }
@@ -305,20 +214,8 @@
   function getOptionsList(select, options) {
     var list = "";
     for (var i = 0; i < options.length; i++) {
-      var selected = options[i].hasAttribute("selected")
-        ? ' aria-selected="true"'
-        : ' aria-selected="false"';
-      list =
-        list +
-        '<li><button type="button" class="reset js-select__item select__item select__item--option" role="option" data-value="' +
-        options[i].value +
-        '" ' +
-        selected +
-        ' data-index="' +
-        select.optionIndex +
-        '">' +
-        options[i].text +
-        "</button></li>";
+      var selected = options[i].hasAttribute("selected") ? ' aria-selected="true"' : ' aria-selected="false"';
+      list = list + '<li><button type="button" class="reset js-select__item select__item select__item--option" role="option" data-value="' + options[i].value + '" ' + selected + ' data-index="' + select.optionIndex + '">' + options[i].text + "</button></li>";
       select.optionIndex = select.optionIndex + 1;
     }
     return list;
@@ -352,10 +249,7 @@
 
     // listen for key events
     window.addEventListener("keyup", function (event) {
-      if (
-        (event.keyCode && event.keyCode == 27) ||
-        (event.key && event.key.toLowerCase() == "escape")
-      ) {
+      if ((event.keyCode && event.keyCode == 27) || (event.key && event.key.toLowerCase() == "escape")) {
         // close custom select on 'Esc'
         selectArray.forEach(function (element) {
           moveFocusToSelectTrigger(element); // if focus is within dropdown, move it to dropdown trigger

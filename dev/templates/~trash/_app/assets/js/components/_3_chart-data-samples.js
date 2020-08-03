@@ -1,3 +1,5 @@
+/** @format */
+
 (function () {
   /* 
     Examples of Area Charts
@@ -121,20 +123,7 @@
       smooth: true,
       xAxis: {
         line: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         ticks: true,
       },
       yAxis: {
@@ -148,13 +137,7 @@
       tooltip: {
         enabled: true,
         customHTML: function (index, chartOptions, datasetIndex) {
-          return (
-            '<span class="color-contrast-medium">' +
-            chartOptions.xAxis.labels[index] +
-            ":</span> $" +
-            chartOptions.datasets[datasetIndex].data[index] +
-            ""
-          );
+          return '<span class="color-contrast-medium">' + chartOptions.xAxis.labels[index] + ":</span> $" + chartOptions.datasets[datasetIndex].data[index] + "";
         },
       },
       animate: true,
@@ -170,20 +153,7 @@
       fillOrigin: true,
       xAxis: {
         line: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         ticks: true,
       },
       yAxis: {
@@ -197,13 +167,7 @@
       tooltip: {
         enabled: true,
         customHTML: function (index, chartOptions, datasetIndex) {
-          return (
-            '<span class="color-contrast-medium">' +
-            chartOptions.xAxis.labels[index] +
-            ":</span> " +
-            chartOptions.datasets[datasetIndex].data[index] +
-            "$"
-          );
+          return '<span class="color-contrast-medium">' + chartOptions.xAxis.labels[index] + ":</span> " + chartOptions.datasets[datasetIndex].data[index] + "$";
         },
       },
       animate: true,
@@ -219,46 +183,19 @@
       xAxis: {
         line: true,
         ticks: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       },
       yAxis: {
         labels: true,
       },
-      datasets: [
-        { data: [5, 7, 11, 13, 18, 16, 17, 13, 16, 8, 15, 8] },
-        { data: [1, 2, 3, 6, 4, 11, 9, 10, 9, 4, 7, 3] },
-      ],
+      datasets: [{ data: [5, 7, 11, 13, 18, 16, 17, 13, 16, 8, 15, 8] }, { data: [1, 2, 3, 6, 4, 11, 9, 10, 9, 4, 7, 3] }],
       tooltip: {
         enabled: true,
         position: "top",
         customHTML: function (index, chartOptions, datasetIndex) {
-          var html =
-            '<p class="margin-bottom-xxs">Total ' +
-            chartOptions.xAxis.labels[index] +
-            "</p>";
-          html =
-            html +
-            '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-primary margin-right-xxs"></span>$' +
-            chartOptions.datasets[0].data[index] +
-            "</p>";
-          html =
-            html +
-            '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-accent margin-right-xxs"></span>$' +
-            chartOptions.datasets[1].data[index] +
-            "</p>";
+          var html = '<p class="margin-bottom-xxs">Total ' + chartOptions.xAxis.labels[index] + "</p>";
+          html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-primary margin-right-xxs"></span>$' + chartOptions.datasets[0].data[index] + "</p>";
+          html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-accent margin-right-xxs"></span>$' + chartOptions.datasets[1].data[index] + "</p>";
           return html;
         },
       },
@@ -275,20 +212,7 @@
       xAxis: {
         line: true,
         ticks: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       },
       yAxis: {
         labels: true,
@@ -316,20 +240,7 @@
       type: "column",
       xAxis: {
         line: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         ticks: true,
       },
       yAxis: {
@@ -344,13 +255,7 @@
       tooltip: {
         enabled: true,
         customHTML: function (index, chartOptions, datasetIndex) {
-          return (
-            '<span class="color-contrast-medium">' +
-            chartOptions.xAxis.labels[index] +
-            ":</span> $" +
-            chartOptions.datasets[datasetIndex].data[index] +
-            ""
-          );
+          return '<span class="color-contrast-medium">' + chartOptions.xAxis.labels[index] + ":</span> $" + chartOptions.datasets[datasetIndex].data[index] + "";
         },
       },
       animate: true,
@@ -365,20 +270,7 @@
       type: "column",
       xAxis: {
         line: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         ticks: true,
       },
       yAxis: {
@@ -393,13 +285,7 @@
       tooltip: {
         enabled: true,
         customHTML: function (index, chartOptions, datasetIndex) {
-          return (
-            '<span class="color-contrast-medium">' +
-            chartOptions.xAxis.labels[index] +
-            ":</span> " +
-            chartOptions.datasets[datasetIndex].data[index] +
-            "$"
-          );
+          return '<span class="color-contrast-medium">' + chartOptions.xAxis.labels[index] + ":</span> " + chartOptions.datasets[datasetIndex].data[index] + "$";
         },
       },
       animate: true,
@@ -414,29 +300,13 @@
       type: "column",
       xAxis: {
         line: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         ticks: true,
       },
       yAxis: {
         labels: true,
       },
-      datasets: [
-        { data: [1, 2, 3, 12, 8, 7, 10, 4, 9, 5, 16, 3] },
-        { data: [4, 8, 10, 12, 15, 11, 7, 3, 5, 2, 12, 6] },
-      ],
+      datasets: [{ data: [1, 2, 3, 12, 8, 7, 10, 4, 9, 5, 16, 3] }, { data: [4, 8, 10, 12, 15, 11, 7, 3, 5, 2, 12, 6] }],
       column: {
         width: "60%",
         gap: "2px",
@@ -445,20 +315,9 @@
       tooltip: {
         enabled: true,
         customHTML: function (index, chartOptions, datasetIndex) {
-          var html =
-            '<p class="margin-bottom-xxs">Total ' +
-            chartOptions.xAxis.labels[index] +
-            "</p>";
-          html =
-            html +
-            '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-primary margin-right-xxs"></span>$' +
-            chartOptions.datasets[0].data[index] +
-            "</p>";
-          html =
-            html +
-            '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-contrast-higher margin-right-xxs"></span>$' +
-            chartOptions.datasets[1].data[index] +
-            "</p>";
+          var html = '<p class="margin-bottom-xxs">Total ' + chartOptions.xAxis.labels[index] + "</p>";
+          html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-primary margin-right-xxs"></span>$' + chartOptions.datasets[0].data[index] + "</p>";
+          html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-contrast-higher margin-right-xxs"></span>$' + chartOptions.datasets[1].data[index] + "</p>";
           return html;
         },
         position: "top",
@@ -476,29 +335,13 @@
       stacked: true,
       xAxis: {
         line: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         ticks: true,
       },
       yAxis: {
         labels: true,
       },
-      datasets: [
-        { data: [1, 2, 3, 12, 8, 7, 10, 4, 9, 5, 16, 3] },
-        { data: [4, 8, 10, 12, 15, 11, 7, 3, 5, 2, 12, 6] },
-      ],
+      datasets: [{ data: [1, 2, 3, 12, 8, 7, 10, 4, 9, 5, 16, 3] }, { data: [4, 8, 10, 12, 15, 11, 7, 3, 5, 2, 12, 6] }],
       column: {
         width: "60%",
         gap: "2px",
@@ -507,20 +350,9 @@
       tooltip: {
         enabled: true,
         customHTML: function (index, chartOptions, datasetIndex) {
-          var html =
-            '<p class="margin-bottom-xxs">Total ' +
-            chartOptions.xAxis.labels[index] +
-            "</p>";
-          html =
-            html +
-            '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-primary margin-right-xxs"></span>$' +
-            chartOptions.datasets[0].data[index] +
-            "</p>";
-          html =
-            html +
-            '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-contrast-higher margin-right-xxs"></span>$' +
-            chartOptions.datasets[1].data[index] +
-            "</p>";
+          var html = '<p class="margin-bottom-xxs">Total ' + chartOptions.xAxis.labels[index] + "</p>";
+          html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-primary margin-right-xxs"></span>$' + chartOptions.datasets[0].data[index] + "</p>";
+          html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-contrast-higher margin-right-xxs"></span>$' + chartOptions.datasets[1].data[index] + "</p>";
           return html;
         },
         position: "top",
@@ -543,20 +375,7 @@
       smooth: true,
       xAxis: {
         line: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
         ticks: true,
       },
       yAxis: {
@@ -570,13 +389,7 @@
       tooltip: {
         enabled: true,
         customHTML: function (index, chartOptions, datasetIndex) {
-          return (
-            '<span class="color-contrast-medium">' +
-            chartOptions.xAxis.labels[index] +
-            ":</span> $" +
-            chartOptions.datasets[datasetIndex].data[index] +
-            ""
-          );
+          return '<span class="color-contrast-medium">' + chartOptions.xAxis.labels[index] + ":</span> $" + chartOptions.datasets[datasetIndex].data[index] + "";
         },
       },
       animate: true,
@@ -586,20 +399,7 @@
   // Timeline Chart
   var lineChart2 = document.getElementById("line-chart-2");
   if (lineChart2) {
-    var months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     function getNiceDate(timestamp) {
       // custom function to transform timestamp values to formatted dates
       var date = new Date(timestamp);
@@ -617,10 +417,7 @@
         labels: true,
         // range: [firstDate, lastDate]
         // use new Date('yyyy-mm-dd').getTime() to get the timestamp value of your date
-        range: [
-          new Date("2018-02-25").getTime(),
-          new Date("2018-03-05").getTime(),
-        ],
+        range: [new Date("2018-02-25").getTime(), new Date("2018-03-05").getTime()],
         step: 86400000 * 2, // two days
         labelModifier: function (value) {
           return getNiceDate(value);
@@ -648,13 +445,7 @@
       tooltip: {
         enabled: true,
         customHTML: function (index, chartOptions, datasetIndex) {
-          return (
-            '<span class="color-contrast-medium">' +
-            getNiceDate(chartOptions.datasets[datasetIndex].data[index][0]) +
-            " - </span> " +
-            chartOptions.datasets[datasetIndex].data[index][1] +
-            "°C"
-          );
+          return '<span class="color-contrast-medium">' + getNiceDate(chartOptions.datasets[datasetIndex].data[index][0]) + " - </span> " + chartOptions.datasets[datasetIndex].data[index][1] + "°C";
         },
       },
       animate: true,
@@ -670,46 +461,19 @@
       xAxis: {
         line: true,
         ticks: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       },
       yAxis: {
         labels: true,
       },
-      datasets: [
-        { data: [1, 2, 3, 6, 4, 11, 9, 10, 9, 4, 7, 3] },
-        { data: [5, 7, 11, 13, 18, 16, 17, 13, 16, 8, 15, 8] },
-      ],
+      datasets: [{ data: [1, 2, 3, 6, 4, 11, 9, 10, 9, 4, 7, 3] }, { data: [5, 7, 11, 13, 18, 16, 17, 13, 16, 8, 15, 8] }],
       tooltip: {
         enabled: true,
         position: "top",
         customHTML: function (index, chartOptions, datasetIndex) {
-          var html =
-            '<p class="margin-bottom-xxs">Total ' +
-            chartOptions.xAxis.labels[index] +
-            "</p>";
-          html =
-            html +
-            '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-primary margin-right-xxs"></span>$' +
-            chartOptions.datasets[0].data[index] +
-            "</p>";
-          html =
-            html +
-            '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-accent margin-right-xxs"></span>$' +
-            chartOptions.datasets[1].data[index] +
-            "</p>";
+          var html = '<p class="margin-bottom-xxs">Total ' + chartOptions.xAxis.labels[index] + "</p>";
+          html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-primary margin-right-xxs"></span>$' + chartOptions.datasets[0].data[index] + "</p>";
+          html = html + '<p class="flex items-center"><span class="height-xxxs width-xxxs radius-50% bg-accent margin-right-xxs"></span>$' + chartOptions.datasets[1].data[index] + "</p>";
           return html;
         },
       },
@@ -726,20 +490,7 @@
       xAxis: {
         line: true,
         ticks: true,
-        labels: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
+        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       },
       yAxis: {
         labels: true,

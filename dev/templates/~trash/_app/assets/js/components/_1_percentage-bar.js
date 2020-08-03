@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _1_percentage-bar
 // Usage: codyhouse.co/license
 (function () {
@@ -18,15 +20,7 @@
 
       if (!customStyle) customStyle = "";
       if (!customClass) customClass = "";
-      content =
-        content +
-        '<div class="pct-bar__fill js-pct-bar__fill ' +
-        customClass +
-        '" style="flex-basis: ' +
-        percentage +
-        ";" +
-        customStyle +
-        '"></div>';
+      content = content + '<div class="pct-bar__fill js-pct-bar__fill ' + customClass + '" style="flex-basis: ' + percentage + ";" + customStyle + '"></div>';
     }
     bar.bar[0].innerHTML = content;
   }

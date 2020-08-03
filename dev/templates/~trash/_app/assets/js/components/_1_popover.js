@@ -1,12 +1,12 @@
+/** @format */
+
 // File#: _1_popover
 // Usage: codyhouse.co/license
 (function () {
   var Popover = function (element) {
     this.element = element;
     this.elementId = this.element.getAttribute("id");
-    this.trigger = document.querySelectorAll(
-      '[aria-controls="' + this.elementId + '"]'
-    );
+    this.trigger = document.querySelectorAll('[aria-controls="' + this.elementId + '"]');
     this.selectedTrigger = false;
     this.popoverVisibleClass = "popover--is-visible";
     this.selectedTriggerClass = "popover-control--active";
@@ -17,12 +17,7 @@
     // position target - position tooltip relative to a specified element
     this.positionTarget = getPositionTarget(this);
     // gap between element and viewport - if there's max-height
-    this.viewportGap =
-      parseInt(
-        getComputedStyle(this.element).getPropertyValue(
-          "--popover-viewport-gap"
-        )
-      ) || 20;
+    this.viewportGap = parseInt(getComputedStyle(this.element).getPropertyValue("--popover-viewport-gap")) || 20;
     initPopover(this);
     initPopoverEvents(this);
   };
@@ -43,9 +38,7 @@
   // private methods
   function getPositionTarget(popover) {
     // position tooltip relative to a specified element - if provided
-    var positionTargetSelector = popover.element.getAttribute(
-      "data-position-target"
-    );
+    var positionTargetSelector = popover.element.getAttribute("data-position-target");
     if (!positionTargetSelector) return false;
     var positionTarget = document.querySelector(positionTargetSelector);
     return positionTarget;
@@ -67,29 +60,19 @@
         popover.trigger[i].addEventListener("click", function (event) {
           event.preventDefault();
           // if the popover had been previously opened by another trigger element -> close it first and reopen in the right position
-          if (
-            Util.hasClass(popover.element, popover.popoverVisibleClass) &&
-            popover.selectedTrigger != popover.trigger[i]
-          ) {
+          if (Util.hasClass(popover.element, popover.popoverVisibleClass) && popover.selectedTrigger != popover.trigger[i]) {
             togglePopover(popover, false, false); // close menu
           }
           // toggle popover
           popover.selectedTrigger = popover.trigger[i];
-          togglePopover(
-            popover,
-            !Util.hasClass(popover.element, popover.popoverVisibleClass),
-            true
-          );
+          togglePopover(popover, !Util.hasClass(popover.element, popover.popoverVisibleClass), true);
         });
       })(i);
     }
 
     // trap focus
     popover.element.addEventListener("keydown", function (event) {
-      if (
-        (event.keyCode && event.keyCode == 9) ||
-        (event.key && event.key == "Tab")
-      ) {
+      if ((event.keyCode && event.keyCode == 9) || (event.key && event.key == "Tab")) {
         //trap focus inside popover
         trapFocus(popover, event);
       }
@@ -136,52 +119,24 @@
   function positionPopover(popover) {
     // reset popover position
     resetPopoverStyle(popover);
-    var selectedTriggerPosition = popover.positionTarget
-      ? popover.positionTarget.getBoundingClientRect()
-      : popover.selectedTrigger.getBoundingClientRect();
+    var selectedTriggerPosition = popover.positionTarget ? popover.positionTarget.getBoundingClientRect() : popover.selectedTrigger.getBoundingClientRect();
 
-    var menuOnTop =
-      window.innerHeight - selectedTriggerPosition.bottom <
-      selectedTriggerPosition.top;
+    var menuOnTop = window.innerHeight - selectedTriggerPosition.bottom < selectedTriggerPosition.top;
 
     var left = selectedTriggerPosition.left,
       right = window.innerWidth - selectedTriggerPosition.right,
-      isRight =
-        window.innerWidth <
-        selectedTriggerPosition.left + popover.element.offsetWidth;
+      isRight = window.innerWidth < selectedTriggerPosition.left + popover.element.offsetWidth;
 
-    var horizontal = isRight
-        ? "right: " + right + "px;"
-        : "left: " + left + "px;",
-      vertical = menuOnTop
-        ? "bottom: " +
-          (window.innerHeight - selectedTriggerPosition.top) +
-          "px;"
-        : "top: " + selectedTriggerPosition.bottom + "px;";
+    var horizontal = isRight ? "right: " + right + "px;" : "left: " + left + "px;",
+      vertical = menuOnTop ? "bottom: " + (window.innerHeight - selectedTriggerPosition.top) + "px;" : "top: " + selectedTriggerPosition.bottom + "px;";
     // check right position is correct -> otherwise set left to 0
-    if (isRight && right + popover.element.offsetWidth > window.innerWidth)
-      horizontal =
-        "left: " +
-        parseInt((window.innerWidth - popover.element.offsetWidth) / 2) +
-        "px;";
+    if (isRight && right + popover.element.offsetWidth > window.innerWidth) horizontal = "left: " + parseInt((window.innerWidth - popover.element.offsetWidth) / 2) + "px;";
     // check if popover needs a max-height (user will scroll inside the popover)
-    var maxHeight = menuOnTop
-      ? selectedTriggerPosition.top - popover.viewportGap
-      : window.innerHeight -
-        selectedTriggerPosition.bottom -
-        popover.viewportGap;
+    var maxHeight = menuOnTop ? selectedTriggerPosition.top - popover.viewportGap : window.innerHeight - selectedTriggerPosition.bottom - popover.viewportGap;
 
     var initialStyle = popover.element.getAttribute("style");
     if (!initialStyle) initialStyle = "";
-    popover.element.setAttribute(
-      "style",
-      initialStyle +
-        horizontal +
-        vertical +
-        "max-height:" +
-        Math.floor(maxHeight) +
-        "px;"
-    );
+    popover.element.setAttribute("style", initialStyle + horizontal + vertical + "max-height:" + Math.floor(maxHeight) + "px;");
   }
 
   function resetPopoverStyle(popover) {
@@ -196,11 +151,7 @@
   function checkPopoverClick(popover, target) {
     // close popover when clicking outside it
     if (!popover.popoverIsOpen) return;
-    if (
-      !popover.element.contains(target) &&
-      !target.closest('[aria-controls="' + popover.elementId + '"]')
-    )
-      togglePopover(popover, false);
+    if (!popover.element.contains(target) && !target.closest('[aria-controls="' + popover.elementId + '"]')) togglePopover(popover, false);
   }
 
   function checkPopoverFocus(popover) {
@@ -252,11 +203,7 @@
 
   function isVisible(element) {
     // check if element is visible
-    return (
-      element.offsetWidth ||
-      element.offsetHeight ||
-      element.getClientRects().length
-    );
+    return element.offsetWidth || element.offsetHeight || element.getClientRects().length;
   }
 
   window.Popover = Popover;
@@ -264,8 +211,7 @@
   //initialize the Popover objects
   var popovers = document.getElementsByClassName("js-popover");
   // generic focusable elements string selector
-  var focusableElString =
-    '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary';
+  var focusableElString = '[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable], audio[controls], video[controls], summary';
 
   if (popovers.length > 0) {
     var popoversArray = [];
@@ -273,23 +219,14 @@
     for (var i = 0; i < popovers.length; i++) {
       (function (i) {
         popoversArray.push(new Popover(popovers[i]));
-        var scrollableElement = popovers[i].getAttribute(
-          "data-scrollable-element"
-        );
-        if (
-          scrollableElement &&
-          !scrollingContainers.includes(scrollableElement)
-        )
-          scrollingContainers.push(scrollableElement);
+        var scrollableElement = popovers[i].getAttribute("data-scrollable-element");
+        if (scrollableElement && !scrollingContainers.includes(scrollableElement)) scrollingContainers.push(scrollableElement);
       })(i);
     }
 
     // listen for key events
     window.addEventListener("keyup", function (event) {
-      if (
-        (event.keyCode && event.keyCode == 27) ||
-        (event.key && event.key.toLowerCase() == "escape")
-      ) {
+      if ((event.keyCode && event.keyCode == 27) || (event.key && event.key.toLowerCase() == "escape")) {
         // close popover on 'Esc'
         popoversArray.forEach(function (element) {
           element.checkPopoverFocus();

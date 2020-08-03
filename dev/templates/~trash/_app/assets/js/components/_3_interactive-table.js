@@ -1,16 +1,14 @@
+/** @format */
+
 // File#: _3_interactive-table
 // Usage: codyhouse.co/license
 (function () {
   var IntTable = function (element) {
     this.element = element;
-    this.header = this.element.getElementsByClassName(
-      "js-int-table__header"
-    )[0];
+    this.header = this.element.getElementsByClassName("js-int-table__header")[0];
     this.headerCols = this.header.getElementsByTagName("tr")[0].children;
     this.body = this.element.getElementsByClassName("js-int-table__body")[0];
-    this.sortingRows = this.element.getElementsByClassName(
-      "js-int-table__sort-row"
-    );
+    this.sortingRows = this.element.getElementsByClassName("js-int-table__sort-row");
     initIntTable(this);
   };
 
@@ -18,22 +16,17 @@
     // check if table has actions
     initIntTableActions(table);
     // check if there are checkboxes to select/deselect a row/all rows
-    var selectAll = table.element.getElementsByClassName(
-      "js-int-table__select-all"
-    );
+    var selectAll = table.element.getElementsByClassName("js-int-table__select-all");
     if (selectAll.length > 0) initIntTableSelection(table, selectAll);
     // check if there are sortable columns
-    table.sortableCols = table.element.getElementsByClassName(
-      "js-int-table__cell--sort"
-    );
+    table.sortableCols = table.element.getElementsByClassName("js-int-table__cell--sort");
     if (table.sortableCols.length > 0) {
       // add a data-order attribute to all rows so that we can reset the order
       setDataRowOrder(table);
       // listen to the click event on a sortable column
       table.header.addEventListener("click", function (event) {
         var selectedCol = event.target.closest(".js-int-table__cell--sort");
-        if (!selectedCol || event.target.tagName.toLowerCase() == "input")
-          return;
+        if (!selectedCol || event.target.tagName.toLowerCase() == "input") return;
         sortColumns(table, selectedCol);
       });
       table.header.addEventListener("change", function (event) {
@@ -44,10 +37,7 @@
       });
       table.header.addEventListener("keydown", function (event) {
         // keyboard navigation - change sorting on enter
-        if (
-          (event.keyCode && event.keyCode == 13) ||
-          (event.key && event.key.toLowerCase() == "enter")
-        ) {
+        if ((event.keyCode && event.keyCode == 13) || (event.key && event.key.toLowerCase() == "enter")) {
           var selectedCol = event.target.closest(".js-int-table__cell--sort");
           if (!selectedCol) return;
           sortColumns(table, selectedCol);
@@ -56,9 +46,7 @@
 
       // change cell style when in focus
       table.header.addEventListener("focusin", function (event) {
-        var closestCell = document.activeElement.closest(
-          ".js-int-table__cell--sort"
-        );
+        var closestCell = document.activeElement.closest(".js-int-table__cell--sort");
         if (closestCell) Util.addClass(closestCell, "int-table__cell--focus");
       });
       table.header.addEventListener("focusout", function (event) {
@@ -73,24 +61,16 @@
     // check if table has actions and store them
     var tableId = table.element.getAttribute("id");
     if (!tableId) return;
-    var tableActions = document.querySelector(
-      '[data-table-controls="' + tableId + '"]'
-    );
+    var tableActions = document.querySelector('[data-table-controls="' + tableId + '"]');
     if (!tableActions) return;
-    table.actionsSelection = tableActions.getElementsByClassName(
-      "js-int-table-actions__items-selected"
-    );
-    table.actionsNoSelection = tableActions.getElementsByClassName(
-      "js-int-table-actions__no-items-selected"
-    );
+    table.actionsSelection = tableActions.getElementsByClassName("js-int-table-actions__items-selected");
+    table.actionsNoSelection = tableActions.getElementsByClassName("js-int-table-actions__no-items-selected");
   }
 
   function initIntTableSelection(table, select) {
     // checkboxes for rows selection
     table.selectAll = select[0];
-    table.selectRow = table.element.getElementsByClassName(
-      "js-int-table__select-row"
-    );
+    table.selectRow = table.element.getElementsByClassName("js-int-table__select-row");
     // select/deselect all rows
     table.selectAll.addEventListener("click", function (event) {
       // we cannot use the 'change' event as on IE/Edge the change from "indeterminate" to either "checked" or "unchecked"  does not trigger that event
@@ -102,10 +82,7 @@
       toggleAllSelection(table);
     });
     // toggle actions
-    toggleActions(
-      table,
-      table.element.getElementsByClassName("int-table__row--checked").length > 0
-    );
+    toggleActions(table, table.element.getElementsByClassName("int-table__row--checked").length > 0);
   }
 
   function toggleRowSelection(table) {
@@ -113,11 +90,7 @@
     var status = table.selectAll.checked;
     for (var i = 0; i < table.selectRow.length; i++) {
       table.selectRow[i].checked = status;
-      Util.toggleClass(
-        table.selectRow[i].closest(".int-table__row"),
-        "int-table__row--checked",
-        status
-      );
+      Util.toggleClass(table.selectRow[i].closest(".int-table__row"), "int-table__row--checked", status);
     }
     toggleActions(table, status);
   }
@@ -132,11 +105,7 @@
       } else {
         oneChecked = true;
       }
-      Util.toggleClass(
-        table.selectRow[i].closest(".int-table__row"),
-        "int-table__row--checked",
-        table.selectRow[i].checked
-      );
+      Util.toggleClass(table.selectRow[i].closest(".int-table__row"), "int-table__row--checked", table.selectRow[i].checked);
     }
     table.selectAll.checked = oneChecked;
     // if status if false but one input is checked -> set an indeterminate state for the 'Select All' checkbox
@@ -161,17 +130,13 @@
 
     // reset appearance of the th column that was previously sorted (if any)
     for (var i = 0; i < table.headerCols.length; i++) {
-      Util.removeClass(
-        table.headerCols[i],
-        "int-table__cell--asc int-table__cell--desc"
-      );
+      Util.removeClass(table.headerCols[i], "int-table__cell--asc int-table__cell--desc");
     }
     // reset appearance for the selected th column
     if (order == "asc") Util.addClass(selectedCol, "int-table__cell--asc");
     if (order == "desc") Util.addClass(selectedCol, "int-table__cell--desc");
     // reset checkbox selection
-    if (!customOrder)
-      selectedCol.querySelector('input[value="' + order + '"]').checked = true;
+    if (!customOrder) selectedCol.querySelector('input[value="' + order + '"]').checked = true;
   }
 
   function getSortingOrder(selectedCol) {
@@ -190,14 +155,8 @@
     while (switching) {
       switching = false;
       for (i = 0; i < rowsArray.length - 1; i++) {
-        var contentOne =
-            order == "none"
-              ? rowsArray[i].getAttribute("data-order")
-              : rowsArray[i].children[index].textContent.trim(),
-          contentTwo =
-            order == "none"
-              ? rowsArray[i + 1].getAttribute("data-order")
-              : rowsArray[i + 1].children[index].textContent.trim();
+        var contentOne = order == "none" ? rowsArray[i].getAttribute("data-order") : rowsArray[i].children[index].textContent.trim(),
+          contentTwo = order == "none" ? rowsArray[i + 1].getAttribute("data-order") : rowsArray[i + 1].children[index].textContent.trim();
 
         shouldSwitch = compareValues(contentOne, contentTwo, order, selctedCol);
         if (shouldSwitch) {
@@ -214,24 +173,13 @@
       dateComparison = selctedCol.getAttribute("data-date-format");
     if (dateComparison && order != "none") {
       // comparing dates
-      compare =
-        order == "asc" || order == "none"
-          ? parseCustomDate(val1, dateComparison) >
-            parseCustomDate(val2, dateComparison)
-          : parseCustomDate(val2, dateComparison) >
-            parseCustomDate(val1, dateComparison);
+      compare = order == "asc" || order == "none" ? parseCustomDate(val1, dateComparison) > parseCustomDate(val2, dateComparison) : parseCustomDate(val2, dateComparison) > parseCustomDate(val1, dateComparison);
     } else if (!isNaN(val1) && !isNaN(val2)) {
       // comparing numbers
-      compare =
-        order == "asc" || order == "none"
-          ? Number(val1) > Number(val2)
-          : Number(val2) > Number(val1);
+      compare = order == "asc" || order == "none" ? Number(val1) > Number(val2) : Number(val2) > Number(val1);
     } else {
       // comparing strings
-      compare =
-        order == "asc" || order == "none"
-          ? val2.toString().localeCompare(val1) < 0
-          : val1.toString().localeCompare(val2) < 0;
+      compare = order == "asc" || order == "none" ? val2.toString().localeCompare(val1) < 0 : val1.toString().localeCompare(val2) < 0;
     }
     return compare;
   }

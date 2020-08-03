@@ -1,5 +1,10 @@
+<!-- @format -->
+
 # Notes
 
-npm run gulp watch
+npm
 
 npx prettier --write .
+
+Preview Build
+python -m SimpleHTTPServer 8000

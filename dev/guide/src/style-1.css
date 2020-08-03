@@ -1,3 +1,5 @@
+/** @format */
+
 *,
 *::after,
 *::before {
@@ -229,12 +231,8 @@ u {
 .text-component h2,
 .text-component h3,
 .text-component h4 {
-  line-height: calc(
-    var(--heading-line-height) * var(--line-height-multiplier, 1)
-  );
-  margin-bottom: calc(
-    var(--space-unit) * 0.25 * var(--text-vspace-multiplier, 1)
-  );
+  line-height: calc(var(--heading-line-height) * var(--line-height-multiplier, 1));
+  margin-bottom: calc(var(--space-unit) * 0.25 * var(--text-vspace-multiplier, 1));
 }
 .text-component h2,
 .text-component h3,
@@ -252,9 +250,7 @@ u {
 .text-component p,
 .text-component blockquote,
 .text-component .text-component__block {
-  margin-bottom: calc(
-    var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1)
-  );
+  margin-bottom: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
 }
 .text-component ul,
 .text-component ol {
@@ -304,15 +300,11 @@ u {
   }
   .text-component__block--left {
     float: left;
-    margin-right: calc(
-      var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1)
-    );
+    margin-right: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
   }
   .text-component__block--right {
     float: right;
-    margin-left: calc(
-      var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1)
-    );
+    margin-left: calc(var(--space-unit) * 0.75 * var(--text-vspace-multiplier, 1));
   }
 }
 @media (min-width: 90rem) {

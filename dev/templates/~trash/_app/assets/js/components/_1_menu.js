@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _1_menu
 // Usage: codyhouse.co/license
 (function () {
@@ -5,9 +7,7 @@
     this.element = element;
     this.elementId = this.element.getAttribute("id");
     this.menuItems = this.element.getElementsByClassName("js-menu__content");
-    this.trigger = document.querySelectorAll(
-      '[aria-controls="' + this.elementId + '"]'
-    );
+    this.trigger = document.querySelectorAll('[aria-controls="' + this.elementId + '"]');
     this.selectedTrigger = false;
     this.menuIsOpen = false;
     this.initMenu();
@@ -35,18 +35,12 @@
         self.trigger[i].addEventListener("click", function (event) {
           event.preventDefault();
           // if the menu had been previously opened by another trigger element -> close it first and reopen in the right position
-          if (
-            Util.hasClass(self.element, "menu--is-visible") &&
-            self.selectedTrigger != self.trigger[i]
-          ) {
+          if (Util.hasClass(self.element, "menu--is-visible") && self.selectedTrigger != self.trigger[i]) {
             self.toggleMenu(false, false); // close menu
           }
           // toggle menu
           self.selectedTrigger = self.trigger[i];
-          self.toggleMenu(
-            !Util.hasClass(self.element, "menu--is-visible"),
-            true
-          );
+          self.toggleMenu(!Util.hasClass(self.element, "menu--is-visible"), true);
         });
       })(i);
     }
@@ -55,15 +49,9 @@
     this.element.addEventListener("keydown", function (event) {
       // use up/down arrow to navigate list of menu items
       if (!Util.hasClass(event.target, "js-menu__content")) return;
-      if (
-        (event.keyCode && event.keyCode == 40) ||
-        (event.key && event.key.toLowerCase() == "arrowdown")
-      ) {
+      if ((event.keyCode && event.keyCode == 40) || (event.key && event.key.toLowerCase() == "arrowdown")) {
         self.navigateItems(event, "next");
-      } else if (
-        (event.keyCode && event.keyCode == 38) ||
-        (event.key && event.key.toLowerCase() == "arrowup")
-      ) {
+      } else if ((event.keyCode && event.keyCode == 38) || (event.key && event.key.toLowerCase() == "arrowup")) {
         self.navigateItems(event, "prev");
       }
     });
@@ -99,38 +87,19 @@
 
   Menu.prototype.positionMenu = function (event, direction) {
     var selectedTriggerPosition = this.selectedTrigger.getBoundingClientRect(),
-      menuOnTop =
-        window.innerHeight - selectedTriggerPosition.bottom <
-        selectedTriggerPosition.top;
+      menuOnTop = window.innerHeight - selectedTriggerPosition.bottom < selectedTriggerPosition.top;
     // menuOnTop = window.innerHeight < selectedTriggerPosition.bottom + this.element.offsetHeight;
 
     var left = selectedTriggerPosition.left,
       right = window.innerWidth - selectedTriggerPosition.right,
-      isRight =
-        window.innerWidth <
-        selectedTriggerPosition.left + this.element.offsetWidth;
+      isRight = window.innerWidth < selectedTriggerPosition.left + this.element.offsetWidth;
 
-    var horizontal = isRight
-        ? "right: " + right + "px;"
-        : "left: " + left + "px;",
-      vertical = menuOnTop
-        ? "bottom: " +
-          (window.innerHeight - selectedTriggerPosition.top) +
-          "px;"
-        : "top: " + selectedTriggerPosition.bottom + "px;";
+    var horizontal = isRight ? "right: " + right + "px;" : "left: " + left + "px;",
+      vertical = menuOnTop ? "bottom: " + (window.innerHeight - selectedTriggerPosition.top) + "px;" : "top: " + selectedTriggerPosition.bottom + "px;";
     // check right position is correct -> otherwise set left to 0
-    if (isRight && right + this.element.offsetWidth > window.innerWidth)
-      horizontal =
-        "left: " +
-        parseInt((window.innerWidth - this.element.offsetWidth) / 2) +
-        "px;";
-    var maxHeight = menuOnTop
-      ? selectedTriggerPosition.top - 20
-      : window.innerHeight - selectedTriggerPosition.bottom - 20;
-    this.element.setAttribute(
-      "style",
-      horizontal + vertical + "max-height:" + Math.floor(maxHeight) + "px;"
-    );
+    if (isRight && right + this.element.offsetWidth > window.innerWidth) horizontal = "left: " + parseInt((window.innerWidth - this.element.offsetWidth) / 2) + "px;";
+    var maxHeight = menuOnTop ? selectedTriggerPosition.top - 20 : window.innerHeight - selectedTriggerPosition.bottom - 20;
+    this.element.setAttribute("style", horizontal + vertical + "max-height:" + Math.floor(maxHeight) + "px;");
   };
 
   Menu.prototype.navigateItems = function (event, direction) {
@@ -144,16 +113,11 @@
 
   Menu.prototype.checkMenuFocus = function () {
     var menuParent = document.activeElement.closest(".js-menu");
-    if (!menuParent || !this.element.contains(menuParent))
-      this.toggleMenu(false, false);
+    if (!menuParent || !this.element.contains(menuParent)) this.toggleMenu(false, false);
   };
 
   Menu.prototype.checkMenuClick = function (target) {
-    if (
-      !this.element.contains(target) &&
-      !target.closest('[aria-controls="' + this.elementId + '"]')
-    )
-      this.toggleMenu(false);
+    if (!this.element.contains(target) && !target.closest('[aria-controls="' + this.elementId + '"]')) this.toggleMenu(false);
   };
 
   window.Menu = Menu;
@@ -166,31 +130,19 @@
     for (var i = 0; i < menus.length; i++) {
       (function (i) {
         menusArray.push(new Menu(menus[i]));
-        var scrollableElement = menus[i].getAttribute(
-          "data-scrollable-element"
-        );
-        if (
-          scrollableElement &&
-          scrollingContainers.indexOf(scrollableElement) < 0
-        )
-          scrollingContainers.push(scrollableElement);
+        var scrollableElement = menus[i].getAttribute("data-scrollable-element");
+        if (scrollableElement && scrollingContainers.indexOf(scrollableElement) < 0) scrollingContainers.push(scrollableElement);
       })(i);
     }
 
     // listen for key events
     window.addEventListener("keyup", function (event) {
-      if (
-        (event.keyCode && event.keyCode == 9) ||
-        (event.key && event.key.toLowerCase() == "tab")
-      ) {
+      if ((event.keyCode && event.keyCode == 9) || (event.key && event.key.toLowerCase() == "tab")) {
         //close menu if focus is outside menu element
         menusArray.forEach(function (element) {
           element.checkMenuFocus();
         });
-      } else if (
-        (event.keyCode && event.keyCode == 27) ||
-        (event.key && event.key.toLowerCase() == "escape")
-      ) {
+      } else if ((event.keyCode && event.keyCode == 27) || (event.key && event.key.toLowerCase() == "escape")) {
         // close menu on 'Esc'
         menusArray.forEach(function (element) {
           element.toggleMenu(false, false);

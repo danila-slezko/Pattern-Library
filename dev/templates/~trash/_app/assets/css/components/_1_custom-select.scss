@@ -1,11 +1,15 @@
-/* -------------------------------- 
-
-File#: _1_custom-select
-Title: Custom Select
-Descr: Custom Select Control
-Usage: codyhouse.co/license
-
--------------------------------- */
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _1_custom-select
+ * Title: Custom Select
+ * Descr: Custom Select Control
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
 :root {
   // --default variation only 👇
@@ -21,10 +25,7 @@ Usage: codyhouse.co/license
 .select__input {
   width: 100%;
   height: 100%;
-  padding-right: calc(
-    var(--select-icon-size) + var(--select-icon-right-margin) +
-      var(--select-text-icon-gap)
-  ) !important;
+  padding-right: calc(var(--select-icon-size) + var(--select-icon-right-margin) + var(--select-text-icon-gap)) !important;
 }
 
 .select__icon {

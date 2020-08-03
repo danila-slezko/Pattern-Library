@@ -1,11 +1,15 @@
-/* -------------------------------- 
-
-File#: _1_tabbed-navigation
-Title: Tabbed Navigation
-Descr: Tabbed secondary navigation
-Usage: codyhouse.co/license
-
--------------------------------- */
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _1_tabbed-navigation
+ * Title: Tabbed Navigation
+ * Descr: Tabbed secondary navigation
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
 :root {
   --s-tabs-border-bottom-width: 1px;
@@ -43,8 +47,7 @@ Usage: codyhouse.co/license
     display: inline-block;
     padding: var(--space-xs);
     white-space: nowrap;
-    border-bottom: var(--s-tabs-selected-item-border-bottom-width) solid
-      transparent;
+    border-bottom: var(--s-tabs-selected-item-border-bottom-width) solid transparent;
     z-index: 1;
     transition: 0.2s;
 

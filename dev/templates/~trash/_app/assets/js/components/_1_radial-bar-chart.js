@@ -1,19 +1,15 @@
+/** @format */
+
 // File#: _1_radial-bar-chart
 // Usage: codyhouse.co/license
 (function () {
   var RadialBar = function (opts) {
     this.options = Util.extend(RadialBar.defaults, opts);
     this.element = this.options.element;
-    this.chartArea = this.element.getElementsByClassName(
-      "js-radial-bar__area"
-    )[0];
-    this.percentages = this.element.getElementsByClassName(
-      "js-radial-bar__value"
-    );
+    this.chartArea = this.element.getElementsByClassName("js-radial-bar__area")[0];
+    this.percentages = this.element.getElementsByClassName("js-radial-bar__value");
     this.chartDashStroke = [];
-    this.tooltip = this.chartArea.getElementsByClassName(
-      "js-radial-bar__tooltip"
-    );
+    this.tooltip = this.chartArea.getElementsByClassName("js-radial-bar__tooltip");
     this.eventIds = [];
     this.hoverId = false;
     this.hovering = false;
@@ -43,26 +39,15 @@
   }
 
   function getChartVariables(chart) {
-    chart.circleGap = parseInt(
-      getComputedStyle(chart.element).getPropertyValue("--radial-bar-gap")
-    );
+    chart.circleGap = parseInt(getComputedStyle(chart.element).getPropertyValue("--radial-bar-gap"));
     if (isNaN(chart.circleGap)) chart.circleGap = 4;
 
-    chart.circleStroke = parseInt(
-      getComputedStyle(chart.element).getPropertyValue(
-        "--radial-bar-bar-stroke"
-      )
-    );
+    chart.circleStroke = parseInt(getComputedStyle(chart.element).getPropertyValue("--radial-bar-bar-stroke"));
     if (isNaN(chart.circleStroke)) chart.circleStroke = 10;
   }
 
   function createChartSvg(chart) {
-    var svg =
-      '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="' +
-      chart.width +
-      '" height="' +
-      chart.height +
-      '" class="radial-bar__svg js-radial-bar__svg"></svg>';
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="' + chart.width + '" height="' + chart.height + '" class="radial-bar__svg js-radial-bar__svg"></svg>';
     chart.chartArea.innerHTML = chart.chartArea.innerHTML + svg;
     chart.svg = chart.chartArea.getElementsByClassName("js-radial-bar__svg")[0];
     // create chart content
@@ -73,33 +58,18 @@
     for (var i = 0; i < chart.percentages.length; i++) {
       // for each percentage value, we'll create: a <g> wrapper + 2 <circle> elements (bg + fill)
       var gEl = document.createElementNS("http://www.w3.org/2000/svg", "g"),
-        circleFill = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "circle"
-        ),
-        circleBg = document.createElementNS(
-          "http://www.w3.org/2000/svg",
-          "circle"
-        );
+        circleFill = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
+        circleBg = document.createElementNS("http://www.w3.org/2000/svg", "circle");
 
-      var customClass = chart.percentages[i].getAttribute(
-        "data-radial-bar-color"
-      );
+      var customClass = chart.percentages[i].getAttribute("data-radial-bar-color");
       if (!customClass) customClass = "";
 
-      var radius =
-        chart.height / 2 -
-        (chart.circleStroke + chart.circleGap) * i -
-        chart.circleStroke;
+      var radius = chart.height / 2 - (chart.circleStroke + chart.circleGap) * i - chart.circleStroke;
 
       var circunference = 2 * Math.PI * radius,
         percentage = parseInt(chart.percentages[i].textContent);
 
-      chart.chartDashStroke.push([
-        (circunference * percentage) / 100,
-        (circunference * (100 - percentage)) / 100,
-        circunference,
-      ]);
+      chart.chartDashStroke.push([(circunference * percentage) / 100, (circunference * (100 - percentage)) / 100, circunference]);
 
       Util.setAttributes(circleBg, {
         cx: chart.height / 2,
@@ -109,15 +79,9 @@
         "data-index": i,
       });
 
-      var dashArray =
-        chart.chartDashStroke[i][0] + " " + chart.chartDashStroke[i][1];
+      var dashArray = chart.chartDashStroke[i][0] + " " + chart.chartDashStroke[i][1];
 
-      if (
-        !chart.chartLoaded &&
-        chart.options.animate &&
-        intersectionObserver &&
-        !reducedMotion
-      ) {
+      if (!chart.chartLoaded && chart.options.animate && intersectionObserver && !reducedMotion) {
         // if chart has to be animated - start with empty circles
         dashArray = "0 " + 2 * circunference;
       }
@@ -126,9 +90,7 @@
         cx: chart.height / 2,
         cy: chart.width / 2,
         r: radius,
-        class:
-          "radial-bar__circle radial-bar__circle__fill js-radial-bar__circle__fill " +
-          customClass,
+        class: "radial-bar__circle radial-bar__circle__fill js-radial-bar__circle__fill " + customClass,
         "stroke-dasharray": dashArray,
         "stroke-dashoffset": circunference / 4,
         "data-index": i,
@@ -192,9 +154,7 @@
   function resetTooltip(chart) {
     // hide tooltip
     if (chart.hoverId) {
-      window.requestAnimationFrame
-        ? window.cancelAnimationFrame(chart.hoverId)
-        : clearTimeout(chart.hoverId);
+      window.requestAnimationFrame ? window.cancelAnimationFrame(chart.hoverId) : clearTimeout(chart.hoverId);
       chart.hoverId = false;
     }
     Util.addClass(chart.tooltip[0], "is-hidden");
@@ -203,8 +163,7 @@
   }
 
   function setTooltipContent(chart) {
-    chart.tooltip[0].textContent =
-      chart.percentages[chart.selectedIndex].textContent;
+    chart.tooltip[0].textContent = chart.percentages[chart.selectedIndex].textContent;
   }
 
   function getSelectedIndex(event) {
@@ -233,16 +192,10 @@
     chart.hovering = false;
     // reset event listeners
     if (chart.eventIds && chart.eventIds["hover"]) {
-      chart.chartArea.removeEventListener(
-        "mouseenter",
-        chart.eventIds["hover"]
-      );
+      chart.chartArea.removeEventListener("mouseenter", chart.eventIds["hover"]);
       chart.chartArea.removeEventListener("mousedown", chart.eventIds["hover"]);
       chart.chartArea.removeEventListener("mousemove", chart.eventIds["hover"]);
-      chart.chartArea.removeEventListener(
-        "mouseleave",
-        chart.eventIds["hover"]
-      );
+      chart.chartArea.removeEventListener("mouseleave", chart.eventIds["hover"]);
     }
   }
 
@@ -253,13 +206,7 @@
 
   function animateChart(chart) {
     // reveal chart when it enters the viewport
-    if (
-      !chart.options.animate ||
-      chart.chartLoaded ||
-      reducedMotion ||
-      !intersectionObserver
-    )
-      return;
+    if (!chart.options.animate || chart.chartLoaded || reducedMotion || !intersectionObserver) return;
     var observer = new IntersectionObserver(chartObserve.bind(chart), {
       rootMargin: "0px 0px -200px 0px",
     });
@@ -278,9 +225,7 @@
   function animatePath(chart) {
     var currentTime = null,
       duration = 600;
-    var circles = chart.element.getElementsByClassName(
-      "js-radial-bar__circle__fill"
-    );
+    var circles = chart.element.getElementsByClassName("js-radial-bar__circle__fill");
 
     var animateSinglePath = function (timestamp) {
       if (!currentTime) currentTime = timestamp;
@@ -288,12 +233,7 @@
       if (progress > duration) progress = duration;
 
       for (var i = 0; i < chart.percentages.length; i++) {
-        var fill = Math.easeOutQuart(
-            progress,
-            0,
-            chart.chartDashStroke[i][0],
-            duration
-          ),
+        var fill = Math.easeOutQuart(progress, 0, chart.chartDashStroke[i][0], duration),
           empty = chart.chartDashStroke[i][2] - fill;
 
         circles[i].setAttribute("stroke-dasharray", fill + " " + empty);
@@ -316,20 +256,13 @@
 
   // initialize the RadialBar objects
   var radialBar = document.getElementsByClassName("js-radial-bar");
-  var intersectionObserver =
-      "IntersectionObserver" in window &&
-      "IntersectionObserverEntry" in window &&
-      "intersectionRatio" in window.IntersectionObserverEntry.prototype,
+  var intersectionObserver = "IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype,
     reducedMotion = Util.osHasReducedMotion();
 
   if (radialBar.length > 0) {
     for (var i = 0; i < radialBar.length; i++) {
       (function (i) {
-        var animate =
-          radialBar[i].getAttribute("data-radial-chart-animation") &&
-          radialBar[i].getAttribute("data-radial-chart-animation") == "on"
-            ? true
-            : false;
+        var animate = radialBar[i].getAttribute("data-radial-chart-animation") && radialBar[i].getAttribute("data-radial-chart-animation") == "on" ? true : false;
         new RadialBar({ element: radialBar[i], animate: animate });
       })(i);
     }

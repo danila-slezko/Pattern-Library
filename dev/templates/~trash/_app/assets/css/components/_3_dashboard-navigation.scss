@@ -1,11 +1,15 @@
-/* -------------------------------- 
-
-File#: _3_dashboard-navigation
-Title: Dashboard Navigation
-Descr: Dashboard navigation template
-Usage: codyhouse.co/license
-
--------------------------------- */
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _3_dashboard-navigation
+ * Title: Dashboard Navigation
+ * Descr: Dashboard navigation template
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
 :root {
   --app-ui-header-height: 50px;
@@ -73,8 +77,7 @@ Usage: codyhouse.co/license
 
     > * {
       stroke-dasharray: 24;
-      transition: transform 0.3s var(--ease-in-out), stroke-dashoffset 0.3s,
-        opacity 0.3s;
+      transition: transform 0.3s var(--ease-in-out), stroke-dashoffset 0.3s, opacity 0.3s;
     }
 
     > *:nth-child(1) {

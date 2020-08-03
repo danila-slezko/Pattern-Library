@@ -1,11 +1,15 @@
-/* -------------------------------- 
-
-File#: _1_modal-window
-Title: Modal Window
-Descr: A modal dialog used to display critical information
-Usage: codyhouse.co/license
-
--------------------------------- */
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _1_modal-window
+ * Title: Modal Window
+ * Descr: A modal dialog used to display critical information
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
 .modal {
   position: fixed;
@@ -90,13 +94,10 @@ Usage: codyhouse.co/license
 @media (prefers-reduced-motion: no-preference) {
   .modal--animate-fade {
     --modal-transition-duration: 0.2s;
-    transition: opacity var(--modal-transition-duration),
-      background-color var(--modal-transition-duration),
-      visibility 0s var(--modal-transition-duration);
+    transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
 
     &.modal--is-visible {
-      transition: opacity var(--modal-transition-duration),
-        background-color var(--modal-transition-duration), visibility 0s;
+      transition: opacity var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s;
     }
   }
 
@@ -106,8 +107,7 @@ Usage: codyhouse.co/license
   .modal--animate-translate-right,
   .modal--animate-translate-left {
     --modal-transition-duration: 0.2s;
-    transition: opacity var(--modal-transition-duration),
-      visibility 0s var(--modal-transition-duration);
+    transition: opacity var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
 
     .modal__content {
       will-change: transform;
@@ -128,9 +128,7 @@ Usage: codyhouse.co/license
   .modal--animate-slide-right,
   .modal--animate-slide-left {
     --modal-transition-duration: 0.3s;
-    transition: opacity 0s var(--modal-transition-duration),
-      background-color var(--modal-transition-duration),
-      visibility 0s var(--modal-transition-duration);
+    transition: opacity 0s var(--modal-transition-duration), background-color var(--modal-transition-duration), visibility 0s var(--modal-transition-duration);
 
     .modal__content {
       will-change: transform;
@@ -138,8 +136,7 @@ Usage: codyhouse.co/license
     }
 
     &.modal--is-visible {
-      transition: background-color var(--modal-transition-duration),
-        visibility 0s;
+      transition: background-color var(--modal-transition-duration), visibility 0s;
 
       .modal__content {
         transform: scale(1); // reset all transformations

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "gulp": "gulp watch",
+    "format": "prettier --write . {twig,json,md,scss,less,html,pug}",
     "start": "fractal start --sync",
     "build": "fractal build"
   },

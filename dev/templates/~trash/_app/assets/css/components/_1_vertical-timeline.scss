@@ -1,21 +1,22 @@
-/* -------------------------------- 
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _1_vertical-timeline
+ * Title: Vertical Timeline
+ * Descr: A vertical timeline used to display a sequence of events/steps
+ * Usage: codyhouse.co/license
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
 
-File#: _1_vertical-timeline
-Title: Vertical Timeline
-Descr: A vertical timeline used to display a sequence of events/steps
-Usage: codyhouse.co/license
-
--------------------------------- */
 :root {
   --v-timeline-marker-size: 16px; // dot indicator size
   --v-timeline-track-width: 2px; // vertical track (line) width
   --v-timeline-triangle-size: 12px; // triangle indicator size
-  --v-timeline-sections-gap: var(
-    --space-lg
-  ); // gap between sections (section = marker + item/s)
-  --v-timeline-items-gap: var(
-    --space-sm
-  ); // gap between items (if there are more than one within same date)
+  --v-timeline-sections-gap: var(--space-lg); // gap between sections (section = marker + item/s)
+  --v-timeline-items-gap: var(--space-sm); // gap between items (if there are more than one within same date)
 }
 
 .v-timeline {
@@ -27,9 +28,7 @@ Usage: codyhouse.co/license
     content: "";
     position: absolute;
     top: 0;
-    left: calc(
-      (var(--v-timeline-marker-size) - var(--v-timeline-track-width)) * 0.5
-    );
+    left: calc((var(--v-timeline-marker-size) - var(--v-timeline-track-width)) * 0.5);
     height: 100%;
     width: var(--v-timeline-track-width);
     background-color: alpha(var(--color-contrast-higher), 0.1);
@@ -136,9 +135,7 @@ Usage: codyhouse.co/license
       }
 
       .v-timeline__date {
-        right: calc(
-          -2 * (var(--v-timeline-triangle-size) + var(--space-xxs)) - var(--v-timeline-marker-size)
-        );
+        right: calc(-2 * (var(--v-timeline-triangle-size) + var(--space-xxs)) - var(--v-timeline-marker-size));
         transform: translateX(100%) translateY(-50%);
       }
     }
@@ -153,9 +150,7 @@ Usage: codyhouse.co/license
       }
 
       .v-timeline__date {
-        left: calc(
-          -2 * (var(--v-timeline-triangle-size) + var(--space-xxs)) - var(--v-timeline-marker-size)
-        );
+        left: calc(-2 * (var(--v-timeline-triangle-size) + var(--space-xxs)) - var(--v-timeline-marker-size));
         transform: translateX(-100%) translateY(-50%);
       }
     }

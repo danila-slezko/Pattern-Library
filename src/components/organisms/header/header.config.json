@@ -4,10 +4,12 @@
   "hidden": false,
   "order": 1,
   "context": {
-    "logo": [{
-      "name": "default",
-      "logoColor": "white"
-    }]
+    "logo": [
+      {
+        "name": "default",
+        "logoColor": "white"
+      }
+    ]
   },
   "status": "wip"
 }

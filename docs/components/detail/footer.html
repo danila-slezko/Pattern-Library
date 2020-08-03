@@ -202,8 +202,7 @@
     <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-1d3e3de41c6b0f0ab9351280fbeeab55-panel-notes">
     <div class="Prose Prose--condensed">
         
-        <h1 id="footer">Footer</h1>
-
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
     </div>
 </div>
@@ -214,6 +213,21 @@
     <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"items-center bg-center bg-no-repeat"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url('http://mktg-static-sites.prod.cnetcontent.com/assets/images/map.svg')"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-id">#bottom</span> {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--color-contrast-higher);
+            <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--color-contrast-low)
+        }
+
+        <span class="hljs-selector-id">#bottom</span> <span class="hljs-selector-class">.link</span> {
+            <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--color-contrast-low);
+            <span class="hljs-attribute">text-decoration</span>: none
+        }
+
+        <span class="hljs-selector-id">#bottom</span> <span class="hljs-selector-class">.link</span><span class="hljs-selector-pseudo">:hover</span> {
+            <span class="hljs-attribute">text-decoration</span>: underline
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-md padding-y-lg"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>

@@ -1,3 +1,5 @@
+/** @format */
+
 // File#: _1_side-navigation
 // Usage: codyhouse.co/license
 (function () {
