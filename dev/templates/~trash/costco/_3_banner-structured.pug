@@ -1,0 +1,13 @@
+// main: ./index.pug
+
+div(class='padding-y-xl radius-lg bg-white shadow-md')
+  div(class='container max-width-adaptive-sm center-items')
+    div(class='text-component text-center line-height-lg v-space-lg')
+      h4(class='text-lg padding-bottom-xxxs color-black')=banner.headline
+      | !{banner.copy}
+    div(class='margin-top-sm text-center')
+      div(class='flex flex-wrap gap-xxxs items-center justify-center')
+        a(class='btn btn--primary', href=banner.button.url)=banner.button.label
+        span or
+        a(class='color-primary-dark', href=banner.link.url, target='_blank')=banner.link.label
+        span if you have an account.

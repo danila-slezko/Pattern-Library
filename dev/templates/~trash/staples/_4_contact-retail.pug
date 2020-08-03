@@ -1,0 +1,79 @@
+// main: ../../index.pug
+
+style
+  :less(compress=true)
+    #contact {
+      .btn {
+        background-color: var(--color-error-dark);
+        color: var(--color-white);
+        &:hover {
+          background-color: var(--color-error-darker);
+          color: var(--color-white);
+        }
+      }
+    }
+
+form.form-template-v3
+  input#captcha(type='hidden', name='captcha_settings', value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":"1588524591826"}')
+  input#oid(type='hidden', name='oid', value='00D2000000002px')
+  input#retURL(type='hidden', name='retURL', value='https://staples.cnetcontent.com?inquiry=true')
+  input#lead_source(type='hidden', name='lead_source', title='Lead Source', value='Landing Page')
+  input#00N57000006PiUg(type='hidden', name='00N57000006PiUg', title='Lead Sub-Source', value='Staples')
+  input#Campaign_ID(type='hidden', name='Campaign_ID', title='Campaign ID', value='7012p000001XpCm')
+  input#00N20000000gOZN(type='hidden', name='00N20000000gOZN', title='CC Product Interest')
+  input#00N570000063NYi(type='hidden', name='00N570000063NYi', title='Referrer URL', value='https://staples.cnetcontent.com/merchandising')
+  //- input(type='hidden', name='debug', value='1')
+  //- input(type='hidden', name='debugEmail', value='valerie.mardorf@cbs.com')
+  fieldset.margin-bottom-md.padding-bottom-sm.border-bottom
+    div(class='text-component margin-bottom-md text-center line-height-lg v-space-lg')
+      h5(class='text-lg padding-bottom-xs') #{contact.headline}
+      div(class='padding-x-lg@md') !{contact.text}
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='first_name') First name
+        div(class='col-4@md')
+          input#first_name(class='form-control width-100%', type='text', name='first_name')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='last_name') Last name
+        div(class='col-4@md')
+          input#last_name(class='form-control width-100%', type='text', name='last_name')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='company') Company
+        div(class='col-4@md')
+          input#company(class='form-control width-100%', type='text', name='company')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='phone') Company phone
+        div(class='col-4@md')
+          input#phone(class='form-control width-100%', type='text', name='phone')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='email') Work email
+        div(class='col-4@md')
+          input#email(class='form-control width-100%', type='email', name='email')
+    
+  fieldset.margin-bottom-md.padding-bottom-md.border-bottom
+    div.text-component.margin-bottom-md.text-center
+      h4.text-md Product Service Interest
+    div.margin-bottom-md
+      div(class='grid gap-0 items-center@md')
+        div(class='col-4@md offset-4@md')
+          ul(class='flex flex-column gap-sm flex-wrap margin-left-sm')
+            li
+              input.checkbox#checkbox1(type='checkbox')
+              label(for='checkbox1') Item&nbsp;Setup
+            li
+              input.checkbox#checkbox2(type='checkbox')
+              label(for='checkbox2') Structured&nbsp;Content
+            li
+              input.checkbox#checkbox3(type='checkbox')
+              label(for='checkbox3') Rich&nbsp;Content
+  .text-center
+    button.btn.btn--primary Submit

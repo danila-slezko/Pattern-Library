@@ -1,0 +1,37 @@
+{
+  "title": "Buttons",
+  "status": "ready",
+  "hidden": false,
+  "order": 1,
+  "preview": "@preview-columns",
+  "tags": ["cta", "call-to-action", "form"],
+  "meta": { "created": "2020-03-08" },
+  "default": "basic",
+  "context": {
+    "buttonText": "Basic",
+    "buttonModifier": "btn"
+  },
+  "variants": [
+    {
+      "name": "primary",
+      "context": {
+        "buttonModifier": "btn--primary",
+        "buttonText": "Primary"
+      }
+    },
+    {
+      "name": "accent",
+      "context": {
+        "buttonModifier": "btn--accent",
+        "buttonText": "Accent"
+      }
+    },
+    {
+      "name": "subtle",
+      "context": {
+        "buttonModifier": "btn--subtle",
+        "buttonText": "Subtle"
+      }
+    }
+  ]
+}

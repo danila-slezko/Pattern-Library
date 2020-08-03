@@ -1,0 +1,876 @@
+<!-- - feature tabs--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="../assets/icon/redball.ico" />
+    <title>Sell More Products on Elkjop</title>
+    <meta
+      name="description"
+      content="Elkjøp has partnered with CNET Content Solution to source structured and rich merchandising content as a part of the setup process for products sold on Elkjop."
+    />
+    <script>
+      document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <link id="codyframe" rel="stylesheet" href="../assets/css/style.css" />
+    <script>
+      if (!("CSS" in window) || !CSS.supports("color", "var(--color-var)")) {
+        var cfStyle = document.getElementById("codyframe");
+        if (cfStyle) {
+          var href = cfStyle.getAttribute("href");
+          href = href.replace("style.css", "style-fallback.css");
+          cfStyle.setAttribute("href", href);
+        }
+      }
+    </script>
+    <style>
+      .anchor {
+        padding-top: var(--header-height);
+      }
+
+      #header {
+        --header-height: 80px;
+        --header-height-md: 72px;
+        --color-bg: var(--color-primary-darker);
+        --color-contrast-higher: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      #header .header__item--divider {
+        width: 2px;
+        height: 3rem;
+        opacity: 0.5;
+        background-color: white;
+      }
+      #header .btn {
+        background-color: transparent;
+        color: var(--color-white);
+        box-shadow: inset 0 0 0 2px white;
+      }
+      #header .btn:hover {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+        box-shadow: inset 0 0 0 2px transparent;
+      }
+      #header .header__trigger {
+        box-shadow: inset 0 0 0 2px transparent !important;
+        padding: var(--space-md) 1em;
+        margin: calc(var(--header-height) * -0.4) 0 auto auto;
+      }
+      #header .header__trigger-icon {
+        margin-right: 0;
+        width: 1.5em;
+      }
+      #header .header__trigger:hover {
+        background: transparent;
+      }
+      #header .header__nav--is-visible .header__item--divider {
+        display: none;
+      }
+      #header .header__container {
+        margin-top: calc(var(--header-height) * -0.5);
+      }
+      #header .header__nav::before {
+        border: none;
+      }
+    </style>
+    <style>
+      #carousel .carousel__navigation {
+        cursor: pointer;
+        box-shadow: none;
+      }
+
+      #carousel .carousel__control {
+        cursor: pointer !important;
+        box-shadow: none;
+      }
+
+      #carousel .carousel__item {
+        text-align: center;
+      }
+      #carousel .carousel__item img {
+        margin: auto;
+      }
+    </style>
+    <style>
+      #bottom {
+        background-color: var(--color-contrast-higher);
+        color: var(--color-contrast-low);
+      }
+      #bottom .link {
+        color: var(--color-contrast-low);
+        text-decoration: none;
+      }
+      #bottom .link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body data-theme="default">
+    <a class="anchor" id="top"></a>
+    <main class="Costco-Page" layout>
+      <style>
+        .anchor {
+          padding-top: var(--header-height);
+        }
+
+        #header {
+          --header-height: 80px;
+          --header-height-md: 72px;
+          --color-bg: var(--color-primary-darker);
+          --color-contrast-higher: white;
+          position: fixed;
+          top: 0;
+          width: 100%;
+        }
+        #header .header__item--divider {
+          width: 2px;
+          height: 3rem;
+          opacity: 0.5;
+          background-color: white;
+        }
+        #header .btn {
+          background-color: transparent;
+          color: var(--color-white);
+          box-shadow: inset 0 0 0 2px white;
+        }
+        #header .btn:hover {
+          background-color: var(--color-white);
+          color: var(--color-primary);
+          box-shadow: inset 0 0 0 2px transparent;
+        }
+        #header .header__trigger {
+          box-shadow: inset 0 0 0 2px transparent !important;
+          padding: var(--space-md) 1em;
+          margin: calc(var(--header-height) * -0.4) 0 auto auto;
+        }
+        #header .header__trigger-icon {
+          margin-right: 0;
+          width: 1.5em;
+        }
+        #header .header__trigger:hover {
+          background: transparent;
+        }
+        #header .header__nav--is-visible .header__item--divider {
+          display: none;
+        }
+        #header .header__container {
+          margin-top: calc(var(--header-height) * -0.5);
+        }
+        #header .header__nav::before {
+          border: none;
+        }
+      </style>
+      <header class="header js-header anchor" id="header">
+        <div class="header__container container max-width-adaptive-md">
+          <div class="header__logo">
+            <a href="#top"
+              ><img
+                src="../assets/images/content-solutions.svg"
+                alt="CNET Content Solutions"
+            /></a>
+          </div>
+          <button
+            class="btn btn--subtle header__trigger js-header__trigger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="header-nav"
+          >
+            <i class="header__trigger-icon" aria-hidden="true"
+              ><span class="is-hidden">Menu</span></i
+            >
+          </button>
+          <nav
+            class="header__nav js-header__nav"
+            id="header-nav"
+            role="navigation"
+            aria-label="Main"
+          >
+            <div class="header__nav-inner">
+              <div class="header__label is-hidden">Main menu</div>
+              <ul class="header__list"></ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section
+        class="position-relative padding-y-lg padding-y-lg@md"
+        id="intro"
+      >
+        <div
+          class="container padding-y-lg margin-top-lg margin-top-xxl@md max-width-adaptive-md"
+        >
+          <div class="grid gap-xxxl items-center">
+            <div class="col-6@md order-1@md">
+              <span class="text-component line-height-lg v-space-lg">
+                <h1 class="text-xl padding-bottom-xxs color-black">
+                  Sell More Products on Elkjop
+                </h1>
+                <p>
+                  Elkjøp has partnered with CNET Content Solution to source
+                  structured and rich merchandising content as a part of the
+                  setup process for products sold on Elkjop.
+                </p>
+                <a class="btn btn--primary margin-bottom-md" href="#contact"
+                  >Get Started</a
+                >
+                <p>
+                  Sign in to your
+                  <a
+                    class="link"
+                    href="https://www.partneraccess.com/login"
+                    target="_blank"
+                  >
+                    PartnerAccess for Elkjop</a
+                  >
+                  account.
+                </p></span
+              >
+            </div>
+            <div class="col-6@md order-1@md">
+              <figure class="media-wrapper media-wrapper--4:3">
+                <img
+                  class="block width-100%"
+                  src="https://via.placeholder.com/640x360.jpg"
+                  srcset="https://via.placeholder.com/1280x720.jpg 2x"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="position-relative padding-y-lg padding-y-lg@md"
+        id="features"
+      >
+        <div class="container padding-y-lg max-width-adaptive-md">
+          <section class="loop-tabs padding-y-lg js-loop-tabs">
+            <div class="container max-width-adaptive-md">
+              <div class="grid gap-md flex-row-reverse@md">
+                <div
+                  class="loop-tabs__content flex flex-column text-center col-6@md flex-column-reverse@md justify-center@md text-left@md"
+                >
+                  <ul
+                    class="loop-tabs__controls js-loop-tabs__controls margin-bottom-lg flex flex-center flex-wrap margin-bottom-0@lg flex-column@md items-start@md"
+                  >
+                    <li>
+                      <a
+                        class="loop-tabs__control loop-tabs__control--selected text-sm padding-md"
+                        href="#timingTab1Panel1"
+                        >Feature 1</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="loop-tabs__control text-sm padding-md"
+                        href="#timingTab1Panel2"
+                        >Feature 2</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="loop-tabs__control text-sm padding-md"
+                        href="#timingTab1Panel3"
+                        >Feature 3</a
+                      >
+                    </li>
+                  </ul>
+                  <div
+                    class="loop-tabs__panels js-loop-tabs__panels margin-bottom-md"
+                  >
+                    <section
+                      class="loop-tabs__panel js-loop-tabs__panel text-component loop-tabs__panel--selected"
+                      id="timingTab1Panel1"
+                    >
+                      <h1>Panel 1</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nemo, aperiam!
+                      </p>
+                    </section>
+                    <section
+                      class="loop-tabs__panel js-loop-tabs__panel text-component"
+                      id="timingTab1Panel2"
+                    >
+                      <h1>Panel 2</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nemo, aperiam!
+                      </p>
+                    </section>
+                    <section
+                      class="loop-tabs__panel js-loop-tabs__panel text-component"
+                      id="timingTab1Panel3"
+                    >
+                      <h1>Panel 3</h1>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Provident.
+                      </p>
+                    </section>
+                  </div>
+                </div>
+                <div class="loop-tabs__media col-6@md" aria-hidden="true">
+                  <ul class="loop-tabs__assets js-loop-tabs__assets">
+                    <li class="loop-tabs__asset loop-tabs__asset--selected">
+                      <img
+                        src="../../assets/img/looping-tabs-img-1.svg"
+                        alt="Feature 1 Preview"
+                      />
+                    </li>
+                    <li class="loop-tabs__asset">
+                      <img
+                        src="../../assets/img/looping-tabs-img-2.svg"
+                        alt="Feature 2 Preview"
+                      />
+                    </li>
+                    <li class="loop-tabs__asset">
+                      <img
+                        src="../../assets/img/looping-tabs-img-3.svg"
+                        alt="Feature 3 Preview"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="bg-primary-dark" id="reach">
+        <div class="container max-width-adaptive-md padding-y-xl">
+          <!-- main: ./index.pug-->
+          <div
+            class="text-component max-width-adaptive-sm margin-auto padding-y-sm"
+          >
+            <h3 class="text-xl text-center color-white text-bold">
+              Extend the reach of your current digital brand assets by
+              incorporating them into The Home Depot's product pages
+            </h3>
+          </div>
+          <div class="max-width-adaptive-xs margin-auto padding-y-sm">
+            <figure class="media-wrapper">
+              <video
+                poster="https://cdn.cnetcontent.com/sites/pages/brand-assets.jpg"
+                preload
+                autoplay
+                loop
+                muted
+                playsinline
+                nofullscreen
+              >
+                <source
+                  src="https://cdn.cnetcontent.com/sites/pages/brand-assets.webm"
+                />
+                <source
+                  src="https://cdn.cnetcontent.com/sites/pages/brand-assets.mp4"
+                />
+                <img
+                  src="https://cdn.cnetcontent.com/sites/pages/brand-assets.jpg"
+                  alt="thumbnail"
+                  aria-label="media"
+                />
+              </video>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="bg bg-contrast-lower padding-y-lg" id="contact">
+        <div class="container max-width-adaptive-sm">
+          <style>
+            #banner .btn:hover {
+              background-color: var(--color-white);
+              box-shadow: inset 0 0 0 2px var(--color-primary-dark);
+            }
+          </style>
+          <div class="padding-y-xl radius-lg bg-white shadow-md">
+            <div class="container max-width-adaptive-sm center-items">
+              <div class="text-component text-center line-height-lg v-space-lg">
+                <h4 class="text-lg padding-bottom-xxxs color-black">
+                  Help ensure your Elkjop Structured Content is accurate and
+                  complete.
+                </h4>
+                <p>
+                  As Elkjop' Structured Content provider, we need your help to
+                  ensure your products go live with complete and accurate
+                  content in a timely manner. We make it easy. Simply respond to
+                  our CNET Requests for missing information through our easy to
+                  use PartnerAccess for Elkjop portal.
+                </p>
+              </div>
+              <div class="margin-top-sm text-center">
+                <div
+                  class="flex flex-wrap gap-xxxs items-center justify-center"
+                >
+                  <a class="btn btn--subtle" href="javascript:void(0)"
+                    ><span class="color-primary-dark">Sign up for FREE</span></a
+                  ><span>or</span
+                  ><a
+                    class="color-primary-dark"
+                    href="https://www.partneraccess.com"
+                    target="_blank"
+                    >login here</a
+                  ><span>if you have an account.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg bg-contrast-lower padding-y-lg" id="contact">
+        <div class="container max-width-adaptive-sm">
+          <form class="form-template-v3">
+            <input
+              id="captcha"
+              type="hidden"
+              name="captcha_settings"
+              value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":"1588524591826"}'
+            />
+            <input id="oid" type="hidden" name="oid" value="00D2000000002px" />
+            <input
+              id="retURL"
+              type="hidden"
+              name="retURL"
+              value="https://staples.cnetcontent.com?inquiry=true"
+            />
+            <input
+              id="lead_source"
+              type="hidden"
+              name="lead_source"
+              title="Lead Source"
+              value="Landing Page"
+            />
+            <input
+              id="00N57000006PiUg"
+              type="hidden"
+              name="00N57000006PiUg"
+              title="Lead Sub-Source"
+              value="Staples"
+            />
+            <input
+              id="Campaign_ID"
+              type="hidden"
+              name="Campaign_ID"
+              title="Campaign ID"
+              value="7012p000001XpCm"
+            />
+            <input
+              id="00N20000000gOZN"
+              type="hidden"
+              name="00N20000000gOZN"
+              title="CC Product Interest"
+            />
+            <input
+              id="00N570000063NYi"
+              type="hidden"
+              name="00N570000063NYi"
+              title="Referrer URL"
+              value="https://staples.cnetcontent.com/merchandising"
+            />
+            <input type="hidden" name="debug" value="1" />
+            <input
+              type="hidden"
+              name="debugEmail"
+              value="valerie.mardorf@cbs.com"
+            />
+            <fieldset class="margin-bottom-md padding-bottom-sm border-bottom">
+              <div
+                class="text-component margin-bottom-md text-center line-height-lg v-space-lg"
+              >
+                <h5 class="text-xxl padding-bottom-xs color-black">
+                  Contact Us to Get Started
+                </h5>
+                <div class="padding-x-xl@md">
+                  <p>
+                    Submit the form below, and a representative will reach out
+                    to you with more information about adding rich content to
+                    Elkjop.com
+                  </p>
+                </div>
+              </div>
+              <div class="margin-bottom-xs">
+                <div class="grid gap-xxs items-center@md">
+                  <div class="col-4@md text-right@md">
+                    <label class="form-label" for="first_name"
+                      >First Name</label
+                    >
+                  </div>
+                  <div class="col-4@md">
+                    <input
+                      class="form-control width-100%"
+                      id="first_name"
+                      type="text"
+                      name="first_name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="margin-bottom-xs">
+                <div class="grid gap-xxs items-center@md">
+                  <div class="col-4@md text-right@md">
+                    <label class="form-label" for="last_name">Last Name</label>
+                  </div>
+                  <div class="col-4@md">
+                    <input
+                      class="form-control width-100%"
+                      id="last_name"
+                      type="text"
+                      name="last_name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="margin-bottom-xs">
+                <div class="grid gap-xxs items-center@md">
+                  <div class="col-4@md text-right@md">
+                    <label class="form-label" for="company">Company</label>
+                  </div>
+                  <div class="col-4@md">
+                    <input
+                      class="form-control width-100%"
+                      id="company"
+                      type="text"
+                      name="company"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="margin-bottom-xs">
+                <div class="grid gap-xxs items-center@md">
+                  <div class="col-4@md text-right@md">
+                    <label class="form-label" for="phone">Company Phone</label>
+                  </div>
+                  <div class="col-4@md">
+                    <input
+                      class="form-control width-100%"
+                      id="phone"
+                      type="text"
+                      name="phone"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="margin-bottom-xs">
+                <div class="grid gap-xxs items-center@md">
+                  <div class="col-4@md text-right@md">
+                    <label class="form-label" for="email">Work Email</label>
+                  </div>
+                  <div class="col-4@md">
+                    <input
+                      class="form-control width-100%"
+                      id="email"
+                      type="email"
+                      name="email"
+                    />
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="text-center">
+              <button class="btn btn--primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section
+        class="position-relative padding-y-lg padding-y-lg@md"
+        id="carousel"
+      >
+        <div class="container padding-y-lg max-width-adaptive-md">
+          <style>
+            #carousel .carousel__navigation {
+              cursor: pointer;
+              box-shadow: none;
+            }
+
+            #carousel .carousel__control {
+              cursor: pointer !important;
+              box-shadow: none;
+            }
+
+            #carousel .carousel__item {
+              text-align: center;
+            }
+            #carousel .carousel__item img {
+              margin: auto;
+            }
+          </style>
+          <div
+            class="text-component margin-auto max-width-adaptive-sm padding-bottom-lg"
+          >
+            <h6 class="text-component text-center text-lg color-black">
+              For over 20 years, CNET has provided managed content services for
+              some of the world’s leading brands and retailers.
+            </h6>
+          </div>
+          <div
+            class="carousel flex flex-column js-carousel"
+            data-drag="on"
+            data-loop="off"
+            data-justify-content="on"
+          >
+            <p class="sr-only">Carousel items</p>
+            <div class="carousel__wrapper order-2 overflow-hidden">
+              <ol class="carousel__list">
+                <li class="carousel__item">
+                  <img
+                    width="96"
+                    height="96"
+                    src="../assets/logos/lexmark.svg"
+                  />
+                </li>
+                <li class="carousel__item">
+                  <img width="96" height="96" src="../assets/logos/jabra.png" />
+                </li>
+                <li class="carousel__item">
+                  <img width="96" height="96" src="../assets/logos/hp.svg" />
+                </li>
+                <li class="carousel__item">
+                  <img width="96" height="96" src="../assets/logos/ge.svg" />
+                </li>
+                <li class="carousel__item">
+                  <img width="96" height="96" src="../assets/logos/epson.svg" />
+                </li>
+                <li class="carousel__item">
+                  <img
+                    width="96"
+                    height="96"
+                    src="../assets/logos/electrolux.svg"
+                  />
+                </li>
+                <li class="carousel__item">
+                  <img
+                    width="96"
+                    height="96"
+                    src="../assets/logos/duracell.svg"
+                  />
+                </li>
+                <li class="carousel__item">
+                  <img width="96" height="96" src="../assets/logos/dell.svg" />
+                </li>
+                <li class="carousel__item">
+                  <img
+                    width="96"
+                    height="96"
+                    src="../assets/logos/corsair.svg"
+                  />
+                </li>
+                <li class="carousel__item">
+                  <img
+                    width="96"
+                    height="96"
+                    src="../assets/logos/coca-cola.svg"
+                  />
+                </li>
+                <li class="carousel__item">
+                  <img
+                    width="96"
+                    height="96"
+                    src="../assets/logos/chefman.png"
+                  />
+                </li>
+                <li class="carousel__item">
+                  <img width="96" height="96" src="../assets/logos/asus.svg" />
+                </li>
+              </ol>
+            </div>
+            <div class="margin-bottom-xs order-1 no-js" :is-hidden>
+              <div class="flex justify-between items-center">
+                <p class="text-sm color-contrast-medium">
+                  <i class="js-carousel__counter"></i> <span>/ </span>
+                  <i class="js-carousel__counter-tot"></i>
+                </p>
+                <nav>
+                  <ul class="flex gap-xxxs justify-end">
+                    <li>
+                      <button
+                        class="reset carousel__control carousel__control--prev js-carousel__control js-tab-focus"
+                      >
+                        <svg class="icon" viewBox="0 0 20 20">
+                          <title>Show previous items</title>
+                          <polyline
+                            points="13 18 5 10 13 2"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                          ></polyline>
+                        </svg>
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        class="reset carousel__control carousel__control--next js-carousel__control js-tab-focus"
+                      >
+                        <svg class="icon" viewBox="0 0 20 20">
+                          <title>Show next items</title>
+                          <polyline
+                            points="7 18 15 10 7 2"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-miterlimit="10"
+                            stroke-width="2"
+                          ></polyline>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <script>
+            function ImagePreload() {
+              window.devicePixelRatio > 1
+                ? ((imgA1 = new Image()),
+                  (imgA1.src = "../assets/images/features-hotspots-2x.jpg"),
+                  (imgA4 = new Image()),
+                  (imgA4.src = "../assets/images/features-spin-2x.jpg"),
+                  (imgA5 = new Image()),
+                  (imgA5.src = "../assets/images/features-videos-2x.jpg"),
+                  (imgA6 = new Image()),
+                  (imgA6.src = "../assets/images/features-zoom-2x.jpg"),
+                  (imgA7 = new Image()),
+                  (imgA7.src = "../assets/images/features-reporting-2x.jpg"),
+                  (imgA8 = new Image()),
+                  (imgA8.src = "../assets/images/features-compare-2x.jpg"))
+                : ((imgB1 = new Image()),
+                  (imgB1.src = "../assets/images/features-hotspots-1x.jpg"),
+                  (imgB4 = new Image()),
+                  (imgB4.src = "../assets/images/features-spin-1x.jpg"),
+                  (imgB5 = new Image()),
+                  (imgB5.src = "../assets/images/features-videos-1x.jpg"),
+                  (imgB6 = new Image()),
+                  (imgB6.src = "../assets/images/features-zoom-1x.jpg"),
+                  (imgB7 = new Image()),
+                  (imgB7.src = "../assets/images/features-reporting-1x.jpg"),
+                  (imgB8 = new Image()),
+                  (imgB8.src = "../assets/images/features-compare-1x.jpg"));
+            }
+            function ImageSwap(e, s, g) {
+              (document.getElementById(e).src = s),
+                (document.getElementById(e).srcset = g);
+            }
+            window.onload = ImagePreload;
+          </script>
+        </div>
+      </section>
+      <style>
+        #bottom {
+          background-color: var(--color-contrast-higher);
+          color: var(--color-contrast-low);
+        }
+        #bottom .link {
+          color: var(--color-contrast-low);
+          text-decoration: none;
+        }
+        #bottom .link:hover {
+          text-decoration: underline;
+        }
+      </style>
+      <footer
+        class="items-center bg-center bg-no-repeat"
+        id="bottom"
+        style="background-image: url('undefined');"
+      >
+        <div class="container max-width-adaptive-md padding-y-lg">
+          <ul
+            class="flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center"
+          >
+            <li>
+              <a
+                class="link padding-x-xs padding-y-xxs inline-block"
+                href="http://cnetcontent.com"
+                target="_blank"
+                >CNET Content Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                class="link padding-x-xs padding-y-xxs inline-block"
+                href="https://www.cbsinteractive.com/legal/cbsi/patents"
+                target="_blank"
+                >Patents</a
+              >
+            </li>
+            <li>
+              <a
+                class="link padding-x-xs padding-y-xxs inline-block"
+                href="https://www.cbsinteractive.com/legal/cbsi/terms-of-use"
+                target="_blank"
+                >Terms of Use</a
+              >
+            </li>
+            <li>
+              <a
+                class="link padding-x-xs padding-y-xxs inline-block"
+                href="https://www.cbsinteractive.com/legal/cbsi/privacy-policy/highlights"
+                target="_blank"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="link padding-x-xs padding-y-xxs inline-block"
+                href="https://ca.privacy.cbs"
+                target="_blank"
+                >California Privacy/Info We Collect</a
+              >
+            </li>
+            <li>
+              <a
+                class="link padding-x-xs padding-y-xxs inline-block"
+                href="https://ca.privacy.cbs/donotsell"
+                target="_blank"
+                >California Do Not Sell My Info</a
+              >
+            </li>
+            <li class="opacity-70%">
+              ©
+              <!--#config timefmt="%Y" -->
+              <!--#echo var="DATE_LOCAL" -->
+              Copyright. All rights reserved.
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <script src="../assets/js/scripts.js"></script>
+    </main>
+    <script>
+      function ImagePreload() {
+        window.devicePixelRatio > 1
+          ? ((imgA1 = new Image()),
+            (imgA1.src = "../assets/images/features-hotspots-2x.jpg"),
+            (imgA4 = new Image()),
+            (imgA4.src = "../assets/images/features-spin-2x.jpg"),
+            (imgA5 = new Image()),
+            (imgA5.src = "../assets/images/features-videos-2x.jpg"),
+            (imgA6 = new Image()),
+            (imgA6.src = "../assets/images/features-zoom-2x.jpg"),
+            (imgA7 = new Image()),
+            (imgA7.src = "../assets/images/features-reporting-2x.jpg"),
+            (imgA8 = new Image()),
+            (imgA8.src = "../assets/images/features-compare-2x.jpg"))
+          : ((imgB1 = new Image()),
+            (imgB1.src = "../assets/images/features-hotspots-1x.jpg"),
+            (imgB4 = new Image()),
+            (imgB4.src = "../assets/images/features-spin-1x.jpg"),
+            (imgB5 = new Image()),
+            (imgB5.src = "../assets/images/features-videos-1x.jpg"),
+            (imgB6 = new Image()),
+            (imgB6.src = "../assets/images/features-zoom-1x.jpg"),
+            (imgB7 = new Image()),
+            (imgB7.src = "../assets/images/features-reporting-1x.jpg"),
+            (imgB8 = new Image()),
+            (imgB8.src = "../assets/images/features-compare-1x.jpg"));
+      }
+      function ImageSwap(e, s, g) {
+        (document.getElementById(e).src = s),
+          (document.getElementById(e).srcset = g);
+      }
+      window.onload = ImagePreload;
+    </script>
+    <script src="../assets/js/scripts.min.js"></script>
+  </body>
+</html>

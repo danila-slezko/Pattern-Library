@@ -1,0 +1,23 @@
+// main: ../../staples.pug
+
+style
+  :less(compress=true)
+    #bottom {
+      background-color: var(--color-contrast-higher);
+      color: var(--color-contrast-low);
+      .link {
+        color: var(--color-contrast-low);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+ul(class='flex flex flex-column flex-row@md justify-center items-center')
+  li.padding-xxs #[a.link(target='_blank', href='https://www.cbsinteractive.com/legal/cbsi/terms-of-use') Terms of Use]
+  li.padding-xxs #[a.link(target='_blank', href='https://www.cbsinteractive.com/legal/cbsi/privacy-policy/highlights') Privacy Policy]
+  li.padding-xxs #[a.link(target='_blank', href='https://ca.privacy.cbs') California Privacy/Info We Collect]
+  li.padding-xxs #[a.link(target='_blank', href='https://ca.privacy.cbs/donotsell') California Do Not Sell My Info]
+ul.flex.flex.flex-row.justify-center.items-center
+  li(class='padding-top-xxxs opacity-70%') !{footer.copyright}

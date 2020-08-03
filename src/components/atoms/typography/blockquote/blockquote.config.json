@@ -1,0 +1,11 @@
+{
+  "label": "Blockquote",
+  "hidden": false,
+  "order": 5,
+  "context": {
+    "bqText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
+    "bqCitation": "http://example.com/"
+  },
+  "default": "blockquote",
+  "status": "wip"
+}

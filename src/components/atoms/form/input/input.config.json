@@ -1,0 +1,41 @@
+{
+  "label": "Text Inputs",
+  "order": 4,
+  "status": "wip",
+  "context": {
+    "inputLabel": "Basic Text Input",
+    "inputName": "basicText",
+    "inputPlaceholder": "Enter text here"
+  },
+  "variants": [
+    {
+      "name": "Email",
+      "context": {
+        "inputLabel": "Email Input",
+        "inputName": "email",
+        "inputPlaceholder": "joebloggs@example.com"
+      }
+    },
+    {
+      "name": "Password",
+      "context": {
+        "inputLabel": "Password Input",
+        "inputName": "password"
+      }
+    },
+    {
+      "name": "Textarea",
+      "context": {
+        "inputLabel": "Textarea",
+        "inputName": "textarea"
+      }
+    },
+    {
+      "name": "Date",
+      "context": {
+        "inputLabel": "Date Input",
+        "inputName": "date"
+      }
+    }
+  ]
+}

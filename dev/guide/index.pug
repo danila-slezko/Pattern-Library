@@ -1,0 +1,495 @@
+// out: ./index.html, pretty:false
+
+doctype html
+html(lang='en')
+  head
+    title CNET Content Solutions | Style Guide
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script.
+      document.getElementsByTagName("html")[0].className += " js";
+    link(href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='src/style-1.css')
+    link(rel='stylesheet', href='src/style-2.css')
+    link(rel='stylesheet', href='../assets/css/style.css')
+  body
+    .style-guide
+      header.style-guide__header
+        .container.max-width-lg
+          nav.style-guide__nav
+            ul.style-guide__nav-list
+              li
+                a.style-guide__nav-link.style-guide__nav-link--current(href='#colors') Colors
+              li
+                a.style-guide__nav-link(href='#typography') Typography
+              li
+                a.style-guide__nav-link(href='#buttons') Buttons
+              li
+                a.style-guide__nav-link(href='#forms') Forms
+              li
+                a.style-guide__nav-link(href='#icons') Icons
+              li.margin-top-xl(class='margin-top-0@md margin-left-auto@md flex@md items-center@md')
+                label.is-hidden.text-md.color-contrast-medium.margin-right-xs(class='text-sm@md', for='select-theme') Theme:
+                .select.inline-block.is-hidden
+                  select#select-theme.select__input.text-md.form-control(class='text-sm@md', name='select-theme')
+                    option(value='default') Default
+                  svg.icon.select__icon(aria-hidden='true', viewBox='0 0 16 16')
+                    g(stroke-width='1', stroke='currentColor')
+                      polyline(fill='none', stroke='currentColor', stroke-linecap='round', stroke-linejoin='round', stroke-miterlimit='10', points='15.5,4.5 8,12 0.5,4.5 ')
+            span.style-guide__nav-indicator(aria-hidden='true')
+      button.reset.style-guide__header-control.js-tab-focus
+        svg.icon(viewBox='0 0 24 24')
+          g.icon__group(fill='none', stroke='currentColor', stroke-linecap='square', stroke-miterlimit='10')
+            path(d='M1 6h22')
+            path(d='M1 12h22')
+            path(d='M1 18h22')
+      main.position-relative.z-index-1
+        section.bg-contrast-lower.padding-y-xxl
+          .container.max-width-adaptive-lg
+            p.color-contrast-medium CNET Content Solutions
+            h1.text-xxxxl Style Guide
+        // colors
+        section#colors.padding-y-xl(class='padding-y-xxl@md')
+          .container.max-width-adaptive-lg
+            .grid
+              div(class='col-3@md')
+                .style-guide__legend.margin-bottom-xl
+                  p.font-bold.text-md(role='heading', aria-level='1')
+                    i.color-contrast-low /
+                    |  Colors
+              div(class='col-9@md')
+                .grid.gap-lg
+                  // --color-primary
+                  div
+                    p.margin-bottom-xs Primary
+                    .grid.border.border-2.border-contrast-lower
+                      .col
+                        .bg-primary-lighter.height-xxxl
+                      .col
+                        .bg-primary-light.height-xxxl
+                      .col
+                        .bg-primary.height-xxxl
+                      .col
+                        .bg-primary-dark.height-xxxl
+                      .col
+                        .bg-primary-darker.height-xxxl
+                    .grid.padding-top-xxs(class='display@sm')
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-primary-lighter
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-primary-light
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-primary
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-primary-dark
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-primary-darker
+                  // --color-accent
+                  div
+                    p.margin-bottom-xs Accent
+                    .grid.border.border-2.border-contrast-lower
+                      .col
+                        .bg-accent-lighter.height-xxxl
+                      .col
+                        .bg-accent-light.height-xxxl
+                      .col
+                        .bg-accent.height-xxxl
+                      .col
+                        .bg-accent-dark.height-xxxl
+                      .col
+                        .bg-accent-darker.height-xxxl
+                    .grid.padding-top-xxs(class='display@sm')
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-accent-lighter
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-accent-light
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-accent
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-accent-dark
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-accent-darker
+                  // --color-main-customs
+                  // --color-black
+                  div
+                    p.margin-bottom-xs Black
+                    .height-xxxl.bg-black.border.border-2.border-contrast-lower
+                    .padding-top-xxs(class='display@sm')
+                      p.text-center.text-xs.style-guide__code.padding-x-xxxs --color-black
+                  // --color-white
+                  div
+                    p.margin-bottom-xs White
+                    .height-xxxl.bg-white.border.border-2.border-contrast-lower
+                    .padding-top-xxs(class='display@sm')
+                      p.text-center.text-xs.style-guide__code.padding-x-xxxs --color-white
+                  // --color-success
+                  div
+                    p.margin-bottom-xs Success
+                    .grid.border.border-2.border-contrast-lower
+                      .col
+                        .bg-success-lighter.height-xxxl
+                      .col
+                        .bg-success-light.height-xxxl
+                      .col
+                        .bg-success.height-xxxl
+                      .col
+                        .bg-success-dark.height-xxxl
+                      .col
+                        .bg-success-darker.height-xxxl
+                    .grid.padding-top-xxs(class='display@sm')
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-success-lighter
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-success-light
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-success
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-success-dark
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-success-darker
+                  // --color-error
+                  div
+                    p.margin-bottom-xs Error
+                    .grid.border.border-2.border-contrast-lower
+                      .col
+                        .bg-error-lighter.height-xxxl
+                      .col
+                        .bg-error-light.height-xxxl
+                      .col
+                        .bg-error.height-xxxl
+                      .col
+                        .bg-error-dark.height-xxxl
+                      .col
+                        .bg-error-darker.height-xxxl
+                    .grid.padding-top-xxs(class='display@sm')
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-error-lighter
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-error-light
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-error
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-error-dark
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-error-darker
+                  // --color-warning
+                  div
+                    p.margin-bottom-xs Warning
+                    .grid.border.border-2.border-contrast-lower
+                      .col
+                        .bg-warning-lighter.height-xxxl
+                      .col
+                        .bg-warning-light.height-xxxl
+                      .col
+                        .bg-warning.height-xxxl
+                      .col
+                        .bg-warning-dark.height-xxxl
+                      .col
+                        .bg-warning-darker.height-xxxl
+                    .grid.padding-top-xxs(class='display@sm')
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-warning-lighter
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-warning-light
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-warning
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-warning-dark
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-warning-darker
+                  // --color-feedback-customs
+                  // contrast scale
+                  div
+                    p.margin-bottom-xs Contrast Scale
+                    .grid.border.border-2.border-contrast-lower
+                      .col
+                        .bg.height-xxxl
+                      .col
+                        .bg-contrast-lower.height-xxxl
+                      .col
+                        .bg-contrast-low.height-xxxl
+                      .col
+                        .bg-contrast-medium.height-xxxl
+                      .col
+                        .bg-contrast-high.height-xxxl
+                      .col
+                        .bg-contrast-higher.height-xxxl
+                    .grid.padding-top-xxs(class='display@sm')
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-bg
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-contrast-lower
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-contrast-low
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-contrast-medium
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-contrast-high
+                      .col.text-center
+                        p.text-xs.style-guide__code.padding-x-xxxs --color-contrast-higher
+        // typography
+        section#typography.padding-y-xl.border-top.border-contrast-lower(class='padding-y-xxl@md')
+          .container.max-width-adaptive-lg
+            .grid
+              div(class='col-3@md')
+                .style-guide__legend.margin-bottom-xl
+                  p.font-bold.text-md(role='heading', aria-level='1')
+                    i.color-contrast-low /
+                    |  Typography
+              div(class='col-9@md')
+                .margin-bottom-xl
+                  p.margin-bottom-xs Font Family
+                  div
+                    .padding-y-sm.border-top.border-bottom.border-contrast-lower
+                      .text-xs.margin-bottom-sm.flex.justify-between
+                        p.style-guide__code --font-primary
+                        p.color-contrast-medium.margin-left-md 'Lato', sans-serif
+                      h2.font-primary The quick brown fox jumps over the lazy dog
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      .text-xs.margin-bottom-sm.flex.justify-between
+                        p.style-guide__code --font-secondary
+                        p.color-contrast-medium.margin-left-md 'Inter', sans-serif
+                      h2.font-secondary The quick brown fox jumps over the lazy dog
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      .text-xs.margin-bottom-sm.flex.justify-between
+                        p.style-guide__code --font-tertiary
+                        p.color-contrast-medium.margin-left-md 'Roboto Mono', monospace
+                      h2.font-tertiary The quick brown fox jumps over the lazy dog
+                .margin-bottom-xl
+                  p.margin-bottom-xs Heading & Body
+                  .text-component.v-space-md.line-height-lg.padding-y-sm.border-top.border-bottom.border-contrast-lower
+                    h1 Lorem ipsum dolor sit amet
+                    p
+                      | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit ad, veniam voluptatibus molestias impedit dolore eligendi modi dicta, sint nulla consequuntur nisi alias distinctio vero expedita est at soluta et. Sapiente veritatis esse dolore ratione doloremque. Accusantium maiores maxime eum eaque voluptates nisi qui unde, dolores minima repudiandae quos perferendis?
+                div
+                  p.margin-bottom-xs Type Scale
+                  div
+                    .padding-y-sm.border-top.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-xxxxl
+                      h1.text-xxxxl Display Text Huge
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-xxxl
+                      h1.text-xxxl Display Text
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-xxl
+                      h1 Heading 1
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-xl
+                      h2 Heading 2
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-lg
+                      h3 Heading 3
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-md
+                      h4 Heading 4
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-base
+                      p.line-height-md
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi, voluptate temporibus, voluptas dicta quibusdam iste dolores repudiandae aperiam tenetur, delectus laborum nobis nostrum consectetur error perspiciatis. Cum laudantium velit provident veritatis corrupti reiciendis iure, architecto ab perferendis, laboriosam voluptatum minima vero.
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-sm
+                      p.text-sm
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi, voluptate temporibus, voluptas dicta quibusdam iste dolores repudiandae aperiam tenetur, delectus laborum nobis nostrum consectetur error perspiciatis.
+                    .padding-y-sm.border-bottom.border-contrast-lower
+                      p.style-guide__code.text-xs.margin-bottom-sm --text-xs
+                      p.text-xs
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi, voluptate temporibus, voluptas dicta quibusdam iste dolores repudiandae aperiam tenetur, delectus laborum nobis nostrum consectetur error perspiciatis.
+        // button
+        section#buttons.padding-y-xl.border-top.border-contrast-lower(class='padding-y-xxl@md')
+          .container.max-width-adaptive-lg
+            .grid
+              div(class='col-3@md')
+                .style-guide__legend.margin-bottom-xl
+                  p.font-bold.text-md(role='heading', aria-level='1')
+                    i.color-contrast-low /
+                    |  Buttons
+              div(class='col-9@md')
+                .margin-bottom-xl
+                  p.margin-bottom-xs Themes
+                  .flex.flex-wrap.gap-xs
+                    button.btn Basic
+                    button.btn.btn--primary Primary
+                    button.btn.btn--subtle Subtle
+                    button.btn.btn--accent Accent
+                    // button-customs
+                .margin-bottom-xl
+                  p.margin-bottom-xs Feedback
+                  button.btn.btn--primary.btn--disabled Disabled
+                .margin-bottom-xl
+                  p.margin-bottom-xs Sizes
+                  .flex.flex-wrap.gap-xs.items-center
+                    div
+                      button.btn.btn--primary.btn--sm Button sm
+                    div
+                      button.btn.btn--primary Button
+                    div
+                      button.btn.btn--primary.btn--md Button md
+                    div
+                      button.btn.btn--primary.btn--lg Button lg
+        // forms
+        section#forms.padding-y-xl.border-top.border-contrast-lower(class='padding-y-xxl@md')
+          .container.max-width-adaptive-lg
+            .grid
+              div(class='col-3@md')
+                .style-guide__legend.margin-bottom-xl
+                  p.font-bold.text-md(role='heading', aria-level='1')
+                    i.color-contrast-low /
+                    |  Forms
+              div(class='col-6@md')
+                form
+                  fieldset.margin-bottom-md
+                    legend.form-legend Form Legend
+                    .grid.gap-sm
+                      div(class='col-6@md')
+                        label.form-label.margin-bottom-xxs(for='inputName') Name
+                        input#inputName.form-control(class='width-100%', type='text', name='inputName', required='')
+                      div(class='col-6@md')
+                        label.form-label.margin-bottom-xxs(for='inputEmail') Email
+                        input#inputEmail.form-control(class='width-100%', type='email', name='inputEmail', placeholder='email@myemail.com')
+                      div
+                        label.form-label.margin-bottom-xxs(for='inputInvalid') Invalid
+                        input#inputInvalid.form-control(class='width-100%', type='text', name='inputInvalid', aria-invalid='true', value='invalid data')
+                      div
+                        label.form-label.margin-bottom-xxs(for='textarea') Textarea
+                        textarea#textarea.form-control(class='width-100%', name='textarea')
+                        p.text-xs.color-contrast-medium.margin-top-xxs Use helper text to provide additional information.
+                  div
+                    button.btn.btn--primary Submit
+        // icons
+        section#icons.padding-y-xl.border-top.border-contrast-lower(class='padding-y-xxl@md')
+          .container.max-width-adaptive-lg
+            .grid
+              div(class='col-3@md')
+                .style-guide__legend.margin-bottom-xl
+                  p.font-bold.text-md(role='heading', aria-level='1')
+                    i.color-contrast-low /
+                    |  Icons
+              div(class='col-6@md')
+                div
+                  // <p class="margin-bottom-xs">Sizes</p>
+                  table.table.table--expanded.position-relative.z-index-1.js-table(class='width-100%', aria-label='Table Example')
+                    thead.table__header
+                      tr.table__row
+                        th.table__cell.text-left(scope='col') Class
+                        th.table__cell.text-left(scope='col') Custom Property
+                        th.table__cell.text-left(scope='col') Size
+                        th.table__cell(scope='col')
+                    tbody.table__body
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--xxxs
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-xxxs)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 8px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--xxxs.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--xxs
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-xxs)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 12px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--xxs.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--xs
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-xs)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 16px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--xs.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--sm
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-sm)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 24px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--sm.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--md
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-md)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 32px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--md.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--lg
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-lg)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 48px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--lg.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--xl
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-xl)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 64px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--xl.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--xxl
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-xxl)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 96px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--xxl.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+                      tr.table__row
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Class:
+                          i.style-guide__code.text-sm icon--xxxl
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Custom Property:
+                          i.style-guide__code.text-sm var(--icon-xxxl)
+                        td.table__cell(role='cell')
+                          span.table__label(aria-hidden='true') Size:
+                          i.style-guide__code.text-sm 128px
+                        td.table__cell.text-right(role='cell')
+                          span.table__label(aria-hidden='true') Preview:
+                          .inline-block.icon--xxxl.bg-primary.radius-md(class='bg-opacity-50%', style='width: 1em; height: 1em;')
+    script(src='src/main.js')

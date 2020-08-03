@@ -1,0 +1,25 @@
+// main: ../../index.pug
+
+style
+  :less(compress=true)
+    #introduction {
+      .btn {
+        background-color: var(--color-error-dark);
+        color: var(--color-white);
+        &:hover {
+          background-color: var(--color-error-darker);
+          color: var(--color-white);
+        }
+      }
+    }
+
+div(class='grid gap-xxxl items-center')
+  div(class='col-6@md order-1@md')
+    span(class='text-component line-height-lg v-space-lg')
+      h1(class='text-xl padding-bottom-xxs')=intro.headline 
+      p #{intro.copy} 
+      a(class='btn margin-bottom-md', href=intro.button.link)=intro.button.label
+      | !{intro.subtext}
+  div(class=intro.flip ? 'col-6@md' : 'col-6@md  order-1@md')
+    figure(class='media-wrapper media-wrapper--4:3')
+      img(src=intro.media.standard, srcset=intro.media.retina + ' 2x')

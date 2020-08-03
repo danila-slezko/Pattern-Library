@@ -1,0 +1,27 @@
+//- main: ../index.pug
+
+//- div(class='grid gap-xxl items-center')
+  div(class='col-6@md order-1@md')
+    span(class='text-component')
+      h2(class='text-xxl') block.headline
+      | #{block.copy}
+  div(class=videoflip ? 'col-6@md' : 'col-6@md  order-1@md')
+    figure(class='media-wrapper')
+      video(poster=block.image, preload, autoplay, loop, muted, playsinline, nofullscreen)
+        source(src=block.webm)
+        source(src=block.mp4)
+        img(src=block.image, alt='thumbnail', aria-label='media')
+          
+mixin feature-block
+  div(class='grid gap-xxl items-center')
+    block
+
+mixin feature-text
+  div(class='col-6@md')
+    span(class='text-component')
+      block
+
+mixin feature-media(order)
+  - var type = (typeof order === 'undefined') ? "default" : order
+  div(class=order + 'col-6@md')
+    block

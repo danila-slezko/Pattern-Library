@@ -1,0 +1,14 @@
+div(class='grid gap-xxxl items-center')
+  div(class='col-6@md order-1@md')
+    span(class='text-component line-height-lg v-space-lg')
+      h2(class='text-xl color-black')= hotspots.headline
+      //- | !{hotspots.copy}
+      ul(class='list list--ul text-md margin-top-md@md margin-left-md@md margin-left-sm@sm line-height-sm')
+        each item, index in hotspots.ul
+          li= item.bullet
+  div(class=hotspots.flip ? 'col-6@md' : 'col-6@md  order-1@md')
+    figure(class='media-wrapper media-wrapper--4:3')
+      video(poster=hotspots.media.image, preload, autoplay, loop, muted, playsinline, nofullscreen)
+        source(src=hotspots.media.webm)
+        source(src=hotspots.media.mp4)
+        img(src=hotspots.media.image, alt='thumbnail', aria-label='media')

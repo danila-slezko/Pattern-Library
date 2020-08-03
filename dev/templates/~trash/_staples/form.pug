@@ -1,0 +1,25 @@
+// main: ../../staples.pug
+
+style
+  :less(compress=true)
+    #contact {
+      .btn {
+        background-color: var(--color-error-dark);
+        color: var(--color-white);
+        &:hover {
+          background-color: var(--color-error-darker);
+          color: var(--color-white);
+        }
+      }
+    }
+
+input#captcha(type='hidden', name='captcha_settings', value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":"1588524591826"}')
+input#oid(type='hidden', name='oid', value='00D2000000002px')
+input#retURL(type='hidden', name='retURL', value='https://staples.cnetcontent.com?inquiry=true')
+input#lead_source(type='hidden', name='lead_source', title='Lead Source', value='Landing Page')
+input#00N57000006PiUg(type='hidden', name='00N57000006PiUg', title='Lead Sub-Source', value='Staples')
+input#Campaign_ID(type='hidden', name='Campaign_ID', title='Campaign ID', value='7012p000001XpCm')
+input#00N20000000gOZN(type='hidden', name='00N20000000gOZN', title='CC Product Interest')
+input#00N570000063NYi(type='hidden', name='00N570000063NYi', title='Referrer URL', value='https://staples.cnetcontent.com/merchandising')
+//- input(type='hidden', name='debug', value='1')
+//- input(type='hidden', name='debugEmail', value='valerie.mardorf@cbs.com')

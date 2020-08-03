@@ -1,0 +1,52 @@
+style
+  :scss(compress=true)
+    .link-card {
+      --shadow-xs: var(--shadow-md);
+      justify-content: space-between;
+      flex-wrap: wrap;
+      display: flex;
+      overflow: hidden;
+      /*&:active {
+        transform: translateY(2px);
+      }*/
+      .bg-contrast-lower {
+        align-content: flex-end;
+        justify-self: flex-end;
+        p::before {
+          content: '';
+          display: block;
+          height: 0;
+          width: 0;
+          margin-top: calc((1 - 1.2) * 0.5em);
+        }
+      }
+    }
+div(class='text-component text-center')
+  h1(class='color-white text-xxl text-xxxl@lg padding-y-xxs@lg')=card.headline
+div(class='padding-y-lg flex justify-center max-width-adaptive-md margin-auto')
+  div(class='grid gap-xl z-index-3 width-100%')
+    
+    div(class='link-card bg radius-lg col-6@md')
+      span(class='text-decoration-none flex flex-column width-100%', href='#0', aria-label='Link')
+        header(class='padding-x-md padding-x-md@md padding-top-md')
+          div(class='flex items-center')
+            figure(class='icon--md margin-right-xxxs') !{card.block1.icon}
+            div.line-height-xs 
+              h4.text-lg #{card.block1.title}
+        main(class='text-component padding-x-md padding-y-sm padding-x-lg@md padding-right-xxl@md margin-bottom-auto')
+          | !{card.block1.text}
+        //- footer(class='flex bg-contrast-lower margin-top-auto') 
+          strong(class='text-md text-center width-100% padding-y-xs color-primary-dark')=card.block2.cta
+          
+    div(class='link-card bg radius-lg col-6@md')
+      span(class='text-decoration-none flex flex-column width-100%', href=card.block2.url, aria-label='Link')
+        header(class='padding-x-md padding-x-md@md padding-top-md')
+          div(class='flex items-center')
+            figure(class='icon--md margin-right-xxxs') !{card.block2.icon}
+            div.line-height-xs 
+              h4.text-lg #{card.block2.title}
+        main(class='text-component padding-x-md padding-y-md padding-x-lg@md padding-right-xxl@md margin-bottom-auto')
+          | !{card.block2.text}
+        br
+        //- footer(class='flex bg-contrast-lower margin-top-auto') 
+          strong(class='text-md text-center width-100% padding-y-xs color-primary-dark')=card.block2.cta

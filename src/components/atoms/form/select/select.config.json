@@ -1,0 +1,27 @@
+{
+  "label": "Select",
+  "order": 3,
+  "status": "ready",
+  "context": {
+    "selectLabel": "Select Input",
+    "selectName": "select",
+    "selectOptions": [
+      {
+        "value": "LoremIpsum1",
+        "text": "Lorem ipsum dolor sit amet 1"
+      },
+      {
+        "value": "LoremIpsum2",
+        "text": "Lorem ipsum dolor sit amet 2"
+      },
+      {
+        "value": "LoremIpsum3",
+        "text": "Lorem ipsum dolor sit amet 3"
+      },
+      {
+        "value": "LoremIpsum4",
+        "text": "Lorem ipsum dolor sit amet 4"
+      }
+    ]
+  }
+}

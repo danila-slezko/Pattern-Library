@@ -1,0 +1,29 @@
+section.loop-tabs.padding-y-lg.js-loop-tabs
+  .container.max-width-adaptive-md
+    div(class='grid gap-md flex-row-reverse@md')
+      div(class='.loop-tabs__content col-6@md flex flex-column flex-column-reverse@md justify-center@md.text-center text-left@md')
+        ul(.loop-tabs__controls.js-loop-tabs__controls.margin-bottom-lg.margin-bottom-0@lg.flex.flex-center.flex-wrap.flex-column@md.items-start@md)
+          li
+            a.loop-tabs__control.loop-tabs__control--selected.text-sm.padding-md(href='#timingTab1Panel1') Feature 1
+          li
+            a.loop-tabs__control.text-sm.padding-md(href='#timingTab1Panel2') Feature 2
+          li
+            a.loop-tabs__control.text-sm.padding-md(href='#timingTab1Panel3') Feature 3
+        .loop-tabs__panels.js-loop-tabs__panels.margin-bottom-md
+          section#timingTab1Panel1.loop-tabs__panel.js-loop-tabs__panel.text-component.loop-tabs__panel--selected
+            h1 Panel 1
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aperiam!
+          section#timingTab1Panel2.loop-tabs__panel.js-loop-tabs__panel.text-component
+            h1 Panel 2
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aperiam!
+          section#timingTab1Panel3.loop-tabs__panel.js-loop-tabs__panel.text-component
+            h1 Panel 3
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.
+      div(class='loop-tabs__media col-6@md', aria-hidden='true')
+        ul.loop-tabs__assets.js-loop-tabs__assets
+          li.loop-tabs__asset.loop-tabs__asset--selected
+            img(src='https://staples.cnetcontent.com/assets/images/features-hover-1x.jpg', alt='Feature 1')
+          li(class='loop-tabs__asset')
+            img(src='https://staples.cnetcontent.com/assets/images/features-video-1x.jpg', alt='Feature 2')
+          li(class='loop-tabs__asset')
+            img(src='https://staples.cnetcontent.com/assets/images/features-hotspots-1x.jpg', alt='Feature 3')

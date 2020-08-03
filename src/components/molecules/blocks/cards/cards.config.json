@@ -1,0 +1,10 @@
+{
+  "title": "Cards",
+  "label": "Cards",
+  "context": {
+    "headingText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  },
+  "default": "cards",
+  "variants": [],
+  "status": "prototype"
+}

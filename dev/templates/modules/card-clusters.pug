@@ -1,0 +1,42 @@
+style
+  :scss(compress=true)
+    .link-card {
+      --shadow-xs: var(--shadow-md);
+      justify-content: space-between;
+      flex-wrap: wrap;
+      display: flex;
+      overflow: hidden;
+      /*&:active {
+        transform: translateY(2px);
+      }*/
+      .bg-contrast-lower {
+        align-content: flex-end;
+        justify-self: flex-end;
+        p::before {
+          content: '';
+          display: block;
+          height: 0;
+          width: 0;
+          margin-top: calc((1 - 1.2) * 0.5em);
+        }
+      }
+    }
+    
+div(class='text-component text-center padding-top-md')
+  h1(class='color-white text-xxl text-xxxl@lg padding-y-xxs@lg')=cluster.headline
+div(class='padding-y-lg flex justify-center max-width-adaptive-md margin-auto')
+  div(class='grid gap-xl z-index-3 width-100%')
+  
+    each item, index in cluster.cards
+      div(class='link-card bg radius-lg col-6@md')
+        span(class='text-decoration-none flex flex-column width-100%')
+          header(class='padding-x-md padding-x-md@md padding-top-md')
+            div(class='flex items-center')
+              figure(class='icon--md margin-right-xxxs') !{item.icon}
+              div.line-height-xs 
+                h4.text-lg #{item.title}
+          main(class='text-component padding-x-md padding-y-sm padding-x-lg@md padding-right-xxl@md margin-bottom-auto')
+            | !{item.text}
+    
+    
+          

@@ -1,0 +1,16 @@
+// main: ../index.pug
+
+header#topbar(class='header position-relative js-header')
+  .header__container.container.max-width-xxl
+    .header__logo #[a(href='#0') #[img(src='assets/images/content-solutions.svg')]]
+    button.btn.btn--sm.header__trigger.js-header__trigger(aria-label='Toggle menu', aria-expanded='false', aria-controls='header-nav')
+      i.header__trigger-icon(aria-hidden='true') #[span Menu]
+    nav.header__nav.js-header__nav#header-nav(role='navigation', aria-label='Main')
+      .header__nav-inner
+        .header__label Main menu
+        ul.header__list
+          li.header__item #[a.header__link(href='#0', aria-current='page') Resources]
+          li.header__item #[a.header__link(href='#0') Pricing]
+          li.header__item #[a.header__link(href='#0') Contact]
+          li.header__item.header__item--divider(aria-hidden='true')
+          li.header__item #[a.btn.btn--subtle(href='#0') Contact Us]

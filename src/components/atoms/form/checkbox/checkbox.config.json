@@ -1,0 +1,10 @@
+{
+  "label": "Checkbox",
+  "status": "ready",
+  "order": 2,
+  "context": {
+    "checkName": "Checkbox",
+    "checkValue": "LoremIpsum",
+    "checkText": "Lorem ipsum"
+  }
+}

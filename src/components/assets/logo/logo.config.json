@@ -1,0 +1,9 @@
+{
+  "label": "Logos",
+  "hidden": true,
+  "order": 1,
+  "context": {
+    "logoColor": "#223344"
+  },
+  "status": "ready"
+}

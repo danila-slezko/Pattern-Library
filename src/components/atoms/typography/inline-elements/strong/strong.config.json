@@ -1,0 +1,9 @@
+{
+  "label": "Strong",
+  "hidden": false,
+  "order": 3,
+  "status": "ready",
+  "context": {
+    "strongText": "dolor sit amet, consectetur"
+  }
+}

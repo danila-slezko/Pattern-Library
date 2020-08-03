@@ -1,0 +1,67 @@
+// main: ../../staples.pug
+
+style
+  :less(compress=true)
+    #top {
+      --header-height: 80px;
+      --header-height-md: 72px;
+      --color-bg: var(--color-primary-darker);
+      --color-contrast-higher: white;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      &::before {
+        content: '';
+        display: block;
+        min-height: var(--header-height);
+        margin-top: ~'calc(var(--header-height) * -1)';
+        visibility: hidden;
+      }
+      .header__item--divider {
+        width: 2px;
+        height: 3rem;
+        opacity: .5;
+        background-color: white;
+      }
+      .btn {
+        background-color: transparent;
+        color: var(--color-white);
+        box-shadow: inset 0 0 0 2px fade(white,50);
+        &:hover {
+          background-color: var(--color-white);
+          color: var(--color-primary);
+          box-shadow: inset 0 0 0 2px transparent;
+        }
+      }
+      .header__trigger {
+        box-shadow: inset 0 0 0 2px transparent !important;
+        padding: var(--space-md) 1em;
+        margin: auto 0 auto auto;
+        &-icon {
+          margin-right: 0;
+          width: 1.5em;
+        }
+        &:hover {
+          background: transparent;
+        }
+      }
+      .header__nav--is-visible {
+        .header__item--divider {
+          display: none;
+        }
+      }
+    }
+
+
+
+
+.header__logo #[a(href='#0') #[img(src='assets/images/content-solutions.svg')]]
+button.btn.header__trigger.js-header__trigger(aria-label='Toggle menu', aria-expanded='false', aria-controls='header-nav')
+  i.header__trigger-icon(aria-hidden='true') #[span.is-hidden Menu]
+nav.header__nav.js-header__nav#header-nav(role='navigation', aria-label='Main')
+  .header__nav-inner
+    // .header__label Main menu
+    ul.header__list
+      li.header__item #[img.block(src='https://staples.cnetcontent.com/assets/images/staples.svg', width='144', height='auto', alt='partner')]
+      li.header__item.header__item--divider(aria-hidden='true')
+      li.header__item #[a.btn.btn--subtle(href='#Contact') Contact Us]

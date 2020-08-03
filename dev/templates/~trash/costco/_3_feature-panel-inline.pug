@@ -1,0 +1,25 @@
+// main: ./index.pug
+
+.grid.gap-xxl.items-center
+  div(class='col-6@md order-2@md')
+    div(class='text-component line-height-lg v-space-lg')
+      h3(class='text-xl color-black') The Costco Exclusive Offering:
+      ul(class='list list--ul margin-top-md@md margin-left-md@md margin-left-sm@sm line-height-sm')
+        li(onmouseover="ImageSwap('jsImageSwap','https://cdn.cnetcontent.com/sites/pages/features-main-1x.jpg','https://cdn.cnetcontent.com/sites/pages/features-main-2x.jpg')")
+          a.link.color-primary-dark Prominent Placement
+        li(onmouseover="ImageSwap('jsImageSwap','https://cdn.cnetcontent.com/sites/pages/features-icons-1x.jpg','https://cdn.cnetcontent.com/sites/pages/features-icons-2x.jpg')")
+          a.link.color-primary-dark Feature Icons
+        li(onmouseover="ImageSwap('jsImageSwap','https://cdn.cnetcontent.com/sites/pages/features-hotspots-1x.jpg','https://cdn.cnetcontent.com/sites/pages/features-hotspots-2x.jpg')")
+          a.link.color-primary-dark Interactive Hotspots
+        li(onmouseover="ImageSwap('jsImageSwap','https://cdn.cnetcontent.com/sites/pages/features-videos-1x.jpg','https://cdn.cnetcontent.com/sites/pages/features-videos-2x.jpg')")
+          a.link.color-primary-dark Videos
+        li(onmouseover="ImageSwap('jsImageSwap','https://cdn.cnetcontent.com/sites/pages/features-zoom-1x.jpg','https://cdn.cnetcontent.com/sites/pages/features-zoom-2x.jpg')")
+          a.link.color-primary-dark Image Zoom
+        li(onmouseover="ImageSwap('jsImageSwap','https://cdn.cnetcontent.com/sites/pages/features-spin-1x.jpg','https://cdn.cnetcontent.com/sites/pages/features-spin-2x.jpg')")
+          a.link.color-primary-dark 360° Product Views
+        li(onmouseover="ImageSwap('jsImageSwap','https://cdn.cnetcontent.com/sites/pages/features-reviews-1x.jpg','https://cdn.cnetcontent.com/sites/pages/features-reviews-2x.jpg')")
+          a.link.color-primary-dark CNET Reviews (where available)
+
+  div(class='col-6@md order-1@md')
+    figure(class='media-wrapper media-wrapper--4:3')
+      img.ccs-media-scale#jsImageSwap(src='https://cdn.cnetcontent.com/sites/pages/features-main-1x.jpg', srcset='https://cdn.cnetcontent.com/sites/pages/features-main-2x.jpg 2x')

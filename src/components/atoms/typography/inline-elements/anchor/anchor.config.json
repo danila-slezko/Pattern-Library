@@ -1,0 +1,10 @@
+{
+  "label": "Anchor",
+  "hidden": false,
+  "status": "ready",
+  "order": 1,
+  "context": {
+    "anchorLink": "http://example.com",
+    "anchorText": "dolor sit amet, consectetur"
+  }
+}

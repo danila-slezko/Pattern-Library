@@ -1,0 +1,8 @@
+{
+  "label": "Small",
+  "order": 4,
+  "status": "ready",
+  "context": {
+    "smallText": "dolor sit amet, consectetur"
+  }
+}

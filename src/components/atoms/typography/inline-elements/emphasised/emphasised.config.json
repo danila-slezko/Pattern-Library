@@ -1,0 +1,9 @@
+{
+  "label": "Emphasised",
+  "hidden": false,
+  "order": 2,
+  "status": "ready",
+  "context": {
+    "emphasisedText": "dolor sit amet, consectetur"
+  }
+}

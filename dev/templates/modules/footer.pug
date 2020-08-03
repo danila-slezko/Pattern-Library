@@ -1,0 +1,23 @@
+style
+  :scss(compress=true)
+    #bottom {
+      background-color: var(--color-contrast-higher);
+      color: var(--color-contrast-low);
+      .link {
+        color: var(--color-contrast-low);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+footer#bottom(class='items-center bg-center bg-no-repeat', style="background-image: url('http://mktg-static-sites.prod.cnetcontent.com/assets/images/map.svg')")
+  div(class='container max-width-adaptive-md padding-y-lg')
+    ul(class='flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center')
+
+      each item, index in footer.links
+        li
+          a(class='link padding-x-xs padding-y-xxs inline-block', href=item.url, target='_blank')=item.label
+      
+      li(class='opacity-70%') !{footer.copyright}

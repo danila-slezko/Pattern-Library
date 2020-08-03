@@ -1,0 +1,14 @@
+// main: ../../staples.pug
+
+.padding-y-xxl
+  .container.max-width-adaptive-sm.center-items
+    .text-component.text-center
+      h4.text-md.margin-y-xxs= banner.headline
+      | !{banner.copy}
+    .margin-top-sm.text-center
+      .flex.flex-wrap.gap-xxxs.items-center.justify-center
+        a.btn.btn--primary(href=banner.button.url)= banner.button.label
+        span or
+        a.color-primary(href=banner.link.url, target='_blank')= banner.link.label
+        span if you have an account.
+svg.section-divider(viewBox='0 0 1920 60', aria-hidden='true') #[path(fill='rgb(242, 242, 242)', d='M1920,60H0S361,0,960,0,1920,60,1920,60Z')]

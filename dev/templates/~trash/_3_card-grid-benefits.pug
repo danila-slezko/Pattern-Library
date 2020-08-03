@@ -1,0 +1,15 @@
+// main: ./index.pug
+
+div(class='text-component text-center padding-top-md')
+  h1(class='color-white text-xxl text-xxxl@lg padding-y-xxs@lg')=card.headline
+div(class='padding-y-lg flex justify-center max-width-adaptive-lg margin-auto')
+  div(class='grid gap-xl justify-center z-index-3 width-100%')
+    each item, index in benefits.cards
+      div(class='link-card bg radius-lg col-4@md')
+        a(class='text-decoration-none flex flex-column width-100%', href='#0', aria-label='Link')
+          header(class='padding-x-md padding-x-lg@md padding-top-md')
+            figure(class='icon--md margin-right-xxxs') !{item.icon}
+            div.line-height-xs 
+              h4.text-md=item.title
+          main(class='text-component padding-x-md padding-y-sm padding-x-lg@md padding-right-xxl@md margin-bottom-auto')
+            p=item.text

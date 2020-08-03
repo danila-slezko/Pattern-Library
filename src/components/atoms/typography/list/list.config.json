@@ -1,0 +1,59 @@
+{
+  "label": "Lists",
+  "hidden": false,
+  "order": 4,
+  "status": "ready",
+  "context": {
+    "listItems": [
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      },
+      {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      }
+    ]
+  },
+  "default": "unordered",
+  "variants": [
+    {
+      "name": "unordered",
+      "label": "Unordered"
+    },
+    {
+      "name": "description",
+      "label": "Description",
+      "context": {
+        "listItems": [
+          {
+            "term": "A Lorem ipsum",
+            "description": "Eu occaecat cillum cillum non laboris elit Lorem qui dolor eiusmod dolor est eiusmod amet veniam ipsum."
+          },
+          {
+            "term": "B Lorem ipsum",
+            "description": "Cupidatat ullamco cillum cupidatat cupidatat incididunt labore minim qui ipsum adipisicing cupidatat dolore eu nisi culpa laborum."
+          },
+          {
+            "term": "4 Lorem ipsum",
+            "description": "Dolor enim proident quis quis labore voluptate tempor amet est irure minim non."
+          },
+          {
+            "term": "5 Lorem ipsum",
+            "description": "Laborum culpa nisi laborum reprehenderit laboris commodo labore ipsum reprehenderit cupidatat cillum excepteur consequat."
+          }
+        ]
+      }
+    },
+    {
+      "name": "ordered",
+      "label": "Ordered",
+      "status": "wip",
+      "hidden": true
+    }
+  ]
+}

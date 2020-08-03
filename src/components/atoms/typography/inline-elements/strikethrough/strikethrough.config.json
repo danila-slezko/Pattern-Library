@@ -1,0 +1,8 @@
+{
+  "label": "Strikethrough",
+  "order": 7,
+  "status": "ready",
+  "context": {
+    "strikethroughText": "dolor sit amet, consectetur"
+  }
+}

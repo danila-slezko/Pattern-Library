@@ -1,0 +1,43 @@
+<header class="header js-header anchor" id="header">
+  <div class="header__container container max-width-adaptive-lg">
+    <div class="header__logo">
+      <a href="#top">
+        {% include '@logo--default' with { logoColor: 'white'} %}
+      </a>
+    </div>
+    <button class="btn btn--subtle header__trigger js-header__trigger"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="header-nav">
+      <i class="header__trigger-icon" aria-hidden="true">
+        <span class="is-hidden">Menu</span>
+      </i>
+    </button>
+    <nav class="header__nav js-header__nav"
+      id="header-nav"
+      role="navigation"
+      aria-label="Main">
+      <div class="header__nav-inner max-width-adaptive-lg margin-auto">
+        <div class="header__label is-hidden">
+          Main menu
+        </div>
+        <ul class="header__list">
+          <li class="header__item">
+            {% include '@logo--company-x' with { logoColor: 'white'} %}
+          </li>
+          <li class="header__item header__item--divider" aria-hidden="true"></li>
+          <li class="header__item">
+            <a class="btn btn--subtle js-smooth-scroll" href="#contact" data-duration="300">
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <a class="anchor" id="top"></a>
+  </div>
+</header>
+
+<style>
+  @import url("{{ path }}/components/raw/header/overrides.css");
+</style>

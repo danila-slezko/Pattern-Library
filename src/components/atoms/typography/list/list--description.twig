@@ -1,0 +1,10 @@
+<dl class="details-list-v2">
+  {% for item in listItems %}
+    <div class="details-list-v2__item">
+      <dt class="details-list-v2__dt">
+        {{ item.term }}
+      </dt>
+      <dd class="details-list-v2__dd">{{ item.description }}</dd>
+    </div>
+  {% endfor %}
+</dl>
