@@ -1,4 +1,3 @@
-/** @format */
 
 "use strict";
 
@@ -31,7 +30,7 @@ fractal.components.set("default.display", { "min-width": "290px" });
 fractal.components.set("default.status", "wip");
 fractal.components.set("ext", ".twig");
 fractal.components.set("label", "Library");
-fractal.components.set("path", uiLibRoot + "src/components");
+fractal.components.set("path", uiLibRoot + "/src/components");
 fractal.components.set("statuses", {
   prototype: {
     label: "Prototype",
@@ -58,7 +57,7 @@ fractal.components.set("statuses", {
 /*
  * DOCS SETTINGS
  */
-fractal.docs.set("path", uiLibRoot + "src/pages");
+fractal.docs.set("path", uiLibRoot + "/src/pages");
 fractal.docs.set("statuses", {
   draft: {
     label: "Draft",
@@ -75,8 +74,8 @@ fractal.docs.set("statuses", {
 /*
  * BUILD SETTINGS
  */
-fractal.web.set("builder.dest", uiLibRoot + "docs");
-fractal.web.set("static.path", uiLibRoot + "src/public");
+fractal.web.set("builder.dest", uiLibRoot + "/docs");
+fractal.web.set("static.path", uiLibRoot + "/src/public");
 //fractal.web.set("static.mount", "/");
 
 /*
@@ -86,7 +85,7 @@ const subTheme = require("@frctl/mandelbrot")({
   favicon: "/favicon.ico",
   nav: ["search", "components", "docs"],
   panels: ["info", "notes", "html", "resources", "context"],
-  styles: ["/assets/css/base.css", "/assets/css/fractal.css"],
+  styles: ["/assets/css/base.css", "/assets/css/default.css"],
 });
-subTheme.addStatic("path", uiLibRoot + "src/public/assets", "/assets");
+//subTheme.addStatic("path", uiLibRoot + "src/public/assets");
 fractal.web.theme(subTheme);
