@@ -1,4 +1,4 @@
-
+/** @format */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -1368,7 +1368,7 @@ mark {
   z-index: 1;
   overflow: auto; }
   .Frame-panel--main.is-loading {
-    background-image: url("/assets/images/loader.svg");
+    background-image: url("img/loader.svg");
     background-repeat: no-repeat;
     background-position: 50%; }
     .Frame-panel--main.is-loading .Frame-inner {
@@ -1383,7 +1383,7 @@ mark {
   z-index: 2;
   height: 100%;
   width: 0.625rem;
-  background: transparent url("/assets/images/icon-drag--vertical.svg") no-repeat 50% 45%;
+  background: transparent url("img/icon-drag--vertical.svg") no-repeat 50% 45%;
   background-size: 3px 16px;
   cursor: ew-resize; }
   .Frame-handle:hover {
@@ -1653,7 +1653,7 @@ mark {
   flex: 0 0 auto;
   height: 0.625rem;
   margin: 0 0.625rem;
-  background: transparent url("/assets/images/icon-drag--horizontal.svg") no-repeat 50% 50%;
+  background: transparent url("img/icon-drag--horizontal.svg") no-repeat 50% 50%;
   background-size: 16px 3px;
   cursor: ns-resize; }
   .Pen-handle:hover {
@@ -1774,7 +1774,7 @@ mark {
   z-index: 100;
   height: calc(100% + 2px);
   width: 0.625rem;
-  background: transparent url("/assets/images/icon-drag--vertical.svg") no-repeat 50%;
+  background: transparent url("img/icon-drag--vertical.svg") no-repeat 50%;
   background-size: 3px 16px;
   cursor: ew-resize; }
   [dir="ltr"] .Preview-handle {
@@ -2080,9 +2080,9 @@ mark {
   .Tree-collection.is-closed .Tree-collectionItems {
     display: none; }
   [dir="ltr"] .Tree-collection.is-closed .Tree-collectionLabel::before {
-    background-image: url("/assets/images/icon-navigation-closed-ltr.svg"); }
+    background-image: url("img/icon-navigation-closed-ltr.svg"); }
   [dir="rtl"] .Tree-collection.is-closed .Tree-collectionLabel::before {
-    background-image: url("/assets/images/icon-navigation-closed-rtl.svg"); }
+    background-image: url("img/icon-navigation-closed-rtl.svg"); }
 
 .Tree-collectionLabel {
   font-size: 0.875rem;
@@ -2110,7 +2110,7 @@ mark {
     top: 0.75rem;
     width: 0.75rem;
     height: 0.75rem;
-    background-image: url("/assets/images/icon-navigation-opened.svg");
+    background-image: url("img/icon-navigation-opened.svg");
     background-size: 0.5rem;
     background-repeat: no-repeat;
     background-position: 50%;
