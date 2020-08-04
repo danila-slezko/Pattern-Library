@@ -4,7 +4,7 @@
   "status": "ready",
   "order": 1,
   "context": {
-    "anchorLink": "http://example.com",
+    "anchorLink": "javascript:void(0)",
     "anchorText": "dolor sit amet, consectetur"
   }
 }
