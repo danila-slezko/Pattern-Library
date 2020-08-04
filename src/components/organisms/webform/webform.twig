@@ -13,9 +13,9 @@
   <input type="hidden" name="debugEmail" value="your.name@email.com">
   <fieldset class="margin-bottom-md padding-bottom-sm border-bottom">
     <div class="text-component text-center line-height-md">
-      <h5 class="text-xxl color-black">Contact us to get started.</h5>
+      {% include '@heading--h2' with { headingText: 'Contact us to get started.'} %}
       <div class="padding-x-lg max-width-xs margin-auto">
-        <p class="margin-y-xs line-height-sm">Submit the form below, and a representative will reach out to you with more information about adding your content to Client.com</p>
+        {% include '@paragraph--basic' with { paraText: 'Submit the form below, and a representative will reach out to you with more information about adding your content to Client.com' } %}
       </div>
     </div>
     <div class="margin-bottom-xs">
@@ -357,19 +357,21 @@
         <div class="col-4@md">
           <div>
             <input class="checkbox" id="Checkbox-1" name="Checkbox" value="LoremIpsum" type="checkbox" checked>
-            <label for="Checkbox-1"><span class="form-label">Article Onboarding</span></label>
+            <label for="Checkbox-1"><span class="text-sm">Article Onboarding</span></label>
           </div>
-          <div class="padding-y-xxs">
+          <div class="padding-top-xxxs">
             <input class="checkbox" id="Checkbox-2" name="Checkbox" value="LoremIpsum" type="checkbox" checked>
-            <label for="Checkbox-2"><span class="form-label">Rich Inline Content</span></label>
+            <label for="Checkbox-2"><span class="text-sm">Rich Inline Content</span></label>
+            <!-- { % include '@checkbox' with { checkName: 'Rich Inline Content' } % } -->
           </div>
         </div>
       </div>
     </div>
   </fieldset>
   <div class="text-center">
-    <p class="color-contrast-medium padding-bottom-sm text-sm">CNET Content Solutions will use your personal information to manage the partner program.</p>
-    <button class="btn btn--primary">Submit</button>
+    {% include '@paragraph--small' with { paraText: 'CNET Content Solutions will use your personal information to manage the partner program.' } %}
+    <br>
+    {% include '@button--primary' with { buttonText: 'Submit', buttonModifier: 'btn--primary' } %}
   </div>
   </form>
 </section>
