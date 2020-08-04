@@ -18,21 +18,12 @@
       'style-fallback.css');cfStyle.setAttribute('href', href);}}
     </script>
   </head>
-  <body class="js no-touch preview-columns"
-    data-theme="default"
-    id="{{ _target.title
-      |replace({
-        ' ': '-'
-      })
-      |replace({
-        ':': ''
-      })
-      |lower }}">
-    <main class="text-component line-height-lg v-space-md max-width-adaptive-md padding-md@md padding-sm">
-      <div class="flex gap-xs flex-column flex-row@xs">
+  <body class="preview-columns" data-theme="default" id="{{ _target.title | replace({ ' ': '-' }) | replace({ ':': '' }) | lower }}">
+    <div class="text-component line-height-lg v-space-md max-width-adaptive-md padding-md@md padding-sm">
+      <main class="flex gap-xs flex-column flex-row@xs">
         {{ yield }}
-      </div>
-    </main>
+      </main>
+    </div>
     <script src="../../assets/js/scripts.min.js"></script>
   </body>
 </html>

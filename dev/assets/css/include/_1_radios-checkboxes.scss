@@ -1,14 +1,14 @@
 /**
  * /* --------------------------------
- * 
+ *
  * File#: _1_radios-checkboxes
  * Title: Radios and Checkboxes
  * Descr: Custom radio and checkbox buttons
- * 
- * 
+ *
+ *
  * --------------------------------
  *
- * @format
+
  */
 
 :root {
@@ -24,7 +24,7 @@
 
   // checkboxes
   --checkbox-marker-size: 12px;
-  --checkbox-radius: 0;
+  --checkbox-radius: 2px;
 }
 
 .radio,
@@ -67,6 +67,14 @@
   background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.2s, border 0.2s;
+}
+
+.checkbox + label::before {
+  height: 18px;
+  width: 18px;
+}
+.checkbox + label {
+  line-height: 20px;
 }
 
 .radio:not(:checked):not(:focus) + label:hover::before,

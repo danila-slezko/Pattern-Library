@@ -1,6 +1,6 @@
 {
   "label": "Lead Forms",
-  "hidden": true,
+  "hidden": false,
   "order": 2,
   "status": "wip"
 }
