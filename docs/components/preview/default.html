@@ -10,20 +10,28 @@
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
-<body class="js no-touch preview" data-theme="default" id="default-default">
-  <body data-theme="default" id="Default:-Default">
-    <main layout>
-        <header class="header js-header anchor" id="header">
+<body data-theme="default" id="default-default">
+  <main layout>
+      <div id="page">
+
+<header class="header js-header anchor" id="header">
   <style>
-  #header{--header-height:80px;--header-height-md:72px;--color-bg:var(--color-primary-darker);--color-contrast-higher:#fff;position:fixed;top:0;width:100%}
-  #header .header__item--divider{width:2px;height:3rem;opacity:.5;background-color:#fff}
-  #header .btn{background-color:transparent;color:var(--color-white);box-shadow:inset 0 0 0 2px rgba(255,255,255,0.5)!important;font-size:var(--text-base-size)}
-  #header .btn:hover{background-color:var(--color-white);color:var(--color-primary);box-shadow:inset 0 0 0 2px transparent}
-  #header .header__trigger{box-shadow:inset 0 0 0 2px transparent!important;padding-right:0}
-  #header .header__trigger-icon{margin-right:0;width:1.5em}
-  #header .header__trigger:hover{background:transparent}
-  #header .header__nav--is-visible .header__item--divider{display:none}
-  #header .header__nav::before{border:none}
+    #header{--header-height:80px;--header-height-md:72px;--color-bg:var(--color-primary-darker);--color-contrast-higher:#fff;position:fixed;top:0;width:100%}
+    #header
+    .header__item--divider{width:2px;height:3rem;opacity:.5;background-color:#fff}
+    #header
+    .btn{background-color:transparent;color:var(--color-white);box-shadow:inset
+    0 0 0 2px rgba(255,255,255,0.5)!important;font-size:var(--text-base-size)}
+    #header
+    .btn:hover{background-color:var(--color-white);color:var(--color-primary);box-shadow:inset
+    0 0 0 2px transparent} #header .header__trigger{box-shadow:inset 0 0 0 2px
+    transparent!important;padding-right:0} #header
+    .header__trigger-icon{margin-right:0;width:1.5em} #header
+    .header__trigger:hover{background:transparent} #header
+    .header__nav--is-visible .header__item--divider{display:none} #header
+    .header__nav::before{border:none}
+    .header__item { text-align: center }
+    .header__item img { margin: auto }
   </style>
   <div class="header__container container max-width-adaptive-lg">
     <div class="header__logo">
@@ -92,27 +100,26 @@
   </div>
 </header>
 
-<div id="content"
-  class="container max-width-adaptive-lg margin-x-auto margin-bottom-auto">
-  <div class="padding-lg">
-    <h1 class="">
-  heya
-</h1>
-  </div>
+<main id="content">
+  <div class="max-width-adaptive-md margin-auto padding-md">
+    <div class="">
+  Standalone Webpage
 </div>
+  </div>
+</main>
 
 <footer class="items-center bg-center bg-no-repeat"
   id="bottom"
-  style="background-image: url('http://mktg-static-sites.prod.cnetcontent.com/assets/images/map.svg')">
+  style="background-image: url('../../assets/img/map.svg')">
   <style>
-  #bottom{background-color:var(--color-contrast-higher);color:var(--color-contrast-low)}
-  #bottom .link{color:var(--color-contrast-low);text-decoration:none}
-  #bottom .link:hover{text-decoration:underline}
+    #bottom{background-color:var(--color-contrast-higher);color:var(--color-contrast-low)}
+    #bottom .link{color:var(--color-contrast-low);text-decoration:none} #bottom
+    .link:hover{text-decoration:underline}
   </style>
-  <div class="container max-width-adaptive-md padding-y-lg">
+  <div class="container max-width-adaptive-md padding-y-xs">
     <ul class="flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center">
-      <li>
-        <a class="link padding-x-xs padding-y-xxs inline-block"
+      <li
+        <a class="link padding-x-xxs padding-y-xxs inline-block"
           href="http://cnetcontent.com"
           target="_blank">
           CNET Content Solutions
@@ -153,7 +160,7 @@
           California Do Not Sell My Info
         </a>
       </li>
-      <li class="opacity-70%">
+      <li class=" opacity-80% padding-y-xxs">
         ©
         <!-- #config timefmt="%Y" -->
         <!-- #echo var="DATE_LOCAL" --> Copyright. All rights reserved.
@@ -162,8 +169,10 @@
   </div>
 </footer>
 
-    </main>
-    <script src="../../assets/js/scripts.min.js"></script>
+</div>
+
+  </main>
+  <script src="../../assets/js/scripts.min.js"></script>
 </body>
 </html>
 

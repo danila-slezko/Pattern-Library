@@ -10,11 +10,10 @@
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
-<body class="js no-touch preview-rows" data-theme="default" id="text-inputs">
-  <body data-theme="default">
-    <main class="text-component line-height-lg v-space-md max-width-adaptive-md padding-md@md padding-sm">
-      <div class="flex gap-xs flex-column">
-        <div><!-- Start: @input--default -->
+<body class="preview-rows" data-theme="default" id="text-inputs">
+  <div class="text-component line-height-lg v-space-md max-width-adaptive-md padding-md@md padding-sm">
+    <main class="flex gap-xs flex-column">
+      <div><!-- Start: @input--default -->
 <label class="form-label" for="basicText">Basic Text Input</label>
 <input class="form-control"
   type="text"
@@ -50,18 +49,18 @@
 <input class="form-control" type="date" name="date" />
 </div>
 
-      </div>
     </main>
-    <script src="../../assets/js/scripts.min.js"></script>
-    <style>
-    #text-inputs main .flex > div {
-      display: inline-flex;
-      flex-direction: column;
-    }
-    #text-inputs .form-label {
-      padding: .5rem 0;
-    }
-    </style>
+  </div>
+  <script src="../../assets/js/scripts.min.js"></script>
+  <style>
+  #text-inputs main .flex > div {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  #text-inputs .form-label {
+    padding: .5rem 0;
+  }
+  </style>
 </body>
 </html>
 
