@@ -1,6 +1,6 @@
 ---
 label: Design Tokens
-title: Design Tokens
+title: Design Tokens (wip)
 status: draft
 ---
 
