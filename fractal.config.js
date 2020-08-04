@@ -74,7 +74,7 @@ fractal.docs.set("statuses", {
  * BUILD SETTINGS
  */
 fractal.web.set("static.path", uiLibRoot + "/src/public");
-fractal.web.set("builder.urls.ext", '');
+//fractal.web.set("builder.urls.ext", 'html');
 fractal.web.set("builder.dest", uiLibRoot + "/docs");
 // fractal.web.set('static.mount', 'files');
 
