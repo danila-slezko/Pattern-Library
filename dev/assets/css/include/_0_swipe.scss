@@ -1,0 +1,26 @@
+/**
+ * /* --------------------------------
+ * 
+ * File#: _0_swipe
+ * Title: Swipe Content
+ * Use: Carousel Utility
+ * Descr: A Vanilla JavaScript plugin to detect touch interactions
+ * 
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
+
+.swipe-content {
+  height: 280px;
+  width: 280px;
+  background-color: var(--color-contrast-low);
+  border-radius: var(--radius-md);
+  cursor: default;
+  transition: background 0.2s;
+
+  &:active {
+    background-color: var(--color-contrast-medium);
+  }
+}

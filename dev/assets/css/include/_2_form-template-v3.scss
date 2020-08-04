@@ -1,0 +1,20 @@
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _2_form-template-v3
+ * Title: Form Template v3
+ * Descr: Form template example
+ * 
+ * 
+ * --------------------------------
+ *
+ * @format
+ */
+
+@include breakpoint(md) {
+  .form-template-v3 {
+    .form-label {
+      font-size: 1em;
+    }
+  }
+}

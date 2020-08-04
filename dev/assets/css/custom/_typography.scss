@@ -1,0 +1,135 @@
+// --------------------------------
+
+// (START) Global Editor code https://codyhouse.co/ds/globals/typography
+
+// --------------------------------
+
+:root {
+  // font family
+  --font-primary: "Lato", system, sans-serif;
+  --font-secondary: "Inter", system, sans-serif;
+  --font-tertiary: "Roboto Mono", system, monospace;
+
+  // body font size
+  --text-base-size: 1rem;
+
+  // type scale
+  --text-scale-ratio: 1.2;
+  --text-xs: calc((var(--text-base-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+  --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+
+  // line-height
+  --body-line-height: 1.4;
+  --heading-line-height: 1.2;
+
+  // capital letters - used in combo with the lhCrop mixin
+  --font-primary-capital-letter: 0.7;
+  --font-secondary-capital-letter: 0.7;
+  --font-tertiary-capital-letter: 0.7;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 900;
+}
+
+// font family
+.font-primary {
+  font-family: var(--font-primary);
+}
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+.font-tertiary {
+  font-family: var(--font-tertiary);
+}
+
+// text base class
+.text-base {
+  font-size: var(--text-base-size);
+}
+
+// --------------------------------
+
+// (END) Global Editor Code
+
+// --------------------------------
+
+// link style
+a,
+.link {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+mark {
+  background-color: alpha(var(--color-accent), 0.2);
+  color: inherit;
+  font-family: var(--font-primary);
+}
+
+.text-component {
+  --line-height-multiplier: 1;
+  --text-vspace-multiplier: 1;
+
+  blockquote {
+    padding-left: 1em;
+    border-left: 4px solid var(--color-contrast-low);
+  }
+
+  hr {
+    background: var(--color-contrast-low);
+    height: 1px;
+  }
+
+  figcaption {
+    font-size: var(--text-sm);
+    color: var(--color-contrast-medium);
+  }
+
+  mark {
+    display: inline-block;
+    padding: 0 2px;
+    margin: 0 -1px;
+    background: alpha(var(--color-primary-dark), 0.1);
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    border-radius: var(--radius-sm);
+  }
+
+  .link {
+    color: var(--color-primary-dark);
+    //text-decoration: none;
+    cursor: pointer;
+    //&:hover {
+    //  text-decoration: underline;
+    //}
+  }
+
+  // h1, h2, h3, h4, h5, h6 {
+  //   color: var(--color-black);
+  // }
+}
+
+.article {
+  // e.g., blog posts
+  --body-line-height: 1.6; // set body line-height
+  --text-vspace-multiplier: 1.2; // increase vertical spacing
+}

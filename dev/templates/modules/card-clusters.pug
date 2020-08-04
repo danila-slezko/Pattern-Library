@@ -6,9 +6,10 @@ style
       flex-wrap: wrap;
       display: flex;
       overflow: hidden;
-      /*&:active {
+      cursor: pointer;
+      &:active {
         transform: translateY(2px);
-      }*/
+      }
       .bg-contrast-lower {
         align-content: flex-end;
         justify-self: flex-end;
@@ -37,3 +38,5 @@ div(class='padding-y-lg flex justify-center max-width-adaptive-md margin-auto')
                 h4(class='text-lg') #{item.title}
           main(class='text-component padding-x-md padding-y-sm padding-x-lg@md padding-right-xxl@md margin-bottom-auto')
             | !{item.text}
+          footer(class='flex bg-contrast-lower margin-top-auto')
+            p(class='padding-y-xs color-primary-dark margin-auto') #{item.cta}
