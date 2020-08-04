@@ -1,5 +1,3 @@
-
-
 function Util() {}
 if (
   ((Util.hasClass = function (e, t) {

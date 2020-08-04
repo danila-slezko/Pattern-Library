@@ -1,5 +1,3 @@
-
-
 // Utility function
 function Util() {}
 

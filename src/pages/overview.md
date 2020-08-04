@@ -1,5 +1,6 @@
 ---
 title: Atomic Design Explained
+label: Atomic Design Explained
 status: published
 ---
 
@@ -9,23 +10,25 @@ Working this way promotes consistency and scalability while simultaneously showi
 
 There are five distinct levels in Atomic Design:
 
-## ![Atom](/assets/images/icon-atoms.svg "Atom") Atoms
+<div class="grid grid-space"><p>header</p></div>
+
+## ![Atom](../assets/img/icon-atoms.svg "Atom") Atoms
 
 Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.
 
-## ![Molecule](/assets/images/icon-molecules.svg "Molecule") Molecules
+## ![Molecule](../assets/img/icon-molecules.svg "Molecule") Molecules
 
 Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound.
 
-## ![Organism](/assets/images/icon-organisms.svg "Organism") Organisms
+## ![Organism](../assets/img/icon-organisms.svg "Organism") Organisms
 
 Organisms are groups of molecules and atoms joined together to form a relatively complex, distinct section of an interface.
 
-## ![Template](/assets/images/icon-templates.svg "Template") Templates
+## ![Template](../assets/img/icon-templates.svg "Template") Templates
 
 Templates are groups of organisms stitched together to form a generic 'full page' component that can be used more than once across your project. For example, a Post template to output blog articles.
 
-## ![Page](/assets/images/icon-pages.svg "Page") Pages
+## ![Page](../assets/img/icon-pages.svg "Page") Pages
 
 Pages are specific, 'bespoke' instances of templates like a homepage.
 

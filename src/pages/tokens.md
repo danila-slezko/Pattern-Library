@@ -1,4 +1,5 @@
 ---
+label: Design Tokens
 title: Design Tokens
 status: draft
 ---

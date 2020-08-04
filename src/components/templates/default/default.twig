@@ -1,12 +1,13 @@
+<div id="page">
+
 {% include '@header' %}
 
-<div id="content"
-  class="container max-width-adaptive-lg margin-x-auto margin-bottom-auto">
-  <div class="padding-lg">
-    {% include '@heading' with {
-      headingText: 'heya'
-    } %}
+<main id="content">
+  <div class="max-width-adaptive-md margin-auto padding-md">
+    {% include '@heading' with { headingText: 'heya' } %}
   </div>
-</div>
+</main>
 
 {% include '@footer' %}
+
+</div>
