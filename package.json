@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "gulp": "gulp watch",
-    "format": "prettier --write . {twig,json,md,scss,less,html,pug}",
+    "format": "prettier --write ./src {twig,json,md,scss,less,html,pug}",
     "start": "fractal start --sync",
     "build": "fractal build"
   },
@@ -31,7 +31,6 @@
     "postcss-css-variables": "git+https://github.com/CodyHouse/postcss-css-variables.git"
   },
   "dependencies": {
-    "@gotoandplay/nighthawk": "^1.5.0",
     "@rsm/fractal-pug-adapter": "^0.5.0",
     "gulp-twig": "^1.2.0",
     "jstransformer": "^1.0.0",
@@ -52,10 +51,7 @@
     "jstransformer-svgo": "^1.2.0",
     "jstransformer-twig": "^1.6.2",
     "jstransformer-uglify-js": "^1.2.0",
-    "mono-fractal": "^1.1.2",
     "prettier": "2.0.5",
-    "prettier-plugin-hbs": "^1.0.1",
-    "prettier-plugin-twig-melody": "^0.4.6",
     "pug": "^3.0.0",
     "pug-filters": "^4.0.0"
   }

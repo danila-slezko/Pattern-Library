@@ -1,12 +1,11 @@
 "use strict";
 
-/*
- * Require the path module
- */
+
 const path = require("path");
 const uiLibRoot = __dirname + "/";
 const fractal = (module.exports = require("@frctl/fractal").create());
 const twigAdapter = require("@frctl/twig")();
+
 
 /*
  * PROJECT VARS
@@ -15,6 +14,7 @@ fractal.set("project.title", "Design Patterns");
 fractal.set("project.version", "v1.0");
 fractal.set("project.repository", "https://github.com/CNETContentSolutions/Pattern-Library/");
 fractal.set("project.author", "Valerie Mardorf");
+
 
 /*
  * COMPONENT SETTINGS
@@ -53,6 +53,7 @@ fractal.components.set("statuses", {
   },
 });
 
+
 /*
  * DOCS SETTINGS
  */
@@ -70,13 +71,15 @@ fractal.docs.set("statuses", {
   },
 });
 
+
 /*
  * BUILD SETTINGS
  */
 fractal.web.set("static.path", uiLibRoot + "/src/public");
-//fractal.web.set("builder.urls.ext", 'html');
+// fractal.web.set("builder.urls.ext", 'html');
 fractal.web.set("builder.dest", uiLibRoot + "/docs");
 // fractal.web.set('static.mount', 'files');
+
 
 /*
  * THEME SETTINGS
@@ -88,6 +91,5 @@ const subTheme = require("@frctl/mandelbrot")({
   styles: ["/themes/base.css", "/themes/default.css"],
   static: { mount: "themes" },
 });
-
 //subTheme.addStatic("path", uiLibRoot + "src/public/assets/theme");
 fractal.web.theme(subTheme);

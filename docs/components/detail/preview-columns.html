@@ -207,22 +207,17 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>
-        | UI Component Library
-    <span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span> | UI Component Library<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
         <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">"html"</span>)[<span class="hljs-number">0</span>].className += <span class="hljs-string">" js"</span>;
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../assets/css/style.css"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
         <span class="hljs-keyword">if</span> (!(<span class="hljs-string">'CSS'</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>) || !CSS.supports(<span class="hljs-string">'color'</span>, <span class="hljs-string">'var(--color-var)'</span>)) {
-            <span class="hljs-keyword">var</span>
-                cfStyle = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'codyframe'</span>);
+            <span class="hljs-keyword">var</span> cfStyle = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'codyframe'</span>);
             <span class="hljs-keyword">if</span> (cfStyle) {
-                <span class="hljs-keyword">var</span> href =
-                    cfStyle.getAttribute(<span class="hljs-string">'href'</span>);
-                href = href.replace(<span class="hljs-string">'style.css'</span>,
-                    <span class="hljs-string">'style-fallback.css'</span>);
+                <span class="hljs-keyword">var</span> href = cfStyle.getAttribute(<span class="hljs-string">'href'</span>);
+                href = href.replace(<span class="hljs-string">'style.css'</span>, <span class="hljs-string">'style-fallback.css'</span>);
                 cfStyle.setAttribute(<span class="hljs-string">'href'</span>, href);
             }
         }
