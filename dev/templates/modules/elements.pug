@@ -1,7 +1,7 @@
 mixin block(name)
  section(id=name, class='position-relative padding-y-md')
-   div(class='container padding-top-md')&attributes(attributes)
-     block 
+   div(class='container padding-y-sm')&attributes(attributes)
+     block
 
 mixin block-overlay(name, image, color)
  section(id=name, class='position-relative bg-cover padding-y-md', style=`background-image: url('${image}')`)

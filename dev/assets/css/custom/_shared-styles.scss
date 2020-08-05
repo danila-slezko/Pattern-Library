@@ -33,7 +33,7 @@ Title: Markting Tweaks
 
 -------------------------------- */
 
-body {
+html {
   scroll-behavior: smooth;
 }
 
@@ -46,13 +46,24 @@ body {
   &::before {
     content: "";
     display: block;
-    height: 5rem;
+    height: 160px;
     width: 100%;
     visibility: hidden;
   }
   #content {
     flex: 1;
   }
+}
+
+:target::before {
+  content: '';
+  display: block;
+  height: 80px;
+  visibility: hidden;
+}
+
+main#content {
+  margin-top: -80px;
 }
 
 .media-wrapper {
@@ -85,4 +96,43 @@ cite {
 
 li::before {
   color: var(--color-error-dark) !important;
+}
+
+
+/*
+ * --------------------------------
+ *
+ * Descr: Cards
+ *
+ * --------------------------------
+ */
+
+a.link-card {
+  cursor: pointer;
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.link-card {
+  --shadow-xs: var(--shadow-md);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+  overflow: hidden;
+  footer > p {
+    align-content: flex-end;
+    justify-self: flex-end;
+    width: 100%;
+    &::before {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      margin-top: calc((1 - 1.2) * 0.5em);
+    }
+    &:empty {
+      display: none;
+    }
+  }
 }

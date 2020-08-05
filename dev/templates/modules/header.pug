@@ -2,7 +2,7 @@ style
   :scss(compress=true)
     #header {
       --header-height: 80px;
-      --header-height-md: 72px;
+      --header-height-md: 80px;
       --color-bg: var(--color-primary-darker);
       --color-contrast-higher: white;
       position: fixed;
@@ -51,13 +51,12 @@ style
       }
     }
 
-
 append vars
   - var showLogo = header.logo.display
   - var showDiv = header.divider.display
   - var showButton = header.button.display
 
-header#header(class='header js-header anchor')
+header#header(class='header')
   .header__container.container.max-width-adaptive-md
     .header__logo #[a(href='#top') #[img(src=header.branding.image, alt=header.branding.alt)]]
     button.btn.btn--subtle.header__trigger.js-header__trigger(aria-label='Toggle menu', aria-expanded='false', aria-controls='header-nav')
@@ -82,4 +81,4 @@ header#header(class='header js-header anchor')
 
           if showButton == 0
           else
-            li.header__item #[a(class='btn btn--sm btn--subtle ', href=header.button.url, data-duration='300') Contact Us]
+            li.header__item #[a(class='btn btn--sm btn--subtle', href=header.button.url, data-duration='300') Contact Us]

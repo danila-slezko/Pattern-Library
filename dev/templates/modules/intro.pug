@@ -12,11 +12,11 @@
 
 div(class='grid gap-lg@md')
   div(class='flex items-center col-6@md')
-    div(class='text-component line-height-lg v-space-lg')
+    div(class='text-component line-height-lg v-space-md')
       h1(class='text-xl padding-bottom-xxs color-black')=intro.headline
       p #{intro.copy}
-      a(class='btn btn--primary margin-bottom-md', href=intro.button.link)=intro.button.label
-      p !{intro.subtext}
+      a(class='btn btn--primary margin-bottom-sm', href=intro.button.link)=intro.button.label
+      | !{intro.subtext}
   div(class='col-6@md')
     figure(class='media-wrapper media-wrapper--4:3 radius-md')
       img(src=intro.media.standard, srcset=intro.media.retina + ' 2x', alt='Image description')

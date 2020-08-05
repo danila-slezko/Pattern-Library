@@ -45,7 +45,7 @@ There are five distinct levels in Atomic Design:
     <img src="../assets/img/icon-organisms.svg">
   </div>
   <div class="col-8">
-    <h4>Molecules</h4>
+    <h4>Organisms</h4>
   </div>
   <div class="grid">
     <div class="col-10 offset-1">
@@ -59,7 +59,7 @@ There are five distinct levels in Atomic Design:
     <img src="../assets/img/icon-templates.svg">
   </div>
   <div class="col-8">
-    <h4>Molecules</h4>
+    <h4>Templates</h4>
   </div>
   <div class="grid">
     <div class="col-10 offset-1">
