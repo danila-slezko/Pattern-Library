@@ -1,6 +1,6 @@
 {
   "label": "Logos",
-  "hidden": true,
+  "hidden": false,
   "order": 1,
   "context": {
     "logoColor": "#223344"

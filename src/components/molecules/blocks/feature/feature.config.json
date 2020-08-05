@@ -1,0 +1,15 @@
+{
+  "title": "features",
+  "label": "features",
+  "hidden": true,
+  "order": 1,
+  "context": {
+    "logo": [
+      {
+        "name": "default",
+        "logoColor": "white"
+      }
+    ]
+  },
+  "status": "wip"
+}

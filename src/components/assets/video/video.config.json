@@ -1,0 +1,11 @@
+{
+  "title": "Merchandising Rich Content Video",
+  "label": "Merchandising Content",
+  "context": {
+    "headingText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  },
+  "default": "cards",
+  "variants": [],
+  "status": "prototype",
+  "hidden": false
+}

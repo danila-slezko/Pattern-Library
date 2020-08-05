@@ -1,6 +1,8 @@
 {
   "title": "Table",
   "label": "Tables",
+  "status": "prototype",
+  "hidden": false,
   "context": {
     "headers": [
       { "title": "Name" },
@@ -38,6 +40,5 @@
         ]
       }
     ]
-  },
-  "status": "prototype"
+  }
 }

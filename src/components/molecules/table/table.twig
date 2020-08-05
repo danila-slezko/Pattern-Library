@@ -1,18 +1,19 @@
-<table>
-  <thead>
-    <tr>
+<div class="table-responsive">
+<table class="row-table row-table--expanded@xs width-100% js-row-table" aria-label="Table Example">
+  <thead class="row-table__header">
+    <tr class="row-table__row">
       {% for header in headers %}
-        <th>
+        <th class="row-table__cell row-table__cell--th text-left">
           {{ header.title }}
         </th>
       {% endfor %}
     </tr>
   </thead>
-  <tbody>
+  <tbody class="row-table__body">
     {% for row in rows %}
-      <tr>
+      <tr class="row-table__row">
         {% for col in row.cols %}
-          <td>
+          <td class="row-table__cell">
             {{ col.value }}
           </td>
         {% endfor %}
@@ -20,3 +21,4 @@
     {% endfor %}
   </tbody>
 </table>
+</div>

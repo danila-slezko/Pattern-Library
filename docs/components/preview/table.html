@@ -13,92 +13,117 @@
 <body class="preview-rows" data-theme="default" id="table-default">
   <div class="text-component line-height-lg v-space-md max-width-adaptive-md padding-md@md padding-sm">
     <main class="flex gap-xs flex-column">
-      <table>
-  <thead>
-    <tr>
-              <th>
+      <div class="table-responsive">
+<table class="row-table row-table--expanded@xs width-100% js-row-table" aria-label="Table Example">
+  <thead class="row-table__header">
+    <tr class="row-table__row">
+              <th class="row-table__cell row-table__cell--th text-left">
           Name
         </th>
-              <th>
+              <th class="row-table__cell row-table__cell--th text-left">
           Title
         </th>
-              <th>
+              <th class="row-table__cell row-table__cell--th text-left">
           Created by
         </th>
-              <th>
+              <th class="row-table__cell row-table__cell--th text-left">
           Created at
         </th>
-              <th>
+              <th class="row-table__cell row-table__cell--th text-left">
           Cost
         </th>
           </tr>
   </thead>
-  <tbody>
-          <tr>
-                  <td>
+  <tbody class="row-table__body">
+          <tr class="row-table__row">
+                  <td class="row-table__cell">
             Some Thing
           </td>
-                  <td>
+                  <td class="row-table__cell">
             Foo
           </td>
-                  <td>
+                  <td class="row-table__cell">
             Bilbo Baggins
           </td>
-                  <td>
+                  <td class="row-table__cell">
             23 minutes ago
           </td>
-                  <td>
+                  <td class="row-table__cell">
             £100.00
           </td>
               </tr>
-          <tr>
-                  <td>
+          <tr class="row-table__row">
+                  <td class="row-table__cell">
             Another Thing
           </td>
-                  <td>
+                  <td class="row-table__cell">
             Bar
           </td>
-                  <td>
+                  <td class="row-table__cell">
             Frodo Baggins
           </td>
-                  <td>
+                  <td class="row-table__cell">
             1 hour ago
           </td>
-                  <td>
+                  <td class="row-table__cell">
             £99.00
           </td>
               </tr>
-          <tr>
-                  <td>
+          <tr class="row-table__row">
+                  <td class="row-table__cell">
             Summit Else
           </td>
-                  <td>
+                  <td class="row-table__cell">
             Wiz
           </td>
-                  <td>
+                  <td class="row-table__cell">
             Gandalf
           </td>
-                  <td>
+                  <td class="row-table__cell">
             01/01/2017 08:23 AM
           </td>
-                  <td>
+                  <td class="row-table__cell">
             £50.00
           </td>
               </tr>
       </tbody>
 </table>
+</div>
 
     </main>
   </div>
   <script src="../../assets/js/scripts.min.js"></script>
+
   <style>
-  #text-inputs main .flex > div {
-    display: inline-flex;
-    flex-direction: column;
-  }
-  #text-inputs .form-label {
-    padding: .5rem 0;
-  }
+
+  .table-responsive {
+    overflow-x: auto;
+    min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+    @media screen and (max-width: @screen-xs-max) {
+      width: 100%;
+      margin-bottom: (@line-height-computed * 0.75);
+      overflow-y: hidden;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+      border: 1px solid @table-border-color;
+
+      // Tighten up spacing
+      > .table {
+        margin-bottom: 0;
+
+        // Ensure the content doesn't wrap
+        > thead,
+        > tbody,
+        > tfoot {
+          > tr {
+            > th,
+            > td {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
   </style>
 </body>
 </html>
