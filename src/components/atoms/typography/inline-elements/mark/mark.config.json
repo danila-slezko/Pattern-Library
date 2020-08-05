@@ -1,6 +1,7 @@
 {
   "label": "Mark",
   "order": 12,
+  "hidden": true,
   "status": "wip",
   "context": {
     "markedText": "dolor sit amet, consectetur"

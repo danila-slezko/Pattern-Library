@@ -1,0 +1,33 @@
+#text-inputs.preview-rows main > div {
+  display: flex;
+  flex-direction: column;
+
+}
+#text-inputs.preview-rows main > div .form-label {
+  padding-bottom: 6px;
+}
+.table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: 100%;
+    margin-bottom: (@line-height-computed * 0.75);
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid @table-border-color;
+
+    > .table {
+      margin-bottom: 0;
+
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }

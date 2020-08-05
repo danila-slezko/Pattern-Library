@@ -2,6 +2,7 @@
   "label": "Deleted",
   "order": 8,
   "status": "ready",
+  "hidden": true,
   "context": {
     "deletedText": "dolor sit amet, consectetur"
   }

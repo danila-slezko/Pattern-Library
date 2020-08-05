@@ -1,13 +1,13 @@
 extend ../layouts/default
 
 append vars
-  
+
 append styles
-  
+
 append scripts
 
 block body
-  
+
   div(class='container max-width-adaptive-xs padding-y-xl text-center')
     a.btn(href='walmart') Walmart
     a.btn(href='amazon') Amazon
@@ -15,9 +15,42 @@ block body
     a.btn(href='costco') Costco
     a.btn(href='sony') Sony
 
-  section(class='text-divider') #[span(class='font-semibold') Boxed Feature]
-  
-  section.position-relative.z-index-1.margin-y-lg
+  // style.
+  //   body {
+  //     min-height: 100vh;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //   }
+  // div(style="max-height:360px;max-width:620px;margin-bottom:2rem")
+  //   link(rel='stylesheet', href='https://cdn.cnetcontent.com/sites/scripts/plyr-style.min.css')
+  //   script(src='https://cdn.cnetcontent.com/sites/scripts/plyr-polyfill.min.js')
+  //   video#player(playsinline, controls, width='620' height='360' poster='https://cdn.cnetcontent.com/sites/video/contentcast-ecom-modules.png')
+  //     source(src='https://cdn.cnetcontent.com/sites/video/contentcast-ecom-modules.webm', type='video/webm')
+  //     source(src='https://cdn.cnetcontent.com/sites/video/contentcast-ecom-modules.mp4', type='video/mp4')
+  //  script(src='https://cdn.cnetcontent.com/sites/scripts/plyr-video.min.js')
+  //  | <script>
+  //  |   document.addEventListener('DOMContentLoaded', () => {
+  //  |     const player = new Plyr('#player', 'volume = 0.5');
+  //  |     window.player = player;
+  //  |     function on(selector, type, callback) {
+  //  |       document.querySelector(selector).addEventListener(type, callback, false); }
+  //  |       on('.js-play', 'click', () => { player.play(); });
+  //  |       on('.js-pause', 'click', () => { player.pause(); });
+  //  |       on('.js-stop', 'click', () => { player.stop(); });
+  //  |       on('.js-rewind', 'click', () => { player.rewind(); });
+  //  |       on('.js-forward', 'click', () => { player.forward(); });
+  //  |   });
+  //  | </script>
+
+
+
+
+
+
+  //- section(class='text-divider') #[span(class='font-semibold') Boxed Feature]
+
+  //- section.position-relative.z-index-1.margin-y-lg
     .container.max-width-adaptive-xl
       .grid
         div(class='bg-contrast-lower flex items-center col-6@md')
@@ -32,7 +65,7 @@ block body
                 a.color-inherit(href='#0') Learn more
         img(class='block width-100% object-cover col-6@md', src='assets/images/_outside-mobile-top-2x.jpg', alt='Image description')
 
-  section.feature-v4
+  //- section.feature-v4
     div(class='container max-width-adaptive-lg')
       div(class='feature-v4__grid grid gap-md items-center')
         div(class='col-5@md position-relative z-index-1')

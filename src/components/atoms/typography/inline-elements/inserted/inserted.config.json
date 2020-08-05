@@ -2,6 +2,7 @@
   "label": "Inserted",
   "order": 9,
   "status": "wip",
+  "hidden": true,
   "context": {
     "insertedText": "dolor sit amet, consectetur"
   }
