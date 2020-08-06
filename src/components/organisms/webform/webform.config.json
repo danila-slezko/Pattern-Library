@@ -2,5 +2,18 @@
   "label": "Webforms",
   "hidden": false,
   "order": 2,
-  "status": "wip"
+  "status": "wip",
+  "collated": false,
+  "default": "retail",
+  "variants": [
+    {
+      "name": "contact",
+      "preview": "@preview-columns"
+    },
+    {
+      "name": "login",
+      "preview": "@preview-columns"
+    }
+  ]
+
 }

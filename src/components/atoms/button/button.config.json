@@ -3,8 +3,7 @@
   "status": "ready",
   "hidden": false,
   "preview": "@preview-columns",
-  "tags": ["cta", "call-to-action", "form"],
-  "meta": { "created": "2020-03-08" },
+  "meta": { "version": "1.0" },
   "default": "basic",
   "context": {
     "buttonText": "Basic",

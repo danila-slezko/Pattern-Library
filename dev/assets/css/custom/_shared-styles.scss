@@ -26,6 +26,7 @@
   //               0 46px 60px -6px rgba(0, 0, 0, 0.2);
 }
 
+
 /* --------------------------------
 
 File#: Main Styles
@@ -46,9 +47,10 @@ html {
   &::before {
     content: "";
     display: block;
-    height: 20px;
+    height: var(--header-height);
     width: 100%;
     visibility: hidden;
+    margin-bottom: 1rem;
   }
   #content {
     flex: 1;
@@ -62,9 +64,6 @@ html {
   visibility: hidden;
 }
 
-main#content {
-  margin-top: -80px;
-}
 
 .media-wrapper {
   border-radius: var(--radius-lg);

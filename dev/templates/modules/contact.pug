@@ -50,7 +50,8 @@ form.form-template-v3
           label.form-label(for='email') Work Email
         div(class='col-4@md')
           input#email(class='form-control width-100%', type='email', name='email')
-    .margin-bottom-xs
+
+    //- .margin-bottom-xs
       div(class='grid gap-xxs items-center@md')
         div(class='col-4@md text-right@md')
           label.form-label(for='country') Country
@@ -312,6 +313,25 @@ form.form-template-v3
             svg.icon.select__icon(aria-hidden='true', viewBox='0 0 16 16', style='position: absolute; top: 1.5rem; right: 1rem;')
               g(stroke-width='2', stroke='currentColor')
                 polyline(fill='none', stroke='currentColor', points='15.5,4.5 8,12 0.5,4.5 ')
+
+    .margin-bottom-xs
+
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='country') Business Region
+        div(class='col-4@md')
+          div(class="select", style="position:relative")
+            select#00N57000006UiQM(name='00N57000006UiQM', class="select__input form-control width-100%" title='Onboarding Region')
+              option(disabled, selected, value) Please Select
+              option(value='APAC') APAC
+              option(value='EMEA') EMEA
+              option(value='Latin America') Latin America
+              option(value='North America') North America
+              option(value='Worldwide') Worldwide
+            svg.icon.select__icon(aria-hidden='true', viewBox='0 0 16 16', style='position: absolute; top: 1.5rem; right: 1rem;')
+              g(stroke-width='2', stroke='currentColor')
+                polyline(fill='none', stroke='currentColor', points='15.5,4.5 8,12 0.5,4.5 ')
+
     .padding-top-md
       div(class='grid gap-md')
         div(class='col-4@md offset-4')
@@ -323,8 +343,6 @@ form.form-template-v3
           div.padding-y-xs(title='Checkbox-2')
             input#Checkbox-2.checkbox(name='Checkbox', value='LoremIpsum', type='checkbox', checked)
             label(for='Checkbox-2') Rich Inline Content
-
-
 
   .text-center
     p.color-contrast-medium.padding-bottom-sm CNET Content Solutions will use your personal information to manage the partner program.

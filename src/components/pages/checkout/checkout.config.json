@@ -1,0 +1,16 @@
+{
+  "label": "Checkout",
+  "hidden": false,
+  "order": 2,
+  "tags": ["channelonline", "col"],
+  "preview": "@preview",
+  "collated": false,
+  "default": "order",
+  "variants": [
+    { "name": "order" },
+    {
+      "name": "summary",
+      "preview": "@preview-rows"
+    }
+  ]
+}

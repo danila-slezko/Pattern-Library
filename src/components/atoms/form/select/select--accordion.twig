@@ -1,0 +1,32 @@
+<fieldset>
+  <legend class="form-legend">Choose an option:</legend>
+
+  <div class="choice-accordion  js-choice-accordion" data-animation="on">
+    {% for option in selectOptions %}
+    <div class="choice-accordion__item">
+      <!-- fallback -->
+      <div class="choice-accordion__fallback js-choice-accordion__fallback">
+        <input type="radio" name="choice-accordion-radio" id="{{ option.value }}">
+        <label for="choice-accordion-radio-1">{{ option.text }}</label>
+      </div>
+
+      <!-- control -->
+      <div class="choice-accordion__btn padding-sm js-choice-accordion__btn" aria-hidden="true">
+        <div class="choice-accordion__input choice-accordion__input--radio">
+          <svg class="icon" viewBox="0 0 16 16"><circle fill="currentColor" cx="8" cy="8" r="4" /></svg>
+        </div>
+
+        <div class="color-contrast-higher user-select-none">{{ option.text }}</div>
+      </div>
+
+      <!-- panel -->
+      <div class="choice-accordion__panel js-choice-accordion__panel">
+        <div class="text-component padding-xs">
+          <p>{{ option.desc }}</p>
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</fieldset>

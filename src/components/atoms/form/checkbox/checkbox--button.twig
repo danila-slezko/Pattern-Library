@@ -1,0 +1,30 @@
+<fieldset>
+  <legend class="form-legend">{{ pickLabel }}</legend>
+
+  <div class="choice-btns gap-xs js-choice-btns">
+
+    {% for select in pickOptions %}
+    <div class="choice-btn padding-xs js-choice-btn">
+      <!-- fallback -->
+      <div class="choice-btn__fallback">
+        <input type="checkbox" id="{{ select.value }}">
+        <label for="{{ select.value }}">{{ select.text }}</label>
+      </div>
+
+      <!-- custom input -->
+      <div class="choice-btn__grid" aria-hidden="true">
+        <div class="choice-btn__input choice-btn__input--checkbox">
+          <svg class="icon" viewBox="0 0 16 16">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" /></svg>
+        </div>
+
+        <div class="flex flex-wrap gap-xxs justify-between">
+          <div class="color-contrast-higher font-bold">{{ select.text }}</div>
+          <div>{{ select.desc }}</div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</fieldset>

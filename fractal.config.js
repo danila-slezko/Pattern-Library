@@ -7,13 +7,19 @@ const fractal = (module.exports = require("@frctl/fractal").create());
 const twigAdapter = require("@frctl/twig")();
 
 
+
+
+
 /*
  * PROJECT VARS
  */
-fractal.set("project.title", "Design Patterns");
+fractal.set("project.title", "Web Design Patterns");
 fractal.set("project.version", "v1.0");
 fractal.set("project.repository", "https://github.com/CNETContentSolutions/Pattern-Library/");
 fractal.set("project.author", "Valerie Mardorf");
+
+
+
 
 
 /*
@@ -54,9 +60,13 @@ fractal.components.set("statuses", {
 });
 
 
+
+
+
 /*
  * DOCS SETTINGS
  */
+//fractal.docs.set('ext', '.html');
 fractal.docs.set("path", uiLibRoot + "/src/pages");
 fractal.docs.set("statuses", {
   draft: {

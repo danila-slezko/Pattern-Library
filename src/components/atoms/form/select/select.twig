@@ -3,9 +3,7 @@
 </label>
 
 <div class="select">
-  <select class="select__input form-control"
-    name="{{ selectName }}"
-    id="{{ selectName }}">
+  <select class="select__input form-control" name="{{ selectName }}" id="{{ selectName }}">
     {% for option in selectOptions %}
       <option value="{{ option.value }}">
         {{ option.text }}

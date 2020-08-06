@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <title>Checkout: Summary | Design Patterns</title>
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
+</head>
+<body class="preview-rows" data-theme="default" id="checkout-summary">
+  <div class="text-component max-width-adaptive-md padding-md@md padding-sm">
+    <main class="flex gap-xs flex-column">
+      <aside class="order-summary bg-contrast-lower radius-md max-width-md">
+  <header class="order-summary__header bg-contrast-lower flex justify-between padding-sm">
+    <p class="text-sm">Your cart (2) <span class="sr-only">items</span></p>
+    <a class="text-sm" href="#0" role="text">Edit <i class="sr-only">cart</i></a>
+  </header>
+
+  <div class="padding-x-sm">
+    <ul class="flex flex-column gap-sm">
+      <li class="order-summary__item">
+        <a href="#0" class="order-summary__img"><img src="https://via.placeholder.com/56" alt="Image description"></a>
+
+        <div class="flex flex-wrap justify-between gap-xxxs">
+          <div>
+            <p class="color-contrast-higher">Product One</p>
+            <div class="color-contrast-medium text-sm">Color: Black, Size: M, Qty: 1</div>
+          </div>
+
+          <p class="color-contrast-higher"><span class="sr-only">Price:</span> $49.00</p>
+        </div>
+      </li>
+
+      <li class="order-summary__item">
+        <a href="#0" class="order-summary__img"><img src="https://via.placeholder.com/56" alt="Image description"></a>
+
+        <div class="flex flex-wrap justify-between gap-xxxs">
+          <div>
+            <div class="color-contrast-higher">Product Two</div>
+            <div class="color-contrast-medium text-sm">Color: Black, Size: M, Qty: 1</div>
+          </div>
+
+          <p class="color-contrast-higher"><span class="sr-only">Price:</span> $49.00</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <footer class="order-summary__footer bg-contrast-lower padding-x-sm padding-bottom-sm">
+    <div class="margin-y-sm padding-y-sm border-top border-bottom">
+      <div class="flex flex-column flex-row@md gap-xxs">
+        <input aria-label="Discount code" class="form-control flex-grow min-width-0" type="email" placeholder="Discount code">
+        <button class="btn btn--subtle">Apply</button>
+      </div>
+    </div>
+
+    <ul class="text-sm flex flex-column gap-xxs">
+      <li class="flex justify-between"><i>Subtotal</i> <i>$98.00</i></li>
+      <li class="flex justify-between"><i>Tax</i> <i>$10.00</i></li>
+      <li class="flex justify-between"><i>Delivery</i> <i>Free</i></li>
+      <li class="flex justify-between font-bold"><i>Total</i> <i>$108.00</i></li>
+    </ul>
+  </footer>
+</aside>
+
+    </main>
+  </div>
+  <script src="../../assets/js/scripts.min.js"></script>
+  <link rel="stylesheet" href="../../themes/tweaks.css" />
+</body>
+</html>
+

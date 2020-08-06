@@ -1,0 +1,12 @@
+<ul class="list flex flex-column gap-xxxs">
+  {% for option in selectOptions %}
+  <li>
+    <input id="{{ option.value }}"
+      value="{{ option.value }}"
+      name="{{ selectName }}"
+      class="radio"
+      type="radio" />
+    <label for="{{ option.value }}">{{ option.text }}</label>
+  </li>
+  {% endfor %}
+</ul>

@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../../themes/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
-<title>Checkbox | Design Patterns</title>
+<title>Multiple Select | Web Design Patterns</title>
 
 </head>
 <body>
@@ -45,7 +45,7 @@
 
         </div>
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Design Patterns</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Web Design Patterns</a>
 </div>
 
     </div>
@@ -67,7 +67,7 @@
     <div class="Pen-panel Pen-header">
     <h1 class="Pen-title">
         <a class="Pen-previewLink" href="../preview/checkbox.html" title="Component preview">
-            Checkbox
+            Multiple Select
             <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 0h24v24H0z" fill="none"/>
     <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
@@ -162,6 +162,21 @@
         
         
         <li class="Meta-item">
+            <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="checkbox--checkbox.html">
+                    <span>Checkbox</span>
+                </a>, 
+            
+                <a href="checkbox--button.html">
+                    <span>Button</span>
+                </a>
+            
+            </span>
+        </li>
+        
+        <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>
             <span class="Meta-value">
                 <ul>
@@ -211,13 +226,21 @@
     <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column gap-xxxs"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Checkbox-1"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Checkbox-1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"LoremIpsum"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"checked"</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Checkbox-1"</span>&gt;</span>A Lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Ipsum1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Ipsum1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Ipsum1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"checked"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Ipsum1"</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Checkbox-2"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Checkbox-2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"LoremIpsum"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Checkbox-2"</span>&gt;</span>B Lorem ipsum<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Lorem2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Lorem2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Lorem2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"checked"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Lorem2"</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Ipsum3"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Ipsum3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Ipsum3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"checked"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Ipsum3"</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Lorem4"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Lorem4"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Lorem4"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"checked"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Lorem4"</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
         
@@ -236,9 +259,30 @@
         
             
             <pre>{
-  <span class="hljs-attr">"checkName"</span>: <span class="hljs-string">"Checkbox"</span>,
-  <span class="hljs-attr">"checkValue"</span>: <span class="hljs-string">"LoremIpsum"</span>,
-  <span class="hljs-attr">"checkText"</span>: <span class="hljs-string">"Lorem ipsum"</span>
+  <span class="hljs-attr">"pickLabel"</span>: <span class="hljs-string">"Check Options"</span>,
+  <span class="hljs-attr">"pickName"</span>: <span class="hljs-string">"check"</span>,
+  <span class="hljs-attr">"pickOptions"</span>: [
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum1"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 1"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam omnis at minima corporis"</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem2"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 2"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Quis laborum reprehenderit sequi"</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum3"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 3"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam dolor adipisicing elit."</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem4"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 4"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Nesciunt, qui ut."</span>
+    }
+  ]
 }</pre>
             
         
@@ -309,7 +353,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="button.html" data-tags="[&quot;cta&quot;,&quot;call-to-action&quot;,&quot;form&quot;]" data-pjax>
+            <a class="Tree-entityLink" href="button.html" data-pjax>
                 <span>Button</span>
                 
 
@@ -342,33 +386,20 @@
             
     
         
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="radio.html" data-pjax>
-                <span>Radio</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-checkbox">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-checkbox-items">
+                Multiple Select
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-checkbox-items">
+            
+            
+            
+            
     
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkbox--checkbox.html" data-pjax>
                 <span>Checkbox</span>
                 
 
@@ -392,8 +423,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select.html" data-pjax>
-                <span>Select</span>
+            <a class="Tree-entityLink" href="checkbox--button.html" data-pjax>
+                <span>Button</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -410,6 +441,99 @@
 
 
             </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-select">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-select-items">
+                Single Select
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-select-items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="select--default.html" data-pjax>
+                <span>Input</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="select--radio.html" data-pjax>
+                <span>Radio</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="select--accordion.html" data-pjax>
+                <span>Accordion</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -883,10 +1007,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-webform">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-webform-items">
+                Webforms
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-webform-items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="webform.html" data-pjax>
-                <span>Webforms</span>
+            <a class="Tree-entityLink" href="webform--retail.html" data-pjax>
+                <span>Retail</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -903,6 +1038,59 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="webform--contact.html" data-pjax>
+                <span>Contact</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="webform--login.html" data-pjax>
+                <span>Login</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -961,6 +1149,70 @@
             
             
             
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-checkout">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-checkout-items">
+                Checkout
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-checkout-items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkout--order.html" data-tags="[&quot;channelonline&quot;,&quot;col&quot;]" data-pjax>
+                <span>Order</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="checkout--summary.html" data-tags="[&quot;channelonline&quot;,&quot;col&quot;]" data-pjax>
+                <span>Summary</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
     
         
         
