@@ -56,11 +56,12 @@
     &.choice-btn--checked,
     &:active {
       border-color: var(--color-primary);
+      box-shadow: inset 0 0 0 1px var(--color-primary);
     }
 
     &.choice-btn--focus,
     &:active {
-      box-shadow: 0 0 0 2px alpha(var(--color-primary), 0.2);
+      box-shadow: inset 0 0 0 1px var(--color-primary);
     }
   }
 

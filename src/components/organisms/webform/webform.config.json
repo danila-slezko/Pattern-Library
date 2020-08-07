@@ -5,14 +5,18 @@
   "status": "wip",
   "collated": false,
   "default": "retail",
+  "context": {
+
+  },
   "variants": [
     {
       "name": "contact",
-      "preview": "@preview-columns"
+      "preview": "@preview-grid"
     },
     {
       "name": "login",
-      "preview": "@preview-columns"
+      "preview": "@preview-grid",
+      "hidden": true
     }
   ]
 

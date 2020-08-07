@@ -2,9 +2,9 @@
   "title": "Buttons",
   "status": "ready",
   "hidden": false,
-  "preview": "@preview-columns",
   "meta": { "version": "1.0" },
   "default": "basic",
+  "preview": "@preview-grid",
   "context": {
     "buttonText": "Basic",
     "buttonModifier": "btn"

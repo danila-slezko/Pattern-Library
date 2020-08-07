@@ -2,6 +2,7 @@
   "label": "Address",
   "hidden": false,
   "order": 6,
+  "hidden": true,
   "context": {
     "addressLines": [
       {

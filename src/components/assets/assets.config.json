@@ -2,5 +2,5 @@
   "label": "Assets",
   "hidden": true,
   "order": 0,
-  "preview": "@preview-rows"
+  "preview": "@preview-list"
 }

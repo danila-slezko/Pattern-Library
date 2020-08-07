@@ -1,11 +1,4 @@
-#text-inputs.preview-rows main > div {
-  display: flex;
-  flex-direction: column;
 
-}
-#text-inputs.preview-rows main > div .form-label {
-  padding-bottom: 6px;
-}
 .table-responsive {
   overflow-x: auto;
   min-height: 0.01%;
@@ -31,3 +24,5 @@
         }
       }
     }
+  }
+}

@@ -2,40 +2,30 @@
 
 <div class="flex flex-column gap-xxxs">
     <div>
-    <input id="Ipsum1"
-      name="Ipsum1"
-      value="Ipsum1"
-      class="checkbox"
-      type="checkbox"
-      checked="checked" />
+    <input id="Ipsum1" name="Ipsum1" value="Ipsum1" class="checkbox" type="checkbox" checked="false" />
     <label for="Ipsum1">Option 1</label>
   </div>
     <div>
-    <input id="Lorem2"
-      name="Lorem2"
-      value="Lorem2"
-      class="checkbox"
-      type="checkbox"
-      checked="checked" />
+    <input id="Lorem2" name="Lorem2" value="Lorem2" class="checkbox" type="checkbox" checked="false" />
     <label for="Lorem2">Option 2</label>
   </div>
     <div>
-    <input id="Ipsum3"
-      name="Ipsum3"
-      value="Ipsum3"
-      class="checkbox"
-      type="checkbox"
-      checked="checked" />
+    <input id="Ipsum3" name="Ipsum3" value="Ipsum3" class="checkbox" type="checkbox" checked="false" />
     <label for="Ipsum3">Option 3</label>
   </div>
     <div>
-    <input id="Lorem4"
-      name="Lorem4"
-      value="Lorem4"
-      class="checkbox"
-      type="checkbox"
-      checked="checked" />
+    <input id="Lorem4" name="Lorem4" value="Lorem4" class="checkbox" type="checkbox" checked="false" />
     <label for="Lorem4">Option 4</label>
   </div>
   </div>
+
+<script>
+  var checkboxes = document.getElementsByTagName('input');
+
+  for (var i=0; i<checkboxes.length; i++)  {
+    if (checkboxes[i].type == 'checkbox')   {
+      checkboxes[i].checked = false;
+    }
+  }
+</script>
 

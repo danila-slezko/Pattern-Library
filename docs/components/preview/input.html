@@ -10,44 +10,33 @@
   <link rel="stylesheet" href="../../assets/css/style.css" />
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
-<body class="preview-rows" data-theme="default" id="text-inputs">
-  <div class="text-component max-width-adaptive-md padding-md@md padding-sm">
-    <main class="flex gap-xs flex-column">
-      <div><!-- Start: @input--default -->
+<body class="preview-list" data-theme="default" id="text-inputs">
+  <div class="max-width-adaptive-md padding-md@lg padding-md">
+    <main class="grid gap-md flex-column">
+      <div class="col"><span ><!-- Start: @input--default -->
 <label class="form-label" for="basicText">Basic Text Input</label>
-<input class="form-control"
-  type="text"
-  name="basicText"
-  placeholder="Enter text here" />
-</div>
+<input class="form-control" type="text" name="basicText" placeholder="Enter text here" />
+</span></div>
 
-<div><!-- Start: @input--email -->
+<div class="col"><span ><!-- Start: @input--email -->
 <label class="form-label" for="email">Email Input</label>
-<input class="form-control"
-  type="email"
-  name="email"
-  placeholder="joebloggs@example.com" />
-</div>
+<input class="form-control" type="email" name="email" placeholder="joebloggs@example.com" />
+</span></div>
 
-<div><!-- Start: @input--password -->
+<div class="col"><span ><!-- Start: @input--password -->
 <label class="form-label" for="password">Password Input</label>
-<input class="form-control"
-  type="password"
-  name="password"
-  placeholder="Enter text here" />
-</div>
+<input class="form-control" type="password" name="password" placeholder="Enter text here" />
+</span></div>
 
-<div><!-- Start: @input--textarea -->
+<div class="col"><span ><!-- Start: @input--textarea -->
 <label class="form-label" for="textarea">Textarea</label>
-<textarea class="form-control"
-  name="textarea"
-  placeholder="Enter text here"></textarea>
-</div>
+<textarea class="form-control" name="textarea" placeholder="Enter text here"></textarea>
+</span></div>
 
-<div><!-- Start: @input--date -->
+<div class="col"><span ><!-- Start: @input--date -->
 <label class="form-label" for="date">Date Input</label>
 <input class="form-control" type="date" name="date" />
-</div>
+</span></div>
 
     </main>
   </div>
