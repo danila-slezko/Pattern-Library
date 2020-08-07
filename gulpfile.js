@@ -1,5 +1,3 @@
-/** @format */
-
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
@@ -15,17 +13,17 @@ var pug = require('gulp-pug');
 var watch = require('gulp-watch');
 
 // js file paths
-var utilJsPath = 'node_modules/codyhouse-framework/main/assets/js'; // util.js path - you may need to update this if including the framework as external node module
-var componentsJsPath = 'dev/assets/js/components/*.js'; // component js files
-var scriptsJsPath = 'dev/assets/js'; //folder for final scripts.js/scripts.min.js files
+var utilJsPath = 'node_modules/codyhouse-framework/main/assets/js'; // util.js path
+var componentsJsPath = 'src/public/assets/js/components/*.js'; // component js files
+var scriptsJsPath = 'src/public/assets/js'; // folder for final scripts
 
 // css file paths
-var cssFolder = 'dev/assets/css'; // folder for final style.css/style-custom-prop-fallbac.css files
-var scssFilesPath = 'dev/assets/css/**/*.scss'; // scss files to watch
+var cssFolder = 'src/public/assets/css'; // folder for final styles files
+var scssFilesPath = 'src/public/assets/css/**/*.scss'; // scss files to watch
 
 // html file paths
-var htmlFolder = 'dev/'; // folder for final style.css/style-custom-prop-fallbac.css files
-var pugFilesPath = 'dev/templates/clients/**/*.pug'; // scss files to watch
+var htmlFolder = 'src/public/mockups'; // folder for final html files
+var pugFilesPath = 'src/public/templates/clients/**/*.pug'; // pug files to watch
 
 function reload(done) {
   browserSync.reload();
@@ -89,26 +87,26 @@ gulp.task('scripts', function () {
 });
 
 // Server
-gulp.task(
-  'browserSync',
-  gulp.series(function (done) {
-    browserSync.init({
-      server: {
-        baseDir: 'dev'
-      },
-      notify: false
-    });
-    done();
-  })
-);
+// gulp.task(
+//   'browserSync',
+//   gulp.series(function (done) {
+//     browserSync.init({
+//       server: {
+//         baseDir: 'src/public'
+//       },
+//       notify: false
+//     });
+//     done();
+//   })
+// );
 
-// Watch
+// Watch // removed 'browserSync',
 gulp.task(
   'watch',
-  gulp.series(['browserSync', 'pug', 'sass', 'scripts'], function () {
-    gulp.watch('dev/*.html', gulp.series(reload));
-    gulp.watch('dev/assets/css/**/*.scss', gulp.series(['sass']));
-    gulp.watch('dev/templates/**/*.pug', gulp.series(['pug']));
+  gulp.series(['pug', 'sass', 'scripts'], function () {
+    // gulp.watch('src/public/*.html', gulp.series(reload));
+    gulp.watch('src/public/assets/css/**/*.scss', gulp.series(['sass']));
+    gulp.watch('src/public/templates/**/*.pug', gulp.series(['pug']));
     gulp.watch(componentsJsPath, gulp.series(['scripts']));
   })
 );

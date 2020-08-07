@@ -1,10 +1,41 @@
 {
   "title": "Cards",
   "label": "Cards",
-  "context": {
-    "headingText": "Landing Page Stablization: ETA, Aug 10"
-  },
+  "status": "ready",
+  "preview": "@preview",
   "default": "cards",
-  "variants": [],
-  "status": "prototype"
+  "variants": [
+    { "name": "buttons" },
+    { "name": "icons" }
+  ],
+  "context": {
+    "cardLabel": "Check Options",
+    "cardName": "check",
+    "cardBlock": [
+      {
+        "icon": "Ipsum21",
+        "title": "Option 1",
+        "text": "Laboriosam omnis at minima corporis. Nesciunt, qui ut.",
+        "link": "https://google.com"
+      },
+      {
+        "icon": "Ipsum31",
+        "title": "Option 2",
+        "text": "Laboriosam omnis at minima corporis. Nesciunt, qui ut.",
+        "link": "https://google.com"
+      },
+      {
+        "icon": "Ipsum41",
+        "title": "Option 3",
+        "text": "Laboriosam omnis at minima corporis. Nesciunt, qui ut.",
+        "link": "https://google.com"
+      },
+      {
+        "icon": "Ipsum51",
+        "title": "Option 4",
+        "text": "Laboriosam omnis at minima corporis. Nesciunt, qui ut.",
+        "link": "https://google.com"
+      }
+    ]
+  }
 }

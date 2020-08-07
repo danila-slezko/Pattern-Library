@@ -34,6 +34,7 @@
   "dependencies": {
     "@rsm/fractal-pug-adapter": "^0.5.0",
     "gulp-twig": "^1.2.0",
+    "handlebars": "^4.7.6",
     "jstransformer": "^1.0.0",
     "jstransformer-browserify": "^0.7.2",
     "jstransformer-css": "^0.2.0",

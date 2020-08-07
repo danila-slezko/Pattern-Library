@@ -2269,10 +2269,10 @@ mark {
 }
 .Prose table {
   width: 100%;
-  margin: 1rem -0.5rem;
   border-collapse: collapse;
-  font-size: 0.875rem;
   font-feature-settings: "lnum" 1, "tnum" 1;
+  position: relative;
+  z-index: 1;
 }
 .Prose caption {
   font-size: 0.875rem;
@@ -2283,11 +2283,6 @@ mark {
   color: rgba(63, 70, 90, 0.75);
   opacity: 0.8;
 }
-.Prose td,
-.Prose th {
-  padding: 0.75em 0.5rem;
-  text-align: start;
-}
 [dir="ltr"] .Prose td,
 [dir="ltr"] .Prose th {
   text-align: left;
@@ -2297,23 +2292,17 @@ mark {
   text-align: right;
 }
 .Prose tr:nth-child(even) {
-  background-color: rgba(63, 70, 90, 0.05);
+  background-color: #f4f4f6;
 }
 .Prose th {
-  background-color: rgba(63, 70, 90, 0.075);
-  border-bottom: 1px solid rgba(63, 70, 90, 0.1);
-  font-size: 0.6875rem;
-  line-height: 1.66667;
-  letter-spacing: 0.075em;
-  text-transform: uppercase;
-  color: #848894;
-  font-weight: bold;
+  position: relative;
+  background-color: inherit;
+  box-shadow: 0 2px 0 #d6d7dc;
+  z-index: 10;
 }
-
 .Prose--condensed > * {
   margin-bottom: 0.5em;
 }
-
 .Prose--condensed li,
 .Prose--condensed li > ul,
 .Prose--condensed li > ol {
