@@ -4,7 +4,7 @@
   "status": "wip",
   "default": "Text",
   "context": {
-    "inputLabel": "Basic Text Input",
+    "inputLabel": "Text",
     "inputName": "basicText",
     "inputPlaceholder": "Enter text here"
   },

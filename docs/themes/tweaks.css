@@ -26,3 +26,13 @@
     }
   }
 }
+
+
+  #text-inputs main div.col > span {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #text-inputs .form-label {
+    padding-bottom: .5em;
+  }
