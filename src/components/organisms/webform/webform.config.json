@@ -5,9 +5,7 @@
   "status": "wip",
   "collated": false,
   "default": "retail",
-  "context": {
-
-  },
+  "context": {},
   "variants": [
     {
       "name": "contact",
@@ -19,5 +17,4 @@
       "hidden": true
     }
   ]
-
 }

@@ -2,6 +2,7 @@
   "label": "Text Inputs",
   "order": 4,
   "status": "wip",
+  "default": "Text",
   "context": {
     "inputLabel": "Basic Text Input",
     "inputName": "basicText",

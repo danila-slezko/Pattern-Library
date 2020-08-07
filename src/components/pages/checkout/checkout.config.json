@@ -7,7 +7,7 @@
   "collated": false,
   "default": "order",
   "variants": [
-    { "name": "order" },
+    {"name": "order"},
     {
       "name": "summary",
       "preview": "@preview-list"

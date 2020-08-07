@@ -2,7 +2,7 @@
   "title": "Buttons",
   "status": "ready",
   "hidden": false,
-  "meta": { "version": "1.0" },
+  "meta": {"version": "1.0"},
   "default": "basic",
   "preview": "@preview-grid",
   "context": {

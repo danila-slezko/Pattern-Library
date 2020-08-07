@@ -7,13 +7,11 @@ status: draft
 <p>Design Tokens are an agnostic way to store variables such as typography, color, and spacing. They are the critical ingredients of a UI, but are not exactly functional on their own.</p>
 <p>This UI component library features the following tokens:</p>
 
-
-
 <h1 class="padding-top-md">Color Palette</h1>
 <div class="grid gap-lg">
   <div>
     <p class="margin-bottom-xs text-md">Primary</p>
-    <div class="grid border border-2 border-contrast-lower">
+    <div class="grid  ">
       <div class="col">
         <div class="bg-primary-lighter height-xxl"></div>
       </div>
@@ -60,7 +58,7 @@ status: draft
   </div>
   <div>
     <p class="margin-bottom-xs text-md">Accent</p>
-    <div class="grid border border-2 border-contrast-lower">
+    <div class="grid  ">
       <div class="col">
         <div class="bg-accent-lighter height-xxl"></div>
       </div>
@@ -108,7 +106,7 @@ status: draft
   <div>
     <div class="grid padding-top-xxs">
       <div class="col">
-        <div class="height-xxl bg-black border border-2 border-contrast-lower"></div>
+        <div class="height-xxl bg-black  "></div>
         <div class="padding-top-xxs display@sm">
           <p class="text-center text-base style-guide__code padding-x-xxxs">
             black
@@ -116,7 +114,7 @@ status: draft
         </div>
       </div>
       <div class="col">
-        <div class="height-xxl bg-white border border-2 border-contrast-lower"></div>
+        <div class="height-xxl bg-white"></div>
         <div class="padding-top-xxs display@sm">
           <p class="text-center text-base style-guide__code padding-x-xxxs">
             white
@@ -127,7 +125,7 @@ status: draft
   </div>
   <div>
     <p class="margin-bottom-xs text-md">Success</p>
-    <div class="grid border border-2 border-contrast-lower">
+    <div class="grid">
       <div class="col">
         <div class="bg-success-lighter height-xxl"></div>
       </div>
@@ -174,7 +172,7 @@ status: draft
   </div>
   <div>
     <p class="margin-bottom-xs text-md">Error</p>
-    <div class="grid border border-2 border-contrast-lower">
+    <div class="grid  ">
       <div class="col">
         <div class="bg-error-lighter height-xxl"></div>
       </div>
@@ -221,7 +219,7 @@ status: draft
   </div>
   <div>
     <p class="margin-bottom-xs text-md">Warning</p>
-    <div class="grid border border-2 border-contrast-lower">
+    <div class="grid  ">
       <div class="col">
         <div class="bg-warning-lighter height-xxl"></div>
       </div>
@@ -268,7 +266,7 @@ status: draft
   </div>
   <div>
     <p class="margin-bottom-xs text-md">Contrast Scale</p>
-    <div class="grid border border-2 border-contrast-lower">
+    <div class="grid  ">
       <div class="col"><div class="bg height-xxl"></div></div>
       <div class="col">
         <div class="bg-contrast-lower height-xxl"></div>
@@ -324,7 +322,7 @@ status: draft
 <h1 class="padding-top-md">Typography</h1>
 <p>This UI component library features the following fonts & weights:</p>
 <div>
-  <div class="padding-y-sm border-top border-bottom border-contrast-lower">
+  <div class="padding-y-sm border-top border-bottom ">
     <div class="text-base margin-bottom-sm flex justify-between">
       <p class="style-guide__code">primary</p>
       <p class="color-contrast-medium margin-left-md">
@@ -335,7 +333,7 @@ status: draft
       The quick brown fox jumps over the lazy dog
     </h2>
   </div>
-  <div class="padding-y-sm border-bottom border-contrast-lower">
+  <div class="padding-y-sm border-bottom ">
     <div class="text-base margin-bottom-sm flex justify-between">
       <p class="style-guide__code">secondary</p>
       <p class="color-contrast-medium margin-left-md">
@@ -346,7 +344,7 @@ status: draft
       The quick brown fox jumps over the lazy dog
     </h2>
   </div>
-  <div class="padding-y-sm border-bottom border-contrast-lower">
+  <div class="padding-y-sm border-bottom ">
     <div class="text-base margin-bottom-sm flex justify-between">
       <p class="style-guide__code">tertiary</p>
       <p class="color-contrast-medium margin-left-md">
@@ -359,7 +357,7 @@ status: draft
   </div>
 </div>
 
-<!-- 
+<!--
 <h2>Iconography</h2>
 <p>Detail any icon fonts or libraries used within this UI component library...</p>
 
