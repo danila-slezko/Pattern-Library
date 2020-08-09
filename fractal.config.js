@@ -3,7 +3,9 @@
 const path = require('path');
 const uiLibRoot = __dirname + '/';
 const fractal = (module.exports = require('@frctl/fractal').create());
-const twigAdapter = require('@frctl/twig')();
+const twigAdapter = require('@frctl/twig')({
+  method: 'fs',
+});
 
 /*
  * PROJECT VARS
@@ -82,7 +84,7 @@ fractal.web.set('builder.dest', uiLibRoot + '/docs');
 const subTheme = require('@frctl/mandelbrot')({
   favicon: '/favicon.ico',
   nav: ['search', 'components', 'docs'],
-  panels: ['info', 'notes', 'html', 'resources', 'context'],
+  panels: ['notes', 'info', 'html', 'resources', 'context'],
   styles: ['/themes/base.css', '/themes/default.css'],
   static: {mount: 'themes'}
 });

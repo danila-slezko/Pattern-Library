@@ -1,0 +1,22 @@
+//- div(class='grid gap-xxxl items-center')
+  div(class='col-6@md order-1@md')
+    span(class='text-component line-height-lg v-space-lg')
+      h1(class='text-xl padding-bottom-xxs color-black')=intro.headline
+      p #{intro.copy}
+      a(class='btn btn--primary margin-bottom-md', href=intro.button.link)=intro.button.label
+      | !{intro.subtext}
+  div(class=intro.flip ? 'col-6@md' : 'col-6@md  order-1@md')
+    figure(class='media-wrapper media-wrapper--4:3')
+      img(src=intro.media.standard, srcset=intro.media.retina + ' 2x', class='block width-100%')
+
+
+div(class='grid gap-lg@md')
+  div(class='flex items-center col-6@md')
+    div(class='text-component line-height-lg v-space-md padding-bottom-xl padding-bottom-0@md')
+      h1(class='text-xl padding-bottom-xxs color-black')=intro.headline
+      p #{intro.copy}
+      a(class='btn btn--primary margin-bottom-sm', href=intro.button.link)=intro.button.label
+      | !{intro.subtext}
+  div(class='col-6@md')
+    figure(class='media-wrapper media-wrapper--4:3 radius-md')
+      img(src=intro.media.standard, srcset=intro.media.retina + ' 2x', alt='Image description')

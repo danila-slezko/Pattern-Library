@@ -86,6 +86,17 @@ gulp.task('scripts', function () {
     );
 });
 
+// Icons
+var gulp = require('gulp')
+var svgSymbols = require('gulp-svg-symbols')
+
+gulp.task(`sprites`, function() {
+  return gulp
+    .src(`src/public/assets/icons/*.svg`)
+    .pipe(svgSymbols())
+    .pipe(gulp.dest(`src/public/assets/icons`))
+})
+
 // Server
 // gulp.task(
 //   'browserSync',
@@ -103,7 +114,7 @@ gulp.task('scripts', function () {
 // Watch // removed 'browserSync',
 gulp.task(
   'watch',
-  gulp.series(['pug', 'sass', 'scripts'], function () {
+  gulp.series(['pug', 'sass', 'scripts', 'sprites'], function () {
     // gulp.watch('src/public/*.html', gulp.series(reload));
     gulp.watch('src/public/assets/css/**/*.scss', gulp.series(['sass']));
     gulp.watch('src/public/templates/**/*.pug', gulp.series(['pug']));

@@ -1,4 +1,4 @@
-/** @format */
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -410,8 +410,8 @@ textarea {
   /* 2 */
 }
 
-/** @format */
-/** @format */
+
+
 *,
 *::before,
 *::after {
@@ -572,7 +572,7 @@ mark {
   background-color: var(--background-color, rgba(40, 65, 189, 0.3));
 }
 
-/** @format */
+
 .AssetList {
   list-style: none;
   max-width: 900px;
@@ -622,7 +622,7 @@ mark {
   fill: #ccc;
 }
 
-/** @format */
+
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -1336,7 +1336,7 @@ mark {
   opacity: 0.6;
 }
 
-/** @format */
+
 .Code {
   display: block;
   background-color: #f6f6f6;
@@ -1354,7 +1354,7 @@ mark {
   text-decoration: underline;
 }
 
-/** @format */
+
 .Document {
   padding: 1.5rem 2rem;
 }
@@ -1391,7 +1391,7 @@ mark {
   font-feature-settings: "dlig" 0;
 }
 
-/** @format */
+
 .Error-stack {
   margin-top: 1.5rem;
 }
@@ -1423,7 +1423,7 @@ mark {
   background-color: #fff !important;
 }
 
-/** @format */
+
 .FileBrowser {
   position: static;
   flex-basis: 100%;
@@ -1516,7 +1516,7 @@ mark {
   }
 }
 
-/** @format */
+
 .Frame {
   display: flex;
   flex-direction: column;
@@ -1659,7 +1659,7 @@ mark {
   margin-left: -0.625rem;
 }
 
-/** @format */
+
 .Header {
   --background-color: rgb(var(--skin-accent));
   --color: whitesmoke;
@@ -1747,7 +1747,7 @@ mark {
   display: block;
 }
 
-/** @format */
+
 .Meta a {
   text-decoration: none;
 }
@@ -1851,7 +1851,7 @@ mark {
   }
 }
 
-/** @format */
+
 .Navigation {
   display: inline-block;
   width: 100%;
@@ -1867,7 +1867,7 @@ mark {
   margin-top: 1.5rem;
 }
 
-/** @format */
+
 .Pen {
   display: flex;
   flex-direction: column;
@@ -2018,7 +2018,7 @@ mark {
   border: 1px solid rgba(63, 70, 90, 0.25);
 }
 
-/** @format */
+
 .Preview {
   position: relative;
   background-color: #f6f6f6;
@@ -2162,7 +2162,7 @@ mark {
   }
 }
 
-/** @format */
+
 .Prose {
   font-size: 1rem;
   line-height: 1.5;
@@ -2270,6 +2270,7 @@ mark {
 .Prose table {
   width: 100%;
   border-collapse: collapse;
+  border-spacing: 0;
   font-feature-settings: "lnum" 1, "tnum" 1;
   position: relative;
   z-index: 1;
@@ -2326,7 +2327,7 @@ mark {
   margin: 1em 0;
 }
 
-/** @format */
+
 .Navigation-search {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2382,13 +2383,13 @@ mark {
   border: 1px solid rgba(63, 70, 90, 0.25);
   font-size: 0.875rem;
   outline-offset: 1px;
-  outline-color: rgba(36, 101, 255, 0.8);
+  outline-color: rgba(36, 101, 255, 1);
 }
 .Search-input::-ms-clear {
   display: none;
 }
 
-/** @format */
+
 .Status,
 .Status-dots {
   display: flex;
@@ -2450,7 +2451,7 @@ mark {
   margin-left: 0.75rem;
 }
 
-/** @format */
+
 .Tree {
   white-space: nowrap;
 }

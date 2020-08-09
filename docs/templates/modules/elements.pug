@@ -1,0 +1,10 @@
+mixin block(name)
+ section(id=name, class='position-relative padding-y-md')
+   div(class='container padding-y-sm')&attributes(attributes)
+     block
+
+mixin block-overlay(name, image, color)
+ section(id=name, class='position-relative bg-cover padding-y-md', style=`background-image: url('${image}')`)
+   span.overlay.z-index-1(style=`background: ${color}`)
+   div(class='container position-relative z-index-2 padding-top-md')&attributes(attributes)
+     block

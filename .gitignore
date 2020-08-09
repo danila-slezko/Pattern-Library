@@ -4,13 +4,4 @@ config.php
 package-lock.json
 **/*~*
 
-
-docs/media/contentcast-ecom-modules.webm
-docs/media/contentcast-ecom-modules.png
-docs/media/contentcast-ecom-modules.mp4
-src/public/media/contentcast-ecom-modules.mp4
-src/public/media/contentcast-ecom-modules.png
-src/public/media/contentcast-ecom-modules.webm
-
-docs/CNAME
-docs/themes/js/mandelbrot.js
+docs/guide

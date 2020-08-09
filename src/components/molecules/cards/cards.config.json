@@ -1,0 +1,85 @@
+{
+  "title": "Cards",
+  "label": "Cards",
+  "status": "ready",
+  "default": "cluster-01",
+  "preview": "@preview",
+  "display": "width: 100%",
+  "context": {
+    "cardHeading": "Partnering with us means",
+    "cardImage": "https://assets.cnetcontent.com/images/group-of-person-sitting-indoors.jpg",
+    "cardTint": "black",
+    "cardWidth": "max-width-adaptive-lg",
+    "cardBlock": [
+      {
+        "column" : "col-6@md col-4@lg",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#support'/></svg>",
+        "span": "",
+        "title": "Complete Scalability",
+        "text": "<p>Our production capacity is built to scale as needed.</p>",
+        "footer": ""
+      },
+      {
+        "column" : "col-6@md col-4@lg",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#time'/></svg><svg><use xlink:href='#money'/></svg>",
+        "span": "",
+        "title": "Save Time &amp; Money",
+        "text": "<p>Save your resources by leveraging our years of experience and expertise.</p>",
+        "footer": ""
+      },
+      {
+        "column" : "col-6@md col-4@lg",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#fast'/></svg>",
+        "span": "",
+        "title": "Accelerated Time to Market",
+        "text": "<p>Prevent content rejection and delays in going live by working with a team that already has systems and processes in place to meet Best Buy standards.</p>",
+        "footer": ""
+      },
+      {
+        "column" : "col-6@md col-4@lg",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#trust'/></svg>",
+        "span": "",
+        "title": "Trusted Partnership",
+        "text": "<p>With a client base of 52,000 brands and content for over 16 million SKUs, our ability to execute and deliver quality results at scale is proven.</p>",
+        "footer": ""
+      },
+      {
+        "column" : "col-6@md col-4@lg",
+        "icon": "<svg><use xlink:href='#support'/></svg>",
+        "span": "",
+        "title": "Unparalleled Service & Support",
+        "text": "<p>Success driven with a dedicated support team that understands your needs and gets the job done.</p>",
+        "footer": ""
+      }
+    ]
+  },
+  "variants": [
+    {
+      "name": "cluster-02",
+      "context": {
+        "cardHeading": "One partner. One complete solution.",
+        "cardImage": "https://assets.cnetcontent.com/images/background.jpg",
+        "cardTint": "var(--color-primary-darker)",
+        "cardWidth": "max-width-adaptive-md",
+        "cardBlock": [
+          {
+            "column" : "col-6@md",
+            "icon" : "<svg viewBox='0 0 64 64'><use xlink:href='#spec'/></svg>",
+            "span": "col-3@md col-2@lg",
+            "title": "Structured Product Content",
+            "text" : "<ul class='list list--ul margin-left-xs'><li>Technical Specifications</li><li>Product Attributes</li><li>Images</li><li>Key Selling Points</li><li>Product Features</li></ul>",
+            "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
+          },
+          {
+            "column" : "col-6@md",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#media'/></svg>",
+            "span": "col-3@md col-2@lg",
+            "title": "&nbsp;Rich Inline Content",
+            "text": "<ul class='list list--ul margin-left-xs'><li>Interactive Hotspot Imagery</li><li>Image Zoom and 360° Product Views</li><li>Videos</li><li>Comparison Charts</li><li>Detailed Reporting</li></ul>",
+            "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
+          }
+        ]
+      }
+    }
+  ]
+}

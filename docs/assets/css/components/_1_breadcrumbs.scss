@@ -1,0 +1,21 @@
+/**
+ * /* -------------------------------- 
+ * 
+ * File#: _1_breadcrumbs
+ * Title: Breadcrumbss
+ * Descr: List of links to help the user move within website structure
+ * 
+ * 
+ * --------------------------------
+ *
+
+ */
+
+.breadcrumbs {
+}
+
+.breadcrumbs__item {
+  display: inline-block; // flex fallback
+  display: inline-flex;
+  align-items: center;
+}

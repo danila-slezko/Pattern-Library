@@ -1,358 +1,71 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr" class="no-js">
 <head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <title>Checkout: Order | Design Patterns</title>
-  <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <link rel="stylesheet" href="../../assets/css/style.css" />
-  <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../themes/base.css?cachebust=1.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../themes/default.css?cachebust=1.4.0" type="text/css">
+
+<link rel="stylesheet" href="../../themes/css/highlight.css?cachebust=1.4.0" type="text/css">
+
+
+<title>Error rendering component checkout--order | Design Patterns</title>
+
 </head>
-<body data-theme="default" id="checkout-order">
-  <section class="checkout padding-y-xl">
-  <div class="container max-width-adaptive-lg">
-    <div class="text-component margin-bottom-lg">
-      <h1>Checkout</h1>
-      <p class="text-sm@md">Already have an account? <a href="#0">Login</a></p>
+<body>
+
+
+
+<div class="Frame Frame--full" id="frame">
+
+
+<div class="Error Error--render">
+    <h4 class="Error-title">Error rendering component</h4>
+    <div class="Error-message Prose">
+        <p>TwigException: Unable to find template file null/@checkout--summary. Error: ENOENT: no such file or directory, stat &#39;null/@checkout--summary&#39;</p>
+
     </div>
+    
+    <code class="Error-stack">
+        <pre>Error: TwigException: Unable to find template file null/@checkout--summary. Error: ENOENT: no such file or directory, stat 'null/@checkout--summary'
+    at /Users/mardorfv/Documents/Development/Codify/patterns/node_modules/@frctl/twig/src/adapter.js:158:24
+    at new Promise (<anonymous>)
+    at TwigAdapter.render (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/@frctl/twig/src/adapter.js:140:16)
+    at ComponentSource._renderVariant (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/@frctl/fractal/src/api/components/source.js:207:30)
+    at _renderVariant.next (<anonymous>)
+    at onFulfilled (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/co/index.js:65:19)
+    at tryCatcher (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:729:18)
+    at Promise._fulfill (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:673:18)
+    at Promise._resolveCallback (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:466:57)
+    at Promise._settlePromiseFromHandler (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:559:17)
+    at Promise._settlePromise (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:649:10)</pre>
+    </code>
+    
+</div>
 
-    <form>
-      <div class="grid gap-md">
-        <div class="col-7@lg">
-          <!-- contact info -->
-          <fieldset class="margin-bottom-lg">
-            <legend class="form-legend font-bold">1. Contact Information</legend>
 
-            <label class="form-label margin-bottom-xxs" for="checkEmail">Email</label>
-            <input class="form-control width-100%" type="email" name="checkEmail" id="checkEmail" required>
-          </fieldset>
+</div>
 
-          <!-- delivery address -->
-          <fieldset class="margin-bottom-lg">
-            <legend class="form-legend font-bold">2. Delivery Address</legend>
 
-            <div class="grid gap-sm">
-              <div class="col-6@sm">
-                <label class="form-label margin-bottom-xxs" for="checkDeliveryName">Full Name</label>
-                <input class="form-control width-100%" type="text" name="checkDeliveryName" id="checkDeliveryName" required>
-              </div>
 
-              <div class="col-6@sm">
-                <label class="form-label margin-bottom-xxs" for="checkDeliveryCompany">Company (optional)</label>
-                <input class="form-control width-100%" type="text" name="checkDeliveryCompany" id="checkDeliveryCompany">
-              </div>
 
-              <div>
-                <label class="form-label margin-bottom-xxs" for="checkDeliveryAddress">Address</label>
-                <input class="form-control width-100%" type="text" name="checkDeliveryAddress" id="checkDeliveryAddress" required>
-              </div>
+<script src="../../themes/js/mandelbrot.js?cachebust=1.4.0"></script>
 
-              <div class="col-6@sm">
-                <label class="form-label margin-bottom-xxs" for="checkDeliveryCity">City</label>
-                <input class="form-control width-100%" type="text" name="checkDeliveryCity" id="checkDeliveryCity" required>
-              </div>
 
-              <div class="col-6@sm">
-                <label class="form-label margin-bottom-xxs" for="checkDeliveryState">State (optional)</label>
-                <input class="form-control width-100%" type="text" name="checkDeliveryState" id="checkDeliveryState">
-              </div>
 
-              <div class="col-6@sm">
-                <label class="form-label margin-bottom-xxs" for="checkDeliveryCountry">Country</label>
-
-                <div class="select">
-                  <select class="select__input form-control" name="checkDeliveryCountry" id="checkDeliveryCountry">
-                    <option value="0">Select Country</option>
-                    <option value="1">USA</option>
-                    <option value="2">Italy</option>
-                  </select>
-
-                  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
-                    <g stroke-width="1" stroke="currentColor">
-                      <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
-                    </g>
-                  </svg>
-                </div>
-              </div>
-
-              <div class="col-6@sm">
-                <label class="form-label margin-bottom-xxs" for="checkDeliveryPostcode">Postcode</label>
-                <input class="form-control width-100%" type="text" name="checkDeliveryPostcode" id="checkDeliveryPostcode" required>
-              </div>
-
-              <div>
-                <label class="form-label margin-bottom-xxs" for="checkDeliveryTel">Phone number (optional)</label>
-                <input class="form-control width-100%" type="tel" name="checkDeliveryTel" id="checkDeliveryTel">
-              </div>
-            </div>
-          </fieldset>
-
-          <!-- delivery options -->
-          <fieldset class="margin-bottom-lg">
-            <legend class="form-legend font-bold">3. Delivery Options</legend>
-
-            <div class="choice-btns gap-xxs js-choice-btns">
-
-              <div class="choice-btn padding-sm js-choice-btn">
-                <!-- fallback -->
-                <div class="choice-btn__fallback">
-                  <input type="radio" name="check-delivery-options" id="check-delivery-option-1" checked>
-                  <label for="check-delivery-option-1">Standard delivery, 4-5 days, $9.00</label>
-                </div>
-
-                <!-- custom input -->
-                <div class="choice-btn__grid" aria-hidden="true">
-                  <div class="choice-btn__input choice-btn__input--radio">
-                    <svg class="icon" viewBox="0 0 16 16">
-                      <circle fill="currentColor" cx="8" cy="8" r="4" /></svg>
-                  </div>
-
-                  <div class="flex flex-wrap gap-xs justify-between">
-                    <div>
-                      <p class="color-contrast-higher">Standard delivery</p>
-                      <p class="color-contrast-medium text-xs">4-5 days</p>
-                    </div>
-
-                    <p class="color-contrast-higher">$9.00</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="choice-btn padding-sm js-choice-btn">
-                <!-- fallback -->
-                <div class="choice-btn__fallback">
-                  <input type="radio" name="check-delivery-options" id="check-delivery-option-2">
-                  <label for="check-delivery-option-2">Express delivery, 1-2 days, $19.00</label>
-                </div>
-
-                <!-- custom input -->
-                <div class="choice-btn__grid" aria-hidden="true">
-                  <div class="choice-btn__input choice-btn__input--radio">
-                    <svg class="icon" viewBox="0 0 16 16">
-                      <circle fill="currentColor" cx="8" cy="8" r="4" /></svg>
-                  </div>
-
-                  <div class="flex flex-wrap gap-xs justify-between">
-                    <div>
-                      <p class="color-contrast-higher">Express delivery</p>
-                      <p class="color-contrast-medium text-xs">1-2 days</p>
-                    </div>
-
-                    <p class="color-contrast-higher">$19.00</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </fieldset>
-
-          <!-- billing address -->
-          <fieldset class="margin-bottom-lg">
-            <legend class="form-legend font-bold">4. Billing Address</legend>
-
-            <div class="checkout__billing-checkbox">
-              <div>
-                <input class="checkbox js-billing-checkbox" type="checkbox" id="autofillBillingInfo" checked>
-                <label for="autofillBillingInfo">Same as delivery address</label>
-              </div>
-            </div>
-
-            <div class="checkout__billing-info margin-top-md js-billing-info">
-              <div class="grid gap-sm">
-                <div class="col-6@sm">
-                  <label class="form-label margin-bottom-xxs" for="checkBillingName">Full Name</label>
-                  <input class="form-control width-100%" type="text" name="checkBillingName" id="checkBillingName" required>
-                </div>
-
-                <div class="col-6@sm">
-                  <label class="form-label margin-bottom-xxs" for="checkBillingCompany">Company (optional)</label>
-                  <input class="form-control width-100%" type="text" name="checkBillingCompany" id="checkBillingCompany">
-                </div>
-
-                <div>
-                  <label class="form-label margin-bottom-xxs" for="checkBillingAddress">Address</label>
-                  <input class="form-control width-100%" type="text" name="checkBillingAddress" id="checkBillingAddress" required>
-                </div>
-
-                <div class="col-6@sm">
-                  <label class="form-label margin-bottom-xxs" for="checkBillingCity">City</label>
-                  <input class="form-control width-100%" type="text" name="checkBillingCity" id="checkBillingCity" required>
-                </div>
-
-                <div class="col-6@sm">
-                  <label class="form-label margin-bottom-xxs" for="checkBillingState">State (optional)</label>
-                  <input class="form-control width-100%" type="text" name="checkBillingState" id="checkBillingState">
-                </div>
-
-                <div class="col-6@sm">
-                  <label class="form-label margin-bottom-xxs" for="checkBillingCountry">Country</label>
-
-                  <div class="select">
-                    <select class="select__input form-control" name="checkBillingCountry" id="checkBillingCountry">
-                      <option value="0">Select Country</option>
-                      <option value="1">USA</option>
-                      <option value="2">Italy</option>
-                    </select>
-
-                    <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
-                      <g stroke-width="1" stroke="currentColor">
-                        <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="col-6@sm">
-                  <label class="form-label margin-bottom-xxs" for="checkBillingPostcode">Postcode</label>
-                  <input class="form-control width-100%" type="text" name="checkBillingPostcode" id="checkBillingPostcode" required>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-          <!-- payment method -->
-          <fieldset class="margin-bottom-lg@lg">
-            <legend class="form-legend font-bold">5. Payment Method</legend>
-
-            <div class="choice-accordion  js-choice-accordion" data-animation="on">
-
-              <div class="choice-accordion__item">
-                <!-- fallback -->
-                <div class="choice-accordion__fallback js-choice-accordion__fallback">
-                  <input type="radio" name="check-pay-method" id="check-pay-method-card" checked>
-                  <label for="check-pay-method-card">Credit Card</label>
-                </div>
-
-                <!-- control -->
-                <div class="choice-accordion__btn padding-sm js-choice-accordion__btn" aria-hidden="true">
-                  <div class="choice-accordion__input choice-accordion__input--radio">
-                    <svg class="icon" viewBox="0 0 16 16">
-                      <circle fill="currentColor" cx="8" cy="8" r="4" /></svg>
-                  </div>
-
-                  <p class="color-contrast-higher user-select-none">Credit Card</p>
-                </div>
-
-                <!-- panel -->
-                <div class="choice-accordion__panel js-choice-accordion__panel">
-                  <div class="grid gap-sm padding-sm">
-                    <div>
-                      <label class="form-label margin-bottom-xxs" for="checkCardNumber">Card Number</label>
-                      <input class="form-control width-100%" type="text" name="checkCardNumber" id="checkCardNumber" required>
-                    </div>
-
-                    <div>
-                      <label class="form-label margin-bottom-xxs" for="checkCardName">Name on Card</label>
-                      <input class="form-control width-100%" type="text" name="checkCardName" id="checkCardName" required>
-                    </div>
-
-                    <div class="col-6@sm">
-                      <label class="form-label margin-bottom-xxs" for="checkCardExpiration">Expiration date (MM/YY)</label>
-                      <input class="form-control width-100%" type="text" name="checkCardExpiration" id="checkCardExpiration" required>
-                    </div>
-
-                    <div class="col-6@sm">
-                      <label class="form-label margin-bottom-xxs" for="checkCardSecCode">Security code</label>
-                      <input class="form-control width-100%" type="text" name="checkCardSecCode" id="checkCardSecCode" required>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="choice-accordion__item">
-                <!-- fallback -->
-                <div class="choice-accordion__fallback js-choice-accordion__fallback">
-                  <input type="radio" name="check-pay-method" id="check-pay-method-paypal">
-                  <label for="check-pay-method-paypal">Paypal</label>
-                </div>
-
-                <!-- control -->
-                <div class="choice-accordion__btn padding-sm js-choice-accordion__btn" aria-hidden="true">
-                  <div class="choice-accordion__input choice-accordion__input--radio">
-                    <svg class="icon" viewBox="0 0 16 16">
-                      <circle fill="currentColor" cx="8" cy="8" r="4" /></svg>
-                  </div>
-
-                  <p class="color-contrast-higher user-select-none">Paypal</p>
-                </div>
-
-              </div>
-
-            </div>
-          </fieldset>
-
-          <button class="btn btn--primary btn--md width-100% display@lg">Place Order</button>
-        </div>
-
-        <div class="col-5@lg">
-          <!-- order summary -->
-
-          <aside class="order-summary bg-contrast-lower radius-md max-width-md">
-  <header class="order-summary__header bg-contrast-lower flex justify-between padding-sm">
-    <p class="text-sm">Your cart (2) <span class="sr-only">items</span></p>
-    <a class="text-sm" href="#0" role="text">Edit <i class="sr-only">cart</i></a>
-  </header>
-
-  <div class="padding-x-sm">
-    <ul class="flex flex-column gap-sm">
-      <li class="order-summary__item">
-        <a href="#0" class="order-summary__img"><img src="https://via.placeholder.com/56" alt="Image description"></a>
-
-        <div class="flex flex-wrap justify-between gap-xxxs">
-          <div>
-            <p class="color-contrast-higher">Product One</p>
-            <div class="color-contrast-medium text-sm">Color: Black, Size: M, Qty: 1</div>
-          </div>
-
-          <p class="color-contrast-higher"><span class="sr-only">Price:</span> $49.00</p>
-        </div>
-      </li>
-
-      <li class="order-summary__item">
-        <a href="#0" class="order-summary__img"><img src="https://via.placeholder.com/56" alt="Image description"></a>
-
-        <div class="flex flex-wrap justify-between gap-xxxs">
-          <div>
-            <div class="color-contrast-higher">Product Two</div>
-            <div class="color-contrast-medium text-sm">Color: Black, Size: M, Qty: 1</div>
-          </div>
-
-          <p class="color-contrast-higher"><span class="sr-only">Price:</span> $49.00</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <footer class="order-summary__footer bg-contrast-lower padding-x-sm padding-bottom-sm">
-    <div class="margin-y-sm padding-y-sm border-top border-bottom">
-      <div class="flex flex-column flex-row@md gap-xxs">
-        <input aria-label="Discount code" class="form-control flex-grow min-width-0" type="email" placeholder="Discount code">
-        <button class="btn btn--subtle">Apply</button>
-      </div>
-    </div>
-
-    <ul class="text-sm flex flex-column gap-xxs">
-      <li class="flex justify-between"><i>Subtotal</i> <i>$98.00</i></li>
-      <li class="flex justify-between"><i>Tax</i> <i>$10.00</i></li>
-      <li class="flex justify-between"><i>Delivery</i> <i>Free</i></li>
-      <li class="flex justify-between font-bold"><i>Total</i> <i>$108.00</i></li>
-    </ul>
-  </footer>
-</aside>
-
-        </div>
-      </div>
-
-      <button class="btn btn--primary btn--lg width-100% hide@lg margin-top-md">Place Order</button>
-    </form>
-  </div>
-</section>
-
-<script src="../../assets/js/scripts.min.js"></script>
-<link rel="stylesheet" href="../../themes/tweaks.css" />
 </body>
 </html>
-

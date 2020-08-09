@@ -1,0 +1,364 @@
+
+style.
+  #formAlert {
+    position: fixed; z-index: 9000; top: 6rem; left: 50%; min-width: 20rem; margin-left: -10rem; padding: 1rem; text-align: center; display: flex; justify-content: space-around; font-weight: 700; line-height: 3rem; color: rgba(0,0,0,.9); border-radius: .25rem; background-color: #ffed42; font-size: 1rem; box-shadow: 2.5px 4px 30px 0 rgba(0,0,0,.5); cursor: pointer; font-size: 1.8rem;
+  }
+
+#formAlert(style='display:none', onclick='closeBar()') #[span.text-md Message Sent #[i.close(class='position: absolute;top: 1.25rem;right: 3rem;') ×]]
+
+script.
+  function closeBar() {
+    var e = document.getElementById("formAlert");
+    "none" === e.style.display ? e.style.display = "block" : e.style.display = "none"
+  };
+
+script(src='https://www.google.com/recaptcha/api.js')
+
+script.
+  function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
+
+form#RetailInquiry(action='https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8', method='POST', autocomplete='off', novalidate)
+  input#captcha_settings(type='hidden', name='captcha_settings', value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}')
+  input#oid(type='hidden', name='oid', value='00D2000000002px')
+  input#retURL(type='hidden', name='retURL', value='https://costco.cnetcontent.com?inquiry=true')
+  input#lead_source(type='hidden', name='lead_source', title='Lead Source', value='Landing Page')
+  input#00N57000006PiUg(type='hidden', name='00N57000006PiUg', title='Lead Sub-Source', value='Costco')
+  input#Campaign_ID(type='hidden', name='Campaign_ID', title='Campaign ID', value="7012p000001XpD1")
+  input#00N570000063NYi(type='hidden', name='00N570000063NYi', title='Referrer URL', value='https://costco.cnetcontent.com')
+  // input(type='hidden', name='debug', value='1')
+  // input(type='hidden', name='debugEmail', value='valerie.mardorf@cbs.com')
+
+  fieldset.margin-bottom-md.padding-bottom-sm
+    div(class='text-component margin-bottom-md text-center line-height-lg v-space-lg')
+      h5(class='text-xxl padding-bottom-xs color-black') #{contact.headline}
+      div(class='padding-x-xl@md') !{contact.text}
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='first_name') First Name
+        div(class='col-4@md')
+          input#first_name(class='form-control width-100%', type='text', name='first_name')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='last_name') Last Name
+        div(class='col-4@md')
+          input#last_name(class='form-control width-100%', type='text', name='last_name')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='company') Company
+        div(class='col-4@md')
+          input#company(class='form-control width-100%', type='text', name='company')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='phone') Company Phone
+        div(class='col-4@md')
+          input#phone(class='form-control width-100%', type='text', name='phone')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='email') Work Email
+        div(class='col-4@md')
+          input#email(class='form-control width-100%', type='email', name='email')
+    .margin-bottom-xs
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-4@md text-right@md')
+          label.form-label(for='country') Country
+        div(class='col-4@md')
+          div(class="select", style="position:relative")
+            select#country(class="select__input form-control width-100%", name='country')
+              option(disabled, selected, value) Please Select
+              optgroup(label='North America')
+                option(value='NA') United States
+                option(value='NA') United States Minor Outlying Islands
+                option(value='NA') Canada
+                option(value='NA') Mexico
+                option(value='NA') Anguilla
+                option(value='NA') Antigua and Barbuda
+                option(value='NA') Aruba
+                option(value='NA') Bahamas
+                option(value='NA') Barbados
+                option(value='NA') Belize
+                option(value='NA') Bermuda
+                option(value='NA') British Virgin Islands
+                option(value='NA') Cayman Islands
+                option(value='NA') Costa Rica
+                option(value='NA') Cuba
+                option(value='NA') Dominica
+                option(value='NA') Dominican Republic
+                option(value='NA') El Salvador
+                option(value='NA') Grenada
+                option(value='NA') Guadeloupe
+                option(value='NA') Guatemala
+                option(value='NA') Haiti
+                option(value='NA') Honduras
+                option(value='NA') Jamaica
+                option(value='NA') Martinique
+                option(value='NA') Montserrat
+                option(value='NA') Netherlands Antilles
+                option(value='NA') Nicaragua
+                option(value='NA') Panama
+                option(value='NA') Puerto Rico
+                option(value='NA') Saint Kitts and Nevis
+                option(value='NA') Saint Lucia
+                option(value='NA') Saint Vincent and the Grenadines
+                option(value='NA') Trinidad and Tobago
+                option(value='NA') Turks and Caicos Islands
+                option(value='NA') US Virgin Islands
+              optgroup(label='South America')
+                option(value='LATAM') Argentina
+                option(value='LATAM') Bolivia
+                option(value='LATAM') Brazil
+                option(value='LATAM') Chile
+                option(value='LATAM') Colombia
+                option(value='LATAM') Ecuador
+                option(value='LATAM') Falkland Islands (Malvinas)
+                option(value='LATAM') French Guiana
+                option(value='LATAM') Guyana
+                option(value='LATAM') Paraguay
+                option(value='LATAM') Peru
+                option(value='LATAM') Suriname
+                option(value='LATAM') Uruguay
+                option(value='LATAM') Venezuela
+              optgroup(label='Europe')
+                option(value='EMEA') United Kingdom
+                option(value='EMEA') Albania
+                option(value='EMEA') Andorra
+                option(value='EMEA') Austria
+                option(value='EMEA') Belarus
+                option(value='EMEA') Belgium
+                option(value='EMEA') Bosnia and Herzegovina
+                option(value='EMEA') Bulgaria
+                option(value='EMEA') Croatia (Hrvatska)
+                option(value='EMEA') Cyprus
+                option(value='EMEA') Czech Republic
+                option(value='EMEA') France
+                option(value='EMEA') Gibraltar
+                option(value='EMEA') Germany
+                option(value='EMEA') Greece
+                option(value='EMEA') Holy See (Vatican City State)
+                option(value='EMEA') Hungary
+                option(value='EMEA') Italy
+                option(value='EMEA') Liechtenstein
+                option(value='EMEA') Luxembourg
+                option(value='EMEA') Macedonia
+                option(value='EMEA') Malta
+                option(value='EMEA') Moldova
+                option(value='EMEA') Monaco
+                option(value='EMEA') Montenegro
+                option(value='EMEA') Netherlands
+                option(value='EMEA') Poland
+                option(value='EMEA') Portugal
+                option(value='EMEA') Romania
+                option(value='EMEA') San Marino
+                option(value='EMEA') Serbia
+                option(value='EMEA') Slovakia
+                option(value='EMEA') Slovenia
+                option(value='EMEA') Spain
+                option(value='EMEA') Ukraine
+                option(value='EMEA') Denmark
+                option(value='EMEA') Estonia
+                option(value='EMEA') Faroe Islands
+                option(value='EMEA') Finland
+                option(value='EMEA') Greenland
+                option(value='EMEA') Iceland
+                option(value='EMEA') Ireland
+                option(value='EMEA') Latvia
+                option(value='EMEA') Lithuania
+                option(value='EMEA') Norway
+                option(value='EMEA') Svalbard and Jan Mayen Islands
+                option(value='EMEA') Sweden
+                option(value='EMEA') Switzerland
+                option(value='EMEA') Turkey
+              optgroup(label='Africa')
+                option(value='EMEA') Algeria
+                option(value='EMEA') Angola
+                option(value='EMEA') Benin
+                option(value='EMEA') Botswana
+                option(value='EMEA') Burkina Faso
+                option(value='EMEA') Burundi
+                option(value='EMEA') Cameroon
+                option(value='EMEA') Cape Verde
+                option(value='EMEA') Central African Republic
+                option(value='EMEA') Chad
+                option(value='EMEA') Comoros
+                option(value='EMEA') Congo
+                option(value='EMEA') Congo, the Democratic Republic of the
+                option(value='EMEA') Dijibouti
+                option(value='EMEA') Egypt
+                option(value='EMEA') Equatorial Guinea
+                option(value='EMEA') Eritrea
+                option(value='EMEA') Ethiopia
+                option(value='EMEA') Gabon
+                option(value='EMEA') Gambia
+                option(value='EMEA') Ghana
+                option(value='EMEA') Guinea
+                option(value='EMEA') Guinea-Bissau
+                option(value='EMEA') Cote d'Ivoire (Ivory Coast)
+                option(value='EMEA') Kenya
+                option(value='EMEA') Lesotho
+                option(value='EMEA') Liberia
+                option(value='EMEA') Libya
+                option(value='EMEA') Madagascar
+                option(value='EMEA') Malawi
+                option(value='EMEA') Mali
+                option(value='EMEA') Mauritania
+                option(value='EMEA') Mauritius
+                option(value='EMEA') Mayotte
+                option(value='EMEA') Morocco
+                option(value='EMEA') Mozambique
+                option(value='EMEA') Namibia
+                option(value='EMEA') Niger
+                option(value='EMEA') Nigeria
+                option(value='EMEA') Reunion
+                option(value='EMEA') Rwanda
+                option(value='EMEA') Sao Tome and Principe
+                option(value='EMEA') Saint Helena
+                option(value='EMEA') Senegal
+                option(value='EMEA') Seychelles
+                option(value='EMEA') Sierra Leone
+                option(value='EMEA') Somalia
+                option(value='EMEA') South Africa
+                option(value='EMEA') South Sudan
+                option(value='EMEA') Sudan
+                option(value='EMEA') Swaziland
+                option(value='EMEA') Tanzania
+                option(value='EMEA') Togo
+                option(value='EMEA') Tunisia
+                option(value='EMEA') Uganda
+                option(value='EMEA') Western Sahara
+                option(value='EMEA') Zambia
+                option(value='EMEA') Zimbabwe
+              optgroup(label='Asia')
+                option(value='APAC') Afghanistan
+                option(value='APAC') Armenia
+                option(value='APAC') Azerbaijan
+                option(value='APAC') Bahrain
+                option(value='APAC') Bangladesh
+                option(value='APAC') Bhutan
+                option(value='APAC') British Indian Ocean Territory
+                option(value='APAC') Brunei Darussalam
+                option(value='APAC') Cambodia
+                option(value='APAC') China
+                option(value='APAC') Christmas Island
+                option(value='APAC') Cocos (Keeling) Islands
+                option(value='APAC') Georgia
+                option(value='APAC') Hong Kong
+                option(value='APAC') India
+                option(value='APAC') Indonesia
+                option(value='APAC') Iran
+                option(value='APAC') Iraq
+                option(value='APAC') Israel
+                option(value='APAC') Japan
+                option(value='APAC') Jordan
+                option(value='APAC') Kazakhstan
+                option(value='APAC') Korea, Democratic People's Republic of
+                option(value='APAC') Korea, Republic of
+                option(value='APAC') Kuwait
+                option(value='APAC') Kyrgyzstan
+                option(value='APAC') Lao
+                option(value='APAC') Lebanon
+                option(value='APAC') Malaysia
+                option(value='APAC') Maldives
+                option(value='APAC') Mongolia
+                option(value='APAC') Myanmar (Burma)
+                option(value='APAC') Nepal
+                option(value='APAC') Oman
+                option(value='APAC') Pakistan
+                option(value='APAC') Philippines
+                option(value='APAC') Qatar
+                option(value='APAC') Russian Federation
+                option(value='APAC') Saudi Arabia
+                option(value='APAC') Singapore
+                option(value='APAC') Sri Lanka
+                option(value='APAC') Syria
+                option(value='APAC') Taiwan
+                option(value='APAC') Tajikistan
+                option(value='APAC') Thailand
+                option(value='APAC') East Timor
+                option(value='APAC') Turkmenistan
+                option(value='APAC') United Arab Emirates
+                option(value='APAC') Uzbekistan
+                option(value='APAC') Vietnam
+                option(value='APAC') Yemen
+              optgroup(label='Australia / Oceania')
+                option(value='APAC') American Samoa
+                option(value='APAC') Australia
+                option(value='APAC') Cook Islands
+                option(value='APAC') Fiji
+                option(value='APAC') French Polynesia (Tahiti)
+                option(value='APAC') Guam
+                option(value='APAC') Kiribati
+                option(value='APAC') Marshall Islands
+                option(value='APAC') Micronesia, Federated States of
+                option(value='APAC') Nauru
+                option(value='APAC') New Caledonia
+                option(value='APAC') New Zealand
+                option(value='APAC') Niue
+                option(value='APAC') Northern Mariana Islands
+                option(value='APAC') Palau
+                option(value='APAC') Papua New Guinea
+                option(value='APAC') Pitcairn
+                option(value='APAC') Samoa
+                option(value='APAC') Solomon Islands
+                option(value='APAC') Tokelau
+                option(value='APAC') Tonga
+                option(value='APAC') Tuvalu
+                option(value='APAC') Vanuatu
+                option(valud='APAC') Wallis and Futuna Islands
+            svg.icon.select__icon(aria-hidden='true', viewBox='0 0 16 16', style='position: absolute; top: 1.5rem; right: 1rem;')
+              g(stroke-width='2', stroke='currentColor')
+                polyline(fill='none', stroke='currentColor', points='15.5,4.5 8,12 0.5,4.5 ')
+
+      .padding-top-md
+        div(class='grid gap-md')
+          div(class='col-4@md offset-4')
+            p.padding-bottom-sm(for='country') Product Interest
+            div(title='Checkbox-1')
+              input#Checkbox-1.checkbox(name='Checkbox', value='LoremIpsum', type='checkbox', checked)
+              label(for='Checkbox-1') Article Onboarding
+            div.padding-y-xs(title='Checkbox-2')
+              input#Checkbox-2.checkbox(name='Checkbox', value='LoremIpsum', type='checkbox', checked)
+              label(for='Checkbox-2') Rich Inline Content
+            br
+      br
+    .margin-bottom-xs.border-top
+      br
+      br
+      div(class='grid gap-xxs items-center@md')
+        div(class='col-5@md text-center@md margin-auto')
+          label(for='g-recaptcha-response', style='display:none') reCAPTCHA
+          .g-recaptcha(data-sitekey='6Lc7zy8UAAAAANNrjVoPAH7vvxssVeozhBNt6fN1', required)
+    .margin-bottom-xs.text-center
+        br
+        p.form-label.padding-bottom-lg CNET Content Solutions will use your personal information to manage the partner program.
+        br
+        button.btn.btn--primary#create-lead(value='Submit', alt='Send')   Submit  
+
+script(src='https://cdn.cnetcontent.com/sites/scripts/just-validate.min.js')
+
+script.
+  new window.JustValidate('#RetailInquiry', {
+    rules: {
+      first_name: { required: true },
+      last_name: { required: true },
+      email: { required: true, email: true },
+      phone: { required: true },
+      company: { required: true },
+      country: { required: true },
+    },
+    messages: {
+      first_name: '*',
+      last_name: '*',
+      email: '*',
+      phone: '*',
+      company: '*',
+      country: '*',
+    },
+    submitHandler: function() {
+      if ("" == grecaptcha.getResponse()) return event.preventDefault(), alert("Please click the reCAPTCHA checkbox"), !1;
+      document.getElementById("formDetails").submit()
+    }
+  }), /true|success|sent/.test(window.location.href) && (document.getElementById("formAlert").style.display = "block");

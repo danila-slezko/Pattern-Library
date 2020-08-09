@@ -32,7 +32,10 @@
     "prettier": "2.0.5"
   },
   "dependencies": {
+    "@frctl/consolidate": "^1.0.1",
+    "@frctl/mustache": "^1.0.0",
     "@rsm/fractal-pug-adapter": "^0.5.0",
+    "gulp-svg-symbols": "^3.2.3",
     "gulp-twig": "^1.2.0",
     "handlebars": "^4.7.6",
     "jstransformer": "^1.0.0",
@@ -53,6 +56,7 @@
     "jstransformer-svgo": "^1.2.0",
     "jstransformer-twig": "^1.6.2",
     "jstransformer-uglify-js": "^1.2.0",
+    "normalize": "^0.3.1",
     "pug": "^3.0.0",
     "pug-filters": "^4.0.0"
   }
