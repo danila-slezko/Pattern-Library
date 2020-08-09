@@ -3,9 +3,7 @@
 const path = require('path');
 const uiLibRoot = __dirname + '/';
 const fractal = (module.exports = require('@frctl/fractal').create());
-const twigAdapter = require('@frctl/twig')({
-  method: 'fs',
-});
+const twigAdapter = require('@frctl/twig')({});
 
 /*
  * PROJECT VARS

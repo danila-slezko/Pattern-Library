@@ -59,10 +59,6 @@
 
     
     
-        
-        
-        
-    
 
 <div class="Pen" data-behaviour="pen" id="pen-b5b6bad1c247ef960b1857e91da0a1f1">
 
@@ -95,16 +91,13 @@
     <div class="Preview-wrapper" data-role="resizer">
         <div class="Preview-resizer">
             
-<div class="Error Error--render">
-    <h4 class="Error-title">Error rendering component</h4>
-    <div class="Error-message Prose">
-        <p>TwigException: Unable to find template file null/@checkout--summary. Error: ENOENT: no such file or directory, stat &#39;null/@checkout--summary&#39;</p>
-
-    </div>
-    
-</div>
-
-            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/checkout--order.html"
+                 style="min-width: 290px !important; "
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
         </div>
         <div class="Preview-handle" data-role="resize-handle"></div>
         <div class="Preview-overlay"></div>
@@ -243,25 +236,345 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-b5b6bad1c247ef960b1857e91da0a1f1-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-comment">&lt;!-- Error rendering component --&gt;</span>
-<span class="hljs-comment">&lt;!-- TwigException: Unable to find template file null/@checkout--summary. Error: ENOENT: no such file or directory, stat 'null/@checkout--summary' --&gt;</span>
-<span class="hljs-comment">&lt;!-- Error: TwigException: Unable to find template file null/@checkout--summary. Error: ENOENT: no such file or directory, stat 'null/@checkout--summary'
-    at /Users/mardorfv/Documents/Development/Codify/patterns/node_modules/@frctl/twig/src/adapter.js:158:24
-    at new Promise (&lt;anonymous&gt;)
-    at TwigAdapter.render (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/@frctl/twig/src/adapter.js:140:16)
-    at ComponentSource._renderVariant (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/@frctl/fractal/src/api/components/source.js:207:30)
-    at _renderVariant.next (&lt;anonymous&gt;)
-    at onFulfilled (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/co/index.js:65:19)
-    at tryCatcher (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/util.js:16:23)
-    at Promise._settlePromiseFromHandler (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:547:31)
-    at Promise._settlePromise (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:649:10)
-    at Promise._settlePromises (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:729:18)
-    at Promise._fulfill (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:673:18)
-    at Promise._resolveCallback (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:466:57)
-    at Promise._settlePromiseFromHandler (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:559:17)
-    at Promise._settlePromise (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromise0 (/Users/mardorfv/Documents/Development/Codify/patterns/node_modules/bluebird/js/release/promise.js:649:10) --&gt;</span></pre>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkout padding-y-xl"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-lg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component margin-bottom-lg"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Checkout<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-sm@md"</span>&gt;</span>Already have an account? <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span>&gt;</span>Login<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-md"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-7@lg"</span>&gt;</span>
+                    <span class="hljs-comment">&lt;!-- contact info --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"margin-bottom-lg"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-legend font-bold"</span>&gt;</span>1. Contact Information<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkEmail"</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkEmail"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkEmail"</span> <span class="hljs-attr">required</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+                    <span class="hljs-comment">&lt;!-- delivery address --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"margin-bottom-lg"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-legend font-bold"</span>&gt;</span>2. Delivery Address<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-sm"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkDeliveryName"</span>&gt;</span>Full Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkDeliveryName"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkDeliveryName"</span> <span class="hljs-attr">required</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkDeliveryCompany"</span>&gt;</span>Company (optional)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkDeliveryCompany"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkDeliveryCompany"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkDeliveryAddress"</span>&gt;</span>Address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkDeliveryAddress"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkDeliveryAddress"</span> <span class="hljs-attr">required</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkDeliveryCity"</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkDeliveryCity"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkDeliveryCity"</span> <span class="hljs-attr">required</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkDeliveryState"</span>&gt;</span>State (optional)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkDeliveryState"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkDeliveryState"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkDeliveryCountry"</span>&gt;</span>Country<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select__input form-control"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkDeliveryCountry"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkDeliveryCountry"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"0"</span>&gt;</span>Select Country<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>USA<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span>&gt;</span>Italy<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon select__icon"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">g</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">polyline</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-miterlimit</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"15.5,4.5 8,12 0.5,4.5 "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">polyline</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">g</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkDeliveryPostcode"</span>&gt;</span>Postcode<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkDeliveryPostcode"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkDeliveryPostcode"</span> <span class="hljs-attr">required</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkDeliveryTel"</span>&gt;</span>Phone number (optional)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"tel"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkDeliveryTel"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkDeliveryTel"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+                    <span class="hljs-comment">&lt;!-- delivery options --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"margin-bottom-lg"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-legend font-bold"</span>&gt;</span>3. Delivery Options<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btns gap-xxs js-choice-btns"</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn padding-sm js-choice-btn"</span>&gt;</span>
+                                <span class="hljs-comment">&lt;!-- fallback --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__fallback"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"check-delivery-options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"check-delivery-option-1"</span> <span class="hljs-attr">checked</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"check-delivery-option-1"</span>&gt;</span>Standard delivery, 4-5 days, $9.00<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-comment">&lt;!-- custom input --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__grid"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__input choice-btn__input--radio"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">r</span>=<span class="hljs-string">"4"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap gap-xs justify-between"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher"</span>&gt;</span>Standard delivery<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-medium text-xs"</span>&gt;</span>4-5 days<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher"</span>&gt;</span>$9.00<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn padding-sm js-choice-btn"</span>&gt;</span>
+                                <span class="hljs-comment">&lt;!-- fallback --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__fallback"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"check-delivery-options"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"check-delivery-option-2"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"check-delivery-option-2"</span>&gt;</span>Express delivery, 1-2 days, $19.00<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-comment">&lt;!-- custom input --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__grid"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__input choice-btn__input--radio"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">r</span>=<span class="hljs-string">"4"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap gap-xs justify-between"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher"</span>&gt;</span>Express delivery<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-medium text-xs"</span>&gt;</span>1-2 days<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher"</span>&gt;</span>$19.00<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+                    <span class="hljs-comment">&lt;!-- billing address --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"margin-bottom-lg"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-legend font-bold"</span>&gt;</span>4. Billing Address<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkout__billing-checkbox"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox js-billing-checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"autofillBillingInfo"</span> <span class="hljs-attr">checked</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"autofillBillingInfo"</span>&gt;</span>Same as delivery address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkout__billing-info margin-top-md js-billing-info"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-sm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkBillingName"</span>&gt;</span>Full Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkBillingName"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkBillingName"</span> <span class="hljs-attr">required</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkBillingCompany"</span>&gt;</span>Company (optional)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkBillingCompany"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkBillingCompany"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkBillingAddress"</span>&gt;</span>Address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkBillingAddress"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkBillingAddress"</span> <span class="hljs-attr">required</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkBillingCity"</span>&gt;</span>City<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkBillingCity"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkBillingCity"</span> <span class="hljs-attr">required</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkBillingState"</span>&gt;</span>State (optional)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkBillingState"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkBillingState"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkBillingCountry"</span>&gt;</span>Country<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select__input form-control"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkBillingCountry"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkBillingCountry"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"0"</span>&gt;</span>Select Country<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>USA<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span>&gt;</span>Italy<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon select__icon"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">g</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span>&gt;</span>
+                                                <span class="hljs-tag">&lt;<span class="hljs-name">polyline</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-miterlimit</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"15.5,4.5 8,12 0.5,4.5 "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">polyline</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;/<span class="hljs-name">g</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkBillingPostcode"</span>&gt;</span>Postcode<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkBillingPostcode"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkBillingPostcode"</span> <span class="hljs-attr">required</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+                    <span class="hljs-comment">&lt;!-- payment method --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"margin-bottom-lg@lg"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">legend</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-legend font-bold"</span>&gt;</span>5. Payment Method<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion  js-choice-accordion"</span> <span class="hljs-attr">data-animation</span>=<span class="hljs-string">"on"</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__item"</span>&gt;</span>
+                                <span class="hljs-comment">&lt;!-- fallback --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__fallback js-choice-accordion__fallback"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"check-pay-method"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"check-pay-method-card"</span> <span class="hljs-attr">checked</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"check-pay-method-card"</span>&gt;</span>Credit Card<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-comment">&lt;!-- control --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__btn padding-sm js-choice-accordion__btn"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__input choice-accordion__input--radio"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">r</span>=<span class="hljs-string">"4"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher user-select-none"</span>&gt;</span>Credit Card<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-comment">&lt;!-- panel --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__panel js-choice-accordion__panel"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-sm padding-sm"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkCardNumber"</span>&gt;</span>Card Number<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkCardNumber"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkCardNumber"</span> <span class="hljs-attr">required</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkCardName"</span>&gt;</span>Name on Card<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkCardName"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkCardName"</span> <span class="hljs-attr">required</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkCardExpiration"</span>&gt;</span>Expiration date (MM/YY)<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkCardExpiration"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkCardExpiration"</span> <span class="hljs-attr">required</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@sm"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label margin-bottom-xxs"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkCardSecCode"</span>&gt;</span>Security code<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkCardSecCode"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkCardSecCode"</span> <span class="hljs-attr">required</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__item"</span>&gt;</span>
+                                <span class="hljs-comment">&lt;!-- fallback --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__fallback js-choice-accordion__fallback"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"check-pay-method"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"check-pay-method-paypal"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"check-pay-method-paypal"</span>&gt;</span>Paypal<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                <span class="hljs-comment">&lt;!-- control --&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__btn padding-sm js-choice-accordion__btn"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-accordion__input choice-accordion__input--radio"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">circle</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">cx</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">cy</span>=<span class="hljs-string">"8"</span> <span class="hljs-attr">r</span>=<span class="hljs-string">"4"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher user-select-none"</span>&gt;</span>Paypal<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--md width-100% display@lg"</span>&gt;</span>Place Order<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-5@lg"</span>&gt;</span>
+                    <span class="hljs-comment">&lt;!-- order summary --&gt;</span>
+
+                    <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"order-summary bg-contrast-lower radius-md max-width-md"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"order-summary__header bg-contrast-lower flex justify-between padding-sm"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-sm"</span>&gt;</span>Your cart (2) <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>items<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-sm"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"text"</span>&gt;</span>Edit <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>cart<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"padding-x-sm"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column gap-sm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"order-summary__item"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"order-summary__img"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://via.placeholder.com/56"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image description"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap justify-between gap-xxxs"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher"</span>&gt;</span>Product One<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-medium text-sm"</span>&gt;</span>Color: Black, Size: M, Qty: 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Price:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> $49.00<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"order-summary__item"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#0"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"order-summary__img"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://via.placeholder.com/56"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image description"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap justify-between gap-xxxs"</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher"</span>&gt;</span>Product Two<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-medium text-sm"</span>&gt;</span>Color: Black, Size: M, Qty: 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                                        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"sr-only"</span>&gt;</span>Price:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> $49.00<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"order-summary__footer bg-contrast-lower padding-x-sm padding-bottom-sm"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"margin-y-sm padding-y-sm border-top border-bottom"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column flex-row@md gap-xxs"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Discount code"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control flex-grow min-width-0"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Discount code"</span>&gt;</span>
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--subtle"</span>&gt;</span>Apply<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-sm flex flex-column gap-xxs"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex justify-between"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Subtotal<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>$98.00<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex justify-between"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Tax<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>$10.00<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex justify-between"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Delivery<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Free<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex justify-between font-bold"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>Total<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>$108.00<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary btn--lg width-100% hide@lg margin-top-md"</span>&gt;</span>Place Order<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
         
     </code>
 </div>

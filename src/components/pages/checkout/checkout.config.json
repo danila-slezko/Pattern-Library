@@ -10,7 +10,7 @@
     {"name": "order"},
     {
       "name": "summary",
-      "preview": "@preview-list"
+      "preview": "@preview-grid"
     }
   ]
 }
