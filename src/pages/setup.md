@@ -1,7 +1,8 @@
 ---
-label: Took Kit
-title: Online Resources
+label: Resources
+title: Mockup Resources
 status: draft
+hidden: true
 order: 3  
 ---
 
@@ -18,11 +19,11 @@ If you are curious which layout modules will work for your project just create a
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <title>Mockup Title</title>
         <script>document.getElementsByTagName("html")[0].className += " js";</script>
-        <link rel="stylesheet" href="https://assets.cnetcontent.com/css/style-fallback.css" />
+        <link rel="stylesheet" href="https://design.cnetcontent.com/assets/css/style.css" />
     </head>
     <body>
         <p>content here</p>
-        <script src="https://assets.cnetcontent.com/js/scripts.min.js"></script>
+        <script src="https://desgin.cnetcontent.com/assets/js/scripts.min.js"></script>
     </body>
     </html>
 

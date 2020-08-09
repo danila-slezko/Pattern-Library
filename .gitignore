@@ -5,3 +5,5 @@ package-lock.json
 **/*~*
 
 docs/guide
+docs/CNAME
+docs/themes/js/mandelbrot.js

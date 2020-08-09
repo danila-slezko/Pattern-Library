@@ -3,9 +3,7 @@
   "meta": {
     "version": "1.0"
   },
-  "tags": [
-    "Marketing Blocks"
-  ],
+  "tags": ["Marketing Blocks"],
   "status": "ready",
   "default": "cluster-01",
   "preview": "@preview",
@@ -17,7 +15,7 @@
     "cardWidth": "max-width-adaptive-lg",
     "cardBlock": [
       {
-        "column" : "col-6@md col-4@lg",
+        "column": "col-6@md col-4@lg",
         "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#support'/></svg>",
         "span": "",
         "title": "Complete Scalability",
@@ -25,7 +23,7 @@
         "footer": ""
       },
       {
-        "column" : "col-6@md col-4@lg",
+        "column": "col-6@md col-4@lg",
         "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#time'/></svg><svg><use xlink:href='#money'/></svg>",
         "span": "",
         "title": "Save Time &amp; Money",
@@ -33,7 +31,7 @@
         "footer": ""
       },
       {
-        "column" : "col-6@md col-4@lg",
+        "column": "col-6@md col-4@lg",
         "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#fast'/></svg>",
         "span": "",
         "title": "Accelerated Time to Market",
@@ -41,7 +39,7 @@
         "footer": ""
       },
       {
-        "column" : "col-6@md col-4@lg",
+        "column": "col-6@md col-4@lg",
         "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#trust'/></svg>",
         "span": "",
         "title": "Trusted Partnership",
@@ -49,7 +47,7 @@
         "footer": ""
       },
       {
-        "column" : "col-6@md col-4@lg",
+        "column": "col-6@md col-4@lg",
         "icon": "<svg><use xlink:href='#support'/></svg>",
         "span": "",
         "title": "Unparalleled Service & Support",
@@ -68,15 +66,15 @@
         "cardWidth": "max-width-adaptive-md",
         "cardBlock": [
           {
-            "column" : "col-6@md",
-            "icon" : "<svg viewBox='0 0 64 64'><use xlink:href='#spec'/></svg>",
+            "column": "col-6@md",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#spec'/></svg>",
             "span": "col-3@md col-2@lg",
             "title": "Structured Product Content",
-            "text" : "<ul class='list list--ul margin-left-xs'><li>Technical Specifications</li><li>Product Attributes</li><li>Images</li><li>Key Selling Points</li><li>Product Features</li></ul>",
+            "text": "<ul class='list list--ul margin-left-xs'><li>Technical Specifications</li><li>Product Attributes</li><li>Images</li><li>Key Selling Points</li><li>Product Features</li></ul>",
             "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
           },
           {
-            "column" : "col-6@md",
+            "column": "col-6@md",
             "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#media'/></svg>",
             "span": "col-3@md col-2@lg",
             "title": "&nbsp;Rich Inline Content",

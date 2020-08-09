@@ -5,9 +5,7 @@
   "meta": {
     "version": "1.0"
   },
-  "tags": [
-    "Marketing Blocks"
-  ],
+  "tags": ["Marketing Blocks"],
   "context": {
     "blockHeadline": "",
     "blockText": "",

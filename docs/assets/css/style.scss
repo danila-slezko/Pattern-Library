@@ -1,9 +1,0 @@
-// $fonts: "https://cdn.cnetcontent.com/sites/fonts/";
-$fonts: "../fonts/";
-@import "../fonts/**/*.scss";
-
-@import "../../../../node_modules/codyhouse-framework/main/assets/css/base";
-
-//@import 'base/**/*.scss';
-@import "include/**/*.scss";
-@import "custom/**/*.scss";
