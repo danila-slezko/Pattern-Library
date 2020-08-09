@@ -1,5 +1,21 @@
 {
   "label": "Blocks",
+  "status": "wip",
   "hidden": false,
-  "preview": "@preview"
+  "meta": {
+    "version": "1.0"
+  },
+  "tags": [
+    "Marketing Blocks"
+  ],
+  "context": {
+    "blockHeadline": "",
+    "blockText": "",
+    "blocks": [
+      {
+        "name": "default",
+        "logoColor": "white"
+      }
+    ]
+  }
 }

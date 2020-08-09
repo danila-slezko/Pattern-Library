@@ -2,6 +2,7 @@
 label: Design Tokens
 title: Design Tokens
 status: draft
+order: 2
 ---
 
 <p>Design Tokens are an agnostic way to store variables such as typography, color, and spacing. They are the critical ingredients of a UI, but are not exactly functional on their own.</p>

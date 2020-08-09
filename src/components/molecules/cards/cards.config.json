@@ -1,6 +1,11 @@
 {
-  "title": "Cards",
   "label": "Cards",
+  "meta": {
+    "version": "1.0"
+  },
+  "tags": [
+    "Marketing Blocks"
+  ],
   "status": "ready",
   "default": "cluster-01",
   "preview": "@preview",

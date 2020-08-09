@@ -14,7 +14,7 @@
 .hljs-selector-tag,
 .hljs-subst {
   color: #333;
-  font-weight: 700;
+  font-weight: 600;
 }
 .hljs-literal,
 .hljs-number,
@@ -31,7 +31,7 @@
 .hljs-selector-id,
 .hljs-title {
   color: #900;
-  font-weight: 700;
+  font-weight: 600;
 }
 .hljs-subst {
   font-weight: 400;
@@ -39,7 +39,7 @@
 .hljs-class .hljs-title,
 .hljs-type {
   color: #458;
-  font-weight: 700;
+  font-weight: 600;
 }
 .hljs-attribute,
 .hljs-name,
@@ -61,7 +61,7 @@
 }
 .hljs-meta {
   color: #999;
-  font-weight: 700;
+  font-weight: 600;
 }
 .hljs-deletion {
   background: #fdd;

@@ -2,6 +2,7 @@
 title: Atomic Design Explained
 label: Atomic Design Explained
 status: published
+order: 1
 ---
 
 Atomic Design is a methodology for creating design systems. In chemistry, atoms bond together to form molecules, which in turn combine into more complex organisms to ultimately create all matter in our universe. This same principle can be applied to building web components. We can break entire interfaces down into fundamental building blocks and work up from there.
