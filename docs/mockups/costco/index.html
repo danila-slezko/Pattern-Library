@@ -13,10 +13,10 @@
   <body data-theme="default">
     <div class="Costco" id="page" layout>
       <style>#header {
-  --header-height: 80px;
-  --header-height-md: 80px;
-  --color-bg: var(--color-primary-darker);
-  --color-contrast-higher: white;
+      --header-height: 80px;
+      --header-height-md: 80px;
+      --color-bg: var(--color-primary-darker);
+      --color-contrast-higher: white;
   position: fixed;
   top: 0;
   width: 100%; }
@@ -155,7 +155,7 @@
             #formAlert {
               position: fixed; z-index: 9000; top: 6rem; left: 50%; min-width: 20rem; margin-left: -10rem; padding: 1rem; text-align: center; display: flex; justify-content: space-around; font-weight: 700; line-height: 3rem; color: rgba(0,0,0,.9); border-radius: .25rem; background-color: #ffed42; font-size: 1rem; box-shadow: 2.5px 4px 30px 0 rgba(0,0,0,.5); cursor: pointer; font-size: 1.8rem;
             }
-            
+
           </style>
           <div id="formAlert" style="display:none" onclick="closeBar()"><span class="text-md">Message Sent <i class="close position: absolute;top: 1.25rem;right: 3rem;">×</i></span></div>
           <script>
@@ -163,12 +163,12 @@
               var e = document.getElementById("formAlert");
               "none" === e.style.display ? e.style.display = "block" : e.style.display = "none"
             };
-            
+
           </script>
           <script src="https://www.google.com/recaptcha/api.js"></script>
           <script>
             function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500);
-            
+
           </script>
           <form id="RetailInquiry" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off" novalidate>
             <input id="captcha_settings" type="hidden" name="captcha_settings" value="{&quot;keyname&quot;:&quot;CCS_Websites&quot;,&quot;fallback&quot;:&quot;true&quot;,&quot;orgId&quot;:&quot;00D2000000002px&quot;,&quot;ts&quot;:&quot;&quot;}">

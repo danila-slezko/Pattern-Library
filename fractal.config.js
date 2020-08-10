@@ -29,7 +29,7 @@ fractal.components.set('label', 'Library');
 fractal.components.set('path', uiLibRoot + '/src/components');
 fractal.components.set('statuses', {
   prototype: {
-    label: 'Prototype',
+    label: 'Stage',
     description: 'Do not implement',
     color: '#cc2222'
   },

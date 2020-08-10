@@ -52,8 +52,10 @@
       </li>
       <li class=" opacity-80% padding-y-xxs">
         ©
-        <!-- #config timefmt="%Y" -->
-        <!-- #echo var="DATE_LOCAL" --> Copyright. All rights reserved.
+        <script type="text/javascript">
+          document.write(new Date().getFullYear());
+        </script>
+        Copyright. All rights reserved.
       </li>
     </ul>
   </div>

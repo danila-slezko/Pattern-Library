@@ -1,6 +1,6 @@
 {
   "label": "Blockquote",
-  "hidden": false,
+  "hidden": true,
   "order": 5,
   "context": {
     "bqText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",

@@ -3,12 +3,9 @@
   "label": "Header",
   "hidden": false,
   "context": {
-    "logo": [
-      {
-        "name": "default",
-        "logoColor": "white"
-      }
-    ]
+    "logoColor": "white",
+    "logoFile": "company-x.svg",
+    "logoWidth" : "124px"
   },
   "status": "wip"
 }

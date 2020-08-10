@@ -142,13 +142,24 @@ a.link-card {
       height: 0;
     }
     p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include breakpoint(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       width: 100%;
       a {
-        padding: 1rem;
-        color: var(--color-primary);
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: inherit;
+        width: calc(100% - 3rem);
+        display: block;
+        @include breakpoint(lg) {
+          text-align: center;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

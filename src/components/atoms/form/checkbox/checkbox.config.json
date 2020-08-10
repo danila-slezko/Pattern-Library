@@ -32,7 +32,7 @@
   },
   "variants": [
     {
-      "name": "button"
+      "name": "rows"
     }
   ]
 }

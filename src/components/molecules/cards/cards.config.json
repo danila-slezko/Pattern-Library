@@ -5,6 +5,7 @@
   },
   "tags": ["Marketing Blocks"],
   "status": "ready",
+  "default": "cluster-01",
   "preview": "@preview",
   "display": "width: 100%",
   "context": {
@@ -62,20 +63,28 @@
         "cardHeading": "One partner. One complete solution.",
         "cardImage": "https://assets.cnetcontent.com/images/background.jpg",
         "cardTint": "var(--color-primary-darker)",
-        "cardWidth": "max-width-adaptive-md",
+        "cardWidth": "max-width-adaptive-lg",
         "cardBlock": [
           {
-            "column": "col-6@md",
+            "column": "col-6@md col-4@lg",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#item'/></svg>",
+            "span": "col-2@lg",
+            "title": "Item Setup",
+            "text": "<ul class='list list--ul margin-left-xs'><li>GTIN</li><li>Part Number</li><li>Description</li><li>Brand</li></ul>",
+            "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
+          },
+          {
+            "column": "col-6@md col-4@lg",
             "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#spec'/></svg>",
-            "span": "col-3@md col-2@lg",
+            "span": "col-2@lg",
             "title": "Structured Product Content",
             "text": "<ul class='list list--ul margin-left-xs'><li>Technical Specifications</li><li>Product Attributes</li><li>Images</li><li>Key Selling Points</li><li>Product Features</li></ul>",
             "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
           },
           {
-            "column": "col-6@md",
+            "column": "col-6@md col-4@lg",
             "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#media'/></svg>",
-            "span": "col-3@md col-2@lg",
+            "span": "col-2@lg",
             "title": "&nbsp;Rich Inline Content",
             "text": "<ul class='list list--ul margin-left-xs'><li>Interactive Hotspot Imagery</li><li>Image Zoom and 360° Product Views</li><li>Videos</li><li>Comparison Charts</li><li>Detailed Reporting</li></ul>",
             "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
