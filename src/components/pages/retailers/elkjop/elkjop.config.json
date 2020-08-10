@@ -12,17 +12,15 @@
         "column": "col-6@lg",
         "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#spec'/></svg>",
         "span": "col-2@lg",
-        "title": "Structured Product Content",
-        "text": "<ul class='list list--ul margin-left-xs'><li>Technical Specifications</li><li>Product Attributes</li><li>Images</li><li>Key Selling Points</li><li>Product Features</li></ul><p>Already have a PartnerAccess for Elkjop account?</p>",
-        "footer": "<p><a href='https://www.partneraccess.com/login' target='_blank'>Sign in here &#8594;</a></p>"
+        "title": "Article Onboarding Program",
+        "text": "<ul class='list list--ul margin-left-xs'><li>Technical Specifications</li><li>Product Attributes</li><li>Images</li><li>Key Selling Points</li><li>Product Features</li></ul><p>Already have a PartnerAccess for Elkjop account?</p><a class='btn btn--subtle' href='https://www.partneraccess.com/login' target='_blank'>Sign in here &#8594;</a>"
       },
       {
         "column": "col-6@lg",
         "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#media'/></svg>",
         "span": "col-2@lg",
-        "title": "&nbsp;Rich Inline Content",
-        "text": "<ul class='list list--ul margin-left-xs'><li>Interactive Hotspot Imagery</li><li>Image Zoom and 360° Product Views</li><li>Videos</li><li>Comparison Charts</li><li>Detailed Reporting</li></ul><p>Already have a PartnerAccess for Elkjop account?</p>",
-        "footer": "<p><a href='https://portal.cnetcontent.com/' target='_blank'>Sign in here &#8594;</a></p>"
+        "title": "Inline Content Program",
+        "text": "<ul class='list list--ul margin-left-xs'><li>Interactive Hotspot Imagery</li><li>Image Zoom and 360° Product Views</li><li>Videos</li><li>Comparison Charts</li><li>Detailed Reporting</li></ul><p>Already have a PartnerAccess for Elkjop account?</p><a class='btn btn--subtle' href='https://portal.cnetcontent.com/' target='_blank'>Sign in here &#8594;</a>"
       }
     ],
     "formTitle": "Contact us to get started.",
