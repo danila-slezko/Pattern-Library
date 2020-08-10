@@ -116,14 +116,14 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--info is-active " data-role="tab">
-            <a href="#browser-657035125e0bcd09cf21e792cef12364-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
+            <a href="#browser-657035125e0bcd09cf21e792cef12364-panel-notes">Notes</a>
         </li>
         
         
         
-        <li class="Browser-tab Browser-tab--notes" data-role="tab">
-            <a href="#browser-657035125e0bcd09cf21e792cef12364-panel-notes">Notes</a>
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-657035125e0bcd09cf21e792cef12364-panel-info">Info</a>
         </li>
         
         
@@ -148,6 +148,77 @@
     </ul>
 </div>
 
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-657035125e0bcd09cf21e792cef12364-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <br>
+
+<table>
+<thead>
+<tr>
+<th><strong>META DETAILS</strong></th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lead Assignment</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Email Group</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Campaign ID</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Portal ID</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<br>
+
+<table>
+<thead>
+<tr>
+<th><strong>SERVICE/PROGRAM</strong></th>
+<th>Enabled</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Item Setup</td>
+<td>n/a</td>
+<td></td>
+</tr>
+<tr>
+<td>Inline Content</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>Retail PartnerAccess</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>Other</td>
+<td>—</td>
+<td></td>
+</tr>
+</tbody></table>
+
+        
+    </div>
+</div>
 
     
     <div class="Browser-panel" data-role="tab-panel" id="browser-657035125e0bcd09cf21e792cef12364-panel-info">
@@ -200,15 +271,6 @@
         
         
     </ul>
-</div>
-
-    
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-657035125e0bcd09cf21e792cef12364-panel-notes">
-    <div class="Prose Prose--condensed">
-        
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
-        
-    </div>
 </div>
 
     
@@ -313,9 +375,7 @@
                         &lt;li class="header__item"&gt;
                             &lt;img src="../../assets/logos/elkjop.svg" width="140px"&gt;
                         &lt;/li&gt;
-                        &lt;li class="header__item header__item--divider" aria-hidden="true"&gt;
-
-                        &lt;/li&gt;
+                        &lt;li class="header__item header__item--divider" aria-hidden="true"&gt;&lt;/li&gt;
                         &lt;li class="header__item"&gt;
                             &lt;a class="btn btn--subtle js-smooth-scroll" href="#contact" data-duration="300"&gt;
                                 Contact Us
@@ -328,6 +388,8 @@
     &lt;/header&gt;
 
     &lt;main id="content"&gt;
+
+        &lt;center&gt;hero&lt;/center&gt;
 
         &lt;section class="position-relative bg-cover padding-y-md" id="service" style="background-image: url('https://assets.cnetcontent.com/images/group-of-person-sitting-indoors.jpg')"&gt;
             &lt;span class="overlay z-index-1" style="background-color: black"&gt;&lt;/span&gt;
@@ -508,7 +570,7 @@
                     &lt;div class="margin-bottom-xs"&gt;
                         &lt;div class="grid gap-xxs items-center@md"&gt;
                             &lt;div class="col-4@md text-right@md"&gt;
-                                &lt;label class="form-label" for="country"&gt;Country&lt;/label&gt;
+                                &lt;label class="form-label" for="region"&gt;Region&lt;/label&gt;
                             &lt;/div&gt;
                             &lt;div class="col-4@md"&gt;
                                 &lt;div class="select"&gt;
@@ -1130,7 +1192,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #cc2222;" title="Stage"></span>
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
 
 
 </div>
@@ -1159,21 +1221,10 @@
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-webform">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-webform-items">
-                Webforms
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-webform-items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="webform--retail.html" data-pjax>
-                <span>Retail</span>
+            <a class="Tree-entityLink" href="webform.html" data-pjax>
+                <span>Webforms</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1190,35 +1241,6 @@
 
 
             </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="webform--contact.html" data-pjax>
-                <span>Contact</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -1314,7 +1336,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #cc2222;" title="Stage"></span>
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
 
 
 </div>
@@ -1338,7 +1360,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #cc2222;" title="Stage"></span>
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
 
 
 </div>
@@ -1389,7 +1411,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
 
 
 </div>
@@ -1413,7 +1435,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
 
 
 </div>
@@ -1526,6 +1548,198 @@
 
 
 <span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="target.html" data-pjax>
+                <span>Target</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="argos.html" data-pjax>
+                <span>Argos</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="best-buy.html" data-pjax>
+                <span>Best Buy</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="currys.html" data-pjax>
+                <span>Currys</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="dixons.html" data-pjax>
+                <span>Dixons</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="home-depot.html" data-pjax>
+                <span>Home Depot</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="london-drugs.html" data-pjax>
+                <span>London Drugs</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="staples.html" data-pjax>
+                <span>Staples</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #cc2222;" title="Staging"></span>
 
 
 </div>

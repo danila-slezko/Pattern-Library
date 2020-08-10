@@ -23,13 +23,13 @@ fractal.components.set('default.collator', function (markup, item) {
 });
 fractal.components.set('default.collated', true);
 fractal.components.set('default.display', {'min-width': '290px'});
-fractal.components.set('default.status', 'wip');
+fractal.components.set('default.status', 'prototype');
 fractal.components.set('ext', '.twig');
 fractal.components.set('label', 'Library');
 fractal.components.set('path', uiLibRoot + '/src/components');
 fractal.components.set('statuses', {
   prototype: {
-    label: 'Stage',
+    label: 'Staging',
     description: 'Do not implement',
     color: '#cc2222'
   },
@@ -79,7 +79,7 @@ fractal.web.set('builder.dest', uiLibRoot + '/docs');
 const subTheme = require('@frctl/mandelbrot')({
   favicon: '/favicon.ico',
   nav: ['search', 'components', 'docs'],
-  panels: ['info', 'notes', 'html', 'resources', 'context'],
+  panels: [ 'notes', 'info', 'html', 'resources', 'context'],
   styles: ['/themes/base.css', '/themes/default.css'],
   static: { mount: 'themes'}
 });

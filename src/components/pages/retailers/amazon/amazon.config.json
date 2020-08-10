@@ -1,6 +1,12 @@
 {
   "status": "ready",
+  "order": 1,
   "context": {
-
+    "logoFile": "amazon.svg",
+    "logoWidth" : "120px",
+    "formTitle": "Contact us to get started.",
+    "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Elkjop.<p>",
+    "formServiceA": "Article Onboarding Program",
+    "formServiceB": "Inline Content Program"
   }
 }

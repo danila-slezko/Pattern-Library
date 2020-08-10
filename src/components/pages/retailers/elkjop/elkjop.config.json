@@ -1,5 +1,6 @@
 {
   "status": "ready",
+  "order": 3,
   "context": {
     "logoFile": "elkjop.svg",
     "logoWidth" : "140px",

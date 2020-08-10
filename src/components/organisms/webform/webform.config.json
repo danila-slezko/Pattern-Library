@@ -14,7 +14,8 @@
   },
   "variants": [
     {
-      "name": "contact"
+      "name": "contact",
+      "hidden": true
     },
     {
       "name": "login",
