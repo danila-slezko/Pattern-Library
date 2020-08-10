@@ -13,9 +13,9 @@ var pug = require('gulp-pug');
 var watch = require('gulp-watch');
 
 // js file paths
-var utilJsPath = 'node_modules/codyhouse-framework/main/assets/js'; // util.js path
-var componentsJsPath = 'src/public/assets/js/components/*.js'; // component js files
-var scriptsJsPath = 'src/public/assets/js'; // folder for final scripts
+// var utilJsPath = 'node_modules/codyhouse-framework/main/assets/js'; // util.js path
+// var componentsJsPath = 'src/public/assets/js/components/*.js'; // component js files
+// var scriptsJsPath = 'src/public/assets/js'; // folder for final scripts
 
 // css file paths
 var cssFolder = 'src/public/assets/css'; // folder for final styles files
@@ -25,10 +25,10 @@ var scssFilesPath = 'src/public/assets/css/**/*.scss'; // scss files to watch
 var htmlFolder = 'src/public/mockups'; // folder for final html files
 var pugFilesPath = 'src/public/templates/clients/**/*.pug'; // pug files to watch
 
-function reload(done) {
-  browserSync.reload();
-  done();
-}
+// function reload(done) {
+//   browserSync.reload();
+//   done();
+// }
 
 // Pages
 gulp.task('pug', function () {
@@ -66,25 +66,25 @@ gulp.task('sass', function () {
 });
 
 // Scripts
-gulp.task('scripts', function () {
-  return gulp
-    .src([utilJsPath + '/util.js', componentsJsPath])
-    .pipe(concat('scripts.js'))
-    .pipe(gulp.dest(scriptsJsPath))
-    .pipe(
-      browserSync.reload({
-        stream: true
-      })
-    )
-    .pipe(rename('scripts.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(scriptsJsPath))
-    .pipe(
-      browserSync.reload({
-        stream: true
-      })
-    );
-});
+// gulp.task('scripts', function () {
+//   return gulp
+//     .src([utilJsPath + '/util.js', componentsJsPath])
+//     .pipe(concat('scripts.js'))
+//     .pipe(gulp.dest(scriptsJsPath))
+//     .pipe(
+//       browserSync.reload({
+//         stream: true
+//       })
+//     )
+//     .pipe(rename('scripts.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest(scriptsJsPath))
+//     .pipe(
+//       browserSync.reload({
+//         stream: true
+//       })
+//     );
+// });
 
 // Server
 // gulp.task(
@@ -103,10 +103,10 @@ gulp.task('scripts', function () {
 // Watch // removed 'browserSync',
 gulp.task(
   'watch',
-  gulp.series(['pug', 'sass', 'scripts'], function () {
+  gulp.series(['pug', 'sass'], function () {
     // gulp.watch('src/public/*.html', gulp.series(reload));
     gulp.watch('src/public/assets/css/**/*.scss', gulp.series(['sass']));
     gulp.watch('src/public/templates/**/*.pug', gulp.series(['pug']));
-    gulp.watch(componentsJsPath, gulp.series(['scripts']));
+    // gulp.watch(componentsJsPath, gulp.series(['scripts']));
   })
 );

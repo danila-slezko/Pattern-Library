@@ -1,19 +1,45 @@
 {
   "label": "Blocks",
-  "status": "wip",
-  "hidden": false,
-  "meta": {
-    "version": "1.0"
-  },
   "tags": ["Marketing Blocks"],
+  "meta": { "version": "1.0" },
+  "status": "ready",
+  "hidden": false,
+  "collated": true,
+  "preview": "@preview",
+  "default": "image-right",
   "context": {
-    "blockHeadline": "",
-    "blockText": "",
-    "blocks": [
-      {
-        "name": "default",
-        "logoColor": "white"
+    "blockHeadline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "blockCopy": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "blockImage1x": "../../assets/images/placeholder-4-3-2.jpg",
+    "blockImage2x": "../../assets/images/placeholder-4-3-2.jpg",
+    "blockClassTxt": "col-6@md order-1@md",
+    "blockClassImg": "col-6@md order-2@md"
+  },
+  "variants": [
+    {
+      "name": "image-left",
+      "context": {
+        "blockImage1x": "../../assets/images/placeholder-4-3.jpg",
+        "blockImage2x": "../../assets/images/placeholder-4-3.jpg",
+        "blockClassTxt": "col-6@md order-2@md",
+        "blockClassImg": "col-6@md order-1@md"
       }
-    ]
-  }
+    },
+    {
+      "name": "center-img",
+      "context": {
+        "blockImage1x": "../../assets/images/placeholder-16-9.jpg",
+        "blockImage2x": "../../assets/images/placeholder-16-9.jpg",
+        "blockClassTxt": "is-hidden",
+        "blockClassImg": "col"
+      }
+    },
+    {
+      "name": "center-txt",
+      "context": {
+        "blockClassTxt": "col",
+        "blockClassImg": "is-hidden"
+      }
+    }
+  ]
 }

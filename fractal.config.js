@@ -53,7 +53,6 @@ fractal.components.set('statuses', {
 /*
  * DOCS SETTINGS
  */
-//fractal.docs.set('ext', '.html');
 fractal.docs.set('path', uiLibRoot + '/src/pages');
 fractal.docs.set('statuses', {
   draft: {
@@ -72,9 +71,7 @@ fractal.docs.set('statuses', {
  * BUILD SETTINGS
  */
 fractal.web.set('static.path', uiLibRoot + '/src/public');
-// fractal.web.set("builder.urls.ext", 'html');
 fractal.web.set('builder.dest', uiLibRoot + '/docs');
-// fractal.web.set('static.mount', 'files');
 
 /*
  * THEME SETTINGS
@@ -82,9 +79,9 @@ fractal.web.set('builder.dest', uiLibRoot + '/docs');
 const subTheme = require('@frctl/mandelbrot')({
   favicon: '/favicon.ico',
   nav: ['search', 'components', 'docs'],
-  panels: ['notes', 'info', 'html', 'resources', 'context'],
+  panels: ['info', 'notes', 'html', 'resources', 'context'],
   styles: ['/themes/base.css', '/themes/default.css'],
-  static: {mount: 'themes'}
+  static: { mount: 'themes'}
 });
-//subTheme.addStatic("path", uiLibRoot + "src/public/assets/theme");
+
 fractal.web.theme(subTheme);

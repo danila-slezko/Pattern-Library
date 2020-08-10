@@ -5,7 +5,6 @@
   },
   "tags": ["Marketing Blocks"],
   "status": "ready",
-  "default": "cluster-01",
   "preview": "@preview",
   "display": "width: 100%",
   "context": {

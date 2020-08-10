@@ -1,14 +1,16 @@
 <section id="create">
   <div class="container max-width-adaptive-md padding-y-xl">
     <div class="grid gap-lg gap-xxxl@md items-center">
-      <div class="col-6@md order-1@md">
+      <div class="{{ blockClassTxt }}">
         <span class="text-component line-height-lg v-space-lg">
-          <h2 class="text-xl color-black">Product Content Creation</h2>
-          <p>CNET works with brands to aggregate product data and marketing assets, and formats them into the specific structure required by Walmart to get them on-boarded. We then collect and deliver the detailed product specifications, warranty information, marketing copy and other structured product information needed to power your product pages on Walmart.com.</p>
+          <h2 class="text-xl color-black">{{ blockHeadline }}</h2>
+          {{ blockCopy }}
         </span>
       </div>
-      <div class="col-6@md  order-1@md">
-        <figure class="media-wrapper media-wrapper--4:3"><img src="assets/images/_outside-mobile-top-1x.jpg" srcset="assets/images/_home-office-right-2x.jpg 2x"></figure>
+      <div class="{{ blockClassImg }}">
+        <figure class="media-wrapper media-wrapper--4:3">
+          <img src="{{ blockImage1x }}" srcset="{{ blockImage2x }} 2x">
+        </figure>
       </div>
     </div>
   </div>
