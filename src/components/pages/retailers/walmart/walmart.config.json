@@ -5,7 +5,57 @@
     "formTitle": "Contact us to get started.",
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Walmart.<p>",
     "formServiceA": "Article Onboarding Program",
-    "formServiceB": "Inline Content Program"
+    "formServiceB": "Inline Content Program",
+
+    "cardHeading": "Partnering with us means",
+    "cardImage": "https://assets.cnetcontent.com/images/group-of-person-sitting-indoors.jpg",
+    "cardTint": "black",
+    "cardWidth": "max-width-adaptive-lg",
+    "cardBlock": [
+      {
+        "column": "col-6@md col-4@lg",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#support'/></svg>",
+        "span": "",
+        "title": "Complete Scalability",
+        "text": "<p>Our production capacity is built to scale as needed.</p>",
+        "footer": ""
+      },
+      {
+        "column": "col-6@md col-4@lg",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#time'/></svg><svg><use xlink:href='#money'/></svg>",
+        "span": "",
+        "title": "Save Time &amp; Money",
+        "text": "<p>Save your resources by leveraging our years of experience and expertise.</p>",
+        "footer": ""
+      },
+      {
+        "column": "col-6@md col-4@lg",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#fast'/></svg>",
+        "span": "",
+        "title": "Accelerated Time to Market",
+        "text": "<p>Prevent content rejection and delays in going live by working with a team that already has systems and processes in place to meet Best Buy standards.</p>",
+        "footer": ""
+      },
+      {
+        "column": "col-6@md col-4@lg",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#trust'/></svg>",
+        "span": "",
+        "title": "Trusted Partnership",
+        "text": "<p>With a client base of 52,000 brands and content for over 16 million SKUs, our ability to execute and deliver quality results at scale is proven.</p>",
+        "footer": ""
+      },
+      {
+        "column": "col-6@md col-4@lg",
+        "icon": "<svg><use xlink:href='#support'/></svg>",
+        "span": "",
+        "title": "Unparalleled Service & Support",
+        "text": "<p>Success driven with a dedicated support team that understands your needs and gets the job done.</p>",
+        "footer": ""
+      }
+    ]
+
+
+
 
 
   }

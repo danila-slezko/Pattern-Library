@@ -33,7 +33,7 @@
     .header__item { text-align: center }
     .header__item img { margin: auto }
   </style>
-  <div class="header__container container max-width-adaptive-lg">
+  <div class="header__container container max-width-adaptive-md">
     <div class="header__logo">
       <a href="#top">
         <svg class='asset-svg' style="color: white" fill="currentColor" width="253" height="45" viewBox="0 0 253 45" xmlns="http://www.w3.org/2000/svg">
@@ -88,30 +88,69 @@
 
   <main id="content">
 
+  <section>
+    <div class="container max-width-adaptive-md padding-y-xl">
+      <div class="grid gap-lg gap-xxxl@md items-center">
+        <div class="col-6@md order-1@md">
+          <div class="text-component line-height-lg v-space-lg">
+            <h2 class="text-xl color-black">Transform your existing marketing assets into powerful digital merchandising tools on Costco.com</h2>
+              <p>Costco has chosen CNET Content Solutions as their partner for Syndicated Rich Content for Costco.com, CostcoBusinessDelivery.com, and Costco.ca.</p>
+              <a href="#contact" class="btn btn--primary">Get Started</a>
+            </div>
+          </div>
+        <div class="col-6@md order-2@md">
+          <figure class="media-wrapper media-wrapper--4:3">
+            <img src="../../assets/images/store-mobile-washing-1x.jpg" srcset="../../assets/images/store-mobile-washing-2x.jpg 2x">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-  <center>hero</center>
 
 
-
+  <script>
+    function ImagePreload() {
+      if(window.devicePixelRatio > 1) {
+        imgA1 = new Image(); imgA1.src = '../../assets/images/features-hotspots-2x.jpg';
+        imgA4 = new Image(); imgA4.src = '../../assets/images/features-spin-2x.jpg';
+        imgA5 = new Image(); imgA5.src = '../../assets/images/features-videos-2x.jpg';
+        imgA6 = new Image(); imgA6.src = '../../assets/images/features-zoom-2x.jpg';
+        imgA7 = new Image(); imgA7.src = '../../assets/images/features-reporting-2x.jpg';
+        imgA8 = new Image(); imgA8.src = '../../assets/images/features-compare-2x.jpg';
+      } else {
+        imgB1 = new Image(); imgB1.src = '../../assets/images/features-hotspots-1x.jpg';
+        imgB4 = new Image(); imgB4.src = '../../assets/images/features-spin-1x.jpg';
+        imgB5 = new Image(); imgB5.src = '../../assets/images/features-videos-1x.jpg';
+        imgB6 = new Image(); imgB6.src = '../../assets/images/features-zoom-1x.jpg';
+        imgB7 = new Image(); imgB7.src = '../../assets/images/features-reporting-1x.jpg';
+        imgB8 = new Image(); imgB8.src = '../../assets/images/features-compare-1x.jpg';
+      }
+    };
+      window.onload = ImagePreload;
+      function ImageSwap(ImageID,FileName1,FileName2) {
+      document.getElementById(ImageID).src = FileName1;
+      document.getElementById(ImageID).srcset = FileName2;
+    };
+  </script>
   <section>
     <div class="container max-width-adaptive-md padding-y-xl">
       <div class="grid gap-lg gap-xxxl@md items-center">
         <div class="col-6@md order-2@md">
           <div class="text-component line-height-lg v-space-lg">
             <h2 class="text-xl color-black">The Costco Exclusive Offering</h2>
-            <ul>
-              <li>hoijkl;</li>
-              <li>hoijkl;</li>
-              <li>hoijkl;</li>
-              <li>hoijkl;</li>
-              <li>hoijkl;</li>
+            <ul class="list list--ul text-md margin-top-md@md margin-left-md@md margin-left-sm@sm">
+              <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap('jsImageSwap','../../assets/images/placeholder-4-3.jpg','../../assets/images/placeholder-4-3.jpg')" onmouseover="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/features-hotspots-1x.jpg','https://assets.cnetcontent.com/images/features-hotspots-2x.jpg')">Interactive Hotspots</a></li>
+              <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap('jsImageSwap','../../assets/images/placeholder-4-3.jpg','../../assets/images/placeholder-4-3.jpg')" onmouseover="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/features-videos-1x.jpg','https://assets.cnetcontent.com/images/features-videos-2x.jpg')">Videos</a></li>
+              <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap('jsImageSwap','../../assets/images/placeholder-4-3.jpg','../../assets/images/placeholder-4-3.jpg')" onmouseover="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/features-zoom-1x.jpg','https://assets.cnetcontent.com/images/features-zoom-2x.jpg')">Image Zoom</a></li>
+              <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap('jsImageSwap','../../assets/images/placeholder-4-3.jpg','../../assets/images/placeholder-4-3.jpg')" onmouseover="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/features-spin-1x.jpg','https://assets.cnetcontent.com/images/features-spin-2x.jpg')">360° Product Views</a></li>
             </ul>
           </div>
         </div>
         <div class="col-6@md order-1@md">
           <figure class="media-wrapper media-wrapper--4:3">
-            <img src="../../assets/images/placeholder-4-3.jpg" srcset="../../assets/images/placeholder-4-3.jpg 2x">
+            <img id="jsImageSwap" src="../../assets/images/placeholder-4-3.jpg" srcset="../../assets/images/placeholder-4-3.jpg 2x">
           </figure>
         </div>
       </div>
@@ -128,9 +167,9 @@
             <h2 class="text-xl color-white">Extend the reach of your current digital brand assets by incorporating them into The Costco's product pages</h2>
               <div class="text-component max-width-adaptive-xs margin-auto padding-y-sm">
               <figure class="media-wrapper radius-md">
-                <video poster="https://assets.cnetcontent.com/media/brand-assets.jpg" preload autoplay loop muted playsinline nofullscreen>
-                  <source src="https://assets.cnetcontent.com/media/brand-assets.webm">
-                  <source src="https://assets.cnetcontent.com/media/brand-assets.mp4">
+                <video poster="../../assets/media/brand-assets-placeholder.jpg" preload autoplay loop muted playsinline nofullscreen>
+                  <source src="../../assets/media/brand-assets-placeholder.webm">
+                  <source src="../../assets/media/brand-assets-placeholder.mp4">
                 </video>
               </figure>
             </div>
@@ -157,7 +196,7 @@
           </span>
         </div>
         <div class="col-6@md order-2@md">
-          <figure class="media-wrapper media-wrapper--4:3">
+          <figure class="media-wrapper">
             <img src="../../assets/images/portal-1x.jpg" srcset="../../assets/images/portal-2x.jpg 2x">
           </figure>
         </div>
@@ -166,9 +205,9 @@
   </section>
 
 
-    <div class="max-width-adaptive-md margin-auto padding-md bg-contrast-lower">
+    <div class="bg-contrast-lower padding-bottom-lg">
       
-<section class="max-width-adaptive-lg margin-auto">
+<section id="contact" class="max-width-adaptive-lg margin-auto">
   <form class="form-template-v3 margin-md v-space-sm">
   <input id="captcha" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":"1588524591826"}'>
   <input id="oid" type="hidden" name="oid" value="00D2000000002px">
@@ -185,16 +224,6 @@
       <h2>Contact us to get started.</h2>
       <div class="padding-x-lg max-width-xs margin-auto">
         <p>Submit the form below, and a representative will reach out to you with more information about adding your content to Costco.<p>
-      </div>
-    </div>
-    <div class="margin-bottom-xs">
-      <div class="grid gap-xxs items-center@md">
-        <div class="col-4@md text-right@md">
-          <label class="form-label" for="first_name">First Name</label>
-        </div>
-        <div class="col-4@md">
-          <input class="form-control width-100%" id="title" type="text" name="title">
-        </div>
       </div>
     </div>
     <div class="margin-bottom-xs">
