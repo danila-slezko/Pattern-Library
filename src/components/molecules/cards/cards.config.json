@@ -64,7 +64,7 @@
         "cardHeading": "One partner. One complete solution.",
         "cardHeadingColor" : "color-white",
         "cardImage": "https://assets.cnetcontent.com/images/background.jpg",
-        "cardTint": "white)",
+        "cardTint": "var(--color-primary-darker)",
         "cardWidth": "max-width-adaptive-lg",
         "cardBlock": [
           {
@@ -98,9 +98,9 @@
       "name": "cluster-03",
       "context": {
         "cardHeading": "Turn your marketing assets into <br>powerful digital merchandising tools.",
-        "cardHeadingColor" : "color-primary-dark",
+        "cardHeadingColor" : "color-white",
         "cardImage": "../../assets/images/background-meeting.jpg",
-        "cardTint": "",
+        "cardTint": "var(--color-contrast-higher)",
         "cardWidth": "max-width-adaptive-md",
         "cardBlock": [
           {

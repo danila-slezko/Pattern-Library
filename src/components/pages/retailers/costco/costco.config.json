@@ -8,9 +8,9 @@
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Costco.<p>",
     "formBackground" : "bg-contrast-lower",
     "cardHeading": "Turn your marketing assets into <br>powerful digital merchandising tools.",
-    "cardHeadingColor": "color-black",
+    "cardHeadingColor": "color-white",
     "cardImage": "../../assets/images/background-meeting.jpg",
-    "cardTint": "white",
+    "cardTint": "var(--color-contrast-higher)",
     "cardWidth": "max-width-adaptive-md",
     "cardBlock": [
       {
