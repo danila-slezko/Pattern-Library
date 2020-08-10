@@ -2,8 +2,8 @@
 
 | **META DETAILS**| Value | Notes |
 |-----------------|-------|-------|
-| Lead Assignment |       |       |
-| Email Group     |       |       |
+| Lead Assignment | Scott Busby      |       |
+| Email Group     | costco.ccssales@cbsi.com      |       |
 | Campaign ID     |       |       |
 | Portal ID       |       |       |
 
@@ -13,6 +13,6 @@
 | **SERVICE/PROGRAM**  | Enabled | Notes |
 |----------------------|---------|-------|
 | Item Setup           | n/a     |       |
-| Inline Content       | true    |       |
-| Retail PartnerAccess | true    |       |
+| Inline Content       | Yes    |       |
+| Retail PartnerAccess | No    |       |
 | Other                | ---     |       |

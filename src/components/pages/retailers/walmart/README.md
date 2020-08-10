@@ -2,8 +2,8 @@
 
 | **META DETAILS**| Value | Notes |
 |-----------------|-------|-------|
-| Lead Assignment |       |       |
-| Email Group     |       |       |
+| Lead Assignment | Marcy Stokes      |       |
+| Email Group     | walmart.ccssales@cbsi.com      |       |
 | Campaign ID     |       |       |
 | Portal ID       |       |       |
 
@@ -12,7 +12,7 @@
 
 | **SERVICE/PROGRAM**  | Enabled | Notes |
 |----------------------|---------|-------|
-| Item Setup           | n/a     |       |
-| Inline Content       | true    |       |
-| Retail PartnerAccess | true    |       |
+| Item Setup           | Yes    |       |
+| Inline Content       | Yes    |       |
+| Retail PartnerAccess | Yes    |       |
 | Other                | ---     |       |

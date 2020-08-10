@@ -11,6 +11,7 @@
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Client.com</p>",
     "formServiceA": "Digital Brand Merchendising",
     "formServiceB": "Structured Product Content",
+    "formServiceC": "Item Setup",
     "formBackground" : "bg-contrast-lower"
   },
   "variants": [

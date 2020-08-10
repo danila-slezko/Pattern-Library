@@ -93,6 +93,7 @@
       </div>
     </div>
     <br>
+    {% if formServiceA or formServiceB %}
     <div class="margin-bottom-xs">
       <div class="grid gap-xxs items-start">
         <div class="col-4@md text-right@md">
@@ -107,9 +108,16 @@
             <input class="checkbox" id="Checkbox-2" name="Checkbox" value="LoremIpsum" type="checkbox" checked>
             <label for="Checkbox-2"><p>{{ formServiceB }}</p></label>
           </div>
+          {% if formServiceC %}
+          <div class="padding-top-xxs">
+            <input class="checkbox" id="Checkbox-2" name="Checkbox" value="LoremIpsum" type="checkbox" checked>
+            <label for="Checkbox-2"><p>{{ formServiceC }}</p></label>
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
+    {% endif %}
   </fieldset>
   <div class="text-center">
     <p class="color-contrast-medium">CNET Content Solutions will use your personal information to manage the partner program.</p>
