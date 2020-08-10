@@ -2,14 +2,14 @@
 <section class="position-relative bg-cover padding-y-md" id="service" style="background-image: url('{{ cardImage }}')">
   <span class="overlay z-index-1" style="background-color: {{ cardTint }}"></span>
   <div class="container position-relative z-index-2 max-width-adaptive-lg">
-    <div class="text-component text-center padding-x-sm">
-      <h1 class="color-white text-xxl text-xxxl@lg padding-y-xxs@lg">{{ cardHeading }}</h1>
+    <div class="text-component text-center padding-x-sm padding-top-sm">
+      <h2 class="{{ cardHeadingColor }} text-xl text-xxl@lg padding-y-xxs@lg">{{ cardHeading }}</h1>
     </div>
     <div class="padding-y-lg flex justify-center {{ cardWidth }} margin-auto">
       <div class="grid gap-xl justify-center z-index-3 width-100%">
 
         {% for item in cardBlock %}
-        <div class="link-card bg radius-lg {{ item.column }}">
+        <div class="link-card bg radius-lg {{ item.column }} shadow-lg">
           <div class="flex flex-column width-100%">
             <header class="grid items-center padding-left-md padding-top-sm padding-bottom-xs padding-right-0">
               <figure class="{{ item.span }} grid">{{ item.icon }}</figure>
