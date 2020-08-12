@@ -5,8 +5,6 @@
     "logoFile": "target.svg",
     "logoWidth" : "50px",
     "formTitle": "Contact us to get started.",
-    "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Target.<p>",
-    "formServiceA": "Article Onboarding Program",
-    "formServiceB": "Inline Content Program"
+    "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Target.<p>"
   }
 }

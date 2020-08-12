@@ -371,7 +371,7 @@
                     &lt;/div&gt;
                     &lt;ul class="header__list"&gt;
                         &lt;li class="header__item"&gt;
-                            &lt;img src="../../assets/logos/staples.svg" width="140px"&gt;
+                            &lt;img src="https://assets.cnetcontent.com/logos/staples.svg" width="140px"&gt;
                         &lt;/li&gt;
                         &lt;li class="header__item header__item--divider" aria-hidden="true"&gt;&lt;/li&gt;
                         &lt;li class="header__item"&gt;
@@ -387,130 +387,222 @@
 
     &lt;main id="content"&gt;
         &lt;div class="max-width-adaptive-md margin-auto padding-md"&gt;
+            &lt;section class="bg-contrast-lower"&gt;
+                &lt;div id="formAlert" style="display:none" onclick="closeBar()"&gt;
+                    &lt;span&gt;Message Sent &lt;i class="close"&gt;×&lt;/i&gt;&lt;/span&gt;
+                    &lt;script&gt;
+                        function closeBar() {
+                            var e = document.getElementById("formAlert");
+                            "none" === e.style.display ? e.style.display = "block" : e.style.display = "none"
+                        };
+                    &lt;/script&gt;
+                &lt;/div&gt;
+                &lt;script src="https://www.google.com/recaptcha/api.js" async defer="defer"&gt;&lt;/script&gt;
+                &lt;script&gt;
+                    function timestamp() {
+                        var response = document.getElementById("g-recaptcha-response");
+                        if (response == null || response.value.trim() == "") {
+                            var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+                            elems["ts"] = JSON.stringify(new Date().getTime());
+                            document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
+                        }
+                    }
+                    setInterval(timestamp, 500);
+                &lt;/script&gt;
 
-            &lt;section id="contact" class="max-width-adaptive-lg margin-auto"&gt;
-                &lt;form class="form-template-v3 margin-md v-space-sm"&gt;
-                    &lt;input id="captcha" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":"1588524591826"}'&gt;
-                    &lt;input id="oid" type="hidden" name="oid" value="00D2000000002px"&gt;
-                    &lt;input id="retURL" type="hidden" name="retURL" value="https://staples.cnetcontent.com?inquiry=true"&gt;
-                    &lt;input id="lead_source" type="hidden" name="lead_source" value="Landing Page"&gt;
-                    &lt;input id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" value="Staples"&gt;
-                    &lt;input id="Campaign_ID" type="hidden" name="Campaign_ID" value="7012p000001XpCm"&gt;
-                    &lt;input id="00N20000000gOZN" type="hidden" name="00N20000000gOZN"&gt;
-                    &lt;input id="00N570000063NYi" type="hidden" name="00N570000063NYi" value="https://staples.cnetcontent.com/merchandising"&gt;
-                    &lt;input type="hidden" name="debug" value="1"&gt;
-                    &lt;input type="hidden" name="debugEmail" value="your.name@email.com"&gt;
-                    &lt;fieldset class="margin-bottom-md padding-bottom-sm border-bottom"&gt;
-                        &lt;div class="text-component text-center line-height-md"&gt;
-                            &lt;h2&gt;Contact us to get started.&lt;/h2&gt;
-                            &lt;div class="padding-x-lg max-width-xs margin-auto"&gt;
-                                &lt;p&gt;Submit the form below, and a representative will reach out to you with more information about adding your content to Staples.
-                                &lt;p&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="margin-bottom-xs"&gt;
-                            &lt;div class="grid gap-xxs items-center@md"&gt;
-                                &lt;div class="col-4@md text-right@md"&gt;
-                                    &lt;label class="form-label" for="first_name"&gt;First Name&lt;/label&gt;
-                                &lt;/div&gt;
-                                &lt;div class="col-4@md"&gt;
-                                    &lt;input class="form-control width-100%" id="first_name" type="text" name="first_name"&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="margin-bottom-xs"&gt;
-                            &lt;div class="grid gap-xxs items-center@md"&gt;
-                                &lt;div class="col-4@md text-right@md"&gt;
-                                    &lt;label class="form-label" for="last_name"&gt;Last Name&lt;/label&gt;
-                                &lt;/div&gt;
-                                &lt;div class="col-4@md"&gt;
-                                    &lt;input class="form-control width-100%" id="last_name" type="text" name="last_name"&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="margin-bottom-xs"&gt;
-                            &lt;div class="grid gap-xxs items-center@md"&gt;
-                                &lt;div class="col-4@md text-right@md"&gt;
-                                    &lt;label class="form-label" for="company"&gt;Company&lt;/label&gt;
-                                &lt;/div&gt;
-                                &lt;div class="col-4@md"&gt;
-                                    &lt;input class="form-control width-100%" id="company" type="text" name="company"&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="margin-bottom-xs"&gt;
-                            &lt;div class="grid gap-xxs items-center@md"&gt;
-                                &lt;div class="col-4@md text-right@md"&gt;
-                                    &lt;label class="form-label" for="phone"&gt;Company Phone&lt;/label&gt;
-                                &lt;/div&gt;
-                                &lt;div class="col-4@md"&gt;
-                                    &lt;input class="form-control width-100%" id="phone" type="text" name="phone"&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="margin-bottom-xs"&gt;
-                            &lt;div class="grid gap-xxs items-center@md"&gt;
-                                &lt;div class="col-4@md text-right@md"&gt;
-                                    &lt;label class="form-label" for="email"&gt;Work Email&lt;/label&gt;
-                                &lt;/div&gt;
-                                &lt;div class="col-4@md"&gt;
-                                    &lt;input class="form-control width-100%" id="email" type="email" name="email"&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="margin-bottom-xs"&gt;
-                            &lt;div class="grid gap-xxs items-center@md"&gt;
-                                &lt;div class="col-4@md text-right@md"&gt;
-                                    &lt;label class="form-label" for="region"&gt;Region&lt;/label&gt;
-                                &lt;/div&gt;
-                                &lt;div class="col-4@md"&gt;
-                                    &lt;div class="select"&gt;
-                                        &lt;select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" id="country" name="country"&gt;
-                                            &lt;option disabled selected value&gt;Please Select&lt;/option&gt;
-                                            &lt;option value=""&gt;-None-&lt;/option&gt;
-                                            &lt;option value="APAC"&gt;APAC&lt;/option&gt;
-                                            &lt;option value="EMEA"&gt;EMEA&lt;/option&gt;
-                                            &lt;option value="Latin America"&gt;Latin America&lt;/option&gt;
-                                            &lt;option value="North America"&gt;North America&lt;/option&gt;
-                                        &lt;/select&gt;
-                                        &lt;svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16"&gt;
-                                            &lt;g stroke-width="2" stroke="currentColor"&gt;
-                                                &lt;polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "&gt;&lt;/polyline&gt;
-                                            &lt;/g&gt;
-                                        &lt;/svg&gt;
+                &lt;div class="container max-width-adaptive-md margin-auto form-template-v3 v-space-sm padding-bottom-md"&gt;
+                    &lt;form id="RetailInquiry" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off" novalidate&gt;
+                        &lt;input id="captcha_settings" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}'&gt;
+                        &lt;input id="oid" type="hidden" name="oid" value="00D2000000002px"&gt;
+                        &lt;input id="lead_source" type="hidden" name="lead_source" title="Lead Source" value="Landing Page"&gt;
+                        &lt;input id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" title="Lead Sub-Source" value=""&gt;
+                        &lt;input id="Campaign_ID" type="hidden" name="Campaign_ID" value=""&gt;
+                        &lt;input id="00N20000000gOZN" type="hidden" name="00N20000000gOZN"&gt;
+                        &lt;input id="retURL" type="hidden" name="retURL" value="?inquiry=true"&gt;
+                        &lt;input id="00N570000063NYi" type="hidden" name="00N570000063NYi" value=""&gt;
+                        &lt;!-- input type="hidden" name="debug" value="1"&gt;
+      &lt;input type="hidden" name="debugEmail" value="your.name@email.com" --&gt;
+                        &lt;div id="contact"&gt;&lt;/div&gt;
+                        &lt;fieldset class="margin-bottom-md padding-bottom-sm border-bottom"&gt;
+                            &lt;div class="margin-bottom-xs"&gt;
+                                &lt;div class="text-component line-height-md"&gt;
+                                    &lt;div class="grid gap-xxs items-center@md flex-column"&gt;
+                                        &lt;div class="col-4@md text-center@md"&gt;
+                                            &lt;h2&gt;Contact us to get started.&lt;/h2&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="col-6@md text-center@md"&gt;Submit the form below, and a representative will reach out to you with more information about adding your content to .&lt;/div&gt;
                                     &lt;/div&gt;
                                 &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="margin-bottom-xs"&gt;
+                                &lt;div class="grid gap-xxs items-center@md"&gt;
+                                    &lt;div class="col-4@md text-right@md"&gt;
+                                        &lt;label class="form-label" for="first_name"&gt;First Name&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-4@md"&gt;
+                                        &lt;input class="form-control width-100%" id="first_name" type="text" name="first_name" data-validate-field="first_name"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="margin-bottom-xs"&gt;
+                                &lt;div class="grid gap-xxs items-center@md"&gt;
+                                    &lt;div class="col-4@md text-right@md"&gt;
+                                        &lt;label class="form-label" for="last_name"&gt;Last Name&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-4@md"&gt;
+                                        &lt;input class="form-control width-100%" id="last_name" type="text" name="last_name" data-validate-field="last_name"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="margin-bottom-xs"&gt;
+                                &lt;div class="grid gap-xxs items-center@md"&gt;
+                                    &lt;div class="col-4@md text-right@md"&gt;
+                                        &lt;label class="form-label" for="company"&gt;Company&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-4@md"&gt;
+                                        &lt;input class="form-control width-100%" id="company" type="text" name="company" data-validate-field="company"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="margin-bottom-xs"&gt;
+                                &lt;div class="grid gap-xxs items-center@md"&gt;
+                                    &lt;div class="col-4@md text-right@md"&gt;
+                                        &lt;label class="form-label" for="phone"&gt;Company Phone&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-4@md"&gt;
+                                        &lt;input class="form-control width-100%" id="phone" type="text" name="phone" data-validate-field="phone"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="margin-bottom-xs"&gt;
+                                &lt;div class="grid gap-xxs items-center@md"&gt;
+                                    &lt;div class="col-4@md text-right@md"&gt;
+                                        &lt;label class="form-label" for="email"&gt;Work Email&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-4@md"&gt;
+                                        &lt;input class="form-control width-100%" id="email" type="email" name="email" data-validate-field="email"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="margin-bottom-xs"&gt;
+                                &lt;div class="grid gap-xxs items-center@md"&gt;
+                                    &lt;div class="col-4@md text-right@md"&gt;
+                                        &lt;label class="form-label" for="region"&gt;Region&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="col-4@md"&gt;
+                                        &lt;div class="select"&gt;
+                                            &lt;select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" id="country" name="country" data-validate-field="country"&gt;
+                                                &lt;option disabled selected value&gt;Please Select&lt;/option&gt;
+                                                &lt;option&gt;-None-&lt;/option&gt;
+                                                &lt;option value="APAC"&gt;Asia-Pacific (APAC)&lt;/option&gt;
+                                                &lt;option value="EMEA"&gt;Europe, Middle East and Africa (EMEA)&lt;/option&gt;
+                                                &lt;option value="Latin America"&gt;Latin America&lt;/option&gt;
+                                                &lt;option value="North America"&gt;North America&lt;/option&gt;
+                                            &lt;/select&gt;
+                                            &lt;svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16"&gt;
+                                                &lt;g stroke-width="2" stroke="currentColor"&gt;
+                                                    &lt;polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "&gt;&lt;/polyline&gt;
+                                                &lt;/g&gt;
+                                            &lt;/svg&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;br&gt;
+                        &lt;/fieldset&gt;
+                        &lt;div class="grid gap-sm flex-center@md flex-column"&gt;
+                            &lt;div class="col"&gt;
+                                &lt;p&gt;CNET Content Solutions will use your personal information to manage the partner program.&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="col-4" style="max-width: 305px"&gt;
+                                &lt;label for="g-recaptcha-response" style="display:none"&gt;reCAPTCHA&lt;/label&gt;
+                                &lt;div class="g-recaptcha" data-sitekey="6Lc7zy8UAAAAANNrjVoPAH7vvxssVeozhBNt6fN1" required&gt;&lt;/div&gt;&lt;br&gt;
+                            &lt;/div&gt;
+                            &lt;div class="col-4"&gt;
+                                &lt;button class="btn btn--primary" id="formDetails" alt="Send"&gt; Submit &lt;/button&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                         &lt;br&gt;
-                        &lt;div class="margin-bottom-xs"&gt;
-                            &lt;div class="grid gap-xxs items-start"&gt;
-                                &lt;div class="col-4@md text-right@md"&gt;
-                                    &lt;label class="form-label"&gt;Product Interest&lt;/label&gt;
-                                &lt;/div&gt;
-                                &lt;div class="col-4@md"&gt;
-                                    &lt;div&gt;
-                                        &lt;input class="checkbox" id="Checkbox-1" name="Checkbox" value="LoremIpsum" type="checkbox" checked&gt;
-                                        &lt;label for="Checkbox-1"&gt;
-                                            &lt;p&gt;Article Onboarding Program&lt;/p&gt;
-                                        &lt;/label&gt;
-                                    &lt;/div&gt;
-                                    &lt;div class="padding-top-xxs"&gt;
-                                        &lt;input class="checkbox" id="Checkbox-2" name="Checkbox" value="LoremIpsum" type="checkbox" checked&gt;
-                                        &lt;label for="Checkbox-2"&gt;
-                                            &lt;p&gt;Inline Content Program&lt;/p&gt;
-                                        &lt;/label&gt;
-                                    &lt;/div&gt;
-                                &lt;/div&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/fieldset&gt;
-                    &lt;div class="text-center"&gt;
-                        &lt;p class="color-contrast-medium"&gt;CNET Content Solutions will use your personal information to manage the partner program.&lt;/p&gt;
-                        &lt;br&gt;
-                        &lt;button class="btn btn--primary"&gt;Submit&lt;/button&gt;
-                    &lt;/div&gt;
-                &lt;/form&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+
+                &lt;script src="https://cdn.cnetcontent.com/sites/scripts/just-validate.min.js"&gt;&lt;/script&gt;
+                &lt;script&gt;
+                    new window.JustValidate('#RetailInquiry', {
+                        rules: {
+                            first_name: {
+                                required: true
+                            },
+                            last_name: {
+                                required: true
+                            },
+                            email: {
+                                required: true,
+                                email: true
+                            },
+                            phone: {
+                                required: true
+                            },
+                            company: {
+                                required: true
+                            },
+                            country: {
+                                required: true
+                            },
+                        },
+                        messages: {
+                            first_name: ' ',
+                            last_name: ' ',
+                            email: ' ',
+                            phone: ' ',
+                            company: ' ',
+                            country: ' ',
+                        },
+                        submitHandler: function() {
+                            if ("" == grecaptcha.getResponse()) return event.preventDefault(), alert("Please click the reCAPTCHA checkbox"), !1;
+                            document.getElementById("RetailInquiry").submit()
+                        }
+                    }), /true|success|sent/.test(window.location.href) &amp;&amp; (document.getElementById("formAlert").style.display = "block");
+                &lt;/script&gt;
+                &lt;style&gt;
+                    #formAlert {
+                        position: fixed;
+                        z-index: 9000;
+                        top: 3rem;
+                        left: 50%;
+                        min-width: 14rem;
+                        margin-left: -12rem;
+                        padding: .5rem;
+                        text-align: center;
+                        display: flex;
+                        justify-content: space-around;
+                        font-weight: 700;
+                        line-height: 3rem;
+                        color: rgba(0, 0, 0, .9);
+                        border-radius: .25rem;
+                        background-color: #ffed42;
+                        font-size: 1rem;
+                        box-shadow: 2.5px 4px 30px 0 rgba(0, 0, 0, .5);
+                        cursor: pointer;
+                        font-size: 1.25rem;
+                    }
+
+                    .js-validate-error-label {
+                        position: absolute;
+                        top: calc(45% - 1rem);
+                        right: calc(0% + 1rem);
+                        height: 3rem;
+                        width: 3rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .js-validate-error-field {
+                        border: none !important;
+                        box-shadow: 0px 1px 2px hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1), inset 0px 0px 0px 2px var(--color-error-dark)
+                    }
+                &lt;/style&gt;
             &lt;/section&gt;
         &lt;/div&gt;
     &lt;/main&gt;
@@ -688,30 +780,6 @@
         
     
         
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="divider.html" data-pjax>
-                <span>Divider</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-form">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-form-items">
                 Form Elements
@@ -745,7 +813,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>
@@ -769,7 +837,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>
@@ -886,7 +954,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>
@@ -1350,7 +1418,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
 
 
 </div>

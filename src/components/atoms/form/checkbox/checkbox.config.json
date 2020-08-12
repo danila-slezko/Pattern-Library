@@ -1,6 +1,6 @@
 {
   "label": "Multiple Select",
-  "status": "wip",
+  "status": "ready",
   "order": 2,
   "collated": false,
   "default": "checkbox",

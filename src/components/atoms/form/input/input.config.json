@@ -1,7 +1,7 @@
 {
   "label": "Text Inputs",
   "order": 4,
-  "status": "wip",
+  "status": "ready",
   "default": "Text",
   "context": {
     "inputLabel": "Text",

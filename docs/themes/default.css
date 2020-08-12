@@ -2162,10 +2162,7 @@ mark {
   }
 }
 
-
 .Prose {
-  font-size: 1rem;
-  line-height: 1.5;
   max-width: 44em;
   width: 100%;
   font-feature-settings: unset;
@@ -2199,34 +2196,8 @@ mark {
 .Prose ol > li {
   list-style-type: decimal;
 }
-.Prose h1 {
-  font-size: 1.75rem;
-  line-height: 1.14286;
-  font-weight: bold;
-  letter-spacing: unset;
-  word-spacing: 0.08em;
-  font-feature-settings: "dlig" 0;
-}
-.Prose h2 {
-  font-size: 1.3125rem;
-  line-height: 1.14286;
-  font-weight: bold;
-  font-feature-settings: "dlig" 0;
-  word-spacing: 0.04em;
-  margin-bottom: 1em;
-  color: #131720;
-}
 .Prose *:not(hr) + h2 {
   margin-top: 2em;
-}
-.Prose h3 {
-  font-size: 1.125rem;
-  line-height: 1.33333;
-  font-weight: bold;
-  font-feature-settings: "dlig" 0;
-  word-spacing: 0.02em;
-  margin-bottom: 0.75em;
-  opacity: 0.8;
 }
 .Prose * + h3 {
   margin-top: 2.25em;
@@ -2300,6 +2271,9 @@ mark {
   background-color: inherit;
   box-shadow: 0 2px 0 #d6d7dc;
   z-index: 10;
+}
+.Prose td {
+  padding: var(--space-xs);
 }
 .Prose--condensed > * {
   margin-bottom: 0.5em;

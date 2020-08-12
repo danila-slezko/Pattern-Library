@@ -70,15 +70,15 @@
           {
             "column": "col-6@md col-4@lg",
             "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#item'/></svg>",
-            "span": "col-2@lg",
+            "span": "col-3@lg",
             "title": "Item Setup",
             "text": "<ul class='list list--ul margin-left-xs'><li>GTIN</li><li>Part Number</li><li>Description</li><li>Brand</li></ul>",
-            "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
+            "footer": "<p><a href='javascript:void(0)'>Learn More </a></p>"
           },
           {
             "column": "col-6@md col-4@lg",
             "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#spec'/></svg>",
-            "span": "col-2@lg",
+            "span": "col-3@lg",
             "title": "Structured Product Content",
             "text": "<ul class='list list--ul margin-left-xs'><li>Technical Specifications</li><li>Product Attributes</li><li>Images</li><li>Key Selling Points</li><li>Product Features</li></ul>",
             "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
@@ -86,7 +86,7 @@
           {
             "column": "col-6@md col-4@lg",
             "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#media'/></svg>",
-            "span": "col-2@lg",
+            "span": "col-3@lg",
             "title": "&nbsp;Rich Inline Content",
             "text": "<ul class='list list--ul margin-left-xs'><li>Interactive Hotspot Imagery</li><li>Image Zoom and 360° Product Views</li><li>Videos</li><li>Comparison Charts</li><li>Detailed Reporting</li></ul>",
             "footer": "<p><a href='javascript:void(0)'>Learn More</a></p>"
@@ -105,37 +105,37 @@
         "cardBlock": [
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-error)'><use xlink:href='#sparkle'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-primary-dark)'><use xlink:href='#sparkle'/></svg>",
             "text": "<p>Enhance your Costco.com product pages with Rich Content in the Product Details section.</p>",
             "footer": ""
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-warning)'><use xlink:href='#marketing'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-primary-dark)'><use xlink:href='#marketing'/></svg>",
             "text": "<p>Tell your product story online, in your brand voice, at the point of purchase.</p>",
             "footer": ""
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-error)'><use xlink:href='#devices'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-primary-dark)'><use xlink:href='#devices'/></svg>",
             "text": "<p>Syndicate that Rich Content across all Costco.com sites (desktop/mobile/app).</p>",
             "footer": ""
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-warning)'><use xlink:href='#fast'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-primary-dark)'><use xlink:href='#fast'/></svg>",
             "text": "<p>Publish new content quickly.</p>",
             "footer": ""
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-error)'><use xlink:href='#settings'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-primary-dark)'><use xlink:href='#settings'/></svg>",
             "text": "<p>Simplify content management and maintenance.</p>",
             "footer": ""
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-warning)'><use xlink:href='#graph'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-primary-dark'><use xlink:href='#graph'/></svg>",
             "text": "<p>Reporting capabilities for your content.</p>",
             "footer": ""
           }

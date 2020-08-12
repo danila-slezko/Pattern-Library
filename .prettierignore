@@ -1,7 +1,0 @@
-node_modules/
-*.min.*
-docs/
-dev/
-_mandelbrot/
-mandelbrot
-/src/public/

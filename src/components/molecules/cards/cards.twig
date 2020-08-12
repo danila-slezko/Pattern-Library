@@ -11,11 +11,11 @@
         {% for item in cardBlock %}
         <div class="link-card bg radius-lg {{ item.column }} shadow-lg">
           <div class="flex flex-column width-100%">
-            <header class="grid items-center padding-left-md padding-top-sm padding-bottom-xs padding-right-0">
+            <header class="grid items-center padding-x-md padding-top-sm padding-bottom-xs">
               <figure class="{{ item.span }} grid">{{ item.icon }}</figure>
-              <h4 class="text-md col padding-top-xxxs@sm">{{ item.title }}</h4>
+              <h4 class="text-md col">{{ item.title }}</h4>
             </header>
-            <main class="text-component margin-bottom-sm padding-x-md">
+            <main class="text-component margin-bottom-md padding-x-md">
               {{ item.text }}
             </main>
             </div>

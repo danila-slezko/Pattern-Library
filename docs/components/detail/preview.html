@@ -206,6 +206,16 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">async</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.googletagmanager.com/gtag/js?id=UA-145377625-1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-built_in">window</span>.dataLayer = <span class="hljs-built_in">window</span>.dataLayer || [];
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">gtag</span>(<span class="hljs-params"></span>) </span>{
+            dataLayer.push(<span class="hljs-built_in">arguments</span>);
+        }
+        gtag(<span class="hljs-string">'js'</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+        gtag(<span class="hljs-string">'config'</span>, <span class="hljs-string">'UA-145377625-1'</span>);
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.cnetcontent.com"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"dns-prefetch"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.cnetcontent.com"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"preconnect"</span>&gt;</span>
@@ -215,7 +225,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
         <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">"html"</span>)[<span class="hljs-number">0</span>].className += <span class="hljs-string">" js"</span>;
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../assets/css/style.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://assets.cnetcontent.com/css/style.css"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
         <span class="hljs-keyword">if</span> (!(<span class="hljs-string">'CSS'</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>) || !CSS.supports(<span class="hljs-string">'color'</span>, <span class="hljs-string">'var(--color-var)'</span>)) {
             <span class="hljs-keyword">var</span> cfStyle = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'codyframe'</span>);
@@ -230,7 +240,7 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">data-theme</span>=<span class="hljs-string">"default"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"_preview"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">""</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"../../assets/js/scripts.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://assets.cnetcontent.com/js/scripts.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../themes/tweaks.css"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display:none"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">symbol</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fast"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 32 32"</span>&gt;</span>
@@ -390,30 +400,6 @@
         
     
         
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="divider.html" data-pjax>
-                <span>Divider</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-form">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-form-items">
                 Form Elements
@@ -447,7 +433,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>
@@ -471,7 +457,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>
@@ -588,7 +574,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>
@@ -1052,7 +1038,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
 
 
 </div>
