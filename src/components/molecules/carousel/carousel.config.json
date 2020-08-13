@@ -1,133 +1,126 @@
 {
   "title": "Carousel",
-  "status": "wip",
+  "status": "ready",
   "hidden": false,
-  "preview": "@preview-list",
   "context": {
     "carouselItems" : [
       {
         "url": "https://assets.cnetcontent.com/logos/whirlpool.svg",
-        "name": "placeholder",
+        "name": "Whirlpool",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/western-digital.svg",
-        "name": "placeholder",
+        "name": "Western Digital",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/vizio.svg",
-        "name": "placeholder",
+        "name": "Vizio",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/tripp-lite.svg",
-        "name": "placeholder",
+        "name": "Tripp-lite",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sony.svg",
-        "name": "placeholder",
+        "name": "Sony",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sennheiser.svg",
-        "name": "placeholder",
+        "name": "Sennheiser",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/seagate.svg",
-        "name": "placeholder",
-        "height": "144",
-        "width": "144"
-      },
-      {
-        "url": "https://assets.cnetcontent.com/logos/seagate.svg",
-        "name": "placeholder",
+        "name": "Seagate",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sandisk.svg",
-        "name": "placeholder",
+        "name": "Sandisk",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/playmates-toys.png",
-        "name": "placeholder",
+        "name": "playmates-toys",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/pioneer.svg",
-        "name": "placeholder",
+        "name": "Pioneer",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/nestle.svg",
-        "name": "placeholder",
+        "name": "Nestle",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/nescafe.svg",
-        "name": "placeholder",
+        "name": "Nescafe",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/lexmark.svg",
-        "name": "placeholder",
+        "name": "Lexmark",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/jabra.png",
-        "name": "placeholder",
+        "name": "Jabra",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/hp.svg",
-        "name": "placeholder",
+        "name": "HP",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/ge.svg",
-        "name": "placeholder",
+        "name": "GE",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/corsair.svg",
-        "name": "placeholder",
+        "name": "Corsair",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/coca-cola.svg",
-        "name": "placeholder",
+        "name": "Coca-cola",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/chefman.png",
-        "name": "placeholder",
+        "name": "Chefman",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/asus.svg",
-        "name": "placeholder",
+        "name": "Asus",
         "height": "144",
         "width": "144"
       }
