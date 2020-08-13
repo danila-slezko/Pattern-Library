@@ -9,15 +9,15 @@
   <link href="https://assets.cnetcontent.com" rel="dns-prefetch"><link href="https://assets.cnetcontent.com" rel="preconnect">
   <title>{{ _target.title }} | Design Patterns</title>
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <link rel="stylesheet" href="https://assets.cnetcontent.com/css/style.css" />
+  <link rel="stylesheet" id="codyframe" href="https://assets.cnetcontent.com/css/style.css" />
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
 <body data-theme="default" class="_preview" id="{{ _target.title | replace({ ' ': '-' }) | replace({ ':': '' }) | lower }}">
 
   {{ yield }}
 
-  <script src="https://assets.cnetcontent.com/js/scripts.min.js"></script>
+  <script src="../../assets/js/scripts.min.js"></script>
   <link rel="stylesheet" href="../../themes/tweaks.css" />
-  <div style="display:none">{{ source('src/public/assets/images/svg-symbols.svg') }}</div>
+  <div style="display:none">{{ source('public/assets/images/svg-symbols.svg') }}</div>
 </body>
 </html>

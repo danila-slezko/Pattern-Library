@@ -1,18 +1,7 @@
-<br>
 
-| **META DETAILS**| Value | Notes |
-|-----------------|-------|-------|
-| Lead Assignment |       |       |
-| Email Group     |       |       |
-| Campaign ID     |       |       |
-| Portal ID       |       |       |
+https://dixons.cnetcontent.com
 
+### Europe, Middle East and Africa (EMEA)
 
-<br>
-
-| **SERVICE/PROGRAM**  | Enabled | Notes |
-|----------------------|---------|-------|
-| Item Setup           | n/a     |       |
-| Inline Content       | true    |       |
-| Retail PartnerAccess | true    |       |
-| Other                | ---     |       |
+- Lead Assignment: 
+- Email Group: 

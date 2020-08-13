@@ -1,0 +1,136 @@
+{
+  "title": "Carousel",
+  "status": "wip",
+  "hidden": false,
+  "preview": "@preview-list",
+  "context": {
+    "carouselItems" : [
+      {
+        "url": "https://assets.cnetcontent.com/logos/whirlpool.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/western-digital.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/vizio.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/tripp-lite.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/sony.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/sennheiser.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/seagate.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/seagate.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/sandisk.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/playmates-toys.png",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/pioneer.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/nestle.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/nescafe.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/lexmark.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/jabra.png",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/hp.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/ge.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/corsair.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/coca-cola.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/chefman.png",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://assets.cnetcontent.com/logos/asus.svg",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      }
+    ]
+  }
+}

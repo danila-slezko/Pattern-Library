@@ -5,11 +5,12 @@
   "status": "wip",
   "collated": false,
   "default": "retail",
-  "preview": "@preview-grid",
+  "preview": "@preview",
   "context": {
     "formTitle": "Contact us to get started.",
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Client.com</p>",
     "formCampaign": "",
+    "formBackground": "",
     "formClient": "Client",
     "formURL": "http://cnetcontent.com",
     "formPrograms": [
