@@ -7,15 +7,16 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145377625-1"></script>
   <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-145377625-1');</script>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link href="https://cdn.cnetcontent.com" rel="dns-prefetch"><link href="https://cdn.cnetcontent.com" rel="preconnect">
+  <link href="https://assets.cnetcontent.com" rel="dns-prefetch"><link href="https://assets.cnetcontent.com" rel="preconnect">
   <title>Webforms: Retail | Design Patterns</title>
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" id="codyframe" href="https://assets.cnetcontent.com/css/style.css" />
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
-<body data-theme="default" class="_preview-grid" id="webforms-retail">
-  <div class="max-width-adaptive-md padding-md@lg padding-md">
-    <main class="grid gap-md flex-column flex-row@xs">
-      <section class="bg-contrast-lower">
+<body data-theme="default" class="_preview" id="webforms-retail">
+
+  <section >
   <div id="formAlert" style="display:none" onclick="closeBar()">
     <span>Message Sent <i class="close">×</i></span>
     <script> function closeBar() { var e = document.getElementById("formAlert"); "none" === e.style.display ? e.style.display = "block" : e.style.display = "none" }; </script>
@@ -40,7 +41,7 @@
         <div class="margin-bottom-xs">
           <div class="text-component line-height-md">
             <div class="grid gap-xxs items-center@md flex-column">
-              <div class="col-4@md text-center@md"><h2>Contact us to get started.</h2></div>
+              <div class="col-4@md text-center@md"><h2 class="padding-top-md">Contact us to get started.</h2></div>
               <div class="col-6@md text-center@md">Submit the form below, and a representative will reach out to you with more information about adding your content to Client.</div>
             </div>
           </div>
@@ -122,7 +123,7 @@
         <br>
             <div class="grid gap-xxs items-start">
         <div class="col-4@md text-right@md">
-          <label class="form-label">Product Interest</label>
+          <label class="form-label">Program Interest</label>
         </div>
         <div class="col-4@md">
           <div class="flex flex-column gap-xxxs">
@@ -148,16 +149,15 @@
           </div>
           <div class="col-4" style="max-width: 305px">
             <label for="g-recaptcha-response" style="display:none">reCAPTCHA</label>
-            <div class="g-recaptcha" data-sitekey="6Lc7zy8UAAAAANNrjVoPAH7vvxssVeozhBNt6fN1" required></div><br>
+            <div class="g-recaptcha" data-sitekey="6Lc7zy8UAAAAANNrjVoPAH7vvxssVeozhBNt6fN1" required></div>
           </div>
           <div class="col-4">
-            <button class="btn btn--primary" id="formDetails" alt="Send"> Submit </button>
+            <button class="btn btn--primary" id="formDetails" alt="Send"> Submit </button><br>
           </div>
         </div>
         <br>
     </form>
   </div>
-
   <script src="https://cdn.cnetcontent.com/sites/scripts/just-validate.min.js"></script>
   <script>
     new window.JustValidate('#RetailInquiry', {
@@ -190,10 +190,10 @@
   </style>
 </section>
 
-    </main>
-  </div>
+
   <script src="../../assets/js/scripts.min.js"></script>
   <link rel="stylesheet" href="../../themes/tweaks.css" />
+  <div style="display:none">Template "public/assets/images/svg-symbols.svg" is not defined.</div>
 </body>
 </html>
 

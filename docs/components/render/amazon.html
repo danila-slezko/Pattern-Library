@@ -105,7 +105,7 @@
 
 
     <div class="max-width-adaptive-md margin-auto padding-md">
-      <section class="bg-contrast-lower">
+      <section >
   <div id="formAlert" style="display:none" onclick="closeBar()">
     <span>Message Sent <i class="close">×</i></span>
     <script> function closeBar() { var e = document.getElementById("formAlert"); "none" === e.style.display ? e.style.display = "block" : e.style.display = "none" }; </script>
@@ -130,7 +130,7 @@
         <div class="margin-bottom-xs">
           <div class="text-component line-height-md">
             <div class="grid gap-xxs items-center@md flex-column">
-              <div class="col-4@md text-center@md"><h2>Contact us to get started.</h2></div>
+              <div class="col-4@md text-center@md"><h2 class="padding-top-md">Contact us to get started.</h2></div>
               <div class="col-6@md text-center@md">Submit the form below, and a representative will reach out to you with more information about adding your content to .</div>
             </div>
           </div>
@@ -217,16 +217,15 @@
           </div>
           <div class="col-4" style="max-width: 305px">
             <label for="g-recaptcha-response" style="display:none">reCAPTCHA</label>
-            <div class="g-recaptcha" data-sitekey="6Lc7zy8UAAAAANNrjVoPAH7vvxssVeozhBNt6fN1" required></div><br>
+            <div class="g-recaptcha" data-sitekey="6Lc7zy8UAAAAANNrjVoPAH7vvxssVeozhBNt6fN1" required></div>
           </div>
           <div class="col-4">
-            <button class="btn btn--primary" id="formDetails" alt="Send"> Submit </button>
+            <button class="btn btn--primary" id="formDetails" alt="Send"> Submit </button><br>
           </div>
         </div>
         <br>
     </form>
   </div>
-
   <script src="https://cdn.cnetcontent.com/sites/scripts/just-validate.min.js"></script>
   <script>
     new window.JustValidate('#RetailInquiry', {
