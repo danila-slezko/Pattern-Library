@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../../themes/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
-<title>Multiple Select | Design Patterns</title>
+<title>Multiple Select | Pattern Library</title>
 
 </head>
 <body>
@@ -45,7 +45,7 @@
 
         </div>
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Design Patterns</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Pattern Library</a>
 </div>
 
     </div>
@@ -171,11 +171,15 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(2)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="checkbox--checkbox.html">
                     <span>Checkbox</span>
+                </a>, 
+            
+                <a href="checkbox--multi.html">
+                    <span>Multi</span>
                 </a>, 
             
                 <a href="checkbox--rows.html">
@@ -216,7 +220,9 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-cdd28f3493a213d991965dfe8e6df6eb-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column gap-xxxs"</span>&gt;</span>
+        
+            <pre><span class="hljs-comment">&lt;!-- Checkbox --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column gap-xxxs"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Ipsum1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"Ipsum1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Ipsum1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"false"</span> /&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Ipsum1"</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
@@ -242,7 +248,122 @@
             checkboxes[i].checked = <span class="hljs-literal">false</span>;
         }
     }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Multi --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column items-start"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"multi-select inline-block js-multi-select"</span> <span class="hljs-attr">data-trigger-class</span>=<span class="hljs-string">"btn btn--subtle justify-between"</span> <span class="hljs-attr">data-no-select-text</span>=<span class="hljs-string">"Select options"</span> <span class="hljs-attr">data-multi-select-text</span>=<span class="hljs-string">"{n} items selected"</span> <span class="hljs-attr">data-n-multi-select</span>=<span class="hljs-string">"2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"multiSelectThis"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"multiSelectThis"</span> <span class="hljs-attr">multiple</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Ipsum1"</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Lorem2"</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Ipsum3"</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Lorem4"</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--xs margin-left-xxxs"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"3,5 8,11 13,5 "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">polygon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Rows --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btns gap-xs js-choice-btns"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn padding-xs js-choice-btn"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- fallback --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__fallback"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Ipsum1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Ipsum1"</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- custom input --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__grid"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__input choice-btn__input--checkbox"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M2 8l4 4 8-8"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap gap-xxs justify-between"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher font-bold"</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Laboriosam omnis at minima corporis<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn padding-xs js-choice-btn"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- fallback --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__fallback"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Lorem2"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Lorem2"</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- custom input --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__grid"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__input choice-btn__input--checkbox"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M2 8l4 4 8-8"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap gap-xxs justify-between"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher font-bold"</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Quis laborum reprehenderit sequi<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn padding-xs js-choice-btn"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- fallback --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__fallback"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Ipsum3"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Ipsum3"</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- custom input --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__grid"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__input choice-btn__input--checkbox"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M2 8l4 4 8-8"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap gap-xxs justify-between"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher font-bold"</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Laboriosam dolor adipisicing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn padding-xs js-choice-btn"</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- fallback --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__fallback"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Lorem4"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Lorem4"</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- custom input --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__grid"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"choice-btn__input choice-btn__input--checkbox"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M2 8l4 4 8-8"</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-wrap gap-xxs justify-between"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-contrast-higher font-bold"</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Nesciunt, qui ut.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+</pre>
+        
         
     </code>
 </div>
@@ -257,8 +378,10 @@
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-cdd28f3493a213d991965dfe8e6df6eb-panel-context">
     <code class="Code Code--lang-json hljs">
         
-            
-            <pre>{
+        
+            <pre>
+<span class="hljs-comment">/* Checkbox */</span>
+{
   <span class="hljs-attr">"pickLabel"</span>: <span class="hljs-string">"Check Options"</span>,
   <span class="hljs-attr">"pickName"</span>: <span class="hljs-string">"check"</span>,
   <span class="hljs-attr">"pickOptions"</span>: [
@@ -283,8 +406,72 @@
       <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Nesciunt, qui ut."</span>
     }
   ]
-}</pre>
-            
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Multi */</span>
+{
+  <span class="hljs-attr">"pickLabel"</span>: <span class="hljs-string">"Check Options"</span>,
+  <span class="hljs-attr">"pickName"</span>: <span class="hljs-string">"check"</span>,
+  <span class="hljs-attr">"pickOptions"</span>: [
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum1"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 1"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam omnis at minima corporis"</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem2"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 2"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Quis laborum reprehenderit sequi"</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum3"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 3"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam dolor adipisicing elit."</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem4"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 4"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Nesciunt, qui ut."</span>
+    }
+  ]
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Rows */</span>
+{
+  <span class="hljs-attr">"pickLabel"</span>: <span class="hljs-string">"Check Options"</span>,
+  <span class="hljs-attr">"pickName"</span>: <span class="hljs-string">"check"</span>,
+  <span class="hljs-attr">"pickOptions"</span>: [
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum1"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 1"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam omnis at minima corporis"</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem2"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 2"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Quis laborum reprehenderit sequi"</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum3"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 3"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam dolor adipisicing elit."</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem4"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 4"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Nesciunt, qui ut."</span>
+    }
+  ]
+}
+
+</pre>
+        
         
     </code>
 </div>
@@ -386,21 +573,10 @@
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-checkbox">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-checkbox-items">
-                Multiple Select
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-checkbox-items">
-            
-            
-            
-            
-    
         
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox--checkbox.html" data-pjax>
-                <span>Checkbox</span>
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Multiple Select</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -423,8 +599,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox--rows.html" data-pjax>
-                <span>Rows</span>
+            <a class="Tree-entityLink" href="select.html" data-pjax>
+                <span>Single Select</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -441,99 +617,6 @@
 
 
             </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-select">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-select-items">
-                Single Select
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-select-items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--default.html" data-pjax>
-                <span>Input</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--radio.html" data-pjax>
-                <span>Radio</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--accordion.html" data-pjax>
-                <span>Accordion</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -730,7 +813,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>

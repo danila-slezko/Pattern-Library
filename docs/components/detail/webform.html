@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../../themes/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
-<title>Webforms | Design Patterns</title>
+<title>Webforms | Pattern Library</title>
 
 </head>
 <body>
@@ -45,7 +45,7 @@
 
         </div>
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Design Patterns</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Pattern Library</a>
 </div>
 
     </div>
@@ -261,6 +261,8 @@
     <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"formAlert"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display:none"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"closeBar()"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Message Sent <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
@@ -284,7 +286,7 @@
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-md margin-auto form-template-v3 v-space-sm padding-bottom-md"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"RetailInquiry"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"POST"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span> <span class="hljs-attr">novalidate</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"RetailInquiry"</span> <span class="hljs-attr">data-parsley-validate</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"POST"</span> <span class="hljs-attr">autocomplete</span>=<span class="hljs-string">"off"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"captcha_settings"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"captcha_settings"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">'{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}'</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"oid"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"oid"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"00D2000000002px"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"lead_source"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lead_source"</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"Lead Source"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Landing Page"</span>&gt;</span>
@@ -313,7 +315,7 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"first_name"</span>&gt;</span>First Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-4@md"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first_name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"first_name"</span> <span class="hljs-attr">data-validate-field</span>=<span class="hljs-string">"first_name"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first_name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"first_name"</span> <span class="hljs-attr">required</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -323,7 +325,7 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"last_name"</span>&gt;</span>Last Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-4@md"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"last_name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"last_name"</span> <span class="hljs-attr">data-validate-field</span>=<span class="hljs-string">"last_name"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"last_name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"last_name"</span> <span class="hljs-attr">required</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -333,7 +335,7 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"company"</span>&gt;</span>Company<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-4@md"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"company"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"company"</span> <span class="hljs-attr">data-validate-field</span>=<span class="hljs-string">"company"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"company"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"company"</span> <span class="hljs-attr">required</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -343,7 +345,7 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"phone"</span>&gt;</span>Company Phone<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-4@md"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">data-validate-field</span>=<span class="hljs-string">"phone"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">required</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -353,7 +355,7 @@
                             <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"email"</span>&gt;</span>Work Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-4@md"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">data-validate-field</span>=<span class="hljs-string">"email"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">data-parsley-trigger</span>=<span class="hljs-string">"change"</span> <span class="hljs-attr">required</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -364,7 +366,7 @@
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-4@md"</span>&gt;</span>
                             <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select"</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"00N2p000009H8t7"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"00N2p000009H8t7"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select__input form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"country"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"country"</span> <span class="hljs-attr">data-validate-field</span>=<span class="hljs-string">"country"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"00N2p000009H8t7"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"00N2p000009H8t7"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"select__input form-control width-100%"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"country"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"country"</span> <span class="hljs-attr">required</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">selected</span> <span class="hljs-attr">value</span>&gt;</span>Please Select<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>-None-<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"APAC"</span>&gt;</span>Asia-Pacific (APAC)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
@@ -384,28 +386,22 @@
                 <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-xxs items-start"</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-4@md text-right@md"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label"</span>&gt;</span>Program Interest<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"00N2p000009GnpJ"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-label"</span>&gt;</span>Program Interest<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-4@md"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column gap-xxxs"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Item Set Up - Best Buy"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"00N2p000009GnpJ"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Item Set Up - Best Buy"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Item Set Up - Best Buy"</span>&gt;</span>
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Item set up<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"PCC - Best Buy"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"00N2p000009GnpJ"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"PCC - Best Buy"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"PCC - Best Buy"</span>&gt;</span>
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Structured content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Rich Content - Best Buy"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"00N2p000009GnpJ"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Rich Content - Best Buy"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Rich Content - Best Buy"</span>&gt;</span>
-                                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Rich content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                                <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">required</span> <span class="hljs-attr">data-parsley-multiple</span>=<span class="hljs-string">"service"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Item Set Up - Best Buy"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"00N2p000009GnpJ"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Item Set Up - Best Buy"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Item Set Up - Best Buy"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Item set up<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">required</span> <span class="hljs-attr">data-parsley-multiple</span>=<span class="hljs-string">"service"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"PCC - Best Buy"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"00N2p000009GnpJ"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"PCC - Best Buy"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"PCC - Best Buy"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Structured content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">required</span> <span class="hljs-attr">data-parsley-multiple</span>=<span class="hljs-string">"service"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"Rich Content - Best Buy"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"00N2p000009GnpJ"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Rich Content - Best Buy"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> /&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"Rich Content - Best Buy"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Rich content<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -425,83 +421,19 @@
             <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.cnetcontent.com/sites/scripts/just-validate.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-        <span class="hljs-keyword">new</span> <span class="hljs-built_in">window</span>.JustValidate(<span class="hljs-string">'#RetailInquiry'</span>, {
-            <span class="hljs-attr">rules</span>: {
-                <span class="hljs-attr">first_name</span>: {
-                    <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>
-                },
-                <span class="hljs-attr">last_name</span>: {
-                    <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>
-                },
-                <span class="hljs-attr">email</span>: {
-                    <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
-                    <span class="hljs-attr">email</span>: <span class="hljs-literal">true</span>
-                },
-                <span class="hljs-attr">phone</span>: {
-                    <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>
-                },
-                <span class="hljs-attr">company</span>: {
-                    <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>
-                },
-                <span class="hljs-attr">country</span>: {
-                    <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>
-                },
-            },
-            <span class="hljs-attr">messages</span>: {
-                <span class="hljs-attr">first_name</span>: <span class="hljs-string">' '</span>,
-                <span class="hljs-attr">last_name</span>: <span class="hljs-string">' '</span>,
-                <span class="hljs-attr">email</span>: <span class="hljs-string">' '</span>,
-                <span class="hljs-attr">phone</span>: <span class="hljs-string">' '</span>,
-                <span class="hljs-attr">company</span>: <span class="hljs-string">' '</span>,
-                <span class="hljs-attr">country</span>: <span class="hljs-string">' '</span>,
-            },
-            <span class="hljs-attr">submitHandler</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-                <span class="hljs-keyword">if</span> (<span class="hljs-string">""</span> == grecaptcha.getResponse()) <span class="hljs-keyword">return</span> event.preventDefault(), alert(<span class="hljs-string">"Please click the reCAPTCHA checkbox"</span>), !<span class="hljs-number">1</span>;
-                <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"RetailInquiry"</span>).submit()
-            }
-        }), /<span class="hljs-literal">true</span>|success|sent/.test(<span class="hljs-built_in">window</span>.location.href) &amp;&amp; (<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"formAlert"</span>).style.display = <span class="hljs-string">"block"</span>);
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">defer</span>&gt;</span><span class="javascript">
+        $(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+            $(<span class="hljs-string">'#RetailInquiry'</span>).parsley().on(<span class="hljs-string">'field:validated'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-keyword">var</span> ok = $(<span class="hljs-string">'.parsley-error'</span>).length === <span class="hljs-number">0</span>;
+                    $(<span class="hljs-string">'.bs-callout-info'</span>).toggleClass(<span class="hljs-string">'hidden'</span>, !ok);
+                    $(<span class="hljs-string">'.bs-callout-warning'</span>).toggleClass(<span class="hljs-string">'hidden'</span>, ok);
+                })
+                .on(<span class="hljs-string">'form:submit'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+                    <span class="hljs-keyword">if</span> (<span class="hljs-string">""</span> == grecaptcha.getResponse()) <span class="hljs-keyword">return</span> event.preventDefault(), alert(<span class="hljs-string">"Please click the reCAPTCHA checkbox"</span>), !<span class="hljs-number">1</span>;
+                    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// Don't submit form for this demo</span>
+                });
+        });
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
-        <span class="hljs-selector-id">#formAlert</span> {
-            <span class="hljs-attribute">position</span>: fixed;
-            <span class="hljs-attribute">z-index</span>: <span class="hljs-number">9000</span>;
-            <span class="hljs-attribute">top</span>: <span class="hljs-number">3rem</span>;
-            <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;
-            <span class="hljs-attribute">min-width</span>: <span class="hljs-number">14rem</span>;
-            <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">12rem</span>;
-            <span class="hljs-attribute">padding</span>: .<span class="hljs-number">5rem</span>;
-            <span class="hljs-attribute">text-align</span>: center;
-            <span class="hljs-attribute">display</span>: flex;
-            <span class="hljs-attribute">justify-content</span>: space-around;
-            <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;
-            <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3rem</span>;
-            <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">9</span>);
-            <span class="hljs-attribute">border-radius</span>: .<span class="hljs-number">25rem</span>;
-            <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffed42</span>;
-            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;
-            <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">2.5px</span> <span class="hljs-number">4px</span> <span class="hljs-number">30px</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, .<span class="hljs-number">5</span>);
-            <span class="hljs-attribute">cursor</span>: pointer;
-            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.25rem</span>;
-        }
-
-        <span class="hljs-selector-class">.js-validate-error-label</span> {
-            <span class="hljs-attribute">position</span>: absolute;
-            <span class="hljs-attribute">top</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">45%</span> - <span class="hljs-number">1rem</span>);
-            <span class="hljs-attribute">right</span>: <span class="hljs-built_in">calc</span>(<span class="hljs-number">0%</span> + <span class="hljs-number">1rem</span>);
-            <span class="hljs-attribute">height</span>: <span class="hljs-number">3rem</span>;
-            <span class="hljs-attribute">width</span>: <span class="hljs-number">3rem</span>;
-            <span class="hljs-attribute">display</span>: flex;
-            <span class="hljs-attribute">align-items</span>: center;
-            <span class="hljs-attribute">justify-content</span>: center;
-        }
-
-        <span class="hljs-selector-class">.js-validate-error-field</span> {
-            <span class="hljs-attribute">border</span>: none <span class="hljs-meta">!important</span>;
-            <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0px</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">hsla</span>(var(--color-contrast-higher-h), <span class="hljs-built_in">var</span>(--color-contrast-higher-s), <span class="hljs-built_in">var</span>(--color-contrast-higher-l), <span class="hljs-number">0.1</span>), inset <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">var</span>(--color-error-dark)
-        }
-    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
         
     </code>
@@ -642,21 +574,10 @@
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-checkbox">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-checkbox-items">
-                Multiple Select
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-checkbox-items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox--checkbox.html" data-pjax>
-                <span>Checkbox</span>
+            <a class="Tree-entityLink" href="checkbox.html" data-pjax>
+                <span>Multiple Select</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -679,8 +600,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox--rows.html" data-pjax>
-                <span>Rows</span>
+            <a class="Tree-entityLink" href="select.html" data-pjax>
+                <span>Single Select</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -697,99 +618,6 @@
 
 
             </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-select">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-select-items">
-                Single Select
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-select-items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--default.html" data-pjax>
-                <span>Input</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--radio.html" data-pjax>
-                <span>Radio</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--accordion.html" data-pjax>
-                <span>Accordion</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -986,7 +814,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>

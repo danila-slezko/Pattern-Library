@@ -9,7 +9,7 @@
     "formBackground" : "bg-contrast-lower",
     "cardHeading": "Turn your marketing assets into <br>powerful digital merchandising tools.",
     "cardHeadingColor": "color-white",
-    "cardImage": "../../assets/images/background-meeting.jpg",
+    "cardImage": "../../images/background-meeting.jpg",
     "cardTint": "var(--color-contrast-higher)",
     "cardWidth": "max-width-adaptive-md",
     "cardBlock": [

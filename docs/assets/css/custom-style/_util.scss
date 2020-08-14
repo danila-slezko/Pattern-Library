@@ -1,0 +1,192 @@
+// --------------------------------
+
+// How to add custom utility classes
+
+// --------------------------------
+
+// 👇 your custom utility class
+// .my-util-class {
+//   property: value;
+// }
+
+// 👇 (optional) create responsive variations - edit only [my-util-class, property, value]
+// @each $breakpoint, $value in $breakpoints {
+//   @include breakpoint(#{$breakpoint}) {
+//     .my-util-class\@#{$breakpoint} {
+//       property: value;
+//     }
+//   }
+// }
+
+
+
+/* --------------------------------
+
+File#: Main Styles
+Title: Markting Tweaks
+
+-------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+#page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    height: var(--header-height);
+    width: 100%;
+    visibility: hidden;
+    margin-bottom: .5rem;
+  }
+  #content {
+    flex: 1;
+  }
+}
+
+:target::before {
+  content: '';
+  display: block;
+  height: 3rem;
+  visibility: hidden;
+}
+
+
+.media-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+cite {
+  display: inline-block;
+  padding: 4px 0;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4px' height='2px' viewBox='0 0 4 2' %3E%3Ccircle fill='currentColor' opacity='60%' id='Oval' cx='1' cy='1' r='1'%3E%3C/circle%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 85%;
+  background-size: 2px 4px;
+  position: relative;
+  background-color: transparent;
+  color: var(--color-black);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  opacity: 0.5;
+  background: black;
+}
+
+li::before {
+  color: var(--color-error-dark) !important;
+}
+
+/*
+ * --------------------------------
+ *
+ * Descr: Custom Cards
+ *
+ * --------------------------------
+ */
+
+a.link-card {
+  cursor: pointer;
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.link-card {
+  --shadow-xs: var(--shadow-md);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+  overflow: hidden;
+  figure {
+    height: 64px;
+    fill: var(--color-primary-dark);
+    svg {
+      max-height: 64px;
+      max-width: 64px;
+    }
+  }
+  footer {
+    align-content: flex-end;
+    justify-self: flex-end;
+    width: 100%;
+    &::before {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      margin-top: calc((1 - 1.2) * 0.5em);
+    }
+    &:empty {
+      display: none;
+      height: 0;
+    }
+    p {
+      @include breakpoint(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      width: 100%;
+      a {
+        padding: 1rem 2rem;
+        text-decoration: none;
+        color: inherit;
+        width: calc(100% - 3rem);
+        display: block;
+        @include breakpoint(lg) {
+          text-align: center;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.text-tag {
+  font-size: 0.6875rem;
+  line-height: 1.66667;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  font-weight: 700;
+  flex: 1 1 auto;
+  color: var(--color-contrast-medium);
+}
+
+.input-multiselect-checkbox {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  outline: none;
+  appearance: none;
+  overflow: hidden;
+  option {
+    padding: .5rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    &:before {
+      display: block;
+      content: "";
+      background: pink;
+      height: 1rem;
+      width: 2rem;
+    }
+  }
+}

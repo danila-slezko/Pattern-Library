@@ -1,14 +1,14 @@
 'use strict';
 
 const path = require('path');
-const uiLibRoot = __dirname + '/';
+const uiLibRoot = __dirname + '/src/';
 const fractal = (module.exports = require('@frctl/fractal').create());
 const twigAdapter = require('@frctl/twig')({});
 
 /*
  * PROJECT VARS
  */
-fractal.set('project.title', 'Design Patterns');
+fractal.set('project.title', 'Pattern Library');
 fractal.set('project.version', 'v1.0');
 fractal.set('project.repository', 'https://github.com/CNETContentSolutions/Pattern-Library/');
 fractal.set('project.author', 'Valerie Mardorf');
@@ -26,7 +26,7 @@ fractal.components.set('default.display', {'min-width': '290px'});
 fractal.components.set('default.status', 'prototype');
 fractal.components.set('ext', '.twig');
 fractal.components.set('label', 'Library');
-fractal.components.set('path', uiLibRoot + '/src/components');
+fractal.components.set('path', uiLibRoot + 'components');
 fractal.components.set('statuses', {
   prototype: {
     label: 'Staging',
@@ -53,7 +53,7 @@ fractal.components.set('statuses', {
 /*
  * DOCS SETTINGS
  */
-fractal.docs.set('path', uiLibRoot + '/src/pages');
+fractal.docs.set('path', uiLibRoot + 'pages');
 fractal.docs.set('statuses', {
   draft: {
     label: 'Draft',
@@ -70,14 +70,14 @@ fractal.docs.set('statuses', {
 /*
  * BUILD SETTINGS
  */
-fractal.web.set('static.path', uiLibRoot + '/src/public');
-fractal.web.set('builder.dest', uiLibRoot + '/docs');
+fractal.web.set('static.path', uiLibRoot + 'public');
+fractal.web.set('builder.dest', 'docs');
 
 /*
  * THEME SETTINGS
  */
 const subTheme = require('@frctl/mandelbrot')({
-  favicon: '/favicon.ico',
+  favicon: 'favicon.ico',
   nav: ['search', 'components', 'docs'],
   panels: [ 'notes', 'info', 'html', 'resources', 'context'],
   styles: ['/themes/base.css', '/themes/default.css'],

@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../../themes/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
-<title>Target | Design Patterns</title>
+<title>Target | Pattern Library</title>
 
 </head>
 <body>
@@ -45,7 +45,7 @@
 
         </div>
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Design Patterns</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Pattern Library</a>
 </div>
 
     </div>
@@ -387,7 +387,10 @@
 
     &lt;main id="content"&gt;
         &lt;div class="max-width-adaptive-md margin-auto padding-md"&gt;
+
             &lt;section&gt;
+                &lt;script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"&gt;&lt;/script&gt;
+                &lt;script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"&gt;&lt;/script&gt;
                 &lt;div id="formAlert" style="display:none" onclick="closeBar()"&gt;
                     &lt;span&gt;Message Sent &lt;i class="close"&gt;×&lt;/i&gt;&lt;/span&gt;
                     &lt;script&gt;
@@ -411,7 +414,7 @@
                 &lt;/script&gt;
 
                 &lt;div class="container max-width-adaptive-md margin-auto form-template-v3 v-space-sm padding-bottom-md"&gt;
-                    &lt;form id="RetailInquiry" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off" novalidate&gt;
+                    &lt;form id="RetailInquiry" data-parsley-validate action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off"&gt;
                         &lt;input id="captcha_settings" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}'&gt;
                         &lt;input id="oid" type="hidden" name="oid" value="00D2000000002px"&gt;
                         &lt;input id="lead_source" type="hidden" name="lead_source" title="Lead Source" value="Landing Page"&gt;
@@ -440,7 +443,7 @@
                                         &lt;label class="form-label" for="first_name"&gt;First Name&lt;/label&gt;
                                     &lt;/div&gt;
                                     &lt;div class="col-4@md"&gt;
-                                        &lt;input class="form-control width-100%" id="first_name" type="text" name="first_name" data-validate-field="first_name"&gt;
+                                        &lt;input class="form-control width-100%" id="first_name" type="text" name="first_name" required&gt;
                                     &lt;/div&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
@@ -450,7 +453,7 @@
                                         &lt;label class="form-label" for="last_name"&gt;Last Name&lt;/label&gt;
                                     &lt;/div&gt;
                                     &lt;div class="col-4@md"&gt;
-                                        &lt;input class="form-control width-100%" id="last_name" type="text" name="last_name" data-validate-field="last_name"&gt;
+                                        &lt;input class="form-control width-100%" id="last_name" type="text" name="last_name" required&gt;
                                     &lt;/div&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
@@ -460,7 +463,7 @@
                                         &lt;label class="form-label" for="company"&gt;Company&lt;/label&gt;
                                     &lt;/div&gt;
                                     &lt;div class="col-4@md"&gt;
-                                        &lt;input class="form-control width-100%" id="company" type="text" name="company" data-validate-field="company"&gt;
+                                        &lt;input class="form-control width-100%" id="company" type="text" name="company" required&gt;
                                     &lt;/div&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
@@ -470,7 +473,7 @@
                                         &lt;label class="form-label" for="phone"&gt;Company Phone&lt;/label&gt;
                                     &lt;/div&gt;
                                     &lt;div class="col-4@md"&gt;
-                                        &lt;input class="form-control width-100%" id="phone" type="text" name="phone" data-validate-field="phone"&gt;
+                                        &lt;input class="form-control width-100%" id="phone" type="text" name="phone" required&gt;
                                     &lt;/div&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
@@ -480,7 +483,7 @@
                                         &lt;label class="form-label" for="email"&gt;Work Email&lt;/label&gt;
                                     &lt;/div&gt;
                                     &lt;div class="col-4@md"&gt;
-                                        &lt;input class="form-control width-100%" id="email" type="email" name="email" data-validate-field="email"&gt;
+                                        &lt;input class="form-control width-100%" id="email" type="email" name="email" data-parsley-trigger="change" required&gt;
                                     &lt;/div&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
@@ -491,7 +494,7 @@
                                     &lt;/div&gt;
                                     &lt;div class="col-4@md"&gt;
                                         &lt;div class="select"&gt;
-                                            &lt;select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" id="country" name="country" data-validate-field="country"&gt;
+                                            &lt;select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" id="country" name="country" required&gt;
                                                 &lt;option disabled selected value&gt;Please Select&lt;/option&gt;
                                                 &lt;option&gt;-None-&lt;/option&gt;
                                                 &lt;option value="APAC"&gt;Asia-Pacific (APAC)&lt;/option&gt;
@@ -525,83 +528,19 @@
                         &lt;br&gt;
                     &lt;/form&gt;
                 &lt;/div&gt;
-                &lt;script src="https://cdn.cnetcontent.com/sites/scripts/just-validate.min.js"&gt;&lt;/script&gt;
-                &lt;script&gt;
-                    new window.JustValidate('#RetailInquiry', {
-                        rules: {
-                            first_name: {
-                                required: true
-                            },
-                            last_name: {
-                                required: true
-                            },
-                            email: {
-                                required: true,
-                                email: true
-                            },
-                            phone: {
-                                required: true
-                            },
-                            company: {
-                                required: true
-                            },
-                            country: {
-                                required: true
-                            },
-                        },
-                        messages: {
-                            first_name: ' ',
-                            last_name: ' ',
-                            email: ' ',
-                            phone: ' ',
-                            company: ' ',
-                            country: ' ',
-                        },
-                        submitHandler: function() {
-                            if ("" == grecaptcha.getResponse()) return event.preventDefault(), alert("Please click the reCAPTCHA checkbox"), !1;
-                            document.getElementById("RetailInquiry").submit()
-                        }
-                    }), /true|success|sent/.test(window.location.href) &amp;&amp; (document.getElementById("formAlert").style.display = "block");
+                &lt;script defer&gt;
+                    $(function() {
+                        $('#RetailInquiry').parsley().on('field:validated', function() {
+                                var ok = $('.parsley-error').length === 0;
+                                $('.bs-callout-info').toggleClass('hidden', !ok);
+                                $('.bs-callout-warning').toggleClass('hidden', ok);
+                            })
+                            .on('form:submit', function() {
+                                if ("" == grecaptcha.getResponse()) return event.preventDefault(), alert("Please click the reCAPTCHA checkbox"), !1;
+                                return false; // Don't submit form for this demo
+                            });
+                    });
                 &lt;/script&gt;
-                &lt;style&gt;
-                    #formAlert {
-                        position: fixed;
-                        z-index: 9000;
-                        top: 3rem;
-                        left: 50%;
-                        min-width: 14rem;
-                        margin-left: -12rem;
-                        padding: .5rem;
-                        text-align: center;
-                        display: flex;
-                        justify-content: space-around;
-                        font-weight: 700;
-                        line-height: 3rem;
-                        color: rgba(0, 0, 0, .9);
-                        border-radius: .25rem;
-                        background-color: #ffed42;
-                        font-size: 1rem;
-                        box-shadow: 2.5px 4px 30px 0 rgba(0, 0, 0, .5);
-                        cursor: pointer;
-                        font-size: 1.25rem;
-                    }
-
-                    .js-validate-error-label {
-                        position: absolute;
-                        top: calc(45% - 1rem);
-                        right: calc(0% + 1rem);
-                        height: 3rem;
-                        width: 3rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    }
-
-                    .js-validate-error-field {
-                        border: none !important;
-                        box-shadow: 0px 1px 2px hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1), inset 0px 0px 0px 2px var(--color-error-dark)
-                    }
-                &lt;/style&gt;
             &lt;/section&gt;
         &lt;/div&gt;
     &lt;/main&gt;
@@ -788,21 +727,10 @@
             
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-checkbox">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-checkbox-items">
-                Multiple Select
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-checkbox-items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox--checkbox.html" data-pjax>
-                <span>Checkbox</span>
+            <a class="Tree-entityLink" href="checkbox.html" data-pjax>
+                <span>Multiple Select</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -825,8 +753,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="checkbox--rows.html" data-pjax>
-                <span>Rows</span>
+            <a class="Tree-entityLink" href="select.html" data-pjax>
+                <span>Single Select</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -843,99 +771,6 @@
 
 
             </a>
-        </li>
-        
-    
-
-            </ul>
-        </li>
-        
-    
-        
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-select">
-            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-select-items">
-                Single Select
-            </button>
-            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-select-items">
-            
-            
-            
-            
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--default.html" data-pjax>
-                <span>Input</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--radio.html" data-pjax>
-                <span>Radio</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="select--accordion.html" data-pjax>
-                <span>Accordion</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
-
-            </ul>
         </li>
         
     
@@ -1132,7 +967,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #449922;" title="Ready"></span>
 
 
 </div>

@@ -1,6 +1,10 @@
 
 
+
+
 <section >
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
   <div id="formAlert" style="display:none" onclick="closeBar()">
     <span>Message Sent <i class="close">×</i></span>
     <script> function closeBar() { var e = document.getElementById("formAlert"); "none" === e.style.display ? e.style.display = "block" : e.style.display = "none" }; </script>
@@ -9,7 +13,7 @@
   <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); </script>
 
   <div class="container max-width-adaptive-md margin-auto form-template-v3 v-space-sm padding-bottom-md">
-    <form id="RetailInquiry" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off" novalidate>
+    <form id="RetailInquiry" data-parsley-validate action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off">
       <input id="captcha_settings" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}'>
       <input id="oid" type="hidden" name="oid" value="00D2000000002px">
       <input id="lead_source" type="hidden" name="lead_source" title="Lead Source" value="Landing Page">
@@ -36,7 +40,7 @@
               <label class="form-label" for="first_name">First Name</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="first_name" type="text" name="first_name" data-validate-field="first_name">
+              <input class="form-control width-100%" id="first_name" type="text" name="first_name" required>
             </div>
           </div>
         </div>
@@ -46,7 +50,7 @@
               <label class="form-label" for="last_name">Last Name</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="last_name" type="text" name="last_name" data-validate-field="last_name">
+              <input class="form-control width-100%" id="last_name" type="text" name="last_name" required>
             </div>
           </div>
         </div>
@@ -56,7 +60,7 @@
               <label class="form-label" for="company">Company</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="company" type="text" name="company" data-validate-field="company">
+              <input class="form-control width-100%" id="company" type="text" name="company" required>
             </div>
           </div>
         </div>
@@ -66,7 +70,7 @@
               <label class="form-label" for="phone">Company Phone</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="phone" type="text" name="phone" data-validate-field="phone">
+              <input class="form-control width-100%" id="phone" type="text" name="phone" required>
             </div>
           </div>
         </div>
@@ -76,7 +80,7 @@
               <label class="form-label" for="email">Work Email</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="email" type="email" name="email" data-validate-field="email">
+              <input class="form-control width-100%" id="email" type="email" name="email" data-parsley-trigger="change" required>
             </div>
           </div>
         </div>
@@ -87,7 +91,7 @@
             </div>
             <div class="col-4@md">
               <div class="select">
-                <select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" id="country" name="country" data-validate-field="country">
+                <select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" id="country" name="country" required>
                   <option disabled selected value>Please Select</option>
                   <option>-None-</option>
                   <option value="APAC">Asia-Pacific (APAC)</option>
@@ -107,22 +111,16 @@
         <br>
             <div class="grid gap-xxs items-start">
         <div class="col-4@md text-right@md">
-          <label class="form-label">Program Interest</label>
+          <label for="00N2p000009GnpJ" class="form-label">Program Interest</label>
         </div>
         <div class="col-4@md">
           <div class="flex flex-column gap-xxxs">
-                          <div>
-                  <input id="Item Set Up - Best Buy" name="00N2p000009GnpJ" value="Item Set Up - Best Buy" class="checkbox" type="checkbox" />
-                  <label for="Item Set Up - Best Buy"><p>Item set up</p></label>
-              </div>
-                          <div>
-                  <input id="PCC - Best Buy" name="00N2p000009GnpJ" value="PCC - Best Buy" class="checkbox" type="checkbox" />
-                  <label for="PCC - Best Buy"><p>Structured content</p></label>
-              </div>
-                          <div>
-                  <input id="Rich Content - Best Buy" name="00N2p000009GnpJ" value="Rich Content - Best Buy" class="checkbox" type="checkbox" />
-                  <label for="Rich Content - Best Buy"><p>Rich content</p></label>
-              </div>
+                          <input required data-parsley-multiple="service" id="Item Set Up - Best Buy" name="00N2p000009GnpJ" value="Item Set Up - Best Buy" class="checkbox" type="checkbox" />
+              <label for="Item Set Up - Best Buy"><p>Item set up</p></label>
+                          <input required data-parsley-multiple="service" id="PCC - Best Buy" name="00N2p000009GnpJ" value="PCC - Best Buy" class="checkbox" type="checkbox" />
+              <label for="PCC - Best Buy"><p>Structured content</p></label>
+                          <input required data-parsley-multiple="service" id="Rich Content - Best Buy" name="00N2p000009GnpJ" value="Rich Content - Best Buy" class="checkbox" type="checkbox" />
+              <label for="Rich Content - Best Buy"><p>Rich content</p></label>
                       </div>
         </div>
       </div>
@@ -142,35 +140,18 @@
         <br>
     </form>
   </div>
-  <script src="https://cdn.cnetcontent.com/sites/scripts/just-validate.min.js"></script>
-  <script>
-    new window.JustValidate('#RetailInquiry', {
-      rules: {
-        first_name: { required: true },
-        last_name: { required: true },
-        email: { required: true, email: true },
-        phone: { required: true },
-        company: { required: true },
-        country: { required: true },
-      },
-      messages: {
-        first_name: ' ',
-        last_name: ' ',
-        email: ' ',
-        phone: ' ',
-        company: ' ',
-        country: ' ',
-      },
-      submitHandler: function() {
+  <script defer>
+    $(function () {
+      $('#RetailInquiry').parsley().on('field:validated', function() {
+        var ok = $('.parsley-error').length === 0;
+        $('.bs-callout-info').toggleClass('hidden', !ok);
+        $('.bs-callout-warning').toggleClass('hidden', ok);
+      })
+      .on('form:submit', function() {
         if ("" == grecaptcha.getResponse()) return event.preventDefault(), alert("Please click the reCAPTCHA checkbox"), !1;
-        document.getElementById("RetailInquiry").submit()
-      }
-    }), /true|success|sent/.test(window.location.href) && (document.getElementById("formAlert").style.display = "block");
+        return false; // Don't submit form for this demo
+      });
+    });
   </script>
-  <style>
-    #formAlert { position: fixed; z-index: 9000; top: 3rem; left: 50%; min-width: 14rem; margin-left: -12rem; padding: .5rem; text-align: center; display: flex; justify-content: space-around; font-weight: 700; line-height: 3rem; color: rgba(0,0,0,.9); border-radius: .25rem; background-color: #ffed42; font-size: 1rem; box-shadow: 2.5px 4px 30px 0 rgba(0,0,0,.5); cursor: pointer; font-size: 1.25rem; }
-    .js-validate-error-label { position: absolute; top: calc(45% - 1rem); right: calc(0% + 1rem); height: 3rem; width: 3rem; display: flex; align-items: center; justify-content: center; }
-    .js-validate-error-field { border: none !important; box-shadow: 0px 1px 2px hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1),inset 0px 0px 0px 2px var(--color-error-dark) }
-  </style>
 </section>
 

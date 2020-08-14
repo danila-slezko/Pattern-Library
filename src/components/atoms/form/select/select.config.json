@@ -2,7 +2,7 @@
   "label": "Single Select",
   "order": 3,
   "status": "ready",
-  "collated": false,
+  "collated": true,
   "default": "default",
   "context": {
     "selectLabel": "Select Input",
@@ -40,6 +40,14 @@
     },
     {
       "name": "accordion"
+    },
+    {
+      "name": "dropdown",
+      "status": "prototype"
+    },
+    {
+      "name": "link",
+      "status": "prototype"
     }
   ]
 }

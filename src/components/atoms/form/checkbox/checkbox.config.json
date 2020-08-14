@@ -2,7 +2,7 @@
   "label": "Multiple Select",
   "status": "ready",
   "order": 2,
-  "collated": false,
+  "collated": true,
   "default": "checkbox",
   "context": {
     "pickLabel": "Check Options",
@@ -33,6 +33,10 @@
   "variants": [
     {
       "name": "rows"
+    },
+    {
+      "name": "multi",
+      "order": 2
     }
   ]
 }

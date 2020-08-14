@@ -1,8 +1,0 @@
-div(class='grid gap-lg gap-xxxl@md items-center')
-  div(class='col-6@md order-1@md')
-    span(class='text-component line-height-lg v-space-lg')
-      h2(class='text-xl color-black')= create.headline
-      | !{create.copy}
-  div(class=create.flip ? 'col-6@md' : 'col-6@md  order-1@md')
-    figure(class='media-wrapper media-wrapper--4:3')
-      img(src=create.media.standard, srcset=create.media.retina + ' 2x')

@@ -2,125 +2,126 @@
   "title": "Carousel",
   "status": "ready",
   "hidden": false,
+  "preview": "@preview-list",
   "context": {
     "carouselItems" : [
       {
         "url": "https://assets.cnetcontent.com/logos/whirlpool.svg",
-        "name": "Whirlpool",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/western-digital.svg",
-        "name": "Western Digital",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/vizio.svg",
-        "name": "Vizio",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/tripp-lite.svg",
-        "name": "Tripp-lite",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sony.svg",
-        "name": "Sony",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sennheiser.svg",
-        "name": "Sennheiser",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/seagate.svg",
-        "name": "Seagate",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sandisk.svg",
-        "name": "Sandisk",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/playmates-toys.png",
-        "name": "playmates-toys",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/pioneer.svg",
-        "name": "Pioneer",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/nestle.svg",
-        "name": "Nestle",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/nescafe.svg",
-        "name": "Nescafe",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/lexmark.svg",
-        "name": "Lexmark",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/jabra.png",
-        "name": "Jabra",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/hp.svg",
-        "name": "HP",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/ge.svg",
-        "name": "GE",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/corsair.svg",
-        "name": "Corsair",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/coca-cola.svg",
-        "name": "Coca-cola",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/chefman.png",
-        "name": "Chefman",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/asus.svg",
-        "name": "Asus",
+        "name": "placeholder",
         "height": "144",
         "width": "144"
       }
