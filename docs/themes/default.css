@@ -1313,6 +1313,7 @@ mark {
   flex: 0 0 auto;
   align-items: center;
   width: 100%;
+  background: white;
   box-shadow: inset 0 -1px 0 0 rgba(63, 70, 90, 0.25);
 }
 
@@ -1345,6 +1346,7 @@ mark {
 .Browser-tab.is-active a {
   --border-color: #2465ff;
   border-bottom-color: var(--border-color, #2841bd);
+  font-weight: bold;
 }
 .Browser-tab.is-disabled a {
   opacity: 0.5;
@@ -1355,7 +1357,7 @@ mark {
   display: none;
   overflow: auto;
   width: 100%;
-  background-color: #f6f6f6;
+  background-color: var(--color-contrast-lower);
   padding: 0.75rem;
 }
 .Browser-panel.is-active {
@@ -1382,12 +1384,13 @@ mark {
 
 .Code {
   display: block;
-  background-color: #f6f6f6;
+  background-color: var(--color-contrast-lower);
   -webkit-overflow-scrolling: touch;
 }
 .Code pre {
   padding: 0.75rem;
   -webkit-overflow-scrolling: touch;
+  line-height: 1.4;
 }
 .Code pre a {
   color: #28f;
@@ -1636,7 +1639,7 @@ mark {
   width: 240px;
   min-width: 240px;
   max-width: 480px;
-  background-color: #f6f6f6;
+  background-color: var(--color-contrast-lower);
   padding: 1rem 0;
 }
 [dir="ltr"] .Frame-panel--sidebar {
@@ -1776,6 +1779,7 @@ mark {
 .Header-navToggleIcon {
   display: none;
   margin: 0 auto;
+  opacity: .9;
 }
 
 .Frame .Header-navToggleIcon--open {
@@ -1917,7 +1921,7 @@ mark {
   align-items: stretch;
   height: 100%;
   overflow: hidden;
-  background: white;
+  background: #f0f0f0;
 }
 .Pen.is-resizing {
   cursor: -webkit-grabbing;
@@ -2064,7 +2068,7 @@ mark {
 
 .Preview {
   position: relative;
-  background-color: #f6f6f6;
+  background-color: var(--color-contrast-lower);
   border: 1px solid rgba(63, 70, 90, 0.25);
 }
 .Preview.is-disabled .Preview-overlay {
@@ -2359,7 +2363,7 @@ mark {
   height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 4px;
   line-height: 0;
   opacity: 0.5;
 }
@@ -2391,19 +2395,45 @@ mark {
 }
 
 .Search-input {
-  width: 100%;
-  padding: 0.3125rem 2rem 0.3125rem 0.5625rem;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  line-height: 1;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 3px;
-  border: 1px solid rgba(63, 70, 90, 0.25);
-  font-size: 0.875rem;
-  outline-offset: 1px;
-  outline-color: rgba(36, 101, 255, 1);
+  font-size: var(--form-control-font-size, .875rem);
+  padding-top: var(--form-control-padding-y, 0.2em);
+  padding-bottom: var(--form-control-padding-y, 0.2em);
+  padding-left: var(--form-control-padding-x, 0.6em);
+  padding-right: var(--form-control-padding-x, 0.8em);
+  border-radius: var(--form-control-radius, 0.25em);
+  width: 100%;
+  /* padding: 0.3125rem 2rem 0.3125rem 0.5625rem; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* border-radius: 3px; */
+  /* border: 1px solid rgba(63, 70, 90, 0.25); */
+  /* font-size: 0.875rem; */
+  /* outline-offset: 1px; */
+  /* outline-color: rgba(36, 101, 255, 1); */
+  background-color: var(--color-bg);
+  color: var(--color-contrast-higher);
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  box-shadow: 0px 1px 2px hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1),inset 0px 0px 0px 1px var(--color-contrast-low);
+  transition: all 0.3s ease;
+  letter-spacing: -0.004em;
 }
 .Search-input::-ms-clear {
   display: none;
+}
+.Search-input:active, .Search-input:focus {
+  box-shadow: inset 0px 0px 0px 2px var(--color-primary);
+  outline: none;
 }
 
 
@@ -2414,12 +2444,13 @@ mark {
 }
 
 .Status-dot {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.375rem;
+  height: 0.375rem;
   background-color: white;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
   border-radius: 100%;
   opacity: 0.8;
+  border-radius: .375rem;
 }
 
 .Status-dot + .Status-dot {
@@ -2535,6 +2566,9 @@ mark {
   user-select: none;
   color: #3f465a;
 }
+button.Tree-collectionLabel {
+  font-weight: 500;
+}
 [dir="ltr"] .Tree-collectionLabel {
   text-align: left;
 }
@@ -2570,11 +2604,8 @@ mark {
   padding-bottom: 0.375rem;
   text-decoration: none;
 }
-.Tree-entityLink:hover {
-  background-color: rgba(63, 70, 90, 0);
-}
 .is-current .Tree-entityLink {
-  background-color: rgba(63, 70, 90, 0.1);
+  background-color: #dbe4f0;
 }
 .Tree-entityLink .Status {
   -webkit-margin-start: 0.25rem;

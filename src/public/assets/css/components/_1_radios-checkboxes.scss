@@ -74,7 +74,10 @@
   width: 18px;
 }
 .checkbox + label {
-  line-height: 20px;
+  line-height: 1em;
+  span {
+    padding-left: 4px;
+  }
 }
 
 .radio:not(:checked):not(:focus) + label:hover::before,

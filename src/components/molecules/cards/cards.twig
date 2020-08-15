@@ -1,30 +1,32 @@
 
 <section class="position-relative bg-cover padding-y-md" id="service" style="background-image: url('{{ cardImage }}')">
-  <span class="overlay z-index-1" style="background-color: {{ cardTint }}"></span>
+  <span class="overlay z-index-1 {{ cardOpacity }}" style="background: {{ cardTint }}"></span>
   <div class="container position-relative z-index-2 max-width-adaptive-lg">
     <div class="text-component text-center padding-x-sm padding-top-sm">
       <h2 class="{{ cardHeadingColor }} text-xl text-xxl@lg padding-y-xxs@lg">{{ cardHeading }}</h1>
     </div>
     <div class="padding-y-lg flex justify-center {{ cardWidth }} margin-auto">
       <div class="grid gap-xl justify-center z-index-3 width-100%">
-
         {% for item in cardBlock %}
         <div class="link-card bg radius-lg {{ item.column }} shadow-lg">
           <div class="flex flex-column width-100%">
-            <header class="grid items-center padding-x-md padding-top-sm padding-bottom-xs">
-              <figure class="{{ item.span }} grid">{{ item.icon }}</figure>
-              <h4 class="text-md col padding-left-xxs@md">{{ item.title }}</h4>
+            <header class="padding-x-md padding-top-sm">
+              <figure>{{ item.icon }}</figure>
+              {% if title is not null %}
+              <h4 class="text-md padding-y-xs">{{ item.title }}</h4>
+              {% endif %}
             </header>
             <main class="text-component margin-bottom-md padding-x-md">
               {{ item.text }}
             </main>
             </div>
+            {% if footer is not null %}
             <footer class='flex bg-contrast-lower margin-top-auto'>
               {{ item.footer }}
             </footer>
+            {% endif %}
         </div>
         {% endfor %}
-
       </div>
     </div>
   </div>

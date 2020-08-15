@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 File#: _1_list
 Title: List
@@ -41,7 +41,7 @@ Usage: codyhouse.co/license
   }
 
   li::before {
-    width: var(--bullet-size); 
+    width: var(--bullet-size);
     height: var(--bullet-size);
     margin-left: calc(var(--bullet-size) * -1);
     display: inline-flex;
@@ -52,7 +52,7 @@ Usage: codyhouse.co/license
 }
 
 .list--ul { // unordered list
-  --bullet-size: 7px; // dot width and height
+  --bullet-size: 6px; // dot width and height
   --bullet-margin-right: var(--space-xxs); // gap between bullet and content
 
   li::before { // bullet

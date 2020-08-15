@@ -4285,24 +4285,7 @@
                   l = it.test(t),
                   c = e.style;
                 if ((l || (t = nt(a)), (s = S.cssHooks[t] || S.cssHooks[a]), void 0 === n)) return s && "get" in s && void 0 !== (i = s.get(e, !1, r)) ? i : c[t];
-                "string" === (o = typeof n) && (i = te.exec(n)) && i[1] && ((n = le(e, t, i)), (o = "number")), null != n && n == n && ("number" !== o || l || (n += (i && i[3]) || (S.cssNumber[a] ? "" : "px")), y.clearCloneStyle || "" !== n || 0 !== t.indexOf("background") || (c[t] = "inherit"), (s && "set" in s && void 0 === (n = s.set(e, n, r))) || (l ? c.setProperty(t, n) : (c[t] = n)));
-              }
-            },
-            css: function (e, t, n, r) {
-              var i,
-                o,
-                s,
-                a = G(t);
-              return it.test(t) || (t = nt(a)), (s = S.cssHooks[t] || S.cssHooks[a]) && "get" in s && (i = s.get(e, !0, n)), void 0 === i && (i = Ke(e, t, r)), "normal" === i && t in st && (i = st[t]), "" === n || n ? ((o = parseFloat(i)), !0 === n || isFinite(o) ? o || 0 : i) : i;
-            },
-          }),
-            S.each(["height", "width"], function (e, l) {
-              S.cssHooks[l] = {
-                get: function (e, t, n) {
-                  if (t)
-                    return !rt.test(S.css(e, "display")) || (e.getClientRects().length && e.getBoundingClientRect().width)
-                      ? ct(e, l, n)
-                      : se(e, ot, function () {
+                "striper__.constructor.call(this)}return r.Extend(n,r.Observable),n.prototype.current=function(e){throw new Error("The `current` method must be defined in child classes.")},n.prototype.query=function(e,t){throw new Error("The `query` method must be defined in child classes.")},n.prototype.bind=function(e,t){},n.prototype.destroy=function(){},n.prototype.generateResultId=function(e,t){var n=e.id+"-result-";return n+=r.generateChars(4),null!=t.id?n+="-"+t.id.toString():n+="-"+r.generateChars(4),n},n}),e.define("select2/data/select",["./base","../utils","jquery"],function(e,t,a){function n(e,t){this.$element=e,this.options=t,n.__super__.constructor.call(this)}return t.Extend(n,e),n.prototype.current=function(e){var n=[],r=this;this.$element.find(":selected").each(function(){var e=a(this),t=r.item(e);n.push(t)}),e(n)},n.prototype.select=function(i){var o=this;if(i.selected=!0,a(i.element).is("option"))return i.element.selected=!0,void this.$element.trigger("change");if(this.$element.prop("multiple"))this.current(function(e){var t=[];(i=[i]).push.apply(i,e);for(var n=0;n<i.length;n++){var r=i[n].id;-1===a.inArray(r,t)&&t.push(r)}o.$element.val(t),o.$element.trigger("c    : se(e, ot, function () {
                           return ct(e, l, n);
                         });
                 },

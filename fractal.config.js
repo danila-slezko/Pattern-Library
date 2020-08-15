@@ -36,7 +36,7 @@ fractal.components.set('statuses', {
   wip: {
     label: 'WIP',
     description: 'Work in progress. Implement with caution',
-    color: '#ff7700'
+    color: '#e97a0c'
   },
   ready: {
     label: 'Ready',
@@ -74,9 +74,10 @@ fractal.web.set('static.path', uiLibRoot + 'public');
 fractal.web.set('builder.dest', 'docs');
 
 /*
- * THEME SETTINGS
+ * THEME SETTINGS ()
  */
 const subTheme = require('@frctl/mandelbrot')({
+  highlightStyles: '/themes/code.css',
   favicon: 'favicon.ico',
   nav: ['search', 'components', 'docs'],
   panels: ['notes', 'info', 'html', 'resources', 'context'],
