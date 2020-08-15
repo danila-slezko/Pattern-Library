@@ -32,7 +32,7 @@ Components and their variants have been given statuses reflecting their state of
     <tr class='row-table__row'>
       <td class="row-table__cell">
         <div class="Status Status--tag">
-          <label class="Status-label" style="background-color: #ff7700; border-color: #ff7700;">WIP</label>
+          <label class="Status-label" style="background-color: #e97a0c; border-color: #e97a0c;">WIP</label>
         </div>
       </td>
       <td class="row-table__cell">Work in progress. Implement with caution</td>
