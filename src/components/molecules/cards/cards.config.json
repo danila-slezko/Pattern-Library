@@ -3,7 +3,7 @@
   "meta": {
     "version": "1.0"
   },
-  "tags": ["Marketing Blocks"],
+  "tags": ["marketing", "blocks"],
   "status": "ready",
   "default": "cluster-01",
   "preview": "@preview",

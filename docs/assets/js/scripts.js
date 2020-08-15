@@ -2304,7 +2304,7 @@ Math.easeOutElastic = function (t, b, c, d) {
 
     // label options
     this.noSelectText = this.element.getAttribute('data-no-select-text') || 'Select';
-    this.multiSelectText = this.element.getAttribute('data-multi-select-text') || '{n} items selected'; 
+    this.multiSelectText = this.element.getAttribute('data-multi-select-text') || '{n} items selected';
     this.nMultiSelect = this.element.getAttribute('data-n-multi-select') || 1;
     this.noUpdateLabel = this.element.getAttribute('data-update-text') && this.element.getAttribute('data-update-text') == 'off';
     this.insetLabel = this.element.getAttribute('data-inset-label') && this.element.getAttribute('data-inset-label') == 'on';
@@ -2313,16 +2313,16 @@ Math.easeOutElastic = function (t, b, c, d) {
     initCustomSelect(this); // init markup
     initCustomSelectEvents(this); // init event listeners
   };
-  
+
   function initCustomSelect(select) {
     // create the HTML for the custom dropdown element
     select.element.insertAdjacentHTML('beforeend', initButtonSelect(select) + initListSelect(select));
-    
+
     // save custom elements
     select.dropdown = select.element.getElementsByClassName('js-multi-select__dropdown')[0];
     select.trigger = select.element.getElementsByClassName('js-multi-select__button')[0];
     select.customOptions = select.dropdown.getElementsByClassName('js-multi-select__option');
-    
+
     // hide default select
     Util.addClass(select.select, 'is-hidden');
     if(select.arrowIcon.length > 0 ) select.arrowIcon[0].style.display = 'none';
@@ -2405,18 +2405,18 @@ Math.easeOutElastic = function (t, b, c, d) {
       selectOption(select, option);
     });
   };
-  
+
   function selectOption(select, option) {
     if(option.hasAttribute('aria-selected') && option.getAttribute('aria-selected') == 'true') {
       // deselecting that option
       option.setAttribute('aria-selected', 'false');
       // update native select element
       updateNativeSelect(select, option.getAttribute('data-index'), false);
-    } else { 
+    } else {
       option.setAttribute('aria-selected', 'true');
       // update native select element
       updateNativeSelect(select, option.getAttribute('data-index'), true);
-      
+
     }
     var triggerLabel = getSelectedOptionText(select);
     select.trigger.getElementsByClassName('js-multi-select__label')[0].innerHTML = triggerLabel[0]; // update trigger label
@@ -2445,7 +2445,7 @@ Math.easeOutElastic = function (t, b, c, d) {
         if(select.selectedOptCounter != 0 ) label = label + ', '
         label = label + '' + select.options[i].text;
         select.selectedOptCounter = select.selectedOptCounter + 1;
-      } 
+      }
     }
 
     if(select.selectedOptCounter > select.nMultiSelect) {
@@ -2462,19 +2462,19 @@ Math.easeOutElastic = function (t, b, c, d) {
     if(select.insetLabel && select.selectedOptCounter > 0) label = noSelectionText+label;
     return [label, ariaLabel];
   };
-  
+
   function initButtonSelect(select) { // create the button element -> custom select trigger
     // check if we need to add custom classes to the button trigger
     var customClasses = select.element.getAttribute('data-trigger-class') ? ' '+select.element.getAttribute('data-trigger-class') : '';
 
-    var triggerLabel = getSelectedOptionText(select);  
+    var triggerLabel = getSelectedOptionText(select);
     var activeSelectionClass = select.selectedOptCounter > 0 ? ' multi-select__button--active' : '';
-    
-    var button = '<button class="js-multi-select__button multi-select__button'+customClasses+activeSelectionClass+'" aria-label="'+triggerLabel[1]+'" aria-expanded="false" aria-controls="'+select.selectId+'-dropdown"><span aria-hidden="true" class="js-multi-select__label multi-select__label">'+triggerLabel[0]+'</span>';
+
+    var button = '<button class="js-multi-select__button multi-select__button select__input form-control'+customClasses+activeSelectionClass+'" aria-label="'+triggerLabel[1]+'" aria-expanded="false" aria-controls="'+select.selectId+'-dropdown"><span aria-hidden="true" class="js-multi-select__label multi-select__label">'+triggerLabel[0]+'</span>';
     if(select.arrowIcon.length > 0 && select.arrowIcon[0].outerHTML) {
       button = button +select.arrowIcon[0].outerHTML;
     }
-    
+
     return button+'</button>';
 
   };
@@ -2523,11 +2523,11 @@ Math.easeOutElastic = function (t, b, c, d) {
     if(!document.activeElement.closest('.js-multi-select')) return
     select.trigger.focus();
   };
-  
+
   function checkCustomSelectClick(select, target) { // close select when clicking outside it
     if( !select.element.contains(target) ) toggleCustomSelect(select, 'false');
   };
-  
+
   //initialize the CustomSelect objects
   var customSelect = document.getElementsByClassName('js-multi-select');
   if( customSelect.length > 0 ) {
@@ -2544,7 +2544,7 @@ Math.easeOutElastic = function (t, b, c, d) {
           moveFocusToSelectTrigger(element); // if focus is within dropdown, move it to dropdown trigger
           toggleCustomSelect(element, 'false'); // close dropdown
         });
-      } 
+      }
     });
     // close custom select when clicking outside it
     window.addEventListener('click', function(event){

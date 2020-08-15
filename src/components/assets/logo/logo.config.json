@@ -1,5 +1,7 @@
 {
   "label": "Logos",
+  "status": "ready",
+  "hidden": true,
   "context": {
     "logoColor": "#223344"
   }

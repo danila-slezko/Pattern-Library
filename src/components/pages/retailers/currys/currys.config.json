@@ -1,6 +1,7 @@
 {
   "status": "prototype",
   "order": "",
+  "tags": ["marketing", "landing"],
   "context": {
     "logoFile": "currys.svg",
     "logoWidth" : "170px",

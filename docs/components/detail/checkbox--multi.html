@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="../../themes/css/highlight.css?cachebust=1.4.0" type="text/css">
 
 
-<title>Multiple Select: Multi | Pattern Library</title>
+<title>Multiple Select: Multi | Design Patterns</title>
 
 </head>
 <body>
@@ -45,7 +45,7 @@
 
         </div>
     </button>
-    <a href="../../index.html" class="Header-title" data-pjax>Pattern Library</a>
+    <a href="../../index.html" class="Header-title" data-pjax>Design Patterns</a>
 </div>
 
     </div>
@@ -169,19 +169,23 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="checkbox--checkbox.html">
                     <span>Checkbox</span>
                 </a>, 
             
+                <a href="checkbox--rows.html">
+                    <span>Rows</span>
+                </a>, 
+            
                 <a href="">
                     <span>Multi</span>
                 </a>, 
             
-                <a href="checkbox--rows.html">
-                    <span>Rows</span>
+                <a href="checkbox--accordion.html">
+                    <span>Accordion</span>
                 </a>
             
             </span>
@@ -219,15 +223,17 @@
     <code class="Code Code--lang-html hljs">
         
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column items-start"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"multi-select inline-block js-multi-select"</span> <span class="hljs-attr">data-trigger-class</span>=<span class="hljs-string">"btn btn--subtle justify-between"</span> <span class="hljs-attr">data-no-select-text</span>=<span class="hljs-string">"Select options"</span> <span class="hljs-attr">data-multi-select-text</span>=<span class="hljs-string">"{n} items selected"</span> <span class="hljs-attr">data-n-multi-select</span>=<span class="hljs-string">"2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"multi-select inline-block js-multi-select"</span> <span class="hljs-attr">data-trigger-class</span>=<span class="hljs-string">"select__input form-control justify-between"</span> <span class="hljs-attr">data-no-select-text</span>=<span class="hljs-string">"Select options"</span> <span class="hljs-attr">data-multi-select-text</span>=<span class="hljs-string">"{n} items selected"</span> <span class="hljs-attr">data-n-multi-select</span>=<span class="hljs-string">"2"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"multiSelectThis"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"multiSelectThis"</span> <span class="hljs-attr">multiple</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Ipsum1"</span>&gt;</span>Option 1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Lorem2"</span>&gt;</span>Option 2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Ipsum3"</span>&gt;</span>Option 3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Lorem4"</span>&gt;</span>Option 4<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--xs margin-left-xxxs"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"3,5 8,11 13,5 "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">polygon</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon select__icon"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 16 16"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">g</span> <span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">polyline</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"15.5,4.5 8,12 0.5,4.5 "</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">polyline</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">g</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
@@ -555,7 +561,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="blocks.html" data-tags="[&quot;Marketing Blocks&quot;]" data-pjax>
+            <a class="Tree-entityLink" href="blocks.html" data-tags="[&quot;marketing&quot;,&quot;blocks&quot;]" data-pjax>
                 <span>Blocks</span>
                 
 
@@ -579,7 +585,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="cards.html" data-tags="[&quot;Marketing Blocks&quot;]" data-pjax>
+            <a class="Tree-entityLink" href="cards.html" data-tags="[&quot;marketing&quot;,&quot;blocks&quot;]" data-pjax>
                 <span>Cards</span>
                 
 
@@ -665,10 +671,21 @@
             
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-webform">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-webform-items">
+                Webforms
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-webform-items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="webform.html" data-pjax>
-                <span>Webforms</span>
+            <a class="Tree-entityLink" href="webform--defaults.html" data-tags="[&quot;marketing&quot;,&quot;blocks&quot;]" data-pjax>
+                <span>Defaults</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -689,6 +706,35 @@
         
     
         
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="webform--onboarding.html" data-tags="[&quot;marketing&quot;,&quot;blocks&quot;]" data-pjax>
+                <span>Onboarding</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #ff7700;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-persistent">
             <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-persistent-items">
                 Persistent
@@ -702,7 +748,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="footer.html" data-pjax>
+            <a class="Tree-entityLink" href="footer.html" data-tags="[&quot;marketing&quot;,&quot;blocks&quot;]" data-pjax>
                 <span>Footer</span>
                 
 
@@ -726,7 +772,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="header.html" data-pjax>
+            <a class="Tree-entityLink" href="header.html" data-tags="[&quot;marketing&quot;,&quot;blocks&quot;]" data-pjax>
                 <span>Header</span>
                 
 
@@ -910,7 +956,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="amazon.html" data-pjax>
+            <a class="Tree-entityLink" href="amazon.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Amazon</span>
                 
 
@@ -934,7 +980,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="costco.html" data-pjax>
+            <a class="Tree-entityLink" href="costco.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Costco</span>
                 
 
@@ -958,7 +1004,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="elkjop.html" data-pjax>
+            <a class="Tree-entityLink" href="elkjop.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Elkjop</span>
                 
 
@@ -982,7 +1028,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="walmart.html" data-pjax>
+            <a class="Tree-entityLink" href="walmart.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Walmart</span>
                 
 
@@ -1006,7 +1052,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="target.html" data-pjax>
+            <a class="Tree-entityLink" href="target.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Target</span>
                 
 
@@ -1030,7 +1076,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="argos.html" data-pjax>
+            <a class="Tree-entityLink" href="argos.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Argos</span>
                 
 
@@ -1054,7 +1100,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="best-buy.html" data-pjax>
+            <a class="Tree-entityLink" href="best-buy.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Best Buy</span>
                 
 
@@ -1078,7 +1124,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="currys.html" data-pjax>
+            <a class="Tree-entityLink" href="currys.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Currys</span>
                 
 
@@ -1102,7 +1148,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="dixons.html" data-pjax>
+            <a class="Tree-entityLink" href="dixons.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Dixons</span>
                 
 
@@ -1150,7 +1196,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="london-drugs.html" data-pjax>
+            <a class="Tree-entityLink" href="london-drugs.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>London Drugs</span>
                 
 
@@ -1174,7 +1220,7 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="staples.html" data-pjax>
+            <a class="Tree-entityLink" href="staples.html" data-tags="[&quot;marketing&quot;,&quot;landing&quot;]" data-pjax>
                 <span>Staples</span>
                 
 

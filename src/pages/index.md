@@ -5,7 +5,9 @@ status:
 hidden: true
 ---
 
-You can browse the component library using the navigation on the left.
+You can browse the component library using the navigation on the left, or use the search bar to find items by title or tags. 
+
+Example keyword: "marketing" 
 
 ## Component statuses
 

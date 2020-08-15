@@ -1,6 +1,7 @@
 {
   "status": "prototype",
   "order": "",
+  "tags": ["marketing", "landing"],
   "context": {
     "logoFile": "argos.svg",
     "logoWidth" : "58px",

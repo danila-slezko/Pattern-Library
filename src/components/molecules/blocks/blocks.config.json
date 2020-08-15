@@ -1,6 +1,6 @@
 {
   "label": "Blocks",
-  "tags": ["Marketing Blocks"],
+  "tags": ["marketing", "blocks"],
   "meta": { "version": "1.0" },
   "status": "ready",
   "hidden": false,

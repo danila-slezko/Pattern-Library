@@ -1,6 +1,7 @@
 {
   "status": "prototype",
   "order": "",
+  "tags": ["marketing", "landing"],
   "context": {
     "logoFile": "best-buy.svg",
     "logoWidth" : "80px",

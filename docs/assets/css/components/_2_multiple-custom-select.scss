@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 File#: _2_multiple-custom-select
 Title: Multiple Custom Select
@@ -9,6 +9,7 @@ Usage: codyhouse.co/license
 
 :root {
   --multi-select-dropdown-gap: 4px; // distance between select control and custom dropdown
+  --select-icon-right-margin: 1rem;
 }
 
 .multi-select {
@@ -37,7 +38,8 @@ Usage: codyhouse.co/license
   min-width: 200px;
   max-height: 1px; // updated in JS
   background-color: var(--color-bg);
-  box-shadow: var(--shadow-sm);
+  //box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 24px -4px rgba(black,.2), 0 0 0 1px var(--color-contrast-low);
   padding: var(--space-xxs) 0;
   border-radius: var(--radius-md);
   z-index: var(--zindex-popover);
@@ -70,8 +72,8 @@ Usage: codyhouse.co/license
   transition: visibility 0s, opacity .2s;
 }
 
-// custom <optgroup> list - include all <option>s if no <optgroup> available 
-.multi-select__list:not(:first-of-type) { 
+// custom <optgroup> list - include all <option>s if no <optgroup> available
+.multi-select__list:not(:first-of-type) {
   padding-top: var(--space-xxs);
 }
 

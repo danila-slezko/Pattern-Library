@@ -1,0 +1,19 @@
+{
+  "label": "SFDC",
+  "hidden": true,
+  "status": "ready",
+  "collated": true,
+  "default": "products",
+  "preview": "@preview-list",
+  "variants": [
+    {
+      "name": "country"
+    },
+    {
+      "name": "region"
+    },
+    {
+      "name": "state"
+    }
+  ]
+}

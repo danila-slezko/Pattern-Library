@@ -1,5 +1,6 @@
 {
   "status": "ready",
+  "tags": ["marketing", "landing"],
   "order": 4,
   "context": {
     "formTitle": "Contact us to get started.",

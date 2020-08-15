@@ -1,5 +1,6 @@
 {
   "status": "wip",
+  "tags": ["marketing", "landing"],
   "order": 6,
   "context": {
     "logoFile": "target.svg",

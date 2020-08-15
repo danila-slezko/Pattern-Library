@@ -1,0 +1,31 @@
+<fieldset>
+
+  <div class="choice-accordion  js-choice-accordion" data-animation="on">
+
+    {% for select in pickOptions %}
+    <div class="choice-accordion__item">
+      <!-- fallback -->
+      <div class="choice-accordion__fallback js-choice-accordion__fallback">
+        <input type="checkbox" id="choice-accordion-check-1" value="{{ select.value }}">
+        <label for="choice-accordion-check-1">{{ select.text }}</label>
+      </div>
+
+      <!-- control -->
+      <div class="choice-accordion__btn padding-sm js-choice-accordion__btn" aria-hidden="true">
+        <div class="choice-accordion__input choice-accordion__input--checkbox">
+          <svg class="icon" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" /></svg>
+        </div>
+        <p class="color-contrast-higher font-bold user-select-none">{{ select.text }}</p>
+      </div>
+
+      <!-- panel -->
+      <div class="choice-accordion__panel js-choice-accordion__panel">
+        <div class="text-component padding-sm">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi.</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</fieldset>

@@ -168,25 +168,25 @@ a.link-card {
   color: var(--color-contrast-medium);
 }
 
-.input-multiselect-checkbox {
-  display: flex;
-  flex-direction: column;
-  border: none;
-  outline: none;
-  appearance: none;
-  overflow: hidden;
-  option {
-    padding: .5rem 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    &:before {
-      display: block;
-      content: "";
-      background: pink;
-      height: 1rem;
-      width: 2rem;
-    }
-  }
-}
+// .input-multiselect-checkbox {
+//   display: flex;
+//   flex-direction: column;
+//   border: none;
+//   outline: none;
+//   appearance: none;
+//   overflow: hidden;
+//   option {
+//     padding: .5rem 0;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: flex-start;
+//     &:before {
+//       display: block;
+//       content: "";
+//       background: pink;
+//       height: 1rem;
+//       width: 2rem;
+//     }
+//   }
+// }

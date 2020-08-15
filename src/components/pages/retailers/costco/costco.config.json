@@ -1,6 +1,7 @@
 {
   "status": "ready",
   "order": 2,
+  "tags": ["marketing", "landing"],
   "context": {
     "logoFile": "costco.svg",
     "logoWidth" : "130px",

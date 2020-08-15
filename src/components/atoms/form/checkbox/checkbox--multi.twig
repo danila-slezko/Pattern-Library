@@ -1,11 +1,15 @@
 
 <div class="flex flex-column items-start">
-  <div class="multi-select inline-block js-multi-select" data-trigger-class="btn btn--subtle justify-between" data-no-select-text="Select options" data-multi-select-text="{n} items selected" data-n-multi-select="2">
+  <div class="multi-select inline-block js-multi-select" data-trigger-class="select__input form-control justify-between" data-no-select-text="Select options" data-multi-select-text="{n} items selected" data-n-multi-select="2">
     <select name="multiSelectThis" id="multiSelectThis" multiple>
       {% for select in pickOptions %}
       <option value="{{ select.value }}">{{ select.text }}</option>
       {% endfor %}
     </select>
-    <svg class="icon icon--xs margin-left-xxxs" aria-hidden="true" viewBox="0 0 16 16"><polygon points="3,5 8,11 13,5 "></polygon></svg>
+    <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+      <g stroke-width="2" stroke="currentColor">
+        <polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+      </g>
+    </svg>
   </div>
 </div>

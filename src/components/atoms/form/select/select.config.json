@@ -32,22 +32,19 @@
   },
   "variants": [
     {
-      "label": "Input",
-      "name": "default"
-    },
-    {
       "name": "radio"
-    },
-    {
-      "name": "accordion"
     },
     {
       "name": "dropdown",
       "status": "prototype"
     },
     {
+      "name": "accordion"
+    },
+    {
       "name": "link",
-      "status": "prototype"
+      "status": "prototype",
+      "hidden": "true"
     }
   ]
 }

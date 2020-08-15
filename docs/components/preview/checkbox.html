@@ -15,7 +15,7 @@
 <body data-theme="default" class="_preview-list" id="multiple-select">
   <div class="max-width-adaptive-md padding-md@lg padding-md">
     <main class="grid gap-lg flex-column">
-      <div class="col"><span ><!-- Start: @checkbox--checkbox -->
+      <div class="col"><span><!-- Start: @checkbox--checkbox -->
 <div class="flex flex-column gap-xxxs">
     <div>
     <input id="Ipsum1" name="Ipsum1" value="Ipsum1" class="checkbox" type="checkbox" checked="false" />
@@ -46,106 +46,114 @@
 </script>
 </span></div>
 
-<div class="col"><span ><!-- Start: @checkbox--multi -->
+<div class="col"><span><!-- Start: @checkbox--multi -->
 <div class="flex flex-column items-start">
-  <div class="multi-select inline-block js-multi-select" data-trigger-class="btn btn--subtle justify-between" data-no-select-text="Select options" data-multi-select-text="{n} items selected" data-n-multi-select="2">
+  <div class="multi-select inline-block js-multi-select" data-trigger-class="select__input form-control justify-between" data-no-select-text="Select options" data-multi-select-text="{n} items selected" data-n-multi-select="2">
     <select name="multiSelectThis" id="multiSelectThis" multiple>
             <option value="Ipsum1">Option 1</option>
             <option value="Lorem2">Option 2</option>
             <option value="Ipsum3">Option 3</option>
             <option value="Lorem4">Option 4</option>
           </select>
-    <svg class="icon icon--xs margin-left-xxxs" aria-hidden="true" viewBox="0 0 16 16"><polygon points="3,5 8,11 13,5 "></polygon></svg>
+    <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+      <g stroke-width="2" stroke="currentColor">
+        <polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+      </g>
+    </svg>
   </div>
 </div>
 </span></div>
 
-<div class="col"><span ><!-- Start: @checkbox--rows -->
+<div class="col"><span><!-- Start: @checkbox--accordion -->
 <fieldset>
 
-  <div class="choice-btns gap-xs js-choice-btns">
+  <div class="choice-accordion  js-choice-accordion" data-animation="on">
 
-        <div class="choice-btn padding-xs js-choice-btn">
+        <div class="choice-accordion__item">
       <!-- fallback -->
-      <div class="choice-btn__fallback">
-        <input type="checkbox" id="Ipsum1">
-        <label for="Ipsum1">Option 1</label>
+      <div class="choice-accordion__fallback js-choice-accordion__fallback">
+        <input type="checkbox" id="choice-accordion-check-1" value="Ipsum1">
+        <label for="choice-accordion-check-1">Option 1</label>
       </div>
 
-      <!-- custom input -->
-      <div class="choice-btn__grid" aria-hidden="true">
-        <div class="choice-btn__input choice-btn__input--checkbox">
-          <svg class="icon" viewBox="0 0 16 16">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" />
-          </svg>
+      <!-- control -->
+      <div class="choice-accordion__btn padding-sm js-choice-accordion__btn" aria-hidden="true">
+        <div class="choice-accordion__input choice-accordion__input--checkbox">
+          <svg class="icon" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" /></svg>
         </div>
+        <p class="color-contrast-higher font-bold user-select-none">Option 1</p>
+      </div>
 
-        <div class="flex flex-wrap gap-xxs justify-between">
-          <div class="color-contrast-higher font-bold">Option 1</div>
-          <div>Laboriosam omnis at minima corporis</div>
+      <!-- panel -->
+      <div class="choice-accordion__panel js-choice-accordion__panel">
+        <div class="text-component padding-sm">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi.</p>
         </div>
       </div>
     </div>
-        <div class="choice-btn padding-xs js-choice-btn">
+        <div class="choice-accordion__item">
       <!-- fallback -->
-      <div class="choice-btn__fallback">
-        <input type="checkbox" id="Lorem2">
-        <label for="Lorem2">Option 2</label>
+      <div class="choice-accordion__fallback js-choice-accordion__fallback">
+        <input type="checkbox" id="choice-accordion-check-1" value="Lorem2">
+        <label for="choice-accordion-check-1">Option 2</label>
       </div>
 
-      <!-- custom input -->
-      <div class="choice-btn__grid" aria-hidden="true">
-        <div class="choice-btn__input choice-btn__input--checkbox">
-          <svg class="icon" viewBox="0 0 16 16">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" />
-          </svg>
+      <!-- control -->
+      <div class="choice-accordion__btn padding-sm js-choice-accordion__btn" aria-hidden="true">
+        <div class="choice-accordion__input choice-accordion__input--checkbox">
+          <svg class="icon" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" /></svg>
         </div>
+        <p class="color-contrast-higher font-bold user-select-none">Option 2</p>
+      </div>
 
-        <div class="flex flex-wrap gap-xxs justify-between">
-          <div class="color-contrast-higher font-bold">Option 2</div>
-          <div>Quis laborum reprehenderit sequi</div>
+      <!-- panel -->
+      <div class="choice-accordion__panel js-choice-accordion__panel">
+        <div class="text-component padding-sm">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi.</p>
         </div>
       </div>
     </div>
-        <div class="choice-btn padding-xs js-choice-btn">
+        <div class="choice-accordion__item">
       <!-- fallback -->
-      <div class="choice-btn__fallback">
-        <input type="checkbox" id="Ipsum3">
-        <label for="Ipsum3">Option 3</label>
+      <div class="choice-accordion__fallback js-choice-accordion__fallback">
+        <input type="checkbox" id="choice-accordion-check-1" value="Ipsum3">
+        <label for="choice-accordion-check-1">Option 3</label>
       </div>
 
-      <!-- custom input -->
-      <div class="choice-btn__grid" aria-hidden="true">
-        <div class="choice-btn__input choice-btn__input--checkbox">
-          <svg class="icon" viewBox="0 0 16 16">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" />
-          </svg>
+      <!-- control -->
+      <div class="choice-accordion__btn padding-sm js-choice-accordion__btn" aria-hidden="true">
+        <div class="choice-accordion__input choice-accordion__input--checkbox">
+          <svg class="icon" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" /></svg>
         </div>
+        <p class="color-contrast-higher font-bold user-select-none">Option 3</p>
+      </div>
 
-        <div class="flex flex-wrap gap-xxs justify-between">
-          <div class="color-contrast-higher font-bold">Option 3</div>
-          <div>Laboriosam dolor adipisicing elit.</div>
+      <!-- panel -->
+      <div class="choice-accordion__panel js-choice-accordion__panel">
+        <div class="text-component padding-sm">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi.</p>
         </div>
       </div>
     </div>
-        <div class="choice-btn padding-xs js-choice-btn">
+        <div class="choice-accordion__item">
       <!-- fallback -->
-      <div class="choice-btn__fallback">
-        <input type="checkbox" id="Lorem4">
-        <label for="Lorem4">Option 4</label>
+      <div class="choice-accordion__fallback js-choice-accordion__fallback">
+        <input type="checkbox" id="choice-accordion-check-1" value="Lorem4">
+        <label for="choice-accordion-check-1">Option 4</label>
       </div>
 
-      <!-- custom input -->
-      <div class="choice-btn__grid" aria-hidden="true">
-        <div class="choice-btn__input choice-btn__input--checkbox">
-          <svg class="icon" viewBox="0 0 16 16">
-            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" />
-          </svg>
+      <!-- control -->
+      <div class="choice-accordion__btn padding-sm js-choice-accordion__btn" aria-hidden="true">
+        <div class="choice-accordion__input choice-accordion__input--checkbox">
+          <svg class="icon" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4 8-8" /></svg>
         </div>
+        <p class="color-contrast-higher font-bold user-select-none">Option 4</p>
+      </div>
 
-        <div class="flex flex-wrap gap-xxs justify-between">
-          <div class="color-contrast-higher font-bold">Option 4</div>
-          <div>Nesciunt, qui ut.</div>
+      <!-- panel -->
+      <div class="choice-accordion__panel js-choice-accordion__panel">
+        <div class="text-component padding-sm">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi.</p>
         </div>
       </div>
     </div>

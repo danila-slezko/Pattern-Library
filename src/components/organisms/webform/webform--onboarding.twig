@@ -1,11 +1,9 @@
 
 
-
-
-<section >
+<section {{ formBackground }}>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
-  <div id="formAlert" style="display:none" onclick="closeBar()">
+  <div id="fodrmAlert" style="display:none" onclick="closeBar()">
     <span>Message Sent <i class="close">×</i></span>
     <script> function closeBar() { var e = document.getElementById("formAlert"); "none" === e.style.display ? e.style.display = "block" : e.style.display = "none" }; </script>
   </div>
@@ -17,11 +15,11 @@
       <input id="captcha_settings" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}'>
       <input id="oid" type="hidden" name="oid" value="00D2000000002px">
       <input id="lead_source" type="hidden" name="lead_source" title="Lead Source" value="Landing Page">
-      <input id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" title="Lead Sub-Source" value="Client">
-      <input id="Campaign_ID" type="hidden" name="Campaign_ID" value="">
+      <input id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" title="Lead Sub-Source" value="{{ formClient }}">
+      <input id="Campaign_ID" type="hidden" name="Campaign_ID" value="{{ formCampaign }}">
       <input id="00N20000000gOZN" type="hidden" name="00N20000000gOZN">
-      <input id="retURL" type="hidden" name="retURL" value="http://cnetcontent.com?inquiry=true">
-      <input id="00N570000063NYi" type="hidden" name="00N570000063NYi" value="http://cnetcontent.com">
+      <input id="retURL" type="hidden" name="retURL" value="{{ formURL }}?inquiry=true">
+      <input id="00N570000063NYi" type="hidden" name="00N570000063NYi" value="{{ formURL }}">
       <!-- input type="hidden" name="debug" value="1">
       <input type="hidden" name="debugEmail" value="your.name@email.com" -->
       <div id="contact"></div>
@@ -30,7 +28,7 @@
           <div class="text-component line-height-md">
             <div class="grid gap-xxs items-center@md flex-column">
               <div class="col-4@md text-center@md"><h2 class="padding-top-md">Contact us to get started.</h2></div>
-              <div class="col-6@md text-center@md">Submit the form below, and a representative will reach out to you with more information about adding your content to Client.</div>
+              <div class="col-6@md text-center@md">Submit the form below, and a representative will reach out to you with more information about adding your content to {{ formClient }}.</div>
             </div>
           </div>
         </div>
@@ -109,22 +107,22 @@
           </div>
         </div>
         <br>
-            <div class="grid gap-xxs items-start">
+      {% if formPrograms %}
+      <div class="grid gap-xxs items-start">
         <div class="col-4@md text-right@md">
           <label for="00N2p000009GnpJ" class="form-label">Program Interest</label>
         </div>
         <div class="col-4@md">
           <div class="flex flex-column gap-xxxs">
-                          <input required data-parsley-multiple="service" id="Item Set Up - Best Buy" name="00N2p000009GnpJ" value="Item Set Up - Best Buy" class="checkbox" type="checkbox" />
-              <label for="Item Set Up - Best Buy"><p>Item set up</p></label>
-                          <input required data-parsley-multiple="service" id="PCC - Best Buy" name="00N2p000009GnpJ" value="PCC - Best Buy" class="checkbox" type="checkbox" />
-              <label for="PCC - Best Buy"><p>Structured content</p></label>
-                          <input required data-parsley-multiple="service" id="Rich Content - Best Buy" name="00N2p000009GnpJ" value="Rich Content - Best Buy" class="checkbox" type="checkbox" />
-              <label for="Rich Content - Best Buy"><p>Rich content</p></label>
-                      </div>
+            {% for option in formPrograms %}
+              <input required data-parsley-multiple="service" id="{{ option.value }}" name="00N2p000009GnpJ" value="{{ option.value }}" class="checkbox" type="checkbox" />
+              <label for="{{ option.value }}"><p>{{ option.name }}</p></label>
+            {% endfor %}
+          </div>
         </div>
       </div>
-            </fieldset>
+      {% endif %}
+      </fieldset>
         <div class="grid gap-sm flex-center@md flex-column">
           <div class="col">
             <p>CNET Content Solutions will use your personal information to manage the partner program.</p>
@@ -154,4 +152,3 @@
     });
   </script>
 </section>
-
