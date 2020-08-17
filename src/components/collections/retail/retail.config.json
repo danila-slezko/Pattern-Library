@@ -16,6 +16,11 @@
       "label": "CNET Advantage",
       "hidden": false,
       "status" : "wip"
+    },
+    {
+      "name": "Login Cards",
+      "hidden": false,
+      "status" : "wip"
     }
   ]
 }

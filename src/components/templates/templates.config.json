@@ -2,5 +2,7 @@
   "label": "Templates",
   "hidden": false,
   "order": 4,
-  "preview": "@preview"
+  "preview": "@preview",
+  "context" : {
+  }
 }

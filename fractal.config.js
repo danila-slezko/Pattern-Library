@@ -17,6 +17,7 @@ fractal.set('project.author', 'Valerie Mardorf');
  * COMPONENT SETTINGS
  */
 fractal.components.engine(twigAdapter);
+fractal.components.set('exclude', '**/node_modules/**');
 fractal.components.set('default.preview', '@preview-list');
 fractal.components.set('default.collator', function (markup, item) {
   return `<div class="col"><span><!-- Start: @${item.handle} -->\n${markup}\n</span></div>\n`;
@@ -78,7 +79,7 @@ fractal.web.set('builder.dest', 'docs');
  */
 const subTheme = require('@frctl/mandelbrot')({
   highlightStyles: '/themes/code.css',
-  favicon: 'favicon.ico',
+  favicon: '/favicon.ico',
   nav: ['search', 'components', 'docs'],
   panels: ['notes', 'info', 'html', 'resources', 'context'],
   styles: ['/themes/base.css', '/themes/default.css'],
