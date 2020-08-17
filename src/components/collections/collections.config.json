@@ -1,0 +1,15 @@
+{
+  "label": "Collections",
+  "tags": ["marketing", "blocks"],
+  "meta": { "version": "1.0" },
+  "status": "ready",
+  "hidden": false,
+  "collated": true,
+  "preview": "@preview",
+
+  "context" : {
+    "clientName" : "CLIENT",
+    "clientSite" : "BRAND.COM"
+  }
+
+}

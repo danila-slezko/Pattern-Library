@@ -5,6 +5,7 @@
   "context": {
     "logoFile": "argos.svg",
     "logoWidth" : "58px",
+    "formBackground" : "bg-contrast-lower",
     "formTitle": "Contact us to get started.",
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Argos.<p>",
     "formServiceA": "Article Onboarding Program",

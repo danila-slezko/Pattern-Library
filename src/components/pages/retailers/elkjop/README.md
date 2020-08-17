@@ -1,7 +1,10 @@
 
-https://elkjop.cnetcontent.com
-
-#### Europe, Middle East and Africa (EMEA)
-
-- Lead Assignment: Jack
-- Email Group: elkjop.ccssales@cbsi.com
+|                 |       |
+|-----------------|-------|
+| URL |https://elkjop.cnetcontent.com |
+| Region | Retailer Programs - EU |
+| Lead Assignment | Jack Panayi |
+| Email Group     | ElkjopMfrProgram@CBSi.com |
+| Campaign ID     | --- |
+| Article onboarding | PCC - Elkjop |
+| Inline content | Rich Content - Elkjop |

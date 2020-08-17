@@ -12,6 +12,7 @@
     "cardHeadingColor" : "color-white",
     "cardImage": "https://assets.cnetcontent.com/images/group-of-person-sitting-indoors.jpg",
     "cardTint": "black",
+    "cardOpacity": "opacity-50%",
     "cardWidth": "max-width-adaptive-md",
     "cardBlock": [
       {

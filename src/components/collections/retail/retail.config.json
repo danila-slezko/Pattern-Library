@@ -1,0 +1,21 @@
+{
+  "label": "Retail Blocks",
+  "tags": ["marketing", "blocks"],
+  "meta": { "version": "1.0" },
+  "status": "ready",
+  "default": "marketing-benefits",
+  "hidden": false,
+  "collated": false,
+  "preview": "@preview",
+  "context": {
+    "blockLayout" : "imgRight"
+  },
+  "variants": [
+    {
+      "name": "cnet advantage",
+      "label": "CNET Advantage",
+      "hidden": false,
+      "status" : "wip"
+    }
+  ]
+}

@@ -136,7 +136,7 @@ div(class="col-4@md")
   </div>
   <div class="grid gap-sm items-center@md height-xxxl">
     <div class="col-4@md text-right@md">Product Interest (2020):</div>
-    <div class="col-4@md"><select id="00N2p000009GnpJ" multiple="multiple" name="00N2p000009GnpJ" title="Product Interest (2020)">
+    <div class="col-4@md"><select id="00N2p000009GnpJ" multiple="multiple" name="00N2p000009GnpJ" title="">
         <option value="CBSI Editorial Content">CBSI Editorial Content</option>
         <option value="ChannelOnline">ChannelOnline</option>
         <option value="ChannelSupply">ChannelSupply</option>

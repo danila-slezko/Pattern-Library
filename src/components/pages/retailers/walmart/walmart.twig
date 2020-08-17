@@ -23,9 +23,8 @@
   </section>
 
 
-
   <section class="position-relative bg-cover padding-y-md" id="service" style="background-image: url('https://assets.cnetcontent.com/images/background.jpg')">
-    <span class="overlay z-index-1" style="background-color: var(--color-primary-darker)"></span>
+    <span class="overlay z-index-1 opacity-50%" style="background-color: var(--color-primary-darker)"></span>
     <div class="container position-relative z-index-2 max-width-adaptive-lg">
       <div class="text-component text-center padding-x-sm">
         <h1 class="color-white text-xxl text-xxxl@lg padding-y-xxs@lg">One partner. One complete solution.</h1>
@@ -53,6 +52,7 @@
               </main>
             </div>
             <footer class="flex bg-contrast-lower margin-top-auto">
+              <a class='btn padding-y-sm margin-auto@md' href='https://www.partneraccess.com/login'>Sign in here &#8594;</a>
             </footer>
           </div>
           <div class="link-card bg radius-lg col-6@md">
@@ -75,7 +75,9 @@
                 </ul>
               </main>
             </div>
-            <footer class="flex bg-contrast-lower margin-top-auto"><a href="https://portal.cnetcontent.com" target="_blank">Login</a></footer>
+            <footer class="flex bg-contrast-lower margin-top-auto">
+              <a class='btn padding-y-sm margin-auto@md' href='https://login.portal.cnetcontent.com/en-us/login'>Sign in here &#8594;</a>
+            </footer>
           </div>
         </div>
       </div>
@@ -83,9 +85,7 @@
   </section>
 
 
-
   {% include '@cards--cluster-01' %}
-
 
 
   <section>
@@ -105,7 +105,6 @@
       </div>
     </div>
   </section>
-
 
 
   <section>
@@ -159,7 +158,6 @@
   </section>
 
 
-
   <section>
     <div class="container max-width-adaptive-md padding-y-xl">
       <div class="grid gap-lg gap-xxxl@md items-center">
@@ -180,7 +178,7 @@
   </section>
 
 
-  {% include '@webform' %}
+  {% include '@webform--onboarding' %}
 
 
   </main>

@@ -1,14 +1,12 @@
 {
   "status": "wip",
-  "order": 1,
   "tags": ["marketing", "landing"],
+  "order": 5,
   "context": {
     "logoFile": "amazon.svg",
     "logoWidth" : "120px",
-    "formTitle": "Contact us to get started.",
-    "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Elkjop.<p>",
-    "formServiceA": "Item Set Up",
-    "formServiceB": "Product Content",
-    "formServiceC": "Rich Content (A+)"
+    "formBackground" : "bg-contrast-lower",
+    "formClient": "Amazon",
+    "formURL": "https://amazon.cnetcontent.com"
   }
 }

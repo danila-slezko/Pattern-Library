@@ -7,19 +7,20 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145377625-1"></script>
   <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-145377625-1');</script>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <title>Webforms: Defaults | Design Patterns</title>
+  <title>Webforms: SFDC Feilds | Design Patterns</title>
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" id="codyframe" href="../../assets/css/style.css" />
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
-<body data-theme="default" class="_preview-list" id="webforms-defaults">
+<body data-theme="default" class="_preview-list" id="webforms-sfdc-feilds">
   <div class="max-width-adaptive-md padding-md@lg padding-md">
     <main class="grid gap-lg flex-column">
       <div class="grid gap-sm max-width-adaptive-sm">
   <div class="col-8@md">
     <label class="form-label padding-bottom-xxxs" for="region">Region</label>
+    
 <div class="select">
-  <select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" required>
+  <select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" required data-parsley-required-message>
     <option disabled selected value>Please Select</option>
     <option>-- None --</option>
     <option value="APAC">Asia-Pacific (APAC)</option>
@@ -36,8 +37,9 @@
   </div>
   <div class="col-8@md">
     <label class="form-label padding-bottom-xxxs" for="region">Country</label>
+    
 <div class="select">
-  <select id="country" name="country" class="select__input form-control width-100%" required>
+  <select id="country" name="country" class="select__input form-control width-100%" required data-parsley-required-message>
     <option disabled selected value>Please Select</option>
     <option>-- None --</option>
     <option value="AF">Afghanistan</option>
@@ -299,8 +301,9 @@
   </div>
   <div class="col-8@md">
     <label class="form-label padding-bottom-xxxs" for="region">State</label>
+    
 <div class="select">
-  <select id="state" name="state" class="select__input form-control width-100%" required>
+  <select id="state" name="state" class="select__input form-control width-100%" required data-parsley-required-message>
     <option disabled selected value>Please Select</option>
     <option>-- None --</option>
     <option value="00">None</option>
@@ -380,8 +383,9 @@
   </div>
   <div class="col-8@md">
     <label class="form-label padding-bottom-xxxs" for="region">Product</label>
+    
 <div class="select">
-  <select id="00N20000000gOZN" name="00N20000000gOZN" class="select__input form-control width-100%" required>
+  <select id="00N20000000gOZN" name="00N20000000gOZN" class="select__input form-control width-100%" required data-parsley-required-message>
     <option disabled selected value>Please Select</option>
     <option>-- None --</option>
     <optgroup label="Product Information">

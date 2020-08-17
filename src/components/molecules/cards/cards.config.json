@@ -18,35 +18,35 @@
     "cardBlock": [
       {
         "column": "col-6@md col-4@lg",
-        "icon": "<svg viewBox='0 0 64 64' fill='var(--color-warning-darker)'><use xlink:href='#support'/></svg>",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#support'/></svg>",
         "title": "Complete Scalability",
         "text": "<p>Our production capacity is built to scale as needed.</p>",
         "footer": ""
       },
       {
         "column": "col-6@md col-4@lg",
-        "icon": "<svg viewBox='0 0 64 64' fill='var(--color-warning-darker)'><use xlink:href='#time'/></svg><svg viewBox='0 0 64 64' fill='var(--color-warning-darker)'><use xlink:href='#money'/></svg>",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#time'/></svg><svg viewBox='0 0 64 64'><use xlink:href='#money'/></svg>",
         "title": "Save Time &amp; Money",
         "text": "<p>Save your resources by leveraging our years of experience and expertise.</p>",
         "footer": ""
       },
       {
         "column": "col-6@md col-4@lg",
-        "icon": "<svg viewBox='0 0 64 64' fill='var(--color-warning-darker)'><use xlink:href='#fast'/></svg>",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#fast'/></svg>",
         "title": "Accelerated Time to Market",
         "text": "<p>Prevent content rejection and delays in going live by working with a team that already has systems and processes in place to meet Best Buy standards.</p>",
         "footer": ""
       },
       {
         "column": "col-6@md col-4@lg",
-        "icon": "<svg viewBox='0 0 64 64' fill='var(--color-warning-darker)'><use xlink:href='#trust'/></svg>",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#trust'/></svg>",
         "title": "Trusted Partnership",
         "text": "<p>With a client base of 52,000 brands and content for over 16 million SKUs, our ability to execute and deliver quality results at scale is proven.</p>",
         "footer": ""
       },
       {
         "column": "col-6@md col-4@lg",
-        "icon": "<svg viewBox='0 0 64 64' fill='var(--color-warning-darker)'><use xlink:href='#support'/></svg>",
+        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#support'/></svg>",
         "title": "Unparalleled Service & Support",
         "text": "<p>Success driven with a dedicated support team that understands your needs and gets the job done.</p>",
         "footer": ""
@@ -99,32 +99,32 @@
         "cardBlock": [
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-contrast-higher)'><use xlink:href='#sparkle'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#sparkle'/></svg>",
             "text": "<p class='padding-top-xs'>Enhance your Costco.com product pages with Rich Content in the Product Details section.</p>"
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-contrast-higher)'><use xlink:href='#marketing'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#marketing'/></svg>",
             "text": "<p class='padding-top-xs'>Tell your product story online, in your brand voice, at the point of purchase.</p>"
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-contrast-higher)'><use xlink:href='#devices'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#devices'/></svg>",
             "text": "<p class='padding-top-xs'>Syndicate that Rich Content across all Costco.com sites (desktop/mobile/app).</p>"
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-contrast-higher)'><use xlink:href='#fast'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#fast'/></svg>",
             "text": "<p class='padding-top-xs'>Publish new content quickly.</p>"
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-contrast-higher)'><use xlink:href='#settings'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#settings'/></svg>",
             "text": "<p class='padding-top-xs'>Simplify content management and maintenance.</p>"
           },
           {
             "column": "col-6@md col-4@lg",
-            "icon": "<svg viewBox='0 0 64 64' fill='var(--color-contrast-higher)'><use xlink:href='#graph'/></svg>",
+            "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#graph'/></svg>",
             "text": "<p class='padding-top-xs'>Reporting capabilities for your content.</p>"
           }
         ]

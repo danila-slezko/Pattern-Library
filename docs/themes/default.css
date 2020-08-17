@@ -461,18 +461,6 @@ textarea {
   box-sizing: inherit;
 }
 
-::-moz-selection {
-  --background-color: rgba(var(--skin-links), 0.2);
-  background-color: rgba(40, 65, 189, 0.2);
-  background-color: var(--background-color, rgba(40, 65, 189, 0.2));
-}
-
-::selection {
-  --background-color: rgba(var(--skin-links), 0.2);
-  background-color: rgba(40, 65, 189, 0.2);
-  background-color: var(--background-color, rgba(40, 65, 189, 0.2));
-}
-
 html {
   position: relative;
   height: 100%;
@@ -1342,11 +1330,12 @@ mark {
   padding: 0.75rem 0.75rem 0.875rem;
   border-bottom: 0.125rem solid transparent;
   text-align: center;
+  color: inherit;
 }
 .Browser-tab.is-active a {
-  --border-color: #2465ff;
-  border-bottom-color: var(--border-color, #2841bd);
-  font-weight: bold;
+  --border-color: var(--color-primary-dark);
+  border-bottom-color: var(--border-color, var(--color-primary-dark));
+  color: var(--color-primary-dark);
 }
 .Browser-tab.is-disabled a {
   opacity: 0.5;
@@ -1357,7 +1346,7 @@ mark {
   display: none;
   overflow: auto;
   width: 100%;
-  background-color: var(--color-contrast-lower);
+  background-color: white;
   padding: 0.75rem;
 }
 .Browser-panel.is-active {
@@ -1639,7 +1628,7 @@ mark {
   width: 240px;
   min-width: 240px;
   max-width: 480px;
-  background-color: var(--color-contrast-lower);
+  background-color: #f1f1f4;
   padding: 1rem 0;
 }
 [dir="ltr"] .Frame-panel--sidebar {
@@ -1999,7 +1988,6 @@ mark {
   --fill: rgb(var(--skin-links));
   fill: #2841bd;
   fill: var(--fill, #2841bd);
-  opacity: 0.75;
 }
 
 .Pen-previewLink:hover svg {
@@ -2363,7 +2351,7 @@ mark {
   height: 100%;
   position: absolute;
   top: 0;
-  right: 4px;
+  right: 0;
   line-height: 0;
   opacity: 0.5;
 }
@@ -2400,16 +2388,12 @@ mark {
   border: 0;
   border-radius: 0;
   color: inherit;
-  line-height: 1;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-size: var(--form-control-font-size, .875rem);
-  padding-top: var(--form-control-padding-y, 0.2em);
-  padding-bottom: var(--form-control-padding-y, 0.2em);
-  padding-left: var(--form-control-padding-x, 0.6em);
-  padding-right: var(--form-control-padding-x, 0.8em);
-  border-radius: var(--form-control-radius, 0.25em);
+  font-size: .875rem;
+  padding: 0.6rem;
+  border-radius: 0.25em;
   width: 100%;
   /* padding: 0.3125rem 2rem 0.3125rem 0.5625rem; */
   -webkit-appearance: none;
@@ -2605,7 +2589,7 @@ button.Tree-collectionLabel {
   text-decoration: none;
 }
 .is-current .Tree-entityLink {
-  background-color: #dbe4f0;
+  background-color: rgba(129, 135, 152, 20%);
 }
 .Tree-entityLink .Status {
   -webkit-margin-start: 0.25rem;

@@ -1,0 +1,47 @@
+<script>
+  function ImagePreload() {
+    if(window.devicePixelRatio > 1) {
+      imgA1 = new Image(); imgA1.src = 'https://assets.cnetcontent.com/images/features-hotspots-2x.jpg';
+      imgA4 = new Image(); imgA4.src = 'https://assets.cnetcontent.com/images/features-spin-2x.jpg';
+      imgA5 = new Image(); imgA5.src = 'https://assets.cnetcontent.com/images/features-videos-2x.jpg';
+      imgA6 = new Image(); imgA6.src = 'https://assets.cnetcontent.com/images/features-zoom-2x.jpg';
+      imgA7 = new Image(); imgA7.src = 'https://assets.cnetcontent.com/images/features-reporting-2x.jpg';
+      imgA8 = new Image(); imgA8.src = 'https://assets.cnetcontent.com/images/features-compare-2x.jpg';
+    } else {
+      imgB1 = new Image(); imgB1.src = 'https://assets.cnetcontent.com/images/features-hotspots-1x.jpg';
+      imgB4 = new Image(); imgB4.src = 'https://assets.cnetcontent.com/images/features-spin-1x.jpg';
+      imgB5 = new Image(); imgB5.src = 'https://assets.cnetcontent.com/images/features-videos-1x.jpg';
+      imgB6 = new Image(); imgB6.src = 'https://assets.cnetcontent.com/images/features-zoom-1x.jpg';
+      imgB7 = new Image(); imgB7.src = 'https://assets.cnetcontent.com/images/features-reporting-1x.jpg';
+      imgB8 = new Image(); imgB8.src = 'https://assets.cnetcontent.com/images/features-compare-1x.jpg';
+    }
+  };
+    window.onload = ImagePreload;
+    function ImageSwap(ImageID,FileName1,FileName2) {
+    document.getElementById(ImageID).src = FileName1;
+    document.getElementById(ImageID).srcset = FileName2;
+  };
+</script>
+
+<section>
+  <div class="container max-width-adaptive-md padding-y-xl">
+    <div class="grid gap-lg gap-xxxl@md items-center">
+      <div class="col-6@md order-2@md">
+        <div class="text-component line-height-lg v-space-lg">
+          <h2 class="text-lg color-black">The Costco Exclusive Offering</h2>
+          <ul class="list list--ul text-md margin-top-md@md margin-left-md@md margin-left-sm@sm">
+            <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/placeholder-4-3.jpg','https://assets.cnetcontent.com/images/placeholder-4-3.jpg')" onmouseover="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/features-hotspots-1x.jpg','https://assets.cnetcontent.com/images/features-hotspots-2x.jpg')">Interactive Hotspots</a></li>
+            <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/placeholder-4-3.jpg','https://assets.cnetcontent.com/images/placeholder-4-3.jpg')" onmouseover="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/features-videos-1x.jpg','https://assets.cnetcontent.com/images/features-videos-2x.jpg')">Videos</a></li>
+            <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/placeholder-4-3.jpg','https://assets.cnetcontent.com/images/placeholder-4-3.jpg')" onmouseover="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/features-zoom-1x.jpg','https://assets.cnetcontent.com/images/features-zoom-2x.jpg')">Image Zoom</a></li>
+            <li><a class="link" href="javascript:void(0)" onmouseout="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/placeholder-4-3.jpg','https://assets.cnetcontent.com/images/placeholder-4-3.jpg')" onmouseover="ImageSwap('jsImageSwap','https://assets.cnetcontent.com/images/features-spin-1x.jpg','https://assets.cnetcontent.com/images/features-spin-2x.jpg')">360° Product Views</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-6@md order-1@md">
+        <figure class="media-wrapper media-wrapper--4:3">
+          <img id="jsImageSwap" src="https://assets.cnetcontent.com/images/placeholder-4-3.jpg" srcset="https://assets.cnetcontent.com/images/placeholder-4-3.jpg 2x">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

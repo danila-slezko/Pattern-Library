@@ -5,6 +5,7 @@
   "context": {
     "logoFile": "currys.svg",
     "logoWidth" : "170px",
+    "formBackground" : "bg-contrast-lower",
     "formTitle": "Contact us to get started.",
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Currys.<p>",
     "formServiceA": "Article Onboarding Program",
