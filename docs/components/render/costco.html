@@ -57,22 +57,19 @@
 
   <main id="content">
 
-  <section>
-  <div class="container max-width-adaptive-md padding-y-xl">
+  <section class="padding-y-xl">
+  <div class="container max-width-adaptive-md">
     <div class="grid gap-lg gap-xxxl@md items-center">
       <div class="col-6@md order-1@md">
         <div class="text-component line-height-lg v-space-lg">
-          <h2 class="text-xl color-black">Transform your existing marketing assets into powerful digital merchandising tools on Costco.com</h2>
+          <h2 class="text-xl color-black">Enrich your Costco product pages with content that sells.</h2>
             <p>Costco has chosen CNET Content Solutions as a partner for Syndicated Rich Content for Costco.com, CostcoBusinessDelivery.com, and Costco.ca.</p>
             <a href="#contact" class="btn btn--primary">Get Started</a>
           </div>
         </div>
       <div class="col-6@md order-2@md">
         <figure class="media-wrapper media-wrapper--4:3">
-          <video poster="https://assets.cnetcontent.com/media/brand-assets-placeholder.jpg" preload autoplay loop muted playsinline nofullscreen>
-            <source src="https://assets.cnetcontent.com/media/brand-assets-placeholder.webm">
-            <source src="https://assets.cnetcontent.com/media/brand-assets-placeholder.mp4">
-          </video>
+          <img src="https://assets.cnetcontent.com/images/store-mobile-washing-1x.jpg" srcset="https://assets.cnetcontent.com/images/store-mobile-washing-2x.jpg 2x">
         </figure>
       </div>
     </div>
@@ -80,33 +77,52 @@
 </section>
 
 
-  <script>
-  function ImagePreload() {
-    if(window.devicePixelRatio > 1) {
-      imgA1 = new Image(); imgA1.src = 'https://assets.cnetcontent.com/images/features-hotspots-2x.jpg';
-      imgA4 = new Image(); imgA4.src = 'https://assets.cnetcontent.com/images/features-spin-2x.jpg';
-      imgA5 = new Image(); imgA5.src = 'https://assets.cnetcontent.com/images/features-videos-2x.jpg';
-      imgA6 = new Image(); imgA6.src = 'https://assets.cnetcontent.com/images/features-zoom-2x.jpg';
-      imgA7 = new Image(); imgA7.src = 'https://assets.cnetcontent.com/images/features-reporting-2x.jpg';
-      imgA8 = new Image(); imgA8.src = 'https://assets.cnetcontent.com/images/features-compare-2x.jpg';
-    } else {
-      imgB1 = new Image(); imgB1.src = 'https://assets.cnetcontent.com/images/features-hotspots-1x.jpg';
-      imgB4 = new Image(); imgB4.src = 'https://assets.cnetcontent.com/images/features-spin-1x.jpg';
-      imgB5 = new Image(); imgB5.src = 'https://assets.cnetcontent.com/images/features-videos-1x.jpg';
-      imgB6 = new Image(); imgB6.src = 'https://assets.cnetcontent.com/images/features-zoom-1x.jpg';
-      imgB7 = new Image(); imgB7.src = 'https://assets.cnetcontent.com/images/features-reporting-1x.jpg';
-      imgB8 = new Image(); imgB8.src = 'https://assets.cnetcontent.com/images/features-compare-1x.jpg';
-    }
-  };
-    window.onload = ImagePreload;
-    function ImageSwap(ImageID,FileName1,FileName2) {
-    document.getElementById(ImageID).src = FileName1;
-    document.getElementById(ImageID).srcset = FileName2;
-  };
-</script>
+  <section class="bg-primary-dark padding-top-xs">
+  <div class="container max-width-adaptive-sm padding-y-lg">
+    <div class="grid gap-lg gap-xxxl@md items-center">
+      <div class="col">
+        <div class="text-component line-height-md v-space-lg text-center max-width-adaptive-sm margin-auto">
+          <h2 class="text-lg text-xl@lg color-white">Extend the reach of your current digital brand assets by incorporating them into Costco product pages</h2>
+            <div class="text-component max-width-adaptive-xs margin-auto padding-y-sm">
+            <figure class="media-wrapper radius-md">
+              <video poster="https://assets.cnetcontent.com/media/brand-assets-placeholder.jpg" preload autoplay loop muted playsinline nofullscreen>
+                <source src="https://assets.cnetcontent.com/media/brand-assets-placeholder.webm">
+                <source src="https://assets.cnetcontent.com/media/brand-assets-placeholder.mp4">
+              </video>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section>
-  <div class="container max-width-adaptive-md padding-y-xl">
+  <section class="padding-y-xl">
+  <script>
+    function ImagePreload() {
+      if(window.devicePixelRatio > 1) {
+        imgA1 = new Image(); imgA1.src = 'https://assets.cnetcontent.com/images/features-hotspots-2x.jpg';
+        imgA4 = new Image(); imgA4.src = 'https://assets.cnetcontent.com/images/features-spin-2x.jpg';
+        imgA5 = new Image(); imgA5.src = 'https://assets.cnetcontent.com/images/features-videos-2x.jpg';
+        imgA6 = new Image(); imgA6.src = 'https://assets.cnetcontent.com/images/features-zoom-2x.jpg';
+        imgA7 = new Image(); imgA7.src = 'https://assets.cnetcontent.com/images/features-reporting-2x.jpg';
+        imgA8 = new Image(); imgA8.src = 'https://assets.cnetcontent.com/images/features-compare-2x.jpg';
+      } else {
+        imgB1 = new Image(); imgB1.src = 'https://assets.cnetczontent.com/images/features-hotspots-1x.jpg';
+        imgB4 = new Image(); imgB4.src = 'https://assets.cnetcontent.com/images/features-spin-1x.jpg';
+        imgB5 = new Image(); imgB5.src = 'https://assets.cnetcontent.com/images/features-videos-1x.jpg';
+        imgB6 = new Image(); imgB6.src = 'https://assets.cnetcontent.com/images/features-zoom-1x.jpg';
+        imgB7 = new Image(); imgB7.src = 'https://assets.cnetcontent.com/images/features-reporting-1x.jpg';
+        imgB8 = new Image(); imgB8.src = 'https://assets.cnetcontent.com/images/features-compare-1x.jpg';
+      }
+    };
+      window.onload = ImagePreload;
+      function ImageSwap(ImageID,FileName1,FileName2) {
+      document.getElementById(ImageID).src = FileName1;
+      document.getElementById(ImageID).srcset = FileName2;
+    };
+  </script>
+  <div class="container max-width-adaptive-md">
     <div class="grid gap-lg gap-xxxl@md items-center">
       <div class="col-6@md order-2@md">
         <div class="text-component line-height-lg v-space-lg">
@@ -277,10 +293,10 @@
       <input title="Referrer" id="00N570000063NYi" type="hidden" name="00N570000063NYi" value="https://costco.cnetcontent.com">
       <input title="Lead Source" id="lead_source" type="hidden" name="lead_source" value="Landing Page">
       <input title="Lead Sub-Source" id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" value="">
-      <input title="Campaign" id="Campaign_ID" type="hidden" name="Campaign_ID" value="">
+      <input title="Campaign" id="Campaign_ID" type="hidden" name="Campaign_ID" value="7012p000001XpD1">
       <input title="CC Product Interest" id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" value="Retail Services">
       <input title="Product Interest (2020)" id="00N2p000009GnpJ" type="hidden" name="00N2p000009GnpJ" value="Rich Content - Costco">
-            <input title="Region" id="00N2p000009H8t7" type="hidden" name="00N2p000009H8t7" value="EMEA">
+            <input title="Region" id="00N2p000009H8t7" type="hidden" name="00N2p000009H8t7" value="North America">
             <!-- input type="hidden" name="debug" value="1">
       <input type="hidden" name="debugEmail" value="your.name@email.com" -->
       <div id="contact"></div>

@@ -6,7 +6,7 @@ module.exports = {
 
     "fileAssets" : true,
 
-    "logoFile": "costco.svg",
+    "logoFile" : "costco.svg",
     "logoWidth" : "130px",
 
     "clientName" : "Costco",
@@ -15,7 +15,8 @@ module.exports = {
     "formURL" : "https://costco.cnetcontent.com",
     "formProduct" : "Retail Services",
     "formService" : "Rich Content - Costco",
-    "defaultRegion" : "EMEA"
+    "formCampaign" : "7012p000001XpD1",
+    "defaultRegion" : "North America"
 
   }
 };
