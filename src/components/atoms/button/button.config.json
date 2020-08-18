@@ -1,6 +1,6 @@
 {
   "title": "Buttons",
-  "status": "ready",
+  "status": "exported",
   "hidden": false,
   "meta": {"version": "1.0"},
   "default": "basic",

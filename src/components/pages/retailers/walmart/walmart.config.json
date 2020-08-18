@@ -1,7 +1,7 @@
 {
   "status": "ready",
   "tags": ["marketing", "landing"],
-  "order": 4,
+  "order": 2,
   "context": {
     "formBackground" : "bg-contrast-lower",
     "formTitle": "Contact us to get started.",

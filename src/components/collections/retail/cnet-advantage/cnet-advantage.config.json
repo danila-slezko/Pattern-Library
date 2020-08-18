@@ -1,0 +1,10 @@
+{
+  "label": "CNET Advantage",
+  "hidden": true,
+  "status": "wip",
+  "tags": ["marketing", "landing"],
+  "preview": "@preview",
+  "context": {
+    "clientName" : "{CLIENT}"
+  }
+}

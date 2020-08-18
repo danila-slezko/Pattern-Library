@@ -1,10 +1,10 @@
 {
   "label": "SFDC",
   "hidden": true,
-  "status": "ready",
+  "status": "wip",
   "collated": true,
-  "default": "products",
   "preview": "@preview-list",
+  "default": "products",
   "variants": [
     {
       "name": "country"

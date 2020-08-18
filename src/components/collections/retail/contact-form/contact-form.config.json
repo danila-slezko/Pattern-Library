@@ -1,0 +1,34 @@
+{
+  "hidden": false,
+  "status": "exported",
+  "preview": "@preview",
+  "context": {
+
+    "clientName" : "{{ clientName }}",
+
+    "formTest": true,
+    "formCampaign": "7012p000001XoCg",
+    "formClient": "Client",
+    "formURL": "",
+    "formProduct": "Retail Services",
+    "formEmail" : "RetailVendorSupport@CBSi.com",
+    "formCheckboxes": [
+      {
+        "name": "Item set up",
+        "value": "Item Set Up"
+      },
+      {
+        "name": "Structured content",
+        "value": "PCC - Client"
+      },
+      {
+        "name": "Rich content",
+        "value": "Rich Content"
+      }
+    ],
+
+    "formProgram" : "Default",
+    "formRegion" : "Default"
+
+  }
+}

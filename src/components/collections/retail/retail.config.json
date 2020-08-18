@@ -1,26 +1,8 @@
 {
   "label": "Retail Blocks",
-  "tags": ["marketing", "blocks"],
+  "prefix": "retail",
+  "tags": ["marketing"],
   "meta": { "version": "1.0" },
-  "status": "ready",
-  "default": "marketing-benefits",
   "hidden": false,
-  "collated": false,
-  "preview": "@preview",
-  "context": {
-    "blockLayout" : "imgRight"
-  },
-  "variants": [
-    {
-      "name": "cnet advantage",
-      "label": "CNET Advantage",
-      "hidden": false,
-      "status" : "wip"
-    },
-    {
-      "name": "Login Cards",
-      "hidden": false,
-      "status" : "wip"
-    }
-  ]
+  "collated": false
 }

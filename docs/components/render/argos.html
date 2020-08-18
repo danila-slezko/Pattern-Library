@@ -2,8 +2,7 @@
 
 <div id="page">
 
-  
-<header class="header js-header anchor" id="header">
+  <header class="header js-header anchor" id="header">
   <div class="header__container container max-width-adaptive-md">
     <div class="header__logo">
       <a href="#top">
@@ -23,47 +22,23 @@
 </svg>
       </a>
     </div>
-    <button class="btn btn--subtle header__trigger js-header__trigger"
-      aria-label="Toggle menu"
-      aria-expanded="false"
-      aria-controls="header-nav">
-      <i class="header__trigger-icon" aria-hidden="true">
-        <span class="is-hidden">Menu</span>
-      </i>
-    </button>
-    <nav class="header__nav js-header__nav"
-      id="header-nav"
-      role="navigation"
-      aria-label="Main">
+    <button class="btn btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav"><i class="header__trigger-icon" aria-hidden="true"><span class="is-hidden">Menu</span></i></button>
+    <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main">
       <div class="header__nav-inner max-width-adaptive-lg margin-auto">
-        <div class="header__label is-hidden">
-          Main menu
-        </div>
+        <div class="header__label is-hidden">Main menu</div>
         <ul class="header__list">
-                    <li class="header__item">
-            <img src="https://assets.cnetcontent.com/logos/argos.svg" width="58px">
-          </li>
+                    <li class="header__item"><img src="https://assets.cnetcontent.com/logos/argos.svg" width="58px"></li>
           <li class="header__item header__item--divider" aria-hidden="true"></li>
-                    <li class="header__item">
-            <a class="btn btn--subtle js-smooth-scroll" href="#contact" data-duration="300">
-              Contact Us
-            </a>
-          </li>
+                    <li class="header__item"><a class="btn btn--subtle js-smooth-scroll" href="#contact" data-duration="300">Contact Us</a></li>
         </ul>
       </div>
     </nav>
   </div>
 </header>
 
-  
-
-<section class='bg-contrast-lower' bg-contrast-lower>
+  <section class='bg-contrast-lower' bg-contrast-lower>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
-  <div id="fodrmAlert" style="display:none" onclick="closeBar()">
-    <span>Message Sent <i class="close">×</i></span>
-    <script> function closeBar() { var e = document.getElementById("formAlert"); "none" === e.style.display ? e.style.display = "block" : e.style.display = "none" }; </script>
-  </div>
   <script src="https://www.google.com/recaptcha/api.js" async defer="defer"></script>
   <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); </script>
 
@@ -78,15 +53,13 @@
       <input title="Campaign" id="Campaign_ID" type="hidden" name="Campaign_ID" value="">
       <input title="CC Product Interest" id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" value="">
       <input title="Product Interest (2020)" id="00N2p000009GnpJ" type="hidden" name="00N2p000009GnpJ" value="">
-            <!-- input type="hidden" name="debug" value="1">
-      <input type="hidden" name="debugEmail" value="your.name@email.com" -->
-      <div id="contact"></div>
+                  <div id="contact"></div>
       <fieldset class="margin-bottom-md border-bottom">
         <div class="margin-bottom-xs">
           <div class="text-component line-height-md">
-            <div class="grid gap-xxs items-center@md flex-column">
-              <div class="col text-center@md"><h2 class="text-xl text-xxl@lg padding-top-md">Contact us to get started.</h2></div>
-              <div class="col-8@md text-center@md">Submit the form below, and a representative will reach out to you with more information about adding your content to  sites.</div>
+            <div class="grid gap-xxs items-center flex-column">
+              <div class="col text-center"><h2 class="text-xl text-xxl@lg padding-top-md">Contact us to get started.</h2></div>
+              <div class="col-8@md text-center">Submit the form below, and a representative will reach out to you with more information about adding your content to  sites.</div>
             </div>
           </div>
         </div>
@@ -174,9 +147,9 @@
         </div>
                 <br>
             </fieldset>
-        <div class="grid gap-sm flex-center@md flex-column">
+        <div class="grid gap-sm flex-center flex-column">
           <div class="col">
-            <p>CNET Content Solutions will use your personal information to manage the partner program.</p>
+            <p class="text-center">CNET Content Solutions will use your personal information to manage the partner program.</p>
           </div>
           <div class="col-4" style="max-width: 305px">
             <label for="g-recaptcha-response" style="display:none">reCAPTCHA</label>
@@ -189,7 +162,7 @@
         <br>
     </form>
   </div>
-  <script defer>
+  <script>
     $(function () {
       $('#RetailInquiry').parsley().on('field:validated', function() {
         var ok = $('.parsley-error').length === 0;
@@ -199,62 +172,41 @@
       .on('form:submit', function() {
         if ("" == grecaptcha.getResponse()) return event.preventDefault(), alert("Please click the reCAPTCHA checkbox"), !1;
         return true; // submit form
-      });
+      })
+      if (/true|success|sent/.test(window.location.href)) {
+        $( "aside#dialog-1" ).addClass( "dialog--is-visible" );
+        $("aside#dialog-1").click(function(){
+          $("aside#dialog-1").removeClass("dialog--is-visible");
+        });
+      }
     });
   </script>
 </section>
+<aside id="dialog-1" class="dialog js-dialog bg-black bg-opacity-90%" data-animation="on">
+  <div class="dialog__content max-width-xxs" role="alertdialog" aria-labelledby="dialog-title-1" aria-describedby="dialog-description-1">
+    <div class="text-component text-center">
+      <h4 id="dialog-title-1">Message Sent!</h4>
+      <p>Thank you.</p>
+    </div>
+    <footer class="margin-top-md">
+      <div class="flex justify-end gap-xs flex-wrap justify-center">
+        <button class="btn btn--subtle js-dialog__close">Close</button>
+      </div>
+    </footer>
+  </div>
+</aside>
 
   <footer class="items-center bg-center bg-no-repeat" id="bottom" style="background-image: url('https://assets.cnetcontent.com/images/map.svg')">
   <div class="container max-width-adaptive-md padding-y-xs">
     <ul class="flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center">
-      <li
-        <a class="link padding-x-xxs padding-y-xxs inline-block"
-          href="http://cnetcontent.com"
-          target="_blank">
-          CNET Content Solutions
-        </a>
-      </li>
-      <li>
-        <a class="link padding-x-xs padding-y-xxs inline-block"
-          href="https://www.cbsinteractive.com/legal/cbsi/patents"
-          target="_blank">
-          Patents
-        </a>
-      </li>
-      <li>
-        <a class="link padding-x-xs padding-y-xxs inline-block"
-          href="https://www.cbsinteractive.com/legal/cbsi/terms-of-use"
-          target="_blank">
-          Terms of Use
-        </a>
-      </li>
-      <li>
-        <a class="link padding-x-xs padding-y-xxs inline-block"
-          href="https://www.cbsinteractive.com/legal/cbsi/privacy-policy/highlights"
-          target="_blank">
-          Privacy Policy
-        </a>
-      </li>
-      <li>
-        <a class="link padding-x-xs padding-y-xxs inline-block"
-          href="https://ca.privacy.cbs"
-          target="_blank">
-          California Privacy/Info We Collect
-        </a>
-      </li>
-      <li>
-        <a class="link padding-x-xs padding-y-xxs inline-block"
-          href="https://ca.privacy.cbs/donotsell"
-          target="_blank">
-          California Do Not Sell My Info
-        </a>
-      </li>
-      <li class=" opacity-80% padding-y-xxs">
-        ©
-        <script type="text/javascript">
-          document.write(new Date().getFullYear());
-        </script>
-        Copyright. All rights reserved.
+      <li><a class="link padding-x-xxs padding-y-xxs inline-block" href="http://cnetcontent.com" target="_blank">CNET Content Solutions</a></li>
+      <li><a class="link padding-x-xs padding-y-xxs inline-block" href="https://www.cbsinteractive.com/legal/cbsi/patents" target="_blank"> Patents</a></li>
+      <li><a class="link padding-x-xs padding-y-xxs inline-block" href="https://www.cbsinteractive.com/legal/cbsi/terms-of-use" target="_blank"> Terms of Use</a></li>
+      <li><a class="link padding-x-xs padding-y-xxs inline-block" href="https://www.cbsinteractive.com/legal/cbsi/privacy-policy/highlights" target="_blank"> Privacy Policy</a></li>
+      <li><a class="link padding-x-xs padding-y-xxs inline-block" href="https://ca.privacy.cbs" target="_blank"> California Privacy/Info We Collect</a></li>
+      <li><a class="link padding-x-xs padding-y-xxs inline-block" href="https://ca.privacy.cbs/donotsell" target="_blank"> California Do Not Sell My Info</a></li>
+      <li class="opacity-80% padding-y-xxs"> ©
+        <script type="text/javascript"> document.write(new Date().getFullYear()); </script> Copyright. All rights reserved.
       </li>
     </ul>
   </div>

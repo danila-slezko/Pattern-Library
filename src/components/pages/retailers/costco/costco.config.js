@@ -1,10 +1,9 @@
 module.exports = {
-  status : "ready",
-  order : 2,
-  tags : ["marketing", "landing"],
+  status : "exported",
+  order : 1,
+  tags : [ "marketing", "landing" ],
+  preview: "@live-landing",
   context : {
-
-    "fileAssets" : true,
 
     "logoFile" : "costco.svg",
     "logoWidth" : "130px",
@@ -12,11 +11,13 @@ module.exports = {
     "clientName" : "Costco",
     "clientSite" : "Costco.com",
 
+    "formTest": false,
     "formURL" : "https://costco.cnetcontent.com",
     "formProduct" : "Retail Services",
     "formService" : "Rich Content - Costco",
     "formCampaign" : "7012p000001XpD1",
-    "defaultRegion" : "North America"
+    "formRegion" : "North America",
+    "formEmail" : "RetailVendorSupport@CBSi.com"
 
   }
 };

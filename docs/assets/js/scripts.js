@@ -1027,6 +1027,9 @@ Math.easeOutElastic = function (t, b, c, d) {
 		});
 	}
 }());
+// File#: _1_dialog
+// Using form jquery
+
 // File#: _1_drawer
 // Usage: codyhouse.co/license
 (function() {

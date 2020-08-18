@@ -1,23 +1,21 @@
 <div id="page">
 
-  {% include '@header' %}
+  {% include '@retail-page-header' %}
 
   <main id="content">
 
   {{ source('src/components/pages/retailers/costco/_intro.twig') }}
 
-  {% include '@retail--repurpose-assets' %}
+  {% include '@retail-program-benefits' %}
 
   {{ source('src/components/pages/retailers/costco/_features.twig') }}
 
-  {% include '@retail--marketing-benefits' %}
+  {% include '@retail-service-options' %}
 
-  {% include '@retail--service-options' %}
-
-  {% include '@webform--retail-program' %}
+  {% include '@retail-contact-form' %}
 
   </main>
 
-  {% include '@footer' %}
+  {% include '@retail-page-footer' %}
 
 </div>

@@ -1,0 +1,10 @@
+{
+  "status": "exported",
+  "tags": ["marketing", "landing"],
+  "preview": "@preview",
+  "context": {
+    "blockLayout": "imgRight",
+    "clientName" : "{{ clientName }}",
+    "clientSite" : "{{ clientSite }}"
+  }
+}

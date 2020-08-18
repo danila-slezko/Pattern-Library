@@ -1,7 +1,5 @@
 
 
-
-
 <section class='bg-contrast-lower' >
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
@@ -16,22 +14,23 @@
     <form id="RetailInquiry" data-parsley-validate data-parsley-focus="first" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off">
       <input id="captcha_settings" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}'>
       <input title="Organisation" id="oid" type="hidden" name="oid" value="00D2000000002px">
-      <input title="Confirmation" id="retURL" type="hidden" name="retURL" value="https://cnetcontent.com?inquiry=true">
-      <input title="Referrer" id="00N570000063NYi" type="hidden" name="00N570000063NYi" value="https://cnetcontent.com">
+      <input title="Confirmation" id="retURL" type="hidden" name="retURL" value="?inquiry=true">
+      <input title="Referrer" id="00N570000063NYi" type="hidden" name="00N570000063NYi" value="">
       <input title="Lead Source" id="lead_source" type="hidden" name="lead_source" value="Landing Page">
       <input title="Lead Sub-Source" id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" value="Client">
-      <input title="Campaign" id="Campaign_ID" type="hidden" name="Campaign_ID" value="">
+      <input title="Campaign" id="Campaign_ID" type="hidden" name="Campaign_ID" value="7012p000001XoCg">
       <input title="CC Product Interest" id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" value="Retail Services">
-      <input title="Product Interest (2020)" id="00N2p000009GnpJ" type="hidden" name="00N2p000009GnpJ" value="Rich Content">
-            <!-- input type="hidden" name="debug" value="1">
-      <input type="hidden" name="debugEmail" value="your.name@email.com" -->
-      <div id="contact"></div>
+      <input title="Product Interest (2020)" id="00N2p000009GnpJ" type="hidden" name="00N2p000009GnpJ" value="Default">
+            <input title="Region" id="00N2p000009H8t7" type="hidden" name="00N2p000009H8t7" value="Default">
+                  <input type="hidden" name="debug" value="1">
+      <input type="hidden" name="debugEmail" value="valerie.mardorf@cbsinteractive.com">
+            <div id="contact"></div>
       <fieldset class="margin-bottom-md border-bottom">
         <div class="margin-bottom-xs">
           <div class="text-component line-height-md">
-            <div class="grid gap-xxs items-center@md flex-column">
-              <div class="col text-center@md"><h2 class="text-xl text-xxl@lg padding-top-md">Contact us to get started.</h2></div>
-              <div class="col-8@md text-center@md">Submit the form below, and a representative will reach out to you with more information about adding your content to  sites.</div>
+            <div class="grid gap-xxs items-center flex-column">
+              <div class="col text-center"><h2 class="text-xl text-xxl@lg padding-top-md">Contact us to get started.</h2></div>
+              <div class="col-8@md text-center">Submit the form below, and a representative will reach out to you with more information about adding your content to  sites.</div>
             </div>
           </div>
         </div>
@@ -85,58 +84,28 @@
             </div>
           </div>
         </div>
-                <div class="margin-bottom-xs">
-          <div class="grid gap-xxs items-center@md">
-            <div class="col-4@md text-right@md">
-              <label class="form-label" for="region">Region</label>
-            </div>
-            <div class="col-4@md">
-              <div class="select">
-                
-<div class="select">
-  <select id="00N2p000009H8t7" name="00N2p000009H8t7" class="select__input form-control width-100%" required data-parsley-required-message>
-    <option disabled selected value>Please Select</option>
-    <option>-- None --</option>
-    <option value="APAC">Asia-Pacific (APAC)</option>
-    <option value="EMEA">Europe, Middle East and Africa (EMEA)</option>
-    <option value="Latin America">Latin America</option>
-    <option value="North America">North America</option>
-  </select>
-  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
-    <g stroke-width="2" stroke="currentColor">
-      <polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
-    </g>
-  </svg>
-</div>
-                <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
-                  <g stroke-width="2" stroke="currentColor">
-                    <polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
-                  </g>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-                <br>
+                        <br>
             <div class="grid gap-xxs items-start">
         <div class="col-4@md text-right@md">
           <label for="00N2p000009GnpJ" class="form-label">Program Interest</label>
         </div>
         <div class="col-4@md">
           <div class="flex flex-column gap-xxxs">
-                          <input required data-parsley-multiple="service" id="Item Set Up" name="00N2p000009GnpJ" value="Item Set Up" class="checkbox" type="checkbox" />
+                          <input required data-parsley-multiple="service" data-required-message="Please select one or more" id="Item Set Up" name="00N2p000009GnpJ" value="Item Set Up" class="checkbox" type="checkbox" />
               <label for="Item Set Up"><p>Item set up</p></label>
-                          <input required data-parsley-multiple="service" id="PCC" name="00N2p000009GnpJ" value="PCC" class="checkbox" type="checkbox" />
+                          <input required data-parsley-multiple="service" data-required-message="Please select one or more" id="PCC" name="00N2p000009GnpJ" value="PCC" class="checkbox" type="checkbox" />
               <label for="PCC"><p>Structured content</p></label>
-                          <input required data-parsley-multiple="service" id="Rich Content" name="00N2p000009GnpJ" value="Rich Content" class="checkbox" type="checkbox" />
+                          <input required data-parsley-multiple="service" data-required-message="Please select one or more" id="Rich Content" name="00N2p000009GnpJ" value="Rich Content" class="checkbox" type="checkbox" />
               <label for="Rich Content"><p>Rich content</p></label>
-                      </div>
+                        <br>
+          </div>
         </div>
       </div>
+      <br>
             </fieldset>
-        <div class="grid gap-sm flex-center@md flex-column">
+        <div class="grid gap-sm flex-center flex-column">
           <div class="col">
-            <p>CNET Content Solutions will use your personal information to manage the partner program.</p>
+            <p class="text-center">CNET Content Solutions will use your personal information to manage the partner program.</p>
           </div>
           <div class="col-4" style="max-width: 305px">
             <label for="g-recaptcha-response" style="display:none">reCAPTCHA</label>
@@ -149,7 +118,7 @@
         <br>
     </form>
   </div>
-  <script defer>
+  <script>
     $(function () {
       $('#RetailInquiry').parsley().on('field:validated', function() {
         var ok = $('.parsley-error').length === 0;
@@ -159,8 +128,27 @@
       .on('form:submit', function() {
         if ("" == grecaptcha.getResponse()) return event.preventDefault(), alert("Please click the reCAPTCHA checkbox"), !1;
         return true; // submit form
-      });
+      })
+      if (/true|success|sent/.test(window.location.href)) {
+        $( "aside#dialog-1" ).addClass( "dialog--is-visible" );
+        $("aside#dialog-1").click(function(){
+          $("aside#dialog-1").removeClass("dialog--is-visible");
+        });
+      }
     });
   </script>
 </section>
+<aside id="dialog-1" class="dialog js-dialog bg-black bg-opacity-90%" data-animation="on">
+  <div class="dialog__content max-width-xxs" role="alertdialog" aria-labelledby="dialog-title-1" aria-describedby="dialog-description-1">
+    <div class="text-component text-center">
+      <h4 id="dialog-title-1">Message Sent!</h4>
+      <p>Thank you.</p>
+    </div>
+    <footer class="margin-top-md">
+      <div class="flex justify-end gap-xs flex-wrap justify-center">
+        <button class="btn btn--subtle js-dialog__close">Close</button>
+      </div>
+    </footer>
+  </div>
+</aside>
 

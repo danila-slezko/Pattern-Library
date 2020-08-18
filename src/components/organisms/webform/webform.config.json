@@ -6,14 +6,13 @@
   "collated": false,
   "preview": "@preview-list",
   "context": {
-    "formTitle": "Contact us to get started.",
-    "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to {{ ClientSite }}</p>",
-    "formCampaign": "",
+    "formTest": true,
+    "formCampaign": "7012p000001XoCg",
     "formClient": "Client",
-    "formURL": "https://cnetcontent.com",
+    "formURL": "",
     "formProduct": "Retail Services",
-    "formService": "Rich Content",
-    "formPrograms": [
+    "formEmail" : "Costco.CCSsales@CBSi.com",
+    "formCheckboxes": [
       {
         "name": "Item set up",
         "value": "Item Set Up"
@@ -26,26 +25,15 @@
         "name": "Rich content",
         "value": "Rich Content"
       }
-    ]
+    ],
+    "formProgram" : "Default",
+    "formRegion" : "Default"
   },
   "variants": [
     {
-      "name": "default",
-      "label": "SFDC Feilds",
-      "hidden": false
-    },
-    {
-      "name": "contact",
-      "hidden": true
-    },
-    {
-      "name": "login",
-      "hidden": true
-    },
-    {
-      "name": "onboarding",
-      "hidden": false,
-      "preview": "@preview"
+      "name": "retail program",
+      "preview": "@preview",
+      "status": "exported"
     }
   ]
 }
