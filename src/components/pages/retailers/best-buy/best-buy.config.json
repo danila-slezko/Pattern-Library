@@ -1,7 +1,6 @@
 {
   "status": "prototype",
   "order": "",
-  "tags": ["marketing", "landing"],
   "context": {
     "logoFile": "best-buy.svg",
     "logoWidth" : "80px",
@@ -10,5 +9,12 @@
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Best Buy.<p>",
     "formServiceA": "Article Onboarding Program",
     "formServiceB": "Inline Content Program"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "best buy",
+      "title": "Best Buy Partner Program"
+    }
+  ]
 }

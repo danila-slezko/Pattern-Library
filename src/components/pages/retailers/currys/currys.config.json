@@ -1,7 +1,6 @@
 {
   "status": "prototype",
   "order": "",
-  "tags": ["marketing", "landing"],
   "context": {
     "logoFile": "currys.svg",
     "logoWidth" : "170px",
@@ -10,5 +9,12 @@
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Currys.<p>",
     "formServiceA": "Article Onboarding Program",
     "formServiceB": "Inline Content Program"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "currys",
+      "title": "Currys Partner Program"
+    }
+  ]
 }

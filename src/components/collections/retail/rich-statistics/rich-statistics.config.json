@@ -1,6 +1,6 @@
 {
   "status": "ready",
-  "tags": ["marketing", "landing"],
+  "tags": ["marketing"],
   "preview": "@preview",
   "context": {
     "clientName" : "{{ clientName }}"

@@ -1,7 +1,6 @@
 {
   "status": "prototype",
   "order": "",
-  "tags": ["marketing", "landing"],
   "context": {
     "logoFile": "argos.svg",
     "logoWidth" : "58px",
@@ -10,5 +9,12 @@
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Argos.<p>",
     "formServiceA": "Article Onboarding Program",
     "formServiceB": "Inline Content Program"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "argos",
+      "title": "Argos Partner Program"
+    }
+  ]
 }

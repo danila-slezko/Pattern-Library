@@ -2,7 +2,7 @@
   "label": "CNET Advantage",
   "hidden": true,
   "status": "wip",
-  "tags": ["marketing", "landing"],
+  "tags": ["marketing"],
   "preview": "@preview",
   "context": {
     "clientName" : "{CLIENT}"

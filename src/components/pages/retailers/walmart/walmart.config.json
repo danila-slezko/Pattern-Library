@@ -1,7 +1,6 @@
 {
   "status" : "exported",
   "order" : 3,
-  "tags" : [ "marketing", "landing" ],
   "preview": "@retail-landing",
   "context" : {
 
@@ -29,7 +28,6 @@
         "value": "Rich Content - Walmart"
       }
     ],
-
     "carouselItems" : [
       {
         "url": "https://assets.cnetcontent.com/logos/corsair.svg",
@@ -102,6 +100,13 @@
         "name": "placeholder",
         "height": "144",
         "width": "144"
+      }
+    ],
+    "variants": [
+      {
+        "name": "default",
+        "label": "walmar",
+        "title": "Walmart Partner Program"
       }
     ]
   }

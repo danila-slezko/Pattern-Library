@@ -1,6 +1,5 @@
 {
   "status": "prototype",
-  "tags": ["marketing", "landing"],
   "order": "",
   "context": {
     "logoFile": "staples.svg",
@@ -10,5 +9,12 @@
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Staples.<p>",
     "formServiceA": "Article Onboarding Program",
     "formServiceB": "Inline Content Program"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "staples",
+      "title": "Staples Partner Program"
+    }
+  ]
 }

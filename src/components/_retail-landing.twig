@@ -8,22 +8,17 @@
   <link href="https://cdn.cnetcontent.com" rel="dns-prefetch"><link href="https://cdn.cnetcontent.com" rel="preconnect">
   <link href="https://assets.cnetcontent.com" rel="dns-prefetch"><link href="https://assets.cnetcontent.com" rel="preconnect">
   <link href="https://cdn.jsdelivr.net" rel="dns-prefetch"><link href="https://cdn.jsdelivr.net" rel="preconnect">
-  <title>{{ _target.label }} | CNET Content Solutions</title>
+  <title>{{ _target.title }} | CNET Content Solutions</title>
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" id="codyframe" href="https://assets.cnetcontent.com/css/style.css" />
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
-<body data-theme="default" class="_preview" id="{{ _target.title | replace({ ' ': '-' }) | replace({ ':': '' }) | lower }}">
+<body data-theme="default" class="_preview" id="{{ _target.label | replace({ ' ': '-' }) | replace({ ':': '' }) | lower }}">
 <div id="page">
-{% include '@retail-page-header' %}
-<main id="content">
-
-  {{ yield }}
-
-</main>
+{{ _target.clientSite }}
+{{ yield }}
 {% include '@retail-page-footer' %}
 </div>
 <script src="https://assets.cnetcontent.com/js/scripts.min.js"></script>
-<link rel="stylesheet" href="https://assets.cnetcontent.com/css/retail.css" />
 </body>
 </html>

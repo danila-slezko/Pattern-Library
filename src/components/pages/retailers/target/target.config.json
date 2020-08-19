@@ -1,6 +1,5 @@
 {
   "status": "wip",
-  "tags": ["marketing", "landing"],
   "order": 6,
   "context": {
     "logoFile": "target.svg",
@@ -8,5 +7,12 @@
     "formBackground" : "bg-contrast-lower",
     "formTitle": "Contact us to get started.",
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Target.<p>"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "target",
+      "title": "Target Partner Program"
+    }
+  ]
 }

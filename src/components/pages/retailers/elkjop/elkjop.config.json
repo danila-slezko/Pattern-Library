@@ -1,16 +1,12 @@
 {
   "status": "exported",
-  "tags": ["marketing", "landing"],
   "preview": "@retail-landing",
   "order": 1,
   "context" : {
-
     "logoFile" : "elkjop.svg",
     "logoWidth" : "140px",
-
     "clientName" : "Elkjop",
     "clientSite" : "Elkjop.no",
-
     "formTest": false,
     "formURL" : "https://elkjop.cnetcontent.com",
     "formProduct" : "Retail Services",
@@ -27,5 +23,12 @@
         "value": "Rich Content - Elkjop"
       }
     ]
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "elkjop",
+      "title": "Elkjop Partner Program"
+    }
+  ]
 }

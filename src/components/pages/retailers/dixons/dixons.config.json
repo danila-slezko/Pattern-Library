@@ -1,6 +1,7 @@
 {
   "status": "prototype",
-  "tags": ["marketing", "landing"],
+  "tags": ["marketing", "client"],
+  "prefix" : "client",
   "order": "",
   "context": {
     "logoFile": "dixons.svg",
@@ -10,5 +11,12 @@
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Dixons.<p>",
     "formServiceA": "Article Onboarding Program",
     "formServiceB": "Inline Content Program"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "dixons",
+      "title": "Dixons Partner Program"
+    }
+  ]
 }

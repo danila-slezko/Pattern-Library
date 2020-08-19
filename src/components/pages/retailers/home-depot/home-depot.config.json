@@ -9,5 +9,12 @@
     "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Home Depot.<p>",
     "formServiceA": "Article Onboarding Program",
     "formServiceB": "Inline Content Program"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "home depot",
+      "title": "Home Depot Partner Program"
+    }
+  ]
 }

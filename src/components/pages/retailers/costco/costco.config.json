@@ -1,7 +1,6 @@
 {
   "status" : "exported",
   "order" : 2,
-  "tags" : [ "marketing", "landing" ],
   "preview": "@retail-landing",
   "context" : {
 
@@ -18,6 +17,12 @@
     "formCampaign" : "7012p000001XpD1",
     "formRegion" : "North America",
     "formEmail" : "RetailVendorSupport@CBSi.com"
-
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "costco",
+      "title": "Costco Partner Program"
+    }
+  ]
 }

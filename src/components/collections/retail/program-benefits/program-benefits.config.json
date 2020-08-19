@@ -1,6 +1,6 @@
 {
   "status": "exported",
-  "tags": ["marketing", "landing"],
+  "tags": ["marketing"],
   "preview": "@preview",
   "context": {
     "blockLayout": "imgRight",

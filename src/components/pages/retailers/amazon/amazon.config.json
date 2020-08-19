@@ -1,12 +1,17 @@
 {
   "status": "wip",
-  "tags": ["marketing","webpage"],
   "order": 5,
   "context": {
     "logoFile": "amazon.svg",
     "logoWidth" : "120px",
-    "formBackground" : "bg-contrast-lower",
     "formClient": "Amazon",
     "formURL": "https://amazon.cnetcontent.com"
-  }
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "amazon",
+      "title": "Amazon Partner Program"
+    }
+  ]
 }
