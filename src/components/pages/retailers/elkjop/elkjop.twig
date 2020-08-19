@@ -4,32 +4,18 @@
 
   <main id="content">
 
-      <section style="background-image: url('https://assets.cnetcontent.com/images/bg-scene-wall.jpg')">
-        <div class="container max-width-adaptive-md padding-y-xl">
-          <div class="grid gap-lg gap-0@md items-center">
-            <div class="col-6@md order-1@md">
-              <div class="text-component line-height-lg v-space-lg padding-right-lg@md padding-bottom-lg@md">
-                <h2 class="text-xl color-black">Sell More Products on Elkjop</h2>
-                <p>Elkjop has partnered with CNET Content Solution to source structured and rich merchandising content as a part of the setup process for products sold on Elkjop.</p>
-                <a href="#contact" class="btn btn--primary margin-bottom-md">Get Started</a>
-              </div>
-            </div>
-            <div class="col-6@md order-2@md">
-              <figure style="margin: auto -4rem; auto 0" class="padding-top-md@md">
-                <img src="https://assets.cnetcontent.com/images/elkjop-desktop-1x.png" srcset="https://assets.cnetcontent.com/images/elkjop-desktop-2x.png 2x">
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
+    {{ source('src/components/pages/retailers/elkjop/_intro.twig') }}
 
-      {% include '@cards--cluster-02' %}
+    {{ source('src/components/pages/retailers/elkjop/_logins.twig') }}
+    <div style="display:none">
+    {{ source('src/public/icons/login-cards.svg') }}
+    </div>
 
-      {% include '@retail-rich-statistics' %}
+    {% include '@retail-rich-statistics' %}
 
-      {% include '@retail-service-options' with { blockLayout: 'imgLeft' } %}
+    {% include '@retail-service-options' with { blockLayout: 'imgLeft' } %}
 
-      {% include '@retail-contact-form' %}
+    {% include '@retail-contact-form' %}
 
   </main>
 

@@ -14,6 +14,7 @@ module.exports = {
     "formURL": "https://walmart.cnetcontent.com",
     "formProduct": "Retail Services",
     "formEmail" : "Walmart.CCSsales@CBSi.com",
+    "formRegion" : "North America",
     "formCheckboxes": [
       {
         "name": "Item set up",
@@ -28,7 +29,6 @@ module.exports = {
         "value": "Rich Content - Walmart"
       }
     ],
-
     "carouselItems" : [
       {
         "url": "https://assets.cnetcontent.com/logos/corsair.svg",
@@ -103,6 +103,5 @@ module.exports = {
         "width": "144"
       }
     ]
-
   }
 };

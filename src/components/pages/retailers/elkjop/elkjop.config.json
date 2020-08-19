@@ -2,44 +2,21 @@
   "status": "exported",
   "tags": ["marketing", "landing"],
   "preview": "@retail-landing",
-  "order": 3,
-  "meta": {
-    "url": "https://elkjop.cnetcontent.com"
-  },
-  "context": {
-    "logoFile": "elkjop.svg",
+  "order": 1,
+  "context" : {
+
+    "logoFile" : "elkjop.svg",
     "logoWidth" : "140px",
-    "cardHeading": "One partner. One complete solution.",
-    "cardHeadingColor" : "color-white",
-    "cardImage": "https://assets.cnetcontent.com/images/group-of-person-sitting-indoors.jpg",
-    "cardTint": "black",
-    "cardOpacity": "opacity-50%",
-    "cardWidth": "max-width-adaptive-md",
-    "cardBlock": [
-      {
-        "column": "col-6@lg",
-        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#spec'/></svg>",
-        "span": "col-2@lg",
-        "title": "Article Onboarding Program",
-        "text": "<ul class='list list--ul margin-left-xs'><li>Technical Specifications</li><li>Product Attributes</li><li>Images</li><li>Key Selling Points</li><li>Product Features</li></ul><p>Already have a PartnerAccess for Elkjop account?</p>",
-        "footer" :"<a class='btn padding-y-sm margin-auto@md' href='https://www.partneraccess.com/login' target='_blank'>Sign in here &#8594;</a>"
-      },
-      {
-        "column": "col-6@lg",
-        "icon": "<svg viewBox='0 0 64 64'><use xlink:href='#media'/></svg>",
-        "span": "col-2@lg",
-        "title": "Inline Content Program",
-        "text": "<ul class='list list--ul margin-left-xs'><li>Interactive Hotspot Imagery</li><li>Image Zoom and 360° Product Views</li><li>Videos</li><li>Comparison Charts</li><li>Detailed Reporting</li></ul><p>Already have a Content Portal account?</p>",
-        "footer" :"<a class='btn padding-y-sm margin-auto@md' href='https://portal.cnetcontent.com/' target='_blank'>Sign in here &#8594;</a>"
-      }
-    ],
-    "formBackground": "class='bg-contrast-lower'",
-    "formTitle": "Contact us to get started.",
-    "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Client.com</p>",
-    "formCampaign": "",
-    "formClient": "Elkjop",
-    "formURL": "https://elkjop.cnetcontent.com",
-    "formPrograms": [
+
+    "clientName" : "Elkjop",
+    "clientSite" : "Elkjop.no",
+
+    "formTest": false,
+    "formURL" : "https://elkjop.cnetcontent.com",
+    "formProduct" : "Retail Services",
+    "formRegion" : "EMEA",
+    "formEmail" : "ElkjopMfrProgram@CBSi.com",
+    "formCheckboxes": [
       {
         "name": "Article onboarding",
         "value": "PCC - Elkjop"
