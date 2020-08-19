@@ -1,14 +1,14 @@
-module.exports = {
-  status : "exported",
-  order : 3,
-  tags : [ "marketing", "landing" ],
-  preview: "@retail-landing",
-  context : {
+{
+  "status" : "exported",
+  "order" : 3,
+  "tags" : [ "marketing", "landing" ],
+  "preview": "@retail-landing",
+  "context" : {
 
     "clientName" : "Walmart",
     "clientSite" : "Walmart.com",
 
-    "formTest": true,
+    "formTest": false,
     "formCampaign": "7012p000001XpCx",
     "formClient": "Walmart",
     "formURL": "https://walmart.cnetcontent.com",
@@ -29,6 +29,7 @@ module.exports = {
         "value": "Rich Content - Walmart"
       }
     ],
+
     "carouselItems" : [
       {
         "url": "https://assets.cnetcontent.com/logos/corsair.svg",
@@ -104,4 +105,4 @@ module.exports = {
       }
     ]
   }
-};
+}

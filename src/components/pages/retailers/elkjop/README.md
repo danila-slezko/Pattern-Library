@@ -1,10 +1,7 @@
 
 |                 |       |
 |-----------------|-------|
-| URL |https://elkjop.cnetcontent.com |
-| Region | Retailer Programs - EU |
+| Live URL |https://elkjop.cnetcontent.com |
 | Lead Assignment | Jack Panayi |
 | Email Group     | ElkjopMfrProgram@CBSi.com |
-| Campaign ID     | --- |
-| Article onboarding | PCC - Elkjop |
-| Inline content | Rich Content - Elkjop |
+| Campaign ID     | https://eu26.salesforce.com/7012p000001XoCg |

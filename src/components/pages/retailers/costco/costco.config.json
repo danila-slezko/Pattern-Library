@@ -1,9 +1,9 @@
-module.exports = {
-  status : "exported",
-  order : 2,
-  tags : [ "marketing", "landing" ],
-  preview: "@retail-landing",
-  context : {
+{
+  "status" : "exported",
+  "order" : 2,
+  "tags" : [ "marketing", "landing" ],
+  "preview": "@retail-landing",
+  "context" : {
 
     "logoFile" : "costco.svg",
     "logoWidth" : "130px",
@@ -20,4 +20,4 @@ module.exports = {
     "formEmail" : "RetailVendorSupport@CBSi.com"
 
   }
-};
+}
