@@ -1,41 +1,29 @@
-<div id="page">
+{{ source('src/components/pages/retailers/walmart/_intro.twig') }}
 
-  {% include '@retail-page-header' %}
-
-<main id="content">
-
-  {{ source('src/components/pages/retailers/walmart/_intro.twig') }}
-
-  {{ source('src/components/pages/retailers/walmart/_logins.twig') }}
-  <div style="display:none">
-  {{ source('src/public/icons/login-cards.svg') }}
-  </div>
-
-  {{ source('src/components/pages/retailers/walmart/_buisness.twig') }}
-  <div style="display:none">
-  {{ source('src/public/icons/business-benefits.svg') }}
-  </div>
-
-  {{ source('src/components/pages/retailers/walmart/_items.twig') }}
-
-  {{ source('src/components/pages/retailers/walmart/_features.twig') }}
-
-  {% include '@retail-service-options' %}
-
-  <section class="border-top margin-top-md padding-y-md">
-    <div class="container max-width-adaptive-md padding-y-lg">
-      <div class="text-component text-center padding-x-sm">
-        <h1 class="color-black text-lg text-xl@md padding-y-xxs@lg">20+ years as the global leader in product content managed services.</h1>
-        <p class="font-medium">We help brands deliver complete, accurate, compliant product content when and where it matters.</p>
-      </div>
-      {% include '@carousel' %}
-    </div>
-  </section>
-
-  {% include '@retail-contact-form' %}
-
-  </main>
-
-  {% include '@retail-page-footer' %}
-
+{{ source('src/components/pages/retailers/walmart/_logins.twig') }}
+<div style="display:none">
+{{ source('src/public/icons/login-cards.svg') }}
 </div>
+
+{{ source('src/components/pages/retailers/walmart/_buisness.twig') }}
+<div style="display:none">
+{{ source('src/public/icons/business-benefits.svg') }}
+</div>
+
+{{ source('src/components/pages/retailers/walmart/_items.twig') }}
+
+{{ source('src/components/pages/retailers/walmart/_features.twig') }}
+
+{% include '@retail-service-options' %}
+
+<section class="border-top margin-top-md padding-y-md">
+  <div class="container max-width-adaptive-md padding-y-lg">
+    <div class="text-component text-center padding-x-sm">
+      <h1 class="color-black text-lg text-xl@md padding-y-xxs@lg">20+ years as the global leader in product content managed services.</h1>
+      <p class="font-medium">We help brands deliver complete, accurate, compliant product content when and where it matters.</p>
+    </div>
+    {% include '@carousel' %}
+  </div>
+</section>
+
+{% include '@retail-contact-form' %}

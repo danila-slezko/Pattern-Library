@@ -5,7 +5,7 @@ status:
 hidden: true
 ---
 
-Browse the component library using the navigation on the left, use the search bar to filter items by keyword... like: marketing, client or shop.
+Browse the component library with the navigation on the left, use the search bar to filter items by keyword... like: marketing, client or shop.
 
 <svg width="832px" height="320px" style="max-width: 640px" viewBox="0 0 832 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="graphic">

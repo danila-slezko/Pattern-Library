@@ -226,15 +226,6 @@
         <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'bg-contrast-lower'</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fodrmAlert"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display:none"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"closeBar()"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Message Sent <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"close"</span>&gt;</span>×<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-            <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">closeBar</span>(<span class="hljs-params"></span>) </span>{
-                <span class="hljs-keyword">var</span> e = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"formAlert"</span>);
-                <span class="hljs-string">"none"</span> === e.style.display ? e.style.display = <span class="hljs-string">"block"</span> : e.style.display = <span class="hljs-string">"none"</span>
-            };
-        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.google.com/recaptcha/api.js"</span> <span class="hljs-attr">async</span> <span class="hljs-attr">defer</span>=<span class="hljs-string">"defer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
         <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">timestamp</span>(<span class="hljs-params"></span>) </span>{
@@ -384,7 +375,7 @@
         });
     </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dialog-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dialog js-dialog bg-black bg-opacity-90%"</span> <span class="hljs-attr">data-animation</span>=<span class="hljs-string">"on"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dialog-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dialog js-dialog bg-opacity-90%"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background: black"</span> <span class="hljs-attr">data-animation</span>=<span class="hljs-string">"on"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dialog__content max-width-xxs"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alertdialog"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"dialog-title-1"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"dialog-description-1"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component text-center"</span>&gt;</span>
             <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"dialog-title-1"</span>&gt;</span>Message Sent!<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>

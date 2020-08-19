@@ -1,24 +1,13 @@
-<div id="page">
 
-  {% include '@retail-page-header' %}
+{{ source('src/components/pages/retailers/elkjop/_intro.twig') }}
 
-  <main id="content">
-
-    {{ source('src/components/pages/retailers/elkjop/_intro.twig') }}
-
-    {{ source('src/components/pages/retailers/elkjop/_logins.twig') }}
-    <div style="display:none">
-    {{ source('src/public/icons/login-cards.svg') }}
-    </div>
-
-    {% include '@retail-rich-statistics' %}
-
-    {% include '@retail-service-options' with { blockLayout: 'imgLeft' } %}
-
-    {% include '@retail-contact-form' %}
-
-  </main>
-
-  {% include '@retail-page-footer' %}
-
+{{ source('src/components/pages/retailers/elkjop/_logins.twig') }}
+<div style="display:none">
+{{ source('src/public/icons/login-cards.svg') }}
 </div>
+
+{% include '@retail-rich-statistics' %}
+
+{% include '@retail-service-options' with { blockLayout: 'imgLeft' } %}
+
+{% include '@retail-contact-form' %}

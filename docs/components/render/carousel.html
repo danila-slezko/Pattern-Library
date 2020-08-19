@@ -1,15 +1,7 @@
 
 
-<style>
-  :root {
-    --carousel-item-auto-size: 144px;
-    --carousel-grid-gap: var(--space-xxs);
-  }
-</style>
-
 <div class="carousel flex flex-column js-carousel" data-drag="on">
   <p class="sr-only">Carousel items</p>
-
   <div class="carousel__wrapper order-1 overflow-hidden">
     <ol class="carousel__list">
             <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/whirlpool.svg"></li>
@@ -34,10 +26,8 @@
             <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/asus.svg"></li>
           </ol>
   </div>
-
   <div class="order-2 no-js:is-hidden">
     <div class="flex justify-center items-center">
-      <!--p class="color-contrast-medium font-medium font-secondary"><i class="js-carousel__counter"></i> / <i class="js-carousel__counter-tot"></i></p-->
       <nav>
         <ul class="flex gap-xxxs justify-center">
           <li>
@@ -48,7 +38,6 @@
               </svg>
             </button>
           </li>
-
           <li>
             <button class="reset carousel__control carousel__control--next js-carousel__control js-tab-focus">
               <svg class="icon" viewBox="0 0 20 20">
@@ -61,6 +50,5 @@
       </nav>
     </div>
   </div>
-
 </div>
 

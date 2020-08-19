@@ -1,21 +1,11 @@
-<div id="page">
 
-  {% include '@retail-page-header' %}
 
-  <main id="content">
+{{ source('src/components/pages/retailers/costco/_intro.twig') }}
 
-  {{ source('src/components/pages/retailers/costco/_intro.twig') }}
+{% include '@retail-program-benefits' %}
 
-  {% include '@retail-program-benefits' %}
+{{ source('src/components/pages/retailers/costco/_features.twig') }}
 
-  {{ source('src/components/pages/retailers/costco/_features.twig') }}
+{% include '@retail-service-options' %}
 
-  {% include '@retail-service-options' %}
-
-  {% include '@retail-contact-form' %}
-
-  </main>
-
-  {% include '@retail-page-footer' %}
-
-</div>
+{% include '@retail-contact-form' %}

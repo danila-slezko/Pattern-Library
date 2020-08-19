@@ -14,7 +14,9 @@
       <input title="Lead Sub-Source" id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" value="{{ formClient }}">
       <input title="Campaign" id="Campaign_ID" type="hidden" name="Campaign_ID" value="{{ formCampaign }}">
       <input title="CC Product Interest" id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" value="{{ formProduct }}">
+      {% if formProgram %}
       <input title="Product Interest (2020)" id="00N2p000009GnpJ" type="hidden" name="00N2p000009GnpJ" value="{{ formProgram }}">
+      {% endif %}
       {% if formRegion %}
       <input title="Region" id="00N2p000009H8t7" type="hidden" name="00N2p000009H8t7" value="{{ formRegion }}">
       {% endif %}

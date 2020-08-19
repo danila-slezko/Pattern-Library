@@ -3,10 +3,6 @@
 <section class='bg-contrast-lower' >
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
-  <div id="fodrmAlert" style="display:none" onclick="closeBar()">
-    <span>Message Sent <i class="close">×</i></span>
-    <script> function closeBar() { var e = document.getElementById("formAlert"); "none" === e.style.display ? e.style.display = "block" : e.style.display = "none" }; </script>
-  </div>
   <script src="https://www.google.com/recaptcha/api.js" async defer="defer"></script>
   <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); </script>
 
@@ -20,8 +16,8 @@
       <input title="Lead Sub-Source" id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" value="Client">
       <input title="Campaign" id="Campaign_ID" type="hidden" name="Campaign_ID" value="7012p000001XoCg">
       <input title="CC Product Interest" id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" value="Retail Services">
-      <input title="Product Interest (2020)" id="00N2p000009GnpJ" type="hidden" name="00N2p000009GnpJ" value="Default">
-            <input title="Region" id="00N2p000009H8t7" type="hidden" name="00N2p000009H8t7" value="Default">
+            <input title="Product Interest (2020)" id="00N2p000009GnpJ" type="hidden" name="00N2p000009GnpJ" value="Default">
+                  <input title="Region" id="00N2p000009H8t7" type="hidden" name="00N2p000009H8t7" value="Default">
                   <input type="hidden" name="debug" value="1">
       <input type="hidden" name="debugEmail" value="valerie.mardorf@cbsinteractive.com">
             <div id="contact"></div>
@@ -138,7 +134,7 @@
     });
   </script>
 </section>
-<aside id="dialog-1" class="dialog js-dialog bg-black bg-opacity-90%" data-animation="on">
+<aside id="dialog-1" class="dialog js-dialog bg-opacity-90%" style="background: black" data-animation="on">
   <div class="dialog__content max-width-xxs" role="alertdialog" aria-labelledby="dialog-title-1" aria-describedby="dialog-description-1">
     <div class="text-component text-center">
       <h4 id="dialog-title-1">Message Sent!</h4>
