@@ -39,7 +39,6 @@
   <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer="defer"></script>
   <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); </script>
-
   <div class="container max-width-adaptive-md margin-auto form-template-v3 v-space-sm padding-bottom-md">
     <form id="RetailInquiry" data-parsley-validate data-parsley-focus="first" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off">
       <input id="captcha_settings" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}'>
@@ -66,7 +65,7 @@
               <label class="form-label" for="first_name">First Name</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="first_name" type="text" name="first_name" required data-parsley-required-message>
+              <input class="form-control width-100%" id="first_name" type="text" name="first_name" required data-parsley-required-message data-parsley-errors-container="#hideFieldError">
             </div>
           </div>
         </div>
@@ -76,7 +75,7 @@
               <label class="form-label" for="last_name">Last Name</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="last_name" type="text" name="last_name" required data-parsley-required-message>
+              <input class="form-control width-100%" id="last_name" type="text" name="last_name" required data-parsley-required-message data-parsley-errors-container="#hideFieldError">
             </div>
           </div>
         </div>
@@ -86,7 +85,7 @@
               <label class="form-label" for="company">Company</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="company" type="text" name="company" required data-parsley-required-message>
+              <input class="form-control width-100%" id="company" type="text" name="company" required data-parsley-required-message data-parsley-errors-container="#hideFieldError">
             </div>
           </div>
         </div>
@@ -96,7 +95,7 @@
               <label class="form-label" for="phone">Company Phone</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="phone" type="text" name="phone" required data-parsley-required-message>
+              <input class="form-control width-100%" id="phone" type="text" name="phone" required data-parsley-required-message data-parsley-errors-container="#hideFieldError">
             </div>
           </div>
         </div>
@@ -106,7 +105,7 @@
               <label class="form-label" for="email">Work Email</label>
             </div>
             <div class="col-4@md">
-              <input class="form-control width-100%" id="email" type="email" name="email" data-parsley-trigger="change" required data-parsley-required-message>
+              <input class="form-control width-100%" id="email" type="email" name="email" data-parsley-trigger="change" required data-parsley-required-message data-parsley-errors-container="#hideFieldError">
             </div>
           </div>
         </div>
