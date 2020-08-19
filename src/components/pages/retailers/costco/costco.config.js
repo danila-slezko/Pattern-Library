@@ -1,8 +1,8 @@
 module.exports = {
   status : "exported",
-  order : 1,
+  order : 2,
   tags : [ "marketing", "landing" ],
-  preview: "@live-landing",
+  preview: "@retail-landing",
   context : {
 
     "logoFile" : "costco.svg",

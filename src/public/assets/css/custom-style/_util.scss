@@ -64,16 +64,16 @@ html {
 }
 
 cite {
-  display: inline-block;
   padding: 4px 0;
   text-decoration: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4px' height='2px' viewBox='0 0 4 2' %3E%3Ccircle fill='currentColor' opacity='60%' id='Oval' cx='1' cy='1' r='1'%3E%3C/circle%3E%3C/svg%3E");
   background-repeat: repeat-x;
-  background-position: 0 85%;
+  background-position: 0 100%;
   background-size: 2px 4px;
   position: relative;
   background-color: transparent;
   color: var(--color-black);
+  font-weight: 500;
 }
 
 .overlay {
@@ -84,9 +84,6 @@ cite {
   position: absolute;
 }
 
-li::before {
-  color: var(--color-error-dark) !important;
-}
 
 /*
  * --------------------------------
@@ -111,7 +108,8 @@ a.link-card {
   overflow: hidden;
   figure {
     height: 64px;
-    fill: var(--color-primary-dark);
+    width: 64px;
+    fill: var(--color-primary);
     svg {
       max-height: 64px;
       max-width: 64px;

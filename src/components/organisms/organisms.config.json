@@ -2,6 +2,5 @@
   "label": "Organisms",
   "hidden": false,
   "order": 3,
-  "preview": "@preview",
-  "tags": ["marketing", "blocks"]
+  "preview": "@preview"
 }

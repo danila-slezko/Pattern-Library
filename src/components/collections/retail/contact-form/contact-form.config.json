@@ -15,7 +15,7 @@
     "formCheckboxes": [
       {
         "name": "Item set up",
-        "value": "Item Set Up"
+        "value": "Item Set Up - Client"
       },
       {
         "name": "Structured content",
@@ -23,7 +23,7 @@
       },
       {
         "name": "Rich content",
-        "value": "Rich Content"
+        "value": "Rich Content - Client"
       }
     ],
 

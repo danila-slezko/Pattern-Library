@@ -52,15 +52,16 @@ Usage: codyhouse.co/license
 }
 
 .list--ul { // unordered list
-  --bullet-size: 6px; // dot width and height
+  --bullet-size: 5px; // dot width and height
   --bullet-margin-right: var(--space-xxs); // gap between bullet and content
 
   li::before { // bullet
     content: '';
     border-radius: 50%;
-    color: var(--color-primary); // bullet color
+    color: var(--color-error-dark); // bullet color
     background-color: currentColor;
     border: 2px solid currentColor;
+    opacity: .9;
   }
 
   ul li::before {

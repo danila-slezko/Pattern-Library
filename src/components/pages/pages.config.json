@@ -1,0 +1,14 @@
+{
+  "label": "Pages",
+  "tags": ["landing"],
+  "meta": { "version": "1.0" },
+  "status": "ready",
+  "hidden": false,
+  "collated": true,
+  "preview": "@preview",
+  "context" : {
+    "clientName" : "CLIENT",
+    "clientSite" : "BRAND.COM"
+  }
+
+}

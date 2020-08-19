@@ -1,6 +1,7 @@
 {
-  "status": "ready",
+  "status": "exported",
   "tags": ["marketing", "landing"],
+  "preview": "@retail-landing",
   "order": 3,
   "meta": {
     "url": "https://elkjop.cnetcontent.com"

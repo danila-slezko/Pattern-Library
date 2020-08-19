@@ -33,7 +33,8 @@
     {
       "name": "retail program",
       "preview": "@preview",
-      "status": "exported"
+      "status": "exported",
+      "hidden": true
     }
   ]
 }

@@ -1,11 +1,7 @@
-|                 |       |       |
-|-----------------|-------|-------|
-| URL | https://walmart.cnetcontent.com      |       |
-| Lead Assignment | Marcy Stokes      |       |
-| Email Group     | walmart.ccssales@cbsi.com      |       |
-| Campaign ID     |       |       |
-| Portal ID       |       |       |
-| Item Setup           | Yes    |       |
-| Inline Content       | Yes    |       |
-| Retail PartnerAccess | Yes    |       |
-| Other                | ---     |       |
+|                 |       |
+|-----------------|-------|
+| Live URL        | https://walmart.cnetcontent.com |
+| Lead Assignment | Marcy Stokes |
+| Email Group     | Walmart.CCSsales@CBSi.com |
+| Campaign        | https://eu26.salesforce.com/7012p000001XpCx |
+| Portal ID       |       |

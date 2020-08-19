@@ -7,7 +7,16 @@
 //   xl: 90rem
 // );
 
+// :root {
+//   --color-primary-darker: rgb(31, 35, 122);
+//   --color-white: white;
+//   --text-base-size: 16px;
+//   --color-primary: rgb(36, 101, 255);
+//   --color-contrast-higher: rgb(42, 49, 70);
+//   --color-contrast-low: rgb(214, 215, 220);
+// }
+
 @import '../../../../node_modules/codyhouse-framework/main/assets/css/base';
-//@import 'custom-style/**/*.scss';
 @import 'custom-style';
+//@import 'custom-style/**/*.scss';
 @import 'components/**/*.scss';

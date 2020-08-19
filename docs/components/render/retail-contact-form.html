@@ -82,17 +82,20 @@
         </div>
                         <br>
             <div class="grid gap-xxs items-start">
+        <div class="offset-4@md col-4@md" id="listFieldError"></div>
+      </div>
+      <div class="grid gap-xxs items-start">
         <div class="col-4@md text-right@md">
           <label for="00N2p000009GnpJ" class="form-label">Program Interest</label>
         </div>
         <div class="col-4@md">
           <div class="flex flex-column gap-xxxs">
-                          <input required data-parsley-multiple="service" data-required-message="Please select one or more" id="Item Set Up" name="00N2p000009GnpJ" value="Item Set Up" class="checkbox" type="checkbox" />
-              <label for="Item Set Up"><p>Item set up</p></label>
-                          <input required data-parsley-multiple="service" data-required-message="Please select one or more" id="PCC - Client" name="00N2p000009GnpJ" value="PCC - Client" class="checkbox" type="checkbox" />
+                          <input required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="Item Set Up - Client" name="00N2p000009GnpJ" value="Item Set Up - Client" class="checkbox" type="checkbox" />
+              <label for="Item Set Up - Client"><p>Item set up</p></label>
+                          <input required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="PCC - Client" name="00N2p000009GnpJ" value="PCC - Client" class="checkbox" type="checkbox" />
               <label for="PCC - Client"><p>Structured content</p></label>
-                          <input required data-parsley-multiple="service" data-required-message="Please select one or more" id="Rich Content" name="00N2p000009GnpJ" value="Rich Content" class="checkbox" type="checkbox" />
-              <label for="Rich Content"><p>Rich content</p></label>
+                          <input required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="Rich Content - Client" name="00N2p000009GnpJ" value="Rich Content - Client" class="checkbox" type="checkbox" />
+              <label for="Rich Content - Client"><p>Rich content</p></label>
                         <br>
           </div>
         </div>

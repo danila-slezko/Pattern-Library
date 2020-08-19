@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 File#: _1_custom-select
 Title: Custom Select
@@ -16,12 +16,18 @@ Usage: codyhouse.co/license
 
 .select {
   position: relative;
+  display: inline-flex;
+  option {
+    line-height: 1rem;
+    margin: -2px auto 2px;
+  }
 }
 
 .select__input {
   width: 100%;
   height: 100%;
-  padding-right: calc(var(--select-icon-size) + var(--select-icon-right-margin) + var(--select-text-icon-gap)) !important;
+  //padding-right: calc(var(--select-icon-size) + var(--select-icon-right-margin) + var(--select-text-icon-gap)) !important;
+  padding: .9375rem 2.625rem .75rem 1rem;
 }
 
 .select__icon {
@@ -45,7 +51,7 @@ Usage: codyhouse.co/license
 
 .select__button[aria-expanded="true"] {
   // custom select control if dropdown = visible
-} 
+}
 
 .select__dropdown { // created in JS - custom select dropdown
   position: absolute;
@@ -87,12 +93,12 @@ Usage: codyhouse.co/license
   transition: visibility 0s, opacity .2s;
 }
 
-// custom <optgroup> list - include all <option>s if no <optgroup> available 
+// custom <optgroup> list - include all <option>s if no <optgroup> available
 .select__list {
   list-style: none !important;
 }
 
-.select__list:not(:first-of-type) { 
+.select__list:not(:first-of-type) {
   padding-top: var(--space-xxs);
 }
 

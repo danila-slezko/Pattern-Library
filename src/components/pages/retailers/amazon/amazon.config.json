@@ -1,6 +1,6 @@
 {
   "status": "wip",
-  "tags": ["marketing", "landing"],
+  "tags": ["marketing","webpage"],
   "order": 5,
   "context": {
     "logoFile": "amazon.svg",
