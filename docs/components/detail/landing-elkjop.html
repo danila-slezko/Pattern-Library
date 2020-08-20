@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-context">Context</a>
         </li>
         
         
@@ -134,14 +128,20 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-info">Info</a>
+        </li>
         
         
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-notes">Notes</a>
         </li>
         
         
@@ -150,100 +150,35 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Live URL</td>
-<td><a href="https://elkjop.cnetcontent.com">https://elkjop.cnetcontent.com</a></td>
-</tr>
-<tr>
-<td>Lead Assignment</td>
-<td>Jack Panayi</td>
-</tr>
-<tr>
-<td>Email Group</td>
-<td><a href="mailto:ElkjopMfrProgram@CBSi.com">ElkjopMfrProgram@CBSi.com</a></td>
-</tr>
-<tr>
-<td>Campaign ID</td>
-<td><a href="https://eu26.salesforce.com/7012p000001XoCg">https://eu26.salesforce.com/7012p000001XoCg</a></td>
-</tr>
-</tbody></table>
-
-        
-    </div>
-</div>
-
-    
-    <div class="Browser-panel" data-role="tab-panel" id="browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-info">
-    <ul class="Meta">
-        <li class="Meta-item">
-            <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@landing-elkjop</span>
-        </li>
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Tags:</strong>
-            <span class="Meta-value">
-                
-                    <span>
-                
-                    <span>client</span>
-                
-            </span>
-        </li>
-        
-        
-        
-        
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Preview:</strong>
-            <span class="Meta-value">
-                <ul>
-                    <li><a data-no-pjax href="../preview/landing-elkjop.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                    <li><a data-no-pjax href="../render/landing-elkjop.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                </ul>
-            </span>
-        </li>
-        <li class="Meta-item">
-            <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/pages/retailers/elkjop/elkjop.twig</span>
-        </li>
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(4)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
             
-                <a href="retail-page-header.html">@<span>retail-page-header</span></a>, 
+            <pre>{
+  <span class="hljs-attr">"logoFile"</span>: <span class="hljs-string">"elkjop.svg"</span>,
+  <span class="hljs-attr">"logoWidth"</span>: <span class="hljs-string">"140px"</span>,
+  <span class="hljs-attr">"clientName"</span>: <span class="hljs-string">"Elkjop"</span>,
+  <span class="hljs-attr">"clientSite"</span>: <span class="hljs-string">"Elkjop.no"</span>,
+  <span class="hljs-attr">"formTest"</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">"formURL"</span>: <span class="hljs-string">"https://elkjop.cnetcontent.com"</span>,
+  <span class="hljs-attr">"formProduct"</span>: <span class="hljs-string">"Retail Services"</span>,
+  <span class="hljs-attr">"formRegion"</span>: <span class="hljs-string">"EMEA"</span>,
+  <span class="hljs-attr">"formCampaign"</span>: <span class="hljs-string">"7012p000001XoCg"</span>,
+  <span class="hljs-attr">"formEmail"</span>: <span class="hljs-string">"ElkjopMfrProgram@CBSi.com"</span>,
+  <span class="hljs-attr">"formCheckboxes"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Article onboarding"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"PCC - Elkjop"</span>
+    },
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Inline content"</span>,
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Rich Content - Elkjop"</span>
+    }
+  ]
+}</pre>
             
-                <a href="retail-rich-statistics.html">@<span>retail-rich-statistics</span></a>, 
-            
-                <a href="retail-service-options.html">@<span>retail-service-options</span></a>, 
-            
-                <a href="retail-contact-form.html">@<span>retail-contact-form</span></a>
-            
-            </span>
-        </li class="Meta-item">
         
-        
-    </ul>
+    </code>
 </div>
 
     
@@ -331,12 +266,8 @@
                                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Key Selling Points<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Product Features<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Already have a PartnerAccess for Elkjop account?<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex bg-contrast-lower margin-top-auto"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--lg color-black padding-y-sm margin-auto@md"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://www.partneraccess.com/login"</span>&gt;</span>Sign in here <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-black opacity-30%"</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span><span class="hljs-symbol">&amp;#8594;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"link-card bg radius-lg col-6@md"</span>&gt;</span>
                         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex flex-column width-100%"</span>&gt;</span>
@@ -356,19 +287,12 @@
                                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Comparison Charts<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                                     <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Detailed Reporting<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
                                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Already have a Content Portal account?<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
                             <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
                         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flex bg-contrast-lower margin-top-auto"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--lg color-black padding-y-sm margin-auto@md"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://login.portal.cnetcontent.com/en-us/login"</span>&gt;</span>Sign in here <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"color-black opacity-30%"</span>&gt;</span><span class="hljs-symbol">&amp;nbsp;</span><span class="hljs-symbol">&amp;#8594;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
                     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
             <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-comment">&lt;!-- div style="display:none"&gt;
-    {{!-- source('src/public/icons/business-benefits.svg') --}}
-  &lt;/div --&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display:none"</span>&gt;</span>
@@ -589,41 +513,106 @@
 </div>
 
     
+    <div class="Browser-panel" data-role="tab-panel" id="browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@landing-elkjop</span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Tags:</strong>
+            <span class="Meta-value">
+                
+                    <span>
+                
+                    <span>client</span>
+                
+            </span>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/landing-elkjop.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/landing-elkjop.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/components/pages/retailers/elkjop/elkjop.twig</span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(4)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="retail-page-header.html">@<span>retail-page-header</span></a>, 
+            
+                <a href="retail-rich-statistics.html">@<span>retail-rich-statistics</span></a>, 
+            
+                <a href="retail-service-options.html">@<span>retail-service-options</span></a>, 
+            
+                <a href="retail-contact-form.html">@<span>retail-contact-form</span></a>
+            
+            </span>
+        </li class="Meta-item">
+        
+        
+    </ul>
+</div>
+
+    
     
 
 
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-c44a225f9a2d607a5be3c2be16b8d1ed-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"logoFile"</span>: <span class="hljs-string">"elkjop.svg"</span>,
-  <span class="hljs-attr">"logoWidth"</span>: <span class="hljs-string">"140px"</span>,
-  <span class="hljs-attr">"clientName"</span>: <span class="hljs-string">"Elkjop"</span>,
-  <span class="hljs-attr">"clientSite"</span>: <span class="hljs-string">"Elkjop.no"</span>,
-  <span class="hljs-attr">"formTest"</span>: <span class="hljs-literal">false</span>,
-  <span class="hljs-attr">"formURL"</span>: <span class="hljs-string">"https://elkjop.cnetcontent.com"</span>,
-  <span class="hljs-attr">"formProduct"</span>: <span class="hljs-string">"Retail Services"</span>,
-  <span class="hljs-attr">"formRegion"</span>: <span class="hljs-string">"EMEA"</span>,
-  <span class="hljs-attr">"formCampaign"</span>: <span class="hljs-string">"7012p000001XoCg"</span>,
-  <span class="hljs-attr">"formEmail"</span>: <span class="hljs-string">"ElkjopMfrProgram@CBSi.com"</span>,
-  <span class="hljs-attr">"formCheckboxes"</span>: [
-    {
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Article onboarding"</span>,
-      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"PCC - Elkjop"</span>
-    },
-    {
-      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Inline content"</span>,
-      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Rich Content - Elkjop"</span>
-    }
-  ]
-}</pre>
-            
+        <table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Live URL</td>
+<td><a href="https://elkjop.cnetcontent.com">https://elkjop.cnetcontent.com</a></td>
+</tr>
+<tr>
+<td>Lead Assignment</td>
+<td>Jack Panayi</td>
+</tr>
+<tr>
+<td>Email Group</td>
+<td><a href="mailto:ElkjopMfrProgram@CBSi.com">ElkjopMfrProgram@CBSi.com</a></td>
+</tr>
+<tr>
+<td>Campaign ID</td>
+<td><a href="https://eu26.salesforce.com/7012p000001XoCg">https://eu26.salesforce.com/7012p000001XoCg</a></td>
+</tr>
+</tbody></table>
+
         
-    </code>
+    </div>
 </div>
 
     

@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-fed62ece0563bb1bca388c28803a1e9b-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-fed62ece0563bb1bca388c28803a1e9b-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-fed62ece0563bb1bca388c28803a1e9b-panel-context">Context</a>
         </li>
         
         
@@ -134,14 +128,20 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-fed62ece0563bb1bca388c28803a1e9b-panel-info">Info</a>
+        </li>
         
         
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-fed62ece0563bb1bca388c28803a1e9b-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-fed62ece0563bb1bca388c28803a1e9b-panel-notes">Notes</a>
         </li>
         
         
@@ -150,12 +150,26 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-fed62ece0563bb1bca388c28803a1e9b-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fed62ece0563bb1bca388c28803a1e9b-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+            
+            <pre>{
+  <span class="hljs-attr">"clientName"</span>: <span class="hljs-string">"{CLIENT}"</span>
+}</pre>
+            
         
-    </div>
+    </code>
+</div>
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-fed62ece0563bb1bca388c28803a1e9b-panel-html">
+    <code class="Code Code--lang-html hljs">
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Placeholder<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre>
+        
+    </code>
 </div>
 
     
@@ -213,32 +227,17 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-fed62ece0563bb1bca388c28803a1e9b-panel-html">
-    <code class="Code Code--lang-html hljs">
-        
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Placeholder<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></pre>
-        
-    </code>
-</div>
-
-    
-    
 
 
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-fed62ece0563bb1bca388c28803a1e9b-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-fed62ece0563bb1bca388c28803a1e9b-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"clientName"</span>: <span class="hljs-string">"{CLIENT}"</span>,
-  <span class="hljs-attr">"clientSite"</span>: <span class="hljs-string">"BRAND.COM"</span>
-}</pre>
-            
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
-    </code>
+    </div>
 </div>
 
     

@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-3d358029000fd5efc808d441dcc0493b-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-3d358029000fd5efc808d441dcc0493b-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-3d358029000fd5efc808d441dcc0493b-panel-context">Context</a>
         </li>
         
         
@@ -134,12 +128,18 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-3d358029000fd5efc808d441dcc0493b-panel-info">Info</a>
+        </li>
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-3d358029000fd5efc808d441dcc0493b-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-3d358029000fd5efc808d441dcc0493b-panel-notes">Notes</a>
         </li>
         
         
@@ -148,69 +148,44 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-3d358029000fd5efc808d441dcc0493b-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-3d358029000fd5efc808d441dcc0493b-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
-        
-    </div>
-</div>
-
-    
-    <div class="Browser-panel" data-role="tab-panel" id="browser-3d358029000fd5efc808d441dcc0493b-panel-info">
-    <ul class="Meta">
-        <li class="Meta-item">
-            <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@cards--cluster-02</span>
-        </li>
-        
-        
-        
-        
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
             
-                <a href="cards--cluster-01.html">
-                    <span>Cluster 01</span>
-                </a>, 
+            <pre>{
+  <span class="hljs-attr">"cardHeading"</span>: <span class="hljs-string">"One partner. One complete solution."</span>,
+  <span class="hljs-attr">"cardHeadingColor"</span>: <span class="hljs-string">"color-white"</span>,
+  <span class="hljs-attr">"cardImage"</span>: <span class="hljs-string">"https://assets.cnetcontent.com/images/background.jpg"</span>,
+  <span class="hljs-attr">"cardTint"</span>: <span class="hljs-string">"var(--color-primary-darker)"</span>,
+  <span class="hljs-attr">"cardOpacity"</span>: <span class="hljs-string">"opacity-50%"</span>,
+  <span class="hljs-attr">"cardWidth"</span>: <span class="hljs-string">"max-width-adaptive-lg"</span>,
+  <span class="hljs-attr">"cardBlock"</span>: [
+    {
+      <span class="hljs-attr">"column"</span>: <span class="hljs-string">"col-6@md col-4@lg"</span>,
+      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"&lt;svg viewBox='0 0 64 64'&gt;&lt;use xlink:href='#item'/&gt;&lt;/svg&gt;"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Item Setup"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"&lt;ul class='list list--ul margin-left-xs'&gt;&lt;li&gt;GTIN&lt;/li&gt;&lt;li&gt;Part Number&lt;/li&gt;&lt;li&gt;Description&lt;/li&gt;&lt;li&gt;Brand&lt;/li&gt;&lt;/ul&gt;"</span>,
+      <span class="hljs-attr">"footer"</span>: <span class="hljs-string">"&lt;a class='btn padding-y-sm margin-auto@md' href='javascript:void(0)'&gt;Learn more&lt;/a&gt;"</span>
+    },
+    {
+      <span class="hljs-attr">"column"</span>: <span class="hljs-string">"col-6@md col-4@lg"</span>,
+      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"&lt;svg viewBox='0 0 64 64'&gt;&lt;use xlink:href='#spec'/&gt;&lt;/svg&gt;"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Structured Product Content"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"&lt;ul class='list list--ul margin-left-xs'&gt;&lt;li&gt;Technical Specifications&lt;/li&gt;&lt;li&gt;Product Attributes&lt;/li&gt;&lt;li&gt;Images&lt;/li&gt;&lt;li&gt;Key Selling Points&lt;/li&gt;&lt;li&gt;Product Features&lt;/li&gt;&lt;/ul&gt;"</span>,
+      <span class="hljs-attr">"footer"</span>: <span class="hljs-string">"&lt;a class='btn padding-y-sm margin-auto@md' href='javascript:void(0)'&gt;Sign in here &amp;#8594;&lt;/a&gt;"</span>
+    },
+    {
+      <span class="hljs-attr">"column"</span>: <span class="hljs-string">"col-6@md col-4@lg"</span>,
+      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"&lt;svg viewBox='0 0 64 64'&gt;&lt;use xlink:href='#media'/&gt;&lt;/svg&gt;"</span>,
+      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"&amp;nbsp;Rich Inline Content"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"&lt;ul class='list list--ul margin-left-xs'&gt;&lt;li&gt;Interactive Hotspot Imagery&lt;/li&gt;&lt;li&gt;Image Zoom and 360° Product Views&lt;/li&gt;&lt;li&gt;Videos&lt;/li&gt;&lt;li&gt;Comparison Charts&lt;/li&gt;&lt;li&gt;Detailed Reporting&lt;/li&gt;&lt;/ul&gt;"</span>,
+      <span class="hljs-attr">"footer"</span>: <span class="hljs-string">"&lt;a class='btn padding-y-sm margin-auto@md' href='javascript:void(0)'&gt;Sign in here &amp;#8594;&lt;/a&gt;"</span>
+    }
+  ]
+}</pre>
             
-                <a href="">
-                    <span>Cluster 02</span>
-                </a>, 
-            
-                <a href="cards--cluster-03.html">
-                    <span>Cluster 03</span>
-                </a>
-            
-            </span>
-        </li>
         
-        <li class="Meta-item">
-            <strong class="Meta-key">Preview:</strong>
-            <span class="Meta-value">
-                <ul>
-                    <li><a data-no-pjax href="../preview/cards--cluster-02.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                    <li><a data-no-pjax href="../render/cards--cluster-02.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                </ul>
-            </span>
-        </li>
-        <li class="Meta-item">
-            <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/molecules/cards/cards.twig</span>
-        </li>
-        
-        
-    </ul>
+    </code>
 </div>
 
     
@@ -300,48 +275,73 @@
 </div>
 
     
+    <div class="Browser-panel" data-role="tab-panel" id="browser-3d358029000fd5efc808d441dcc0493b-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@cards--cluster-02</span>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Variants <em class="Meta-count">(3)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="cards--cluster-01.html">
+                    <span>Cluster 01</span>
+                </a>, 
+            
+                <a href="">
+                    <span>Cluster 02</span>
+                </a>, 
+            
+                <a href="cards--cluster-03.html">
+                    <span>Cluster 03</span>
+                </a>
+            
+            </span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/cards--cluster-02.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/cards--cluster-02.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/components/molecules/cards/cards.twig</span>
+        </li>
+        
+        
+    </ul>
+</div>
+
+    
     
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-3d358029000fd5efc808d441dcc0493b-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-3d358029000fd5efc808d441dcc0493b-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"cardHeading"</span>: <span class="hljs-string">"One partner. One complete solution."</span>,
-  <span class="hljs-attr">"cardHeadingColor"</span>: <span class="hljs-string">"color-white"</span>,
-  <span class="hljs-attr">"cardImage"</span>: <span class="hljs-string">"https://assets.cnetcontent.com/images/background.jpg"</span>,
-  <span class="hljs-attr">"cardTint"</span>: <span class="hljs-string">"var(--color-primary-darker)"</span>,
-  <span class="hljs-attr">"cardOpacity"</span>: <span class="hljs-string">"opacity-50%"</span>,
-  <span class="hljs-attr">"cardWidth"</span>: <span class="hljs-string">"max-width-adaptive-lg"</span>,
-  <span class="hljs-attr">"cardBlock"</span>: [
-    {
-      <span class="hljs-attr">"column"</span>: <span class="hljs-string">"col-6@md col-4@lg"</span>,
-      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"&lt;svg viewBox='0 0 64 64'&gt;&lt;use xlink:href='#item'/&gt;&lt;/svg&gt;"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Item Setup"</span>,
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"&lt;ul class='list list--ul margin-left-xs'&gt;&lt;li&gt;GTIN&lt;/li&gt;&lt;li&gt;Part Number&lt;/li&gt;&lt;li&gt;Description&lt;/li&gt;&lt;li&gt;Brand&lt;/li&gt;&lt;/ul&gt;"</span>,
-      <span class="hljs-attr">"footer"</span>: <span class="hljs-string">"&lt;a class='btn padding-y-sm margin-auto@md' href='javascript:void(0)'&gt;Learn more&lt;/a&gt;"</span>
-    },
-    {
-      <span class="hljs-attr">"column"</span>: <span class="hljs-string">"col-6@md col-4@lg"</span>,
-      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"&lt;svg viewBox='0 0 64 64'&gt;&lt;use xlink:href='#spec'/&gt;&lt;/svg&gt;"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Structured Product Content"</span>,
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"&lt;ul class='list list--ul margin-left-xs'&gt;&lt;li&gt;Technical Specifications&lt;/li&gt;&lt;li&gt;Product Attributes&lt;/li&gt;&lt;li&gt;Images&lt;/li&gt;&lt;li&gt;Key Selling Points&lt;/li&gt;&lt;li&gt;Product Features&lt;/li&gt;&lt;/ul&gt;"</span>,
-      <span class="hljs-attr">"footer"</span>: <span class="hljs-string">"&lt;a class='btn padding-y-sm margin-auto@md' href='javascript:void(0)'&gt;Sign in here &amp;#8594;&lt;/a&gt;"</span>
-    },
-    {
-      <span class="hljs-attr">"column"</span>: <span class="hljs-string">"col-6@md col-4@lg"</span>,
-      <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"&lt;svg viewBox='0 0 64 64'&gt;&lt;use xlink:href='#media'/&gt;&lt;/svg&gt;"</span>,
-      <span class="hljs-attr">"title"</span>: <span class="hljs-string">"&amp;nbsp;Rich Inline Content"</span>,
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"&lt;ul class='list list--ul margin-left-xs'&gt;&lt;li&gt;Interactive Hotspot Imagery&lt;/li&gt;&lt;li&gt;Image Zoom and 360° Product Views&lt;/li&gt;&lt;li&gt;Videos&lt;/li&gt;&lt;li&gt;Comparison Charts&lt;/li&gt;&lt;li&gt;Detailed Reporting&lt;/li&gt;&lt;/ul&gt;"</span>,
-      <span class="hljs-attr">"footer"</span>: <span class="hljs-string">"&lt;a class='btn padding-y-sm margin-auto@md' href='javascript:void(0)'&gt;Sign in here &amp;#8594;&lt;/a&gt;"</span>
-    }
-  ]
-}</pre>
-            
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
-    </code>
+    </div>
 </div>
 
     

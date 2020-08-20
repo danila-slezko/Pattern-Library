@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-29fce6de53774b5915ef50c90b593186-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-29fce6de53774b5915ef50c90b593186-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-29fce6de53774b5915ef50c90b593186-panel-context">Context</a>
         </li>
         
         
@@ -134,12 +128,18 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-29fce6de53774b5915ef50c90b593186-panel-info">Info</a>
+        </li>
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-29fce6de53774b5915ef50c90b593186-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-29fce6de53774b5915ef50c90b593186-panel-notes">Notes</a>
         </li>
         
         
@@ -148,13 +148,42 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-29fce6de53774b5915ef50c90b593186-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-29fce6de53774b5915ef50c90b593186-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p>More information about proper usage of the <code>&lt;blockquote&gt;</code> element can be found <a href="http://html5doctor.com/blockquote-q-cite/">here</a>.</p>
+            
+            <pre>{
+  <span class="hljs-attr">"bqText"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</span>,
+  <span class="hljs-attr">"bqCitation"</span>: <span class="hljs-string">"http://example.com/"</span>
+}</pre>
+            
+        
+    </code>
+</div>
 
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-29fce6de53774b5915ef50c90b593186-panel-html">
+    <code class="Code Code--lang-html hljs">
         
-    </div>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">cite</span>=<span class="hljs-string">"http://example.com/"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"position-relative z-index-1 bg-contrast-lower text-center padding-y-xl"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-sm"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--lg color-contrast-low"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 64 64"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"2 36 17 2 26 2 15 36 26 36 26 62 2 62 2 36"</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"38 36 53 2 62 2 51 36 62 36 62 62 38 62 38 36"</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component margin-top-sm"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-md"</span>&gt;</span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"margin-top-md"</span>&gt;</span>
+            <span class="hljs-symbol">&amp;mdash;</span> Famous Name
+        <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span></pre>
+        
+    </code>
 </div>
 
     
@@ -212,45 +241,16 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-29fce6de53774b5915ef50c90b593186-panel-html">
-    <code class="Code Code--lang-html hljs">
-        
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">cite</span>=<span class="hljs-string">"http://example.com/"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"position-relative z-index-1 bg-contrast-lower text-center padding-y-xl"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-sm"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"icon icon--lg color-contrast-low"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 64 64"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"2 36 17 2 26 2 15 36 26 36 26 62 2 62 2 36"</span> /&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">polygon</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"currentColor"</span> <span class="hljs-attr">points</span>=<span class="hljs-string">"38 36 53 2 62 2 51 36 62 36 62 62 38 62 38 36"</span> /&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component margin-top-sm"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-md"</span>&gt;</span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-            <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"margin-top-md"</span>&gt;</span>
-            <span class="hljs-symbol">&amp;mdash;</span> Famous Name
-        <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span></pre>
-        
-    </code>
-</div>
-
-    
-    
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-29fce6de53774b5915ef50c90b593186-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-29fce6de53774b5915ef50c90b593186-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"bqText"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</span>,
-  <span class="hljs-attr">"bqCitation"</span>: <span class="hljs-string">"http://example.com/"</span>
-}</pre>
-            
+        <p>More information about proper usage of the <code>&lt;blockquote&gt;</code> element can be found <a href="http://html5doctor.com/blockquote-q-cite/">here</a>.</p>
+
         
-    </code>
+    </div>
 </div>
 
     

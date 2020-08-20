@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-d50bb9ad195c35330299feb7dd16be83-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-d50bb9ad195c35330299feb7dd16be83-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-d50bb9ad195c35330299feb7dd16be83-panel-context">Context</a>
         </li>
         
         
@@ -134,12 +128,18 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-d50bb9ad195c35330299feb7dd16be83-panel-info">Info</a>
+        </li>
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-d50bb9ad195c35330299feb7dd16be83-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-d50bb9ad195c35330299feb7dd16be83-panel-notes">Notes</a>
         </li>
         
         
@@ -148,16 +148,68 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-d50bb9ad195c35330299feb7dd16be83-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-d50bb9ad195c35330299feb7dd16be83-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p>Todo:</p>
-<ul>
-<li>Clean up ordered list style</li>
-</ul>
+            
+            <pre>{
+  <span class="hljs-attr">"listItems"</span>: [
+    {
+      <span class="hljs-attr">"term"</span>: <span class="hljs-string">"A Lorem ipsum"</span>,
+      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Eu occaecat cillum cillum non laboris elit Lorem qui dolor eiusmod dolor est eiusmod amet veniam ipsum."</span>
+    },
+    {
+      <span class="hljs-attr">"term"</span>: <span class="hljs-string">"B Lorem ipsum"</span>,
+      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Cupidatat ullamco cillum cupidatat cupidatat incididunt labore minim qui ipsum adipisicing cupidatat dolore eu nisi culpa laborum."</span>
+    },
+    {
+      <span class="hljs-attr">"term"</span>: <span class="hljs-string">"C Lorem ipsum"</span>,
+      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Dolor enim proident quis quis labore voluptate tempor amet est irure minim non."</span>
+    },
+    {
+      <span class="hljs-attr">"term"</span>: <span class="hljs-string">"D Lorem ipsum"</span>,
+      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Laborum culpa nisi laborum reprehenderit laboris commodo labore ipsum reprehenderit cupidatat cillum excepteur consequat."</span>
+    }
+  ]
+}</pre>
+            
+        
+    </code>
+</div>
 
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-d50bb9ad195c35330299feb7dd16be83-panel-html">
+    <code class="Code Code--lang-html hljs">
         
-    </div>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dt"</span>&gt;</span>
+            A Lorem ipsum
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dd"</span>&gt;</span>Eu occaecat cillum cillum non laboris elit Lorem qui dolor eiusmod dolor est eiusmod amet veniam ipsum.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dt"</span>&gt;</span>
+            B Lorem ipsum
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dd"</span>&gt;</span>Cupidatat ullamco cillum cupidatat cupidatat incididunt labore minim qui ipsum adipisicing cupidatat dolore eu nisi culpa laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dt"</span>&gt;</span>
+            C Lorem ipsum
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dd"</span>&gt;</span>Dolor enim proident quis quis labore voluptate tempor amet est irure minim non.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__item"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dt"</span>&gt;</span>
+            D Lorem ipsum
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dd"</span>&gt;</span>Laborum culpa nisi laborum reprehenderit laboris commodo labore ipsum reprehenderit cupidatat cillum excepteur consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span></pre>
+        
+    </code>
 </div>
 
     
@@ -219,71 +271,19 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-d50bb9ad195c35330299feb7dd16be83-panel-html">
-    <code class="Code Code--lang-html hljs">
-        
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">dl</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__item"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dt"</span>&gt;</span>
-            A Lorem ipsum
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dd"</span>&gt;</span>Eu occaecat cillum cillum non laboris elit Lorem qui dolor eiusmod dolor est eiusmod amet veniam ipsum.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__item"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dt"</span>&gt;</span>
-            B Lorem ipsum
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dd"</span>&gt;</span>Cupidatat ullamco cillum cupidatat cupidatat incididunt labore minim qui ipsum adipisicing cupidatat dolore eu nisi culpa laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__item"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dt"</span>&gt;</span>
-            C Lorem ipsum
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dd"</span>&gt;</span>Dolor enim proident quis quis labore voluptate tempor amet est irure minim non.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__item"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dt</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dt"</span>&gt;</span>
-            D Lorem ipsum
-        <span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"details-list-v2__dd"</span>&gt;</span>Laborum culpa nisi laborum reprehenderit laboris commodo labore ipsum reprehenderit cupidatat cillum excepteur consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span></pre>
-        
-    </code>
-</div>
-
-    
-    
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-d50bb9ad195c35330299feb7dd16be83-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-d50bb9ad195c35330299feb7dd16be83-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"listItems"</span>: [
-    {
-      <span class="hljs-attr">"term"</span>: <span class="hljs-string">"A Lorem ipsum"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Eu occaecat cillum cillum non laboris elit Lorem qui dolor eiusmod dolor est eiusmod amet veniam ipsum."</span>
-    },
-    {
-      <span class="hljs-attr">"term"</span>: <span class="hljs-string">"B Lorem ipsum"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Cupidatat ullamco cillum cupidatat cupidatat incididunt labore minim qui ipsum adipisicing cupidatat dolore eu nisi culpa laborum."</span>
-    },
-    {
-      <span class="hljs-attr">"term"</span>: <span class="hljs-string">"C Lorem ipsum"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Dolor enim proident quis quis labore voluptate tempor amet est irure minim non."</span>
-    },
-    {
-      <span class="hljs-attr">"term"</span>: <span class="hljs-string">"D Lorem ipsum"</span>,
-      <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Laborum culpa nisi laborum reprehenderit laboris commodo labore ipsum reprehenderit cupidatat cillum excepteur consequat."</span>
-    }
-  ]
-}</pre>
-            
+        <p>Todo:</p>
+<ul>
+<li>Clean up ordered list style</li>
+</ul>
+
         
-    </code>
+    </div>
 </div>
 
     

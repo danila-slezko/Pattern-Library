@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-4f829a9f7fca22d771e1c339b99a0f08-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-4f829a9f7fca22d771e1c339b99a0f08-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-4f829a9f7fca22d771e1c339b99a0f08-panel-context">Context</a>
         </li>
         
         
@@ -134,14 +128,20 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-4f829a9f7fca22d771e1c339b99a0f08-panel-info">Info</a>
+        </li>
         
         
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-4f829a9f7fca22d771e1c339b99a0f08-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-4f829a9f7fca22d771e1c339b99a0f08-panel-notes">Notes</a>
         </li>
         
         
@@ -150,134 +150,22 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-4f829a9f7fca22d771e1c339b99a0f08-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4f829a9f7fca22d771e1c339b99a0f08-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <br>
-
-<table>
-<thead>
-<tr>
-<th><strong>META DETAILS</strong></th>
-<th>Value</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Lead Assignment</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Email Group</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Campaign ID</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Portal ID</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<br>
-
-<table>
-<thead>
-<tr>
-<th><strong>SERVICE/PROGRAM</strong></th>
-<th>Enabled</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Item Setup</td>
-<td>n/a</td>
-<td></td>
-</tr>
-<tr>
-<td>Inline Content</td>
-<td>true</td>
-<td></td>
-</tr>
-<tr>
-<td>Retail PartnerAccess</td>
-<td>true</td>
-<td></td>
-</tr>
-<tr>
-<td>Other</td>
-<td>—</td>
-<td></td>
-</tr>
-</tbody></table>
-
-        
-    </div>
-</div>
-
-    
-    <div class="Browser-panel" data-role="tab-panel" id="browser-4f829a9f7fca22d771e1c339b99a0f08-panel-info">
-    <ul class="Meta">
-        <li class="Meta-item">
-            <strong class="Meta-key">Handle:</strong>
-            <span class="Meta-value">@landing-home-depot</span>
-        </li>
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Tags:</strong>
-            <span class="Meta-value">
-                
-                    <span>
-                
-                    <span>client</span>
-                
-            </span>
-        </li>
-        
-        
-        
-        
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">Preview:</strong>
-            <span class="Meta-value">
-                <ul>
-                    <li><a data-no-pjax href="../preview/landing-home-depot.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                    <li><a data-no-pjax href="../render/landing-home-depot.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0h24v24H0z" fill="none"/>
-    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
-</svg>
-</a></li>
-                </ul>
-            </span>
-        </li>
-        <li class="Meta-item">
-            <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">src/components/pages/retailers/home-depot/home-depot.twig</span>
-        </li>
-        
-        <li class="Meta-item">
-            <strong class="Meta-key">References <em class="Meta-count">(2)</em>:</strong>
-            <span class="Meta-value Meta-value--linkList">
             
-                <a href="retail-page-header.html">@<span>retail-page-header</span></a>, 
+            <pre>{
+  <span class="hljs-attr">"logoFile"</span>: <span class="hljs-string">"home-depot.svg"</span>,
+  <span class="hljs-attr">"logoWidth"</span>: <span class="hljs-string">"50px"</span>,
+  <span class="hljs-attr">"formBackground"</span>: <span class="hljs-string">"bg-contrast-lower"</span>,
+  <span class="hljs-attr">"formTitle"</span>: <span class="hljs-string">"Contact us to get started."</span>,
+  <span class="hljs-attr">"formText"</span>: <span class="hljs-string">"&lt;p&gt;Submit the form below, and a representative will reach out to you with more information about adding your content to Home Depot.&lt;p&gt;"</span>,
+  <span class="hljs-attr">"formServiceA"</span>: <span class="hljs-string">"Article Onboarding Program"</span>,
+  <span class="hljs-attr">"formServiceB"</span>: <span class="hljs-string">"Inline Content Program"</span>
+}</pre>
             
-                <a href="retail-contact-form.html">@<span>retail-contact-form</span></a>
-            
-            </span>
-        </li class="Meta-item">
         
-        
-    </ul>
+    </code>
 </div>
 
     
@@ -493,28 +381,140 @@
 </div>
 
     
+    <div class="Browser-panel" data-role="tab-panel" id="browser-4f829a9f7fca22d771e1c339b99a0f08-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@landing-home-depot</span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Tags:</strong>
+            <span class="Meta-value">
+                
+                    <span>
+                
+                    <span>client</span>
+                
+            </span>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/landing-home-depot.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/landing-home-depot.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/components/pages/retailers/home-depot/home-depot.twig</span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(2)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="retail-page-header.html">@<span>retail-page-header</span></a>, 
+            
+                <a href="retail-contact-form.html">@<span>retail-contact-form</span></a>
+            
+            </span>
+        </li class="Meta-item">
+        
+        
+    </ul>
+</div>
+
+    
     
 
 
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-4f829a9f7fca22d771e1c339b99a0f08-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-4f829a9f7fca22d771e1c339b99a0f08-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"logoFile"</span>: <span class="hljs-string">"home-depot.svg"</span>,
-  <span class="hljs-attr">"logoWidth"</span>: <span class="hljs-string">"50px"</span>,
-  <span class="hljs-attr">"formBackground"</span>: <span class="hljs-string">"bg-contrast-lower"</span>,
-  <span class="hljs-attr">"formTitle"</span>: <span class="hljs-string">"Contact us to get started."</span>,
-  <span class="hljs-attr">"formText"</span>: <span class="hljs-string">"&lt;p&gt;Submit the form below, and a representative will reach out to you with more information about adding your content to Home Depot.&lt;p&gt;"</span>,
-  <span class="hljs-attr">"formServiceA"</span>: <span class="hljs-string">"Article Onboarding Program"</span>,
-  <span class="hljs-attr">"formServiceB"</span>: <span class="hljs-string">"Inline Content Program"</span>
-}</pre>
-            
+        <br>
+
+<table>
+<thead>
+<tr>
+<th><strong>META DETAILS</strong></th>
+<th>Value</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Lead Assignment</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Email Group</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Campaign ID</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Portal ID</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<br>
+
+<table>
+<thead>
+<tr>
+<th><strong>SERVICE/PROGRAM</strong></th>
+<th>Enabled</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Item Setup</td>
+<td>n/a</td>
+<td></td>
+</tr>
+<tr>
+<td>Inline Content</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>Retail PartnerAccess</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>Other</td>
+<td>—</td>
+<td></td>
+</tr>
+</tbody></table>
+
         
-    </code>
+    </div>
 </div>
 
     

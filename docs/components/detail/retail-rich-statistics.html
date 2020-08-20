@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-61cde0485f4cd27771f74b07b8552e9b-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-61cde0485f4cd27771f74b07b8552e9b-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-61cde0485f4cd27771f74b07b8552e9b-panel-context">Context</a>
         </li>
         
         
@@ -134,14 +128,20 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-61cde0485f4cd27771f74b07b8552e9b-panel-info">Info</a>
+        </li>
         
         
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-61cde0485f4cd27771f74b07b8552e9b-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-61cde0485f4cd27771f74b07b8552e9b-panel-notes">Notes</a>
         </li>
         
         
@@ -150,12 +150,43 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-61cde0485f4cd27771f74b07b8552e9b-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-61cde0485f4cd27771f74b07b8552e9b-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+            
+            <pre>{
+  <span class="hljs-attr">"clientName"</span>: <span class="hljs-string">"{{ clientName }}"</span>,
+  <span class="hljs-attr">"blockLayout"</span>: <span class="hljs-string">"imgRight"</span>
+}</pre>
+            
         
-    </div>
+    </code>
+</div>
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-61cde0485f4cd27771f74b07b8552e9b-panel-html">
+    <code class="Code Code--lang-html hljs">
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"padding-top-md"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-md padding-y-xl"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-lg gap-xxxl@md items-center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@md order-1@md"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component line-height-lg v-space-lg"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-lg text-xl@lg color-black"</span>&gt;</span>Bring your product pages to life with Inline Content.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Transform your existing marketing assets into powerful digital merchandising tools that <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>increase interaction rates by up to 50%<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>. Research shows that consumers are <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>100-150% more likely to buy<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span> after interaction with rich content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@md order-2@md"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"media-wrapper media-wrapper--4:3"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://assets.cnetcontent.com/images/brand-assets-1x.jpg"</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"https://assets.cnetcontent.com/images/brand-assets-2x.jpg 2x"</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
+        
+    </code>
 </div>
 
     
@@ -222,48 +253,17 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-61cde0485f4cd27771f74b07b8552e9b-panel-html">
-    <code class="Code Code--lang-html hljs">
-        
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"padding-top-md"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-md padding-y-xl"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-lg gap-xxxl@md items-center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@md order-1@md"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component line-height-lg v-space-lg"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-lg text-xl@lg color-black"</span>&gt;</span>Bring your product pages to life with Inline Content.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Transform your existing marketing assets into powerful digital merchandising tools that <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>increase interaction rates by up to 50%<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span>. Research shows that consumers are <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>100-150% more likely to buy<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span> after interaction with rich content.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-6@md order-2@md"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"media-wrapper media-wrapper--4:3"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://assets.cnetcontent.com/images/brand-assets-1x.jpg"</span> <span class="hljs-attr">srcset</span>=<span class="hljs-string">"https://assets.cnetcontent.com/images/brand-assets-2x.jpg 2x"</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
-        
-    </code>
-</div>
-
-    
-    
 
 
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-61cde0485f4cd27771f74b07b8552e9b-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-61cde0485f4cd27771f74b07b8552e9b-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"clientName"</span>: <span class="hljs-string">"{{ clientName }}"</span>,
-  <span class="hljs-attr">"clientSite"</span>: <span class="hljs-string">"BRAND.COM"</span>
-}</pre>
-            
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
-    </code>
+    </div>
 </div>
 
     

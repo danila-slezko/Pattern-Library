@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-161907374f4b83bfd5e5197fd99acd05-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-161907374f4b83bfd5e5197fd99acd05-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-161907374f4b83bfd5e5197fd99acd05-panel-context">Context</a>
         </li>
         
         
@@ -134,14 +128,20 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-161907374f4b83bfd5e5197fd99acd05-panel-info">Info</a>
+        </li>
         
         
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-161907374f4b83bfd5e5197fd99acd05-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-161907374f4b83bfd5e5197fd99acd05-panel-notes">Notes</a>
         </li>
         
         
@@ -150,12 +150,44 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-161907374f4b83bfd5e5197fd99acd05-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-161907374f4b83bfd5e5197fd99acd05-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+            
+            <pre>{
+  <span class="hljs-attr">"clientName"</span>: <span class="hljs-string">"{{ clientName }}"</span>
+}</pre>
+            
         
-    </div>
+    </code>
+</div>
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-161907374f4b83bfd5e5197fd99acd05-panel-html">
+    <code class="Code Code--lang-html hljs">
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-primary-dark padding-top-xs"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-sm padding-y-lg"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-lg gap-xxxl@md items-center"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component line-height-md v-space-lg text-center max-width-adaptive-sm margin-auto"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-lg text-xl@lg color-white text-bold"</span>&gt;</span>Extend the reach of your current digital brand assets by incorporating them into {{ clientName }} product pages<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component max-width-adaptive-xs margin-auto padding-y-sm"</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"media-wrapper radius-md"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"https://assets.cnetcontent.com/media/brand-assets-placeholder.jpg"</span> <span class="hljs-attr">preload</span> <span class="hljs-attr">autoplay</span> <span class="hljs-attr">loop</span> <span class="hljs-attr">muted</span> <span class="hljs-attr">playsinline</span> <span class="hljs-attr">nofullscreen</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://assets.cnetcontent.com/media/brand-assets-placeholder.webm"</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://assets.cnetcontent.com/media/brand-assets-placeholder.mp4"</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
+        
+    </code>
 </div>
 
     
@@ -213,50 +245,17 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-161907374f4b83bfd5e5197fd99acd05-panel-html">
-    <code class="Code Code--lang-html hljs">
-        
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bg-primary-dark padding-top-xs"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container max-width-adaptive-sm padding-y-lg"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"grid gap-lg gap-xxxl@md items-center"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component line-height-md v-space-lg text-center max-width-adaptive-sm margin-auto"</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-lg text-xl@lg color-white text-bold"</span>&gt;</span>Extend the reach of your current digital brand assets by incorporating them into {{ clientName }} product pages<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-component max-width-adaptive-xs margin-auto padding-y-sm"</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">figure</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"media-wrapper radius-md"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">poster</span>=<span class="hljs-string">"https://assets.cnetcontent.com/media/brand-assets-placeholder.jpg"</span> <span class="hljs-attr">preload</span> <span class="hljs-attr">autoplay</span> <span class="hljs-attr">loop</span> <span class="hljs-attr">muted</span> <span class="hljs-attr">playsinline</span> <span class="hljs-attr">nofullscreen</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://assets.cnetcontent.com/media/brand-assets-placeholder.webm"</span>&gt;</span>
-                                <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://assets.cnetcontent.com/media/brand-assets-placeholder.mp4"</span>&gt;</span>
-                            <span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">figure</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
-        
-    </code>
-</div>
-
-    
-    
 
 
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-161907374f4b83bfd5e5197fd99acd05-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-161907374f4b83bfd5e5197fd99acd05-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"clientName"</span>: <span class="hljs-string">"{{ clientName }}"</span>,
-  <span class="hljs-attr">"clientSite"</span>: <span class="hljs-string">"BRAND.COM"</span>
-}</pre>
-            
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
-    </code>
+    </div>
 </div>
 
     

@@ -3,6 +3,7 @@
   "tags": ["marketing"],
   "preview": "@preview",
   "context": {
-    "clientSite" : "{{ clientSite }}"
+    "clientSite" : "{{ clientSite }}",
+    "blockLayout": "imgLeft"
   }
 }

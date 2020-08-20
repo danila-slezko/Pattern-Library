@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-2f226f5191928642142f45392a40412f-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-2f226f5191928642142f45392a40412f-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-2f226f5191928642142f45392a40412f-panel-context">Context</a>
         </li>
         
         
@@ -134,14 +128,20 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-2f226f5191928642142f45392a40412f-panel-info">Info</a>
+        </li>
         
         
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-2f226f5191928642142f45392a40412f-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-2f226f5191928642142f45392a40412f-panel-notes">Notes</a>
         </li>
         
         
@@ -150,12 +150,82 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-2f226f5191928642142f45392a40412f-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-2f226f5191928642142f45392a40412f-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
-    </div>
+            <pre>
+<span class="hljs-comment">/* Basic */</span>
+{
+  <span class="hljs-attr">"buttonText"</span>: <span class="hljs-string">"Basic"</span>,
+  <span class="hljs-attr">"buttonModifier"</span>: <span class="hljs-string">"btn"</span>,
+  <span class="hljs-attr">"buttonUrl"</span>: <span class="hljs-string">"https://google.com"</span>
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Primary */</span>
+{
+  <span class="hljs-attr">"buttonText"</span>: <span class="hljs-string">"Primary"</span>,
+  <span class="hljs-attr">"buttonModifier"</span>: <span class="hljs-string">"btn--primary"</span>,
+  <span class="hljs-attr">"buttonUrl"</span>: <span class="hljs-string">"https://google.com"</span>
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Accent */</span>
+{
+  <span class="hljs-attr">"buttonText"</span>: <span class="hljs-string">"Accent"</span>,
+  <span class="hljs-attr">"buttonModifier"</span>: <span class="hljs-string">"btn--accent"</span>,
+  <span class="hljs-attr">"buttonUrl"</span>: <span class="hljs-string">"https://google.com"</span>
+}
+
+</pre>
+        
+            <pre>
+<span class="hljs-comment">/* Subtle */</span>
+{
+  <span class="hljs-attr">"buttonText"</span>: <span class="hljs-string">"Subtle"</span>,
+  <span class="hljs-attr">"buttonModifier"</span>: <span class="hljs-string">"btn--subtle"</span>,
+  <span class="hljs-attr">"buttonUrl"</span>: <span class="hljs-string">"https://google.com"</span>
+}
+
+</pre>
+        
+        
+    </code>
+</div>
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-2f226f5191928642142f45392a40412f-panel-html">
+    <code class="Code Code--lang-html hljs">
+        
+        
+            <pre><span class="hljs-comment">&lt;!-- Basic --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn"</span>&gt;</span>Basic<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Primary --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Accent --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--accent"</span>&gt;</span>Accent<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+</pre>
+        
+            <pre><span class="hljs-comment">&lt;!-- Subtle --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--subtle"</span>&gt;</span>Subtle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+</pre>
+        
+        
+    </code>
 </div>
 
     
@@ -234,87 +304,17 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-2f226f5191928642142f45392a40412f-panel-html">
-    <code class="Code Code--lang-html hljs">
-        
-        
-            <pre><span class="hljs-comment">&lt;!-- Basic --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn"</span>&gt;</span>Basic<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-</pre>
-        
-            <pre><span class="hljs-comment">&lt;!-- Primary --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-</pre>
-        
-            <pre><span class="hljs-comment">&lt;!-- Accent --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--accent"</span>&gt;</span>Accent<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-</pre>
-        
-            <pre><span class="hljs-comment">&lt;!-- Subtle --&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn--subtle"</span>&gt;</span>Subtle<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-
-</pre>
-        
-        
-    </code>
-</div>
-
-    
-    
 
 
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-2f226f5191928642142f45392a40412f-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-2f226f5191928642142f45392a40412f-panel-notes">
+    <div class="Prose Prose--condensed">
         
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
-            <pre>
-<span class="hljs-comment">/* Basic */</span>
-{
-  <span class="hljs-attr">"buttonText"</span>: <span class="hljs-string">"Basic"</span>,
-  <span class="hljs-attr">"buttonModifier"</span>: <span class="hljs-string">"btn"</span>,
-  <span class="hljs-attr">"buttonUrl"</span>: <span class="hljs-string">"https://google.com"</span>
-}
-
-</pre>
-        
-            <pre>
-<span class="hljs-comment">/* Primary */</span>
-{
-  <span class="hljs-attr">"buttonText"</span>: <span class="hljs-string">"Primary"</span>,
-  <span class="hljs-attr">"buttonModifier"</span>: <span class="hljs-string">"btn--primary"</span>,
-  <span class="hljs-attr">"buttonUrl"</span>: <span class="hljs-string">"https://google.com"</span>
-}
-
-</pre>
-        
-            <pre>
-<span class="hljs-comment">/* Accent */</span>
-{
-  <span class="hljs-attr">"buttonText"</span>: <span class="hljs-string">"Accent"</span>,
-  <span class="hljs-attr">"buttonModifier"</span>: <span class="hljs-string">"btn--accent"</span>,
-  <span class="hljs-attr">"buttonUrl"</span>: <span class="hljs-string">"https://google.com"</span>
-}
-
-</pre>
-        
-            <pre>
-<span class="hljs-comment">/* Subtle */</span>
-{
-  <span class="hljs-attr">"buttonText"</span>: <span class="hljs-string">"Subtle"</span>,
-  <span class="hljs-attr">"buttonModifier"</span>: <span class="hljs-string">"btn--subtle"</span>,
-  <span class="hljs-attr">"buttonUrl"</span>: <span class="hljs-string">"https://google.com"</span>
-}
-
-</pre>
-        
-        
-    </code>
+    </div>
 </div>
 
     

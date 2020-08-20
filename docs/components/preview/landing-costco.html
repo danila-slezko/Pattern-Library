@@ -370,7 +370,7 @@
         return true; // submit form
       })
       if (/true|success|sent/.test(window.location.href)) {
-        $( "aside#dialog-1" ).addClass( "dialog--is-visible" );
+        $("aside#dialog-1").addClass( "dialog--is-visible" );
         $("aside#dialog-1").click(function(){
           $("aside#dialog-1").removeClass("dialog--is-visible");
         });

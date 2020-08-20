@@ -97,12 +97,8 @@
                   <li>Key Selling Points</li>
                   <li>Product Features</li>
                 </ul>
-                <div>Already have a PartnerAccess for Walmart account?</div>
               </main>
             </div>
-            <footer class="flex bg-contrast-lower margin-top-auto">
-              <a class="btn btn--lg color-black padding-y-sm margin-auto@md" href="https://www.partneraccess.com/login">Sign in here <span class="color-black opacity-30%">&nbsp;&#8594;</span></a>
-            </footer>
           </div>
           <div class="link-card bg radius-lg col-6@md">
             <div class="flex flex-column width-100%">
@@ -122,19 +118,12 @@
                   <li>Comparison Charts</li>
                   <li>Detailed Reporting</li>
                 </ul>
-                <div>Already have a Content Portal account?</div>
               </main>
             </div>
-            <footer class="flex bg-contrast-lower margin-top-auto">
-              <a class="btn btn--lg color-black padding-y-sm margin-auto@md" href="https://login.portal.cnetcontent.com/en-us/login">Sign in here <span class="color-black opacity-30%">&nbsp;&#8594;</span></a>
-            </footer>
           </div>
         </div>
       </div>
     </div>
-  <!-- div style="display:none">
-    {{!-- source('src/public/icons/business-benefits.svg') --}}
-  </div -->
 </section>
 
 <div style="display:none">
@@ -353,20 +342,21 @@
   <p class="sr-only">Carousel items</p>
   <div class="carousel__wrapper order-1 overflow-hidden">
     <ol class="carousel__list">
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/corsair.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/sony.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/better-body-foods.png"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/microsoft.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/vizio.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/att.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/western-digital.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/sandisk.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/sennheiser.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/jabra.png"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/pioneer.svg"></li>
-            <li class="carousel__item"><img alt="placeholder" width="144" height="144" src="https://assets.cnetcontent.com/logos/chefman.png"></li>
+            <li class="carousel__item"><img alt="Corsair logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/corsair.svg"></li>
+            <li class="carousel__item"><img alt="Sony logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/sony.svg"></li>
+            <li class="carousel__item"><img alt="Better Body Foods logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/better-body-foods.png"></li>
+            <li class="carousel__item"><img alt="Microsoft logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/microsoft.svg"></li>
+            <li class="carousel__item"><img alt="Vizio logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/vizio.svg"></li>
+            <li class="carousel__item"><img alt="AT&T logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/att.svg"></li>
+            <li class="carousel__item"><img alt="Western Digital logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/western-digital.svg"></li>
+            <li class="carousel__item"><img alt="Sandisk logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/sandisk.svg"></li>
+            <li class="carousel__item"><img alt="Sennheiser logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/sennheiser.svg"></li>
+            <li class="carousel__item"><img alt="Jabra logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/jabra.png"></li>
+            <li class="carousel__item"><img alt="Pioneer logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/pioneer.svg"></li>
+            <li class="carousel__item"><img alt="Chefman logo" width="144" height="144" src="https://assets.cnetcontent.com/logos/chefman.png"></li>
           </ol>
   </div>
+  <style> :root { --carousel-item-auto-size: 144px; --carousel-grid-gap: var(--space-xxs); } </style>
   <div class="order-2 no-js:is-hidden">
     <div class="flex justify-center items-center">
       <nav>
@@ -521,7 +511,7 @@
         return true; // submit form
       })
       if (/true|success|sent/.test(window.location.href)) {
-        $( "aside#dialog-1" ).addClass( "dialog--is-visible" );
+        $("aside#dialog-1").addClass( "dialog--is-visible" );
         $("aside#dialog-1").click(function(){
           $("aside#dialog-1").removeClass("dialog--is-visible");
         });

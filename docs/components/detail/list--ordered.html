@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-context">Context</a>
         </li>
         
         
@@ -134,12 +128,18 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-info">Info</a>
+        </li>
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-notes">Notes</a>
         </li>
         
         
@@ -148,16 +148,44 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p>Todo:</p>
-<ul>
-<li>Clean up ordered list style</li>
-</ul>
+            
+            <pre>{
+  <span class="hljs-attr">"listItems"</span>: [
+    {
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span>
+    },
+    {
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span>
+    },
+    {
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span>
+    },
+    {
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span>
+    }
+  ]
+}</pre>
+            
+        
+    </code>
+</div>
 
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-html">
+    <code class="Code Code--lang-html hljs">
         
-    </div>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--ol"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></pre>
+        
+    </code>
 </div>
 
     
@@ -219,47 +247,19 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-html">
-    <code class="Code Code--lang-html hljs">
-        
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list list--ol"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span></pre>
-        
-    </code>
-</div>
-
-    
-    
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-8f331d2ede2f8e7e45aa19c02bae8c8c-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"listItems"</span>: [
-    {
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span>
-    },
-    {
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span>
-    },
-    {
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span>
-    },
-    {
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet, consectetur adipiscing elit"</span>
-    }
-  ]
-}</pre>
-            
+        <p>Todo:</p>
+<ul>
+<li>Clean up ordered list style</li>
+</ul>
+
         
-    </code>
+    </div>
 </div>
 
     

@@ -99,12 +99,8 @@
                   <li>Key Selling Points</li>
                   <li>Product Features</li>
                 </ul>
-                <p>Already have a PartnerAccess for Elkjop account?</p>
               </main>
             </div>
-            <footer class="flex bg-contrast-lower margin-top-auto">
-              <a class="btn btn--lg color-black padding-y-sm margin-auto@md" href="https://www.partneraccess.com/login">Sign in here <span class="color-black opacity-30%">&nbsp;&#8594;</span></a>
-            </footer>
           </div>
           <div class="link-card bg radius-lg col-6@md">
             <div class="flex flex-column width-100%">
@@ -124,19 +120,12 @@
                   <li>Comparison Charts</li>
                   <li>Detailed Reporting</li>
                 </ul>
-                <p>Already have a Content Portal account?</p>
               </main>
             </div>
-            <footer class="flex bg-contrast-lower margin-top-auto">
-              <a class="btn btn--lg color-black padding-y-sm margin-auto@md" href="https://login.portal.cnetcontent.com/en-us/login">Sign in here <span class="color-black opacity-30%">&nbsp;&#8594;</span></a>
-            </footer>
           </div>
         </div>
       </div>
     </div>
-  <!-- div style="display:none">
-    {{!-- source('src/public/icons/business-benefits.svg') --}}
-  </div -->
 </section>
 
 <div style="display:none">
@@ -309,7 +298,7 @@
         return true; // submit form
       })
       if (/true|success|sent/.test(window.location.href)) {
-        $( "aside#dialog-1" ).addClass( "dialog--is-visible" );
+        $("aside#dialog-1").addClass( "dialog--is-visible" );
         $("aside#dialog-1").click(function(){
           $("aside#dialog-1").removeClass("dialog--is-visible");
         });

@@ -3,13 +3,11 @@
   "status": "exported",
   "preview": "@preview",
   "context": {
-
     "clientName" : "{{ clientName }}",
-
     "formTest": true,
     "formCampaign": "7012p000001XoCg",
     "formClient": "Client",
-    "formURL": "",
+    "formURL": "https://client.cnetcontent.com",
     "formProduct": "Retail Services",
     "formEmail" : "RetailVendorSupport@CBSi.com",
     "formCheckboxes": [
@@ -25,10 +23,6 @@
         "name": "Rich content",
         "value": "Rich Content - Client"
       }
-    ],
-
-    "formProgram" : "Default",
-    "formRegion" : "Default"
-
+    ]
   }
 }

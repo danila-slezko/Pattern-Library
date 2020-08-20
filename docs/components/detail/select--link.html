@@ -116,14 +116,8 @@
     <ul class="Browser-tabs">
         
         
-        <li class="Browser-tab Browser-tab--notes is-active " data-role="tab">
-            <a href="#browser-2ef8c376b300492069600557a289ac39-panel-notes">Notes</a>
-        </li>
-        
-        
-        
-        <li class="Browser-tab Browser-tab--info" data-role="tab">
-            <a href="#browser-2ef8c376b300492069600557a289ac39-panel-info">Info</a>
+        <li class="Browser-tab Browser-tab--context is-active " data-role="tab">
+            <a href="#browser-2ef8c376b300492069600557a289ac39-panel-context">Context</a>
         </li>
         
         
@@ -134,12 +128,18 @@
         
         
         
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-2ef8c376b300492069600557a289ac39-panel-info">Info</a>
+        </li>
         
         
         
         
-        <li class="Browser-tab Browser-tab--context" data-role="tab">
-            <a href="#browser-2ef8c376b300492069600557a289ac39-panel-context">Context</a>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-2ef8c376b300492069600557a289ac39-panel-notes">Notes</a>
         </li>
         
         
@@ -148,12 +148,65 @@
 
 
     
-    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-2ef8c376b300492069600557a289ac39-panel-notes">
-    <div class="Prose Prose--condensed">
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-2ef8c376b300492069600557a289ac39-panel-context">
+    <code class="Code Code--lang-json hljs">
         
-        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+            
+            <pre>{
+  <span class="hljs-attr">"selectLabel"</span>: <span class="hljs-string">"Select Input"</span>,
+  <span class="hljs-attr">"selectName"</span>: <span class="hljs-string">"select"</span>,
+  <span class="hljs-attr">"selectOptions"</span>: [
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum1"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 1"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut."</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem2"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 2"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi."</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum3"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 3"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit."</span>
+    },
+    {
+      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem4"</span>,
+      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 4"</span>,
+      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi."</span>
+    }
+  ]
+}</pre>
+            
         
-    </div>
+    </code>
+</div>
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-2ef8c376b300492069600557a289ac39-panel-html">
+    <code class="Code Code--lang-html hljs">
+        
+        <pre><span class="hljs-comment">&lt;!--     
+&lt;label for="select"&gt;Select Input&lt;/label&gt;
+&lt;select name="select"&gt;
+      &lt;option value="Ipsum1"&gt;
+      Option 1
+    &lt;/option&gt;
+      &lt;option value="Lorem2"&gt;
+      Option 2
+    &lt;/option&gt;
+      &lt;option value="Ipsum3"&gt;
+      Option 3
+    &lt;/option&gt;
+      &lt;option value="Lorem4"&gt;
+      Option 4
+    &lt;/option&gt;
+  &lt;/select&gt;
+     --&gt;</span></pre>
+        
+    </code>
 </div>
 
     
@@ -223,68 +276,15 @@
 
     
     
-<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-2ef8c376b300492069600557a289ac39-panel-html">
-    <code class="Code Code--lang-html hljs">
-        
-        <pre><span class="hljs-comment">&lt;!--     
-&lt;label for="select"&gt;Select Input&lt;/label&gt;
-&lt;select name="select"&gt;
-      &lt;option value="Ipsum1"&gt;
-      Option 1
-    &lt;/option&gt;
-      &lt;option value="Lorem2"&gt;
-      Option 2
-    &lt;/option&gt;
-      &lt;option value="Ipsum3"&gt;
-      Option 3
-    &lt;/option&gt;
-      &lt;option value="Lorem4"&gt;
-      Option 4
-    &lt;/option&gt;
-  &lt;/select&gt;
-     --&gt;</span></pre>
-        
-    </code>
-</div>
-
-    
-    
 
 
     
-    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-2ef8c376b300492069600557a289ac39-panel-context">
-    <code class="Code Code--lang-json hljs">
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-2ef8c376b300492069600557a289ac39-panel-notes">
+    <div class="Prose Prose--condensed">
         
-            
-            <pre>{
-  <span class="hljs-attr">"selectLabel"</span>: <span class="hljs-string">"Select Input"</span>,
-  <span class="hljs-attr">"selectName"</span>: <span class="hljs-string">"select"</span>,
-  <span class="hljs-attr">"selectOptions"</span>: [
-    {
-      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum1"</span>,
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 1"</span>,
-      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut."</span>
-    },
-    {
-      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem2"</span>,
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 2"</span>,
-      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi."</span>
-    },
-    {
-      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Ipsum3"</span>,
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 3"</span>,
-      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit."</span>
-    },
-    {
-      <span class="hljs-attr">"value"</span>: <span class="hljs-string">"Lorem4"</span>,
-      <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Option 4"</span>,
-      <span class="hljs-attr">"desc"</span>: <span class="hljs-string">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi."</span>
-    }
-  ]
-}</pre>
-            
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
         
-    </code>
+    </div>
 </div>
 
     

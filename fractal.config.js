@@ -81,7 +81,7 @@ const subTheme = require('@frctl/mandelbrot')({
   highlightStyles: '/themes/code.css',
   favicon: '/favicon.ico',
   nav: ['search', 'components', 'docs'],
-  panels: ['notes', 'info', 'html', 'resources', 'context'],
+  panels: ['context', 'html', 'info', 'resources', 'notes'],
   styles: ['/themes/base.css', '/themes/default.css'],
   static: { mount: 'themes'}
 });

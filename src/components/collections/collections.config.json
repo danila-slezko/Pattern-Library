@@ -1,15 +1,8 @@
 {
   "label": "Collections",
   "tags": ["projects", "blocks"],
-  "meta": { "version": "1.0" },
   "status": "ready",
   "hidden": false,
-  "collated": true,
-  "preview": "@preview",
-
-  "context" : {
-    "clientName" : "CLIENT",
-    "clientSite" : "BRAND.COM"
-  }
-
+  "collated": false,
+  "preview": "@preview"
 }

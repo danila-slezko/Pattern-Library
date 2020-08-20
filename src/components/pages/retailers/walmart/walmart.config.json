@@ -3,17 +3,15 @@
   "order" : 3,
   "preview": "@retail-landing",
   "context" : {
-
     "clientName" : "Walmart",
     "clientSite" : "Walmart.com",
-
     "formTest": false,
     "formCampaign": "7012p000001XpCx",
     "formClient": "Walmart",
     "formURL": "https://walmart.cnetcontent.com",
     "formProduct": "Retail Services",
-    "formEmail" : "Walmart.CCSsales@CBSi.com",
-    "formRegion" : "North America",
+    "formEmail": "Walmart.CCSsales@CBSi.com",
+    "formRegion": "North America",
     "formCheckboxes": [
       {
         "name": "Item set up",
@@ -28,76 +26,76 @@
         "value": "Rich Content - Walmart"
       }
     ],
-    "carouselItems" : [
+    "carouselItems": [
       {
         "url": "https://assets.cnetcontent.com/logos/corsair.svg",
-        "name": "placeholder",
+        "name": "Corsair logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sony.svg",
-        "name": "placeholder",
+        "name": "Sony logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/better-body-foods.png",
-        "name": "placeholder",
+        "name": "Better Body Foods logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/microsoft.svg",
-        "name": "placeholder",
+        "name": "Microsoft logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/vizio.svg",
-        "name": "placeholder",
+        "name": "Vizio logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/att.svg",
-        "name": "placeholder",
+        "name": "AT&T logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/western-digital.svg",
-        "name": "placeholder",
+        "name": "Western Digital logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sandisk.svg",
-        "name": "placeholder",
+        "name": "Sandisk logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/sennheiser.svg",
-        "name": "placeholder",
+        "name": "Sennheiser logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/jabra.png",
-        "name": "placeholder",
+        "name": "Jabra logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/pioneer.svg",
-        "name": "placeholder",
+        "name": "Pioneer logo",
         "height": "144",
         "width": "144"
       },
       {
         "url": "https://assets.cnetcontent.com/logos/chefman.png",
-        "name": "placeholder",
+        "name": "Chefman logo",
         "height": "144",
         "width": "144"
       }
@@ -105,7 +103,7 @@
     "variants": [
       {
         "name": "default",
-        "label": "walmar",
+        "label": "walmart",
         "title": "Walmart Partner Program"
       }
     ]
