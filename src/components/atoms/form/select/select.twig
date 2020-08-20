@@ -1,8 +1,8 @@
 <!-- <label class="form-label margin-bottom-xxxs" for="{{ selectName }}">
   {{ selectLabel }}
 </label> -->
-<label class="form-label padding-bottom-xxxs">Form Select</label>
-<div class="select">
+<label class="form-label padding-bottom-xxxs">Form Select</label><br>
+<div class="select width-100%">
   <select class="select__input form-control" name="{{ selectName }}" id="{{ selectName }}">
     {% for option in selectOptions %}
       <option value="{{ option.value }}">

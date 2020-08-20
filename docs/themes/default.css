@@ -1402,7 +1402,7 @@ mark {
 .Document-header {
   display: flex;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: .75rem;
   border-bottom: 0 none transparent;
   padding-bottom: 0.5rem;
 }
@@ -1418,7 +1418,7 @@ mark {
 }
 
 .Document-title {
-  font-size: 1.75rem;
+  font-size: 1.3125rem;
   line-height: 1.14286;
   font-weight: bold;
   letter-spacing: unset;

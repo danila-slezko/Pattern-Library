@@ -94,14 +94,13 @@ textarea.parsley-error {
   line-height: 0.9em;
   opacity: 0;
   color: var(--color-error-dark);
-  font-weight: 600;
-
+  font-weight: 500;
   transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
   -moz-transition: all .3s ease-in;
   -webkit-transition: all .3s ease-in;
   li {
-    padding-bottom: .5rem;
+    padding: 0 2.5rem;
   }
 }
 

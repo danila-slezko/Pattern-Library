@@ -1,5 +1,6 @@
 {
-  "title": "Buttons",
+  "order": 1,
+  "label": "Buttons",
   "status": "exported",
   "hidden": false,
   "meta": {"version": "1.0"},
