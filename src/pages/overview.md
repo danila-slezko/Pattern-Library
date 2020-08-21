@@ -1,6 +1,6 @@
 ---
-title: Atomic Design Explained
-label: Atomic Design Explained
+title: Atomic Design
+label: Atomic Design
 status: published
 order: 1
 ---
