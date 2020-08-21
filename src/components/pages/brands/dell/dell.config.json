@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "dell.svg",
+    "logoWidth" : "120px",
+    "formClient": "Dell",
+    "formURL": "https://dell.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "dell",
+      "title": "Dell Partner Program"
+    }
+  ]
+}

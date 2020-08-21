@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "soundunited.svg",
+    "logoWidth" : "120px",
+    "formClient": "Sound United",
+    "formURL": "https://soundunited.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "sound united",
+      "title": "Sound United Partner Program"
+    }
+  ]
+}

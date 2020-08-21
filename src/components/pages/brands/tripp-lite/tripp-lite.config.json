@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "tripp-lite.svg",
+    "logoWidth" : "120px",
+    "formClient": "tripp lite",
+    "formURL": "https://tripplite.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "tripp lite",
+      "title": "Tripp-Lite Partner Program"
+    }
+  ]
+}

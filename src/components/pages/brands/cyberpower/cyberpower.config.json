@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "cyberpower.svg",
+    "logoWidth" : "120px",
+    "formClient": "CyberPower",
+    "formURL": "https://cyberpower.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "cyberpower",
+      "title": "CyberPower Partner Program"
+    }
+  ]
+}

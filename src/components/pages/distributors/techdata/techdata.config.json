@@ -1,0 +1,14 @@
+{
+  "default": "United States",
+  "status": "prototype",
+  "variants": [
+    {
+      "name": "europe",
+      "label": "Europe"
+    },
+    {
+      "name": "channelonline",
+      "label": "ChannelOnline"
+    }
+  ]
+}

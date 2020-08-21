@@ -114,7 +114,7 @@ Components and their variants have been given statuses reflecting their state of
     <tr class='row-table__row'>
       <td class="row-table__cell">
         <div class="Status Status--tag">
-          <label class="Status-label" style="background-color: #cc2222; border-color: #cc2222;">Prototype</label>
+          <label class="Status-label" style="background-color: #cc2222; border-color: #cc2222;">Staging</label>
         </div>
       </td>
       <td class="row-table__cell">Do not implement</td>

@@ -1,0 +1,94 @@
+{
+  "title": "Carousel",
+  "status": "ready",
+  "hidden": false,
+  "preview": "@preview-list",
+  "context": {
+    "carouselItems": [
+      {
+          "height": "144",
+          "name": "AT&T logo",
+          "url": "https://assets.cnetcontent.com/logos/att.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Better Body Foods logo",
+          "url": "https://assets.cnetcontent.com/logos/better-body-foods.png",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Better Body Foods logo",
+          "url": "https://assets.cnetcontent.com/logos/better-body-foods.png",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Chefman logo",
+          "url": "https://assets.cnetcontent.com/logos/chefman.png",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Corsair logo",
+          "url": "https://assets.cnetcontent.com/logos/corsair.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Jabra logo",
+          "url": "https://assets.cnetcontent.com/logos/jabra.png",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Microsoft logo",
+          "url": "https://assets.cnetcontent.com/logos/microsoft.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Microsoft logo",
+          "url": "https://assets.cnetcontent.com/logos/microsoft.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Pioneer logo",
+          "url": "https://assets.cnetcontent.com/logos/pioneer.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Sandisk logo",
+          "url": "https://assets.cnetcontent.com/logos/sandisk.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Sennheiser logo",
+          "url": "https://assets.cnetcontent.com/logos/sennheiser.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Sony logo",
+          "url": "https://assets.cnetcontent.com/logos/sony.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Vizio logo",
+          "url": "https://assets.cnetcontent.com/logos/vizio.svg",
+          "width": "144"
+      },
+      {
+          "height": "144",
+          "name": "Western Digital logo",
+          "url": "https://assets.cnetcontent.com/logos/western-digital.svg",
+          "width": "144"
+      }
+    ]
+  }
+}

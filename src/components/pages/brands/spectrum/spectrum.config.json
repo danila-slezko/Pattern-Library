@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "spectrum.svg",
+    "logoWidth" : "120px",
+    "formClient": "Spectrum",
+    "formURL": "https://spectrum.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "spectrum",
+      "title": "Spectrum Partner Program"
+    }
+  ]
+}

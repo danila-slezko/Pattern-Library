@@ -1,0 +1,30 @@
+{
+  "label": "Select Lists",
+  "name": "select",
+  "hidden": false,
+  "status": "wip",
+  "collated": true,
+  "preview": "@preview-grid",
+  "default": "product",
+  "context": {
+    "sfdcLabel": true
+  },
+  "variants": [
+    {
+      "name": "product",
+      "preview": "@preview-list"
+    },
+    {
+      "name": "country",
+      "preview": "@preview-list"
+    },
+    {
+      "name": "region",
+      "preview": "@preview-list"
+    },
+    {
+      "name": "state",
+      "preview": "@preview-list"
+    }
+  ]
+}

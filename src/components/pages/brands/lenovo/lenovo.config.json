@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "lenvo.svg",
+    "logoWidth" : "120px",
+    "formClient": "Lenovo",
+    "formURL": "https://lenovo.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "lenvo",
+      "title": "Lenovo Partner Program"
+    }
+  ]
+}

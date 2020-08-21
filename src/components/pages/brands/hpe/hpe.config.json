@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "hpe.svg",
+    "logoWidth" : "120px",
+    "formClient": "HPE",
+    "formURL": "https://hpe.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "hpe",
+      "title": "HPE Partner Program"
+    }
+  ]
+}

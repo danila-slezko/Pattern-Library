@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "klipsch.svg",
+    "logoWidth" : "120px",
+    "formClient": "Klipsch",
+    "formURL": "https://klipsch.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "klipsch",
+      "title": "Klipsch Partner Program"
+    }
+  ]
+}

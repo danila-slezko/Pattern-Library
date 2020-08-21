@@ -1,0 +1,50 @@
+{
+  "label": "Single Selects",
+  "order": 3,
+  "status": "ready",
+  "collated": true,
+  "default": "default",
+  "context": {
+    "selectLabel": "Select Input",
+    "selectName": "select",
+    "selectOptions": [
+      {
+        "value": "Ipsum1",
+        "text": "Option 1",
+        "desc": "Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut."
+      },
+      {
+        "value": "Lorem2",
+        "text": "Option 2",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi."
+      },
+      {
+        "value": "Ipsum3",
+        "text": "Option 3",
+        "desc": "Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      },
+      {
+        "value": "Lorem4",
+        "text": "Option 4",
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, qui ut. Laboriosam omnis at minima corporis, quis laborum reprehenderit sequi."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "name": "radio"
+    },
+    {
+      "name": "dropdown",
+      "status": "prototype"
+    },
+    {
+      "name": "accordion"
+    },
+    {
+      "name": "link",
+      "status": "prototype",
+      "hidden": "true"
+    }
+  ]
+}

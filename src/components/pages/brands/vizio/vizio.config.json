@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "vizio.svg",
+    "logoWidth" : "120px",
+    "formClient": "Vizio",
+    "formURL": "https://vizio.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "vizio",
+      "title": "Vizio Partner Program"
+    }
+  ]
+}

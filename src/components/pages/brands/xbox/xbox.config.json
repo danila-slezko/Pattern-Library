@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "xbox.svg",
+    "logoWidth" : "120px",
+    "formClient": "Xbox",
+    "formURL": "https://xbox.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "xbox",
+      "title": "Xbox Partner Program"
+    }
+  ]
+}

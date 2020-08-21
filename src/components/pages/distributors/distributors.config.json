@@ -1,0 +1,9 @@
+{
+  "label": "Distributors",
+  "order": "3",
+  "tags": ["client"],
+  "prefix": "landing",
+  "meta": { "version": "1.0" },
+  "hidden": false,
+  "collated": false
+}

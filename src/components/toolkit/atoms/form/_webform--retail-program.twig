@@ -1,0 +1,173 @@
+<section class='bg-contrast-lower' {{ formBackground }}>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/parsleyjs@2/dist/parsley.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer="defer"></script>
+  <script> function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); </script>
+
+  <div class="container max-width-adaptive-md margin-auto form-template-v3 v-space-sm padding-bottom-md">
+    <form id="RetailInquiry" data-parsley-validate data-parsley-focus="first" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" autocomplete="off">
+      <input id="captcha_settings" type="hidden" name="captcha_settings" value='{"keyname":"CCS_Websites","fallback":"true","orgId":"00D2000000002px","ts":""}'>
+      <input title="Organisation" id="oid" type="hidden" name="oid" value="00D2000000002px">
+      <input title="Confirmation" id="retURL" type="hidden" name="retURL" value="{{ formURL }}?inquiry=true">
+      <input title="Referrer" id="00N570000063NYi" type="hidden" name="00N570000063NYi" value="{{ formURL }}">
+      <input title="Lead Source" id="lead_source" type="hidden" name="lead_source" value="Landing Page">
+      <input title="Lead Sub-Source" id="00N57000006PiUg" type="hidden" name="00N57000006PiUg" value="{{ formClient }}">
+      <input title="Campaign" id="Campaign_ID" type="hidden" name="Campaign_ID" value="{{ formCampaign }}">
+      <input title="CC Product Interest" id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" value="{{ formProduct }}">
+      {% if formProgram %}
+      <input title="Product Interest (2020)" id="00N2p000009GnpJ" type="hidden" name="00N2p000009GnpJ" value="{{ formProgram }}">
+      {% endif %}
+      {% if formRegion %}
+      <input title="Region" id="00N2p000009H8t7" type="hidden" name="00N2p000009H8t7" value="{{ formRegion }}">
+      {% endif %}
+      {% if formTest == true %}
+      <input type="hidden" name="debug" value="1">
+      <input type="hidden" name="debugEmail" value="valerie.mardorf@cbsinteractive.com">
+      {% endif %}
+      <div id="contact"></div>
+      <fieldset class="margin-bottom-md border-bottom">
+        <div class="margin-bottom-xs">
+          <div class="text-component line-height-md">
+            <div class="grid gap-xxs items-center flex-column">
+              <div class="col text-center"><h2 class="text-xl text-xxl@lg padding-top-md">Contact us to get started.</h2></div>
+              <div class="col-8@md text-center">Submit the form below, and a representative will reach out to you with more information about adding your content to {{ clientName }} sites.</div>
+            </div>
+          </div>
+        </div>
+        <div class="margin-bottom-xs">
+          <div class="grid gap-xxs items-center@md">
+            <div class="col-4@md text-right@md">
+              <label class="form-label" for="first_name">First Name</label>
+            </div>
+            <div class="col-4@md">
+              <input class="form-control width-100%" id="first_name" type="text" name="first_name" required data-parsley-required-message>
+            </div>
+          </div>
+        </div>
+        <div class="margin-bottom-xs">
+          <div class="grid gap-xxs items-center@md">
+            <div class="col-4@md text-right@md">
+              <label class="form-label" for="last_name">Last Name</label>
+            </div>
+            <div class="col-4@md">
+              <input class="form-control width-100%" id="last_name" type="text" name="last_name" required data-parsley-required-message>
+            </div>
+          </div>
+        </div>
+        <div class="margin-bottom-xs">
+          <div class="grid gap-xxs items-center@md">
+            <div class="col-4@md text-right@md">
+              <label class="form-label" for="company">Company</label>
+            </div>
+            <div class="col-4@md">
+              <input class="form-control width-100%" id="company" type="text" name="company" required data-parsley-required-message>
+            </div>
+          </div>
+        </div>
+        <div class="margin-bottom-xs">
+          <div class="grid gap-xxs items-center@md">
+            <div class="col-4@md text-right@md">
+              <label class="form-label" for="phone">Company Phone</label>
+            </div>
+            <div class="col-4@md">
+              <input class="form-control width-100%" id="phone" type="text" name="phone" required data-parsley-required-message>
+            </div>
+          </div>
+        </div>
+        <div class="margin-bottom-xs">
+          <div class="grid gap-xxs items-center@md">
+            <div class="col-4@md text-right@md">
+              <label class="form-label" for="email">Work Email</label>
+            </div>
+            <div class="col-4@md">
+              <input class="form-control width-100%" id="email" type="email" name="email" data-parsley-trigger="change" required data-parsley-required-message>
+            </div>
+          </div>
+        </div>
+        {% if formRegion %}
+        {% else %}
+        <div class="margin-bottom-xs">
+          <div class="grid gap-xxs items-center@md">
+            <div class="col-4@md text-right@md">
+              <label class="form-label" for="region">Region</label>
+            </div>
+            <div class="col-4@md">
+              <div class="select">
+                {% include '@sfdc-select--region' %}
+                <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+                  <g stroke-width="2" stroke="currentColor">
+                    <polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        <br>
+      {% if formCheckboxes %}
+      <div class="grid gap-xxs items-start">
+        <div class="col-4@md text-right@md">
+          <label for="00N2p000009GnpJ" class="form-label">Program Interest</label>
+        </div>
+        <div class="col-4@md">
+          <div class="flex flex-column gap-xxxs">
+            {% for option in formCheckboxes %}
+              <input required data-parsley-multiple="service" data-required-message="Please select one or more" id="{{ option.value }}" name="00N2p000009GnpJ" value="{{ option.value }}" class="checkbox" type="checkbox" />
+              <label for="{{ option.value }}"><p>{{ option.name }}</p></label>
+            {% endfor %}
+            <br>
+          </div>
+        </div>
+      </div>
+      <br>
+      {% endif %}
+      </fieldset>
+        <div class="grid gap-sm flex-center flex-column">
+          <div class="col">
+            <p class="text-center">CNET Content Solutions will use your personal information to manage the partner program.</p>
+          </div>
+          <div class="col-4" style="max-width: 305px">
+            <label for="g-recaptcha-response" style="display:none">reCAPTCHA</label>
+            <div class="g-recaptcha" data-sitekey="6Lc7zy8UAAAAANNrjVoPAH7vvxssVeozhBNt6fN1" required></div>
+          </div>
+          <div class="col-4">
+            <button class="btn btn--primary" id="formDetails" alt="Send"> Submit </button><br>
+          </div>
+        </div>
+        <br>
+    </form>
+  </div>
+  <script>
+    $(function () {
+      $('#RetailInquiry').parsley().on('field:validated', function() {
+        var ok = $('.parsley-error').length === 0;
+        $('.bs-callout-info').toggleClass('hidden', !ok);
+        $('.bs-callout-warning').toggleClass('hidden', ok);
+      })
+      .on('form:submit', function() {
+        if ("" == grecaptcha.getResponse()) return event.preventDefault(), alert("Please click the reCAPTCHA checkbox"), !1;
+        return true; // submit form
+      })
+      if (/true|success|sent/.test(window.location.href)) {
+        $( "aside#dialog-1" ).addClass( "dialog--is-visible" );
+        $("aside#dialog-1").click(function(){
+          $("aside#dialog-1").removeClass("dialog--is-visible");
+        });
+      }
+    });
+  </script>
+</section>
+<aside id="dialog-1" class="dialog js-dialog bg-opacity-90%" style="background: black" data-animation="on">
+  <div class="dialog__content max-width-xxs" role="alertdialog" aria-labelledby="dialog-title-1" aria-describedby="dialog-description-1">
+    <div class="text-component text-center">
+      <h4 id="dialog-title-1">Message Sent!</h4>
+      <p>Thank you.</p>
+    </div>
+    <footer class="margin-top-md">
+      <div class="flex justify-end gap-xs flex-wrap justify-center">
+        <button class="btn btn--subtle js-dialog__close">Close</button>
+      </div>
+    </footer>
+  </div>
+</aside>

@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "hp.svg",
+    "logoWidth" : "120px",
+    "formClient": "HP",
+    "formURL": "https://hp.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "hp",
+      "title": "HP Partner Program"
+    }
+  ]
+}

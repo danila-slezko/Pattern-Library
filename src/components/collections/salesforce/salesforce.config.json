@@ -1,0 +1,8 @@
+{
+  "label": "Salesforce Fields",
+  "prefix": "sfdc",
+  "tags": ["marketing"],
+  "meta": { "version": "1.0" },
+  "hidden": false,
+  "collated": false
+}

@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "lexmark.svg",
+    "logoWidth" : "120px",
+    "formClient": "Lexmark",
+    "formURL": "https://lexmark.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "lexmark",
+      "title": "Lexmark Partner Program"
+    }
+  ]
+}

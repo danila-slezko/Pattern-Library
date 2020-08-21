@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "cdiscount.svg",
+    "logoWidth" : "120px",
+    "formClient": "CDiscount",
+    "formURL": "https://cdiscount.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "CDiscount",
+      "title": "CDiscount Partner Program"
+    }
+  ]
+}

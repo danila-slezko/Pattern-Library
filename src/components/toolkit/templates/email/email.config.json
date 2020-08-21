@@ -1,0 +1,8 @@
+{
+  "title": "Email",
+  "status": "prototype",
+  "context" : {
+    "userName" : "{{ userName }}",
+    "productName" : "{{ productName }}"
+  }
+}

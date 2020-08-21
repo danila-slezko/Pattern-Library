@@ -1,5 +1,6 @@
 {
   "label": "Retailers",
+  "order": "1",
   "tags": ["client"],
   "prefix": "landing",
   "meta": { "version": "1.0" },

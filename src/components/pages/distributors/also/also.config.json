@@ -1,0 +1,16 @@
+{
+  "status": "prototype",
+  "context": {
+    "logoFile": "also.svg",
+    "logoWidth" : "120px",
+    "formClient": "ALSO",
+    "formURL": "https://also.cnetcontent.com"
+  },
+  "variants": [
+    {
+      "name": "default",
+      "label": "ALSO",
+      "title": "ALSO Partner Program"
+    }
+  ]
+}

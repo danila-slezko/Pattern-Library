@@ -1,0 +1,88 @@
+{
+  "title": "Carousel",
+  "status": "ready",
+  "hidden": false,
+  "preview": "@preview-list",
+  "context": {
+    "carouselItems" : [
+      {
+        "url": "https://picsum.photos/200/300?random=1",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=2",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=3",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=4",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=5",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=6",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=7",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=8",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=9",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=10",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=11",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=12",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      },
+      {
+        "url": "https://picsum.photos/200/300?random=13",
+        "name": "placeholder",
+        "height": "144",
+        "width": "144"
+      }
+    ]
+  }
+}

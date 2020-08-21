@@ -17,7 +17,7 @@ fractal.set('project.author', 'Valerie Mardorf');
  * COMPONENT SETTINGS
  */
 fractal.components.engine(twigAdapter);
-fractal.components.set('exclude', '**/node_modules/**');
+fractal.components.set('exclude', ['**/node_modules/**', '**/public/**']);
 fractal.components.set('default.preview', '@preview-list');
 fractal.components.set('default.collator', function (markup, item) {
   return `<div class="col"><span><!-- Start: @${item.handle} -->\n${markup}\n</span></div>\n`;

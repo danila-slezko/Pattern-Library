@@ -1,0 +1,45 @@
+{
+  "label": "Multiple Selects",
+  "status": "ready",
+  "order": 1,
+  "collated": true,
+  "default": "checkbox",
+  "context": {
+    "pickLabel": "Check Options",
+    "pickName": "check",
+    "pickOptions": [
+      {
+        "value": "Ipsum1",
+        "text": "Option 1",
+        "desc": "Laboriosam omnis at minima corporis"
+      },
+      {
+        "value": "Lorem2",
+        "text": "Option 2",
+        "desc": "Quis laborum reprehenderit sequi"
+      },
+      {
+        "value": "Ipsum3",
+        "text": "Option 3",
+        "desc": "Laboriosam dolor adipisicing elit."
+      },
+      {
+        "value": "Lorem4",
+        "text": "Option 4",
+        "desc": "Nesciunt, qui ut."
+      }
+    ]
+  },
+  "variants": [
+    {
+      "name": "rows",
+      "hidden": "true"
+    },
+    {
+      "name": "multi"
+    },
+    {
+      "name": "accordion"
+    }
+  ]
+}
