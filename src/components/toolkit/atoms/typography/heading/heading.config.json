@@ -5,7 +5,7 @@
   "status": "ready",
   "context": {
     "headingText": "Lorem ipsum dolor sit amet",
-    "typeModifier": "text-truncate"
+    "typeModifier": "text-truncate color-black"
   },
   "default": "h1",
   "variants": [
@@ -55,7 +55,7 @@
       "label": "4X",
       "name": "xxxxl",
       "context": {
-        "typeModifier": "text-xxxxl text-truncate",
+        "typeModifier": "text-xxxxl text-truncate color-black",
         "headingText": "text-xxxxl, Lorem ipsum dolor sit amet"
       }
     },
@@ -63,7 +63,7 @@
       "label": "3X",
       "name": "xxxl",
       "context": {
-        "typeModifier": "text-xxxl text-truncate",
+        "typeModifier": "text-xxxl text-truncate color-black",
         "headingText": "text-xxxl, Lorem ipsum dolor sit amet"
       }
     },
@@ -71,7 +71,7 @@
       "label": "2X",
       "name": "xxl",
       "context": {
-        "typeModifier": "text-xxl text-truncate",
+        "typeModifier": "text-xxl text-truncate color-black",
         "headingText": "text-xxl, Lorem ipsum dolor sit amet"
       }
     },
@@ -79,7 +79,7 @@
       "label": "1X",
       "name": "xl",
       "context": {
-        "typeModifier": "text-xl text-truncate",
+        "typeModifier": "text-xl text-truncate color-black",
         "headingText": "text-xl, Lorem ipsum dolor sit amet"
       }
     },
@@ -87,7 +87,7 @@
       "label": "LG",
       "name": "lg",
       "context": {
-        "typeModifier": "text-lg text-truncate",
+        "typeModifier": "text-lg text-truncate color-black",
         "headingText": "text-lg, Lorem ipsum dolor sit amet"
       }
     }
