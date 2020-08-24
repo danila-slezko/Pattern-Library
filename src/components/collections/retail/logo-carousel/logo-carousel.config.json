@@ -1,6 +1,6 @@
 {
   "title": "Carousel",
-  "status": "ready",
+  "status": "exported",
   "hidden": false,
   "preview": "@preview-list",
   "context": {
@@ -9,12 +9,6 @@
           "height": "144",
           "name": "AT&T logo",
           "url": "https://assets.cnetcontent.com/logos/att.svg",
-          "width": "144"
-      },
-      {
-          "height": "144",
-          "name": "Better Body Foods logo",
-          "url": "https://assets.cnetcontent.com/logos/better-body-foods.png",
           "width": "144"
       },
       {
@@ -39,12 +33,6 @@
           "height": "144",
           "name": "Jabra logo",
           "url": "https://assets.cnetcontent.com/logos/jabra.png",
-          "width": "144"
-      },
-      {
-          "height": "144",
-          "name": "Microsoft logo",
-          "url": "https://assets.cnetcontent.com/logos/microsoft.svg",
           "width": "144"
       },
       {
