@@ -1,7 +1,6 @@
 {
   "status" : "exported",
   "order" : 2,
-  "preview": "@retail-landing",
   "context" : {
 
     "logoFile" : "costco.svg",

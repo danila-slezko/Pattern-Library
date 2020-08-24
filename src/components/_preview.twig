@@ -9,9 +9,7 @@
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
 <body data-theme="default" class="_preview" id="{{ _target.title | replace({ ' ': '-' }) | replace({ ':': '' }) | lower }}">
-
   {{ yield }}
-
 <script src="../../assets/js/scripts.min.js"></script>
 <div style="display:none">{{ source('src/public/icons/svg-symbols.svg') }}</div>
 </body>

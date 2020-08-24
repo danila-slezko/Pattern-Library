@@ -1,16 +1,18 @@
 {
-  "status": "prototype",
-  "context": {
-    "logoFile": "sony.svg",
+  "status" : "wip",
+  "order" : 1,
+  "context" : {
+    "logoFile" : "sony-white.svg",
     "logoWidth" : "120px",
-    "formClient": "Sony",
-    "formURL": "https://sony.cnetcontent.com"
+    "formClient" : "Sony",
+    "formURL" : "https://sony.cnetcontent.com",
+    "headerLink" : ""
   },
   "variants": [
     {
-      "name": "default",
-      "label": "sony",
-      "title": "Sony Partner Program"
+      "name" : "default",
+      "label" : "sony",
+      "title" : "Sony Partner Program"
     }
   ]
 }

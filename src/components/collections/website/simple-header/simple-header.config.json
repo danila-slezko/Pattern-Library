@@ -1,0 +1,12 @@
+{
+  "hidden": false,
+  "order": 1,
+  "label": "Header",
+  "name": "Landing Header",
+  "context": {
+    "logoColor": "white",
+    "logoFile": "company-x.svg",
+    "logoWidth" : "124px"
+  },
+  "status": "exported"
+}

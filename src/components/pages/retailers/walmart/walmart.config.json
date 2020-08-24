@@ -1,7 +1,6 @@
 {
   "status" : "exported",
   "order" : 3,
-  "preview": "@retail-landing",
   "context" : {
     "clientName" : "Walmart",
     "clientSite" : "Walmart.com",
