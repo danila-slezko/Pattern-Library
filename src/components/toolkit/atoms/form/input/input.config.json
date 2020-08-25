@@ -1,7 +1,7 @@
 {
   "label": "Text Inputs",
   "order": 4,
-  "status": "ready",
+  "status": "exported",
   "default": "Text",
   "context": {
     "inputLabel": "Text",

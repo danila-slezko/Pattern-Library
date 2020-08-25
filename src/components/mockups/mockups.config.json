@@ -4,5 +4,6 @@
   "status": "prototype",
   "hidden": false,
   "collated": false,
-  "preview": "@preview"
+  "preview": "@preview",
+  "order": 4
 }

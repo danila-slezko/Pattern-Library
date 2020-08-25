@@ -1,18 +1,9 @@
-<!-- <label class="form-label margin-bottom-xxxs" for="{{ selectName }}">
-  {{ selectLabel }}
-</label> -->
-<label class="form-label padding-bottom-xxxs">Form Select</label><br>
-<div class="select width-100%">
-  <select class="select__input form-control" name="{{ selectName }}" id="{{ selectName }}">
-    {% for option in selectOptions %}
-      <option value="{{ option.value }}">
-        {{ option.text }}
-      </option>
-    {% endfor %}
-  </select>
-  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
-    <g stroke-width="2" stroke="currentColor">
-      <polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
-    </g>
-  </svg>
-</div>
+<label class="form-label padding-bottom-xxxs">Radio Buttons</label>
+<ul class="list flex flex-column gap-xxxs">
+  {% for option in selectOptions %}
+  <li>
+    <input id="{{ option.value }}" value="{{ option.value }}" name="{{ selectName }}" class="radio" type="radio" />
+    <label for="{{ option.value }}">{{ option.text }}</label>
+  </li>
+  {% endfor %}
+</ul>

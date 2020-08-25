@@ -1,6 +1,6 @@
 {
   "label": "Multiple Selects",
-  "status": "ready",
+  "status": "exported",
   "order": 1,
   "collated": true,
   "default": "checkbox",

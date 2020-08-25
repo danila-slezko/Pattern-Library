@@ -5,33 +5,36 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <title>radio | Design Patterns</title>
+  <title>list | Design Patterns</title>
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" id="codyframe" href="../../assets/css/style.css" />
   <script>if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}</script>
 </head>
-<body data-theme="default" class="_preview-list" id="single-selects-radio">
+<body data-theme="default" class="_preview-list" id="single-selects-list">
   <div class="max-width-adaptive-md padding-md@lg padding-md">
     <main class="grid gap-lg flex-column">
-      <label class="form-label padding-bottom-xxxs">Radio Buttons</label>
-<ul class="list flex flex-column gap-xxxs">
-    <li>
-    <input id="Ipsum1" value="Ipsum1" name="select" class="radio" type="radio" />
-    <label for="Ipsum1">Option 1</label>
-  </li>
-    <li>
-    <input id="Lorem2" value="Lorem2" name="select" class="radio" type="radio" />
-    <label for="Lorem2">Option 2</label>
-  </li>
-    <li>
-    <input id="Ipsum3" value="Ipsum3" name="select" class="radio" type="radio" />
-    <label for="Ipsum3">Option 3</label>
-  </li>
-    <li>
-    <input id="Lorem4" value="Lorem4" name="select" class="radio" type="radio" />
-    <label for="Lorem4">Option 4</label>
-  </li>
-  </ul>
+      <label class="form-label padding-bottom-xxxs">Pick List</label><br>
+<div class="select width-100%">
+  <select class="select__input form-control" name="select" id="select">
+          <option value="Ipsum1">
+        Option 1
+      </option>
+          <option value="Lorem2">
+        Option 2
+      </option>
+          <option value="Ipsum3">
+        Option 3
+      </option>
+          <option value="Lorem4">
+        Option 4
+      </option>
+      </select>
+  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
+    <g stroke-width="2" stroke="currentColor">
+      <polyline fill="none" stroke="currentColor" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
+    </g>
+  </svg>
+</div>
 
     </main>
   </div>

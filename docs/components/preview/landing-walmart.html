@@ -18,7 +18,7 @@
 <body data-theme="default" class="_preview" id="default">
 <div id="page">
 
-<header class="header js-header anchor" id="header">
+<header class="header js-header" id="header">
   <div class="header__container container max-width-adaptive-md">
     <div class="header__logo">
       <a href="#top">
@@ -43,7 +43,7 @@
       <div class="header__nav-inner max-width-adaptive-lg margin-auto">
         <div class="header__label is-hidden">Main menu</div>
         <ul class="header__list">
-                    <li class="header__item"><a class="btn btn--subtle js-smooth-scroll" href="#contact" data-duration="300">Contact Us</a></li>
+                    <li class="header__item"><a class="btn btn--subtle" href="#contact" data-duration="300">Contact Us</a></li>
         </ul>
       </div>
     </nav>
@@ -55,8 +55,8 @@
     <div class="grid gap-lg gap-xxxl@md items-center">
       <div class="col-6@md order-1@md">
         <div class="text-component line-height-lg v-space-lg">
-          <h2 class="text-xl text-xxl@lg color-black">Ensure accurate and complete product content on Walmart.com</h2>
-            <p>CNET Content Solutions gives Walmart’s brand partners the best opportunity to control and manage their brand content on Walmart.com with item setup, content enhancement, rich media, and detailed analytics.</p>
+          <h2 class="text-xl text-xxl@lg color-black">Ensure accurate and complete product content on Walmart.com.</h2>
+            <p>CNET Content Solutions gives Walmart’s brand partners the best opportunity to control and manage their brand content with item setup, content enhancement, rich media, and detailed analytics.</p>
             <a href="#contact" class="btn btn--primary margin-bottom-md">Get Started</a>
           </div>
         </div>
@@ -73,57 +73,77 @@
 <section class="position-relative bg-cover padding-y-md" id="service" style="background-image: url('https://assets.cnetcontent.com/images/background.jpg')">
   <span class="overlay z-index-1 opacity-50%" style="background-color: var(--color-primary-darker)"></span>
   <div class="container position-relative z-index-2 max-width-adaptive-lg margin-top-sm">
-      <div class="text-component text-center padding-x-sm">
-        <h1 class="color-white text-xl text-xxl@md padding-y-xxs@lg">One partner. One complete solution.</h1>
-        <p class="color-white font-medium">Just provide your content to us in whatever format you have it in, and we’ll take care of the rest.</p>
-      </div>
-      <div class="padding-y-lg flex justify-center max-width-adaptive-md margin-auto">
-        <div class="grid gap-xl justify-center z-index-3 width-100%">
-          <div class="link-card bg radius-lg col-6@md">
-            <div class="flex flex-column width-100%">
-              <header class="margin-x-md margin-y-sm flex@md flex-row items-center">
-                <figure class="col-4">
-                  <svg viewBox="0 0 64 64">
-                    <use xlink:href="#spec"></use>
-                  </svg>
-                </figure>
-                <h4 class="text-md text-lg@md line-height-xl padding-top-xs padding-top-0@md">&nbsp;Structured Product Content</h4>
-              </header>
-              <main class="text-component margin-bottom-sm padding-x-md font-medium">
-                <ul class="list list--ul margin-left-xs">
-                  <li>Technical Specifications</li>
-                  <li>Product Attributes</li>
-                  <li>Images</li>
-                  <li>Key Selling Points</li>
-                  <li>Product Features</li>
-                </ul>
-              </main>
-            </div>
+    <div class="text-component text-center padding-x-sm">
+      <h1 class="color-white text-xl text-xxl@md padding-y-xxs@lg">One partner. One complete solution.</h1>
+      <p class="color-white font-medium">Just provide your content to us in whatever format you have it in, and we’ll take care of the rest.</p>
+    </div>
+    <div class="padding-y-lg flex justify-center">
+      <div class="grid gap-lg justify-center z-index-3 width-100%">
+        <div class="link-card bg radius-lg col-4@md">
+          <div class="flex flex-column width-100%">
+            <header class="margin-x-md margin-y-sm flex@md flex-row items-center">
+              <figure class="col-4">
+                <svg viewBox="0 0 64 64">
+                  <use xlink:href="#item"></use>
+                </svg>
+              </figure>
+              <h4 class="text-md padding-top-xs padding-top-0@md padding-left-xs@md">Item Setup</h4>
+            </header>
+            <main class="text-component margin-bottom-sm padding-x-md font-medium">
+              <ul class="list list--ul margin-left-xs">
+                <li>GTIN</li>
+                <li>Part Number</li>
+                <li>Description</li>
+                <li>Brand</li>
+              </ul>
+            </main>
           </div>
-          <div class="link-card bg radius-lg col-6@md">
-            <div class="flex flex-column width-100%">
-              <header class="margin-x-md margin-y-sm flex@md flex-row items-center">
-                <figure class="col-4">
-                  <svg viewBox="0 0 64 64">
-                    <use xlink:href="#media"></use>
-                  </svg>
-                </figure>
-                <h4 class="text-md text-lg@md line-height-xl padding-top-xs padding-top-0@md">&nbsp;Rich Inline Content</h4>
-              </header>
-              <main class="text-component margin-bottom-sm padding-x-md">
-                <ul class="list list--ul margin-left-xs padding-bottom-sm font-medium">
-                  <li>Interactive Hotspot Imagery</li>
-                  <li>Image Zoom and 360° Product Views</li>
-                  <li>Videos</li>
-                  <li>Comparison Charts</li>
-                  <li>Detailed Reporting</li>
-                </ul>
-              </main>
-            </div>
+        </div>
+        <div class="link-card bg radius-lg col-4@md">
+          <div class="flex flex-column width-100%">
+            <header class="margin-x-md margin-y-sm flex@md flex-row items-center">
+              <figure class="col-4">
+                <svg viewBox="0 0 64 64">
+                  <use xlink:href="#spec"></use>
+                </svg>
+              </figure>
+              <h4 class="text-md padding-top-xs padding-top-0@md padding-left-xs@md">Structured Product Content</h4>
+            </header>
+            <main class="text-component margin-bottom-sm padding-x-md font-medium">
+              <ul class="list list--ul margin-left-xs">
+                <li>Technical Specifications</li>
+                <li>Product Attributes</li>
+                <li>Images</li>
+                <li>Key Selling Points</li>
+                <li>Product Features</li>
+              </ul>
+            </main>
+          </div>
+        </div>
+        <div class="link-card bg radius-lg col-4@md">
+          <div class="flex flex-column width-100%">
+            <header class="margin-x-md margin-y-sm flex@md flex-row items-center">
+              <figure class="col-4">
+                <svg viewBox="0 0 64 64">
+                  <use xlink:href="#media"></use>
+                </svg>
+              </figure>
+              <h4 class="text-md padding-top-xs padding-top-0@md padding-left-xs@md">Rich Inline Content</h4>
+            </header>
+            <main class="text-component margin-bottom-sm padding-x-md">
+              <ul class="list list--ul margin-left-xs padding-bottom-sm font-medium">
+                <li>Interactive Hotspot Imagery</li>
+                <li>Image Zoom and 360° Product Views</li>
+                <li>Videos</li>
+                <li>Comparison Charts</li>
+                <li>Detailed Reporting</li>
+              </ul>
+            </main>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <div style="display:none">
@@ -402,7 +422,7 @@
       <input title="CC Product Interest" id="00N20000000gOZN" type="hidden" name="00N20000000gOZN" value="Retail Services">
                     <input title="Region" id="00N2p000009H8t7" type="hidden" name="00N2p000009H8t7" value="North America">
                   <div id="contact"></div>
-      <fieldset class="margin-bottom-md border-bottom">
+      <fieldset class="margin-bottom-md padding-bottom-xxs border-bottom">
         <div class="margin-bottom-xs">
           <div class="text-component line-height-md">
             <div class="grid gap-xxs items-center flex-column">
@@ -461,29 +481,28 @@
             </div>
           </div>
         </div>
-                        <br>
-            <div class="grid gap-xxs items-start">
-        <div class="offset-4@md col-4@md" id="listFieldError"></div>
-        <div class="is-hidden" id="hideFieldError"></div>
-      </div>
-      <div class="grid gap-xxs items-start">
-        <div class="col-4@md text-right@md">
-          <label for="00N2p000009GnpJ" class="form-label">Program Interest</label>
-        </div>
-        <div class="col-4@md">
-          <div class="flex flex-column gap-xxxs">
-                          <input checked required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="Item Set Up - Walmart" name="00N2p000009GnpJ" value="Item Set Up - Walmart" class="checkbox" type="checkbox" />
-              <label for="Item Set Up - Walmart"><p>Item set up</p></label>
-                          <input checked required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="PCC - Walmart" name="00N2p000009GnpJ" value="PCC - Walmart" class="checkbox" type="checkbox" />
-              <label for="PCC - Walmart"><p>Structured content</p></label>
-                          <input checked required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="Rich Content - Walmart" name="00N2p000009GnpJ" value="Rich Content - Walmart" class="checkbox" type="checkbox" />
-              <label for="Rich Content - Walmart"><p>Rich content</p></label>
-                        <br>
+                                <div class="grid gap-xxs items-start">
+          <div class="offset-4@md col-4@md" id="listFieldError">
+            <span class="is-hidden" id="hideFieldError"></span>
           </div>
         </div>
-      </div>
-      <br>
-            </fieldset>
+        <div class="grid gap-xxs items-start">
+          <div class="col-4@md text-right@md">
+            <label for="00N2p000009GnpJ" class="form-label">Program Interest</label>
+          </div>
+          <div class="col-4@md">
+            <div class="flex flex-column gap-xxxs">
+                              <input checked required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="Item Setup - Walmart" name="00N2p000009GnpJ" value="Item Setup - Walmart" class="checkbox" type="checkbox" />
+                <label for="Item Setup - Walmart"><p>Item set up</p></label>
+                              <input checked required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="PCC - Walmart" name="00N2p000009GnpJ" value="PCC - Walmart" class="checkbox" type="checkbox" />
+                <label for="PCC - Walmart"><p>Structured content</p></label>
+                              <input checked required data-parsley-multiple="service" data-parsley-required-message="Please select one or more" data-parsley-errors-container="#listFieldError" id="Rich Content - Walmart" name="00N2p000009GnpJ" value="Rich Content - Walmart" class="checkbox" type="checkbox" />
+                <label for="Rich Content - Walmart"><p>Rich content</p></label>
+                            <br>
+            </div>
+          </div>
+        </div>
+              </fieldset>
         <div class="grid gap-sm flex-center flex-column">
           <div class="col">
             <p class="text-center">CNET Content Solutions will use your personal information to manage the partner program.</p>
@@ -536,7 +555,7 @@
 </main>
 <footer class="items-center bg-center bg-no-repeat" id="bottom" style="background-image: url('https://assets.cnetcontent.com/images/map.svg')">
   <div class="container max-width-adaptive-md padding-y-xs">
-    <ul class="flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center text-center">
+    <ul class="flex flex-wrap flex-column flex-row@md gap-0 justify-center items-center text-center font-medium">
       <li><a class="link padding-y-xxs padding-x-xs inline-block" href="http://cnetcontent.com" target="_blank">CNET Content Solutions</a></li>
       <li><a class="link padding-y-xxs padding-x-xs inline-block" href="https://www.cbsinteractive.com/legal/cbsi/patents" target="_blank"> Patents</a></li>
       <li><a class="link padding-y-xxs padding-x-xs inline-block" href="https://www.cbsinteractive.com/legal/cbsi/terms-of-use" target="_blank"> Terms of Use</a></li>

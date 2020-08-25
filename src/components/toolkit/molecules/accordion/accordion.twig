@@ -1,0 +1,20 @@
+<ul class="accordion  js-accordion" data-animation="on" data-multi-items="on">
+  {% for item in accordionList %}
+  <li class="accordion__item js-accordion__item">
+    <button class="reset accordion__header padding-y-xs padding-x-md js-tab-focus" type="button">
+      <span class="font-semibold color-black">{{ item.listHeading }}</span>
+      <svg class="icon color-contrast-medium accordion__icon-arrow-v2 no-js:is-hidden" viewBox="0 0 16 16" aria-hidden="true">
+        <g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10">
+          <path d="M2 2l12 12" stroke-width="2" />
+          <path d="M14 2L2 14" stroke-width="2" />
+        </g>
+      </svg>
+    </button>
+    <div class="accordion__panel js-accordion__panel">
+      <div class="text-component padding-top-xxxs padding-x-md padding-bottom-md">
+        {{ item.listContent }}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

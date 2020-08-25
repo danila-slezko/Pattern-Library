@@ -43,24 +43,14 @@
 
               <div class="col-6@sm">
                 <label class="form-label margin-bottom-xxs" for="checkDeliveryState">State (optional)</label>
-                <input class="form-control width-100%" type="text" name="checkDeliveryState" id="checkDeliveryState">
+                {% include '@sfdc-select--state' %}
               </div>
 
               <div class="col-6@sm">
                 <label class="form-label margin-bottom-xxs" for="checkDeliveryCountry">Country</label>
 
                 <div class="select">
-                  <select class="select__input form-control" name="checkDeliveryCountry" id="checkDeliveryCountry">
-                    <option value="0">Select Country</option>
-                    <option value="1">USA</option>
-                    <option value="2">Italy</option>
-                  </select>
-
-                  <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16">
-                    <g stroke-width="1" stroke="currentColor">
-                      <polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,4.5 8,12 0.5,4.5 "></polyline>
-                    </g>
-                  </svg>
+                {% include '@sfdc-select--country' %}
                 </div>
               </div>
 
@@ -271,7 +261,7 @@
             </div>
           </fieldset>
 
-          <button class="btn btn--primary btn--md width-100% display@lg">Place Order</button>
+          <button class="btn btn--primary btn--lg width-100% display@lg">Place Order</button>
         </div>
 
         <div class="col-5@lg">

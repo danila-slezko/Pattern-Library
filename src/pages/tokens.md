@@ -12,7 +12,7 @@ order: 2
 <div class="grid gap-lg">
   <div>
     <p class="margin-bottom-xs text-md">Primary</p>
-    <div class="grid  ">
+    <div class="grid">
       <div class="col">
         <div class="bg-primary-lighter height-xxl"></div>
       </div>
@@ -59,7 +59,7 @@ order: 2
   </div>
   <div>
     <p class="margin-bottom-xs text-md">Accent</p>
-    <div class="grid  ">
+    <div class="grid">
       <div class="col">
         <div class="bg-accent-lighter height-xxl"></div>
       </div>

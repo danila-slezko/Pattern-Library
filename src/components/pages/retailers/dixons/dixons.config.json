@@ -8,9 +8,7 @@
     "logoWidth" : "120px",
     "formBackground" : "bg-contrast-lower",
     "formTitle": "Contact us to get started.",
-    "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Dixons.<p>",
-    "formServiceA": "Article Onboarding Program",
-    "formServiceB": "Inline Content Program"
+    "formText": "<p>Submit the form below, and a representative will reach out to you with more information about adding your content to Dixons.<p>"
   },
   "variants": [
     {

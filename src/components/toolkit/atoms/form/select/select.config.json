@@ -1,9 +1,8 @@
 {
   "label": "Single Selects",
   "order": 3,
-  "status": "ready",
+  "status": "exported",
   "collated": true,
-  "default": "default",
   "context": {
     "selectLabel": "Select Input",
     "selectName": "select",
@@ -32,19 +31,14 @@
   },
   "variants": [
     {
-      "name": "radio"
+      "name": "default",
+      "label": "Radios"
     },
     {
-      "name": "dropdown",
-      "status": "prototype"
+      "name": "list"
     },
     {
       "name": "accordion"
-    },
-    {
-      "name": "link",
-      "status": "prototype",
-      "hidden": "true"
     }
   ]
 }
